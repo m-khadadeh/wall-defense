@@ -1,22 +1,45 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace WallDefense
 {
-  public class DroppableSlot : MonoBehaviour, DroppableUI
+  public class DroppableSlot : DroppableUI
   {
-    public void SetIn(DraggableUI draggable)
+    public override void OnDrop(PointerEventData eventData)
     {
-      draggable.transform.SetParent(transform);
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-      if(transform.childCount == 0)
+      if (transform.childCount == 0)
       {
         DraggableUI draggable = eventData.pointerDrag.GetComponent<DraggableUI>();
-        draggable.OnDroppingInto(this);
+        if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+        {
+          draggable.OnDroppingInto(this);
+        }
       }
+    }
+
+    public override void SetIn(DraggableUI draggable)
+    {
+      draggable.transform.SetParent(transform);
+      foreach (var subscriber in _onAddSubscriptions)
+      {
+        subscriber.Invoke(this, draggable);
+      }
+    }
+
+    public override void UnsetIn(DraggableUI draggable)
+    {
+      foreach (var subscriber in _onRemoveSubscriptions)
+      {
+        subscriber.Invoke(this, draggable);
+      }
+    }
+
+    private void Awake()
+    {
+      _onAddSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
+      _onRemoveSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
     }
   }
 }

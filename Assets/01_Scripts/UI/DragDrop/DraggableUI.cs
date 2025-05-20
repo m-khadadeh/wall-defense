@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,9 +10,11 @@ namespace WallDefense
     [SerializeField] private UnityEngine.UI.Image _image;
     private DroppableUI _currentDroppable;
     private DroppableUI _nextDroppable;
+    [field: SerializeField] public Metadata Metadata { get; set; }
     public void OnBeginDrag(PointerEventData eventData)
     {
       //Debug.Log("Begin Drag");
+      _currentDroppable.UnsetIn(this);
       _nextDroppable = null;
       transform.SetParent(transform.root);
       transform.SetAsLastSibling();

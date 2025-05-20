@@ -1,20 +1,37 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace WallDefense
 {
-  public class DroppableZone : MonoBehaviour, DroppableUI
+  public class DroppableZone : DroppableUI
   {
-    public void OnDrop(PointerEventData eventData)
+    public override void OnDrop(PointerEventData eventData)
     {
       DraggableUI draggable = eventData.pointerDrag.GetComponent<DraggableUI>();
-      draggable.OnDroppingInto(this);
+      if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+      {
+        draggable.OnDroppingInto(this);
+      }
     }
 
-    public void SetIn(DraggableUI draggable)
+    public override void SetIn(DraggableUI draggable)
     {
       draggable.transform.SetParent(transform);
+      foreach (var subscriber in _onAddSubscriptions)
+      {
+        subscriber.Invoke(this, draggable);
+      }
       // TODO: Add Sorting Logic and Sort
+    }
+
+    public override void UnsetIn(DraggableUI draggable)
+    {
+      foreach (var subscriber in _onRemoveSubscriptions)
+      {
+        subscriber.Invoke(this, draggable);
+      }
     }
   }
 }
