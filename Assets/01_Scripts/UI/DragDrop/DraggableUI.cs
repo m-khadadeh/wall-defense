@@ -10,7 +10,7 @@ namespace WallDefense
     private DroppableUI _nextDroppable;
     public void OnBeginDrag(PointerEventData eventData)
     {
-      Debug.Log("Begin Drag");
+      //Debug.Log("Begin Drag");
       _nextDroppable = null;
       transform.SetParent(transform.root);
       transform.SetAsLastSibling();
@@ -19,13 +19,13 @@ namespace WallDefense
 
     public void OnDrag(PointerEventData eventData)
     {
-      Debug.Log("Dragging");
+      //Debug.Log("Dragging");
       transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-      Debug.Log("End Drag");
+      //Debug.Log("End Drag");
       _nextDroppable ??= _currentDroppable;
       _nextDroppable.SetIn(this);
       _currentDroppable = _nextDroppable;
