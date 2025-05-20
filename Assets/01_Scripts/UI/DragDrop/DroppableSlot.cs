@@ -8,7 +8,6 @@ namespace WallDefense
     public void SetIn(DraggableUI draggable)
     {
       draggable.transform.SetParent(transform);
-      draggable.transform.localPosition = Vector3.zero;
     }
 
     public void OnDrop(PointerEventData eventData)
