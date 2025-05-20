@@ -4,13 +4,13 @@ namespace WallDefense
 {
   public class SlotTester : MonoBehaviour
   {
-    bool _unsub = false;
+    [SerializeField] bool _unsub = false;
     DroppableUI.Unsubscriber _unsubscriber;
     void Start()
     {
       var droppable = gameObject.GetComponent<DroppableUI>();
       string gameObjectName = gameObject.name;
-      droppable.Subscribe(OnSet, OnUnset);
+      _unsubscriber = droppable.Subscribe(OnSet, OnUnset);
     }
 
     void OnSet(DroppableUI drop, DraggableUI drag)
