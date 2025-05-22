@@ -119,6 +119,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &394246721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394246722}
+  - component: {fileID: 394246723}
+  m_Layer: 0
+  m_Name: WallManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &394246722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394246721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394246723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394246721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1cd298724d4ee4eb5cfcc3d4572d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maria: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}
+  sina: {fileID: 11400000, guid: 683bfa76d55349846ba77904e14561b1, type: 2}
+  rose: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
+  debug_Daybreak: 0
+  debug_Nightfall: 0
+  debug_CollectClue: 0
+  debug_ApplyDefense: 0
+  defenseType: 0
+  targetWallDefense: {fileID: 0}
+  targetSegementDefense: 0
+  ghouls:
+  - {fileID: 11400000, guid: f90739eeb21709f479581f843b1fa689, type: 2}
+  - {fileID: 11400000, guid: 2b2960167e165f04bb0a0c96ce2362b3, type: 2}
+  activeGhoul: {fileID: 0}
+  clueMain: {fileID: 0}
+  clueSecondary: {fileID: 0}
+  ghoulTargetWall: {fileID: 0}
 --- !u!1 &549322916
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,3 +277,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 549322919}
+  - {fileID: 394246722}

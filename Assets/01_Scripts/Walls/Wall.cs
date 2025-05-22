@@ -1,8 +1,17 @@
 using NUnit.Framework;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace WallDefense
 {
+    public enum DamageType
+    {
+        bludgeoning,
+        corrosion,
+        finesse,
+        none
+    }
+
     [CreateAssetMenu(fileName = "Wall", menuName = "Scriptable Objects/Wall")]
     public class Wall : ScriptableObject
     {
@@ -11,23 +20,49 @@ namespace WallDefense
         public WallSegment top;
         public WallSegment middle;
         public WallSegment bottom;
-        public WallSegment[] walls;
         public void InitializeWalls()
         {
-            bottom.health = 200;
-            middle.health = 150;
-            top.health = 100;
-            walls[0] = bottom;
-            walls[1] = middle;
-            walls[2] = top;
-            for (int i = 0; i < walls.Length; i++)
+            bottom = new()
             {
-                walls[i].damageReductionAmount = damageReductionAmount;
-                walls[i].hasBludgeoningDefense = false;
-                walls[i].hasCorrosionDefense = false;
-                walls[i].hasFinesseDefense = false;
+                wallIndex = 0,
+                health = 200,
+                _damageReductionAmount = damageReductionAmount,
+                currentDefenseType = DamageType.none
+            };
+            middle = new()
+            {
+                wallIndex = 1,
+                health = 150,
+                _damageReductionAmount = damageReductionAmount,
+                currentDefenseType = DamageType.none
+            };
+            top = new()
+            {
+                wallIndex = 2,
+                health = 100,
+                _damageReductionAmount = damageReductionAmount,
+                currentDefenseType = DamageType.none
+            };
+        }
+        public void ApplyDefense(WallSegmentName segmentName, DamageType damageType)
+        {
+            switch (segmentName)
+            {
+                case WallSegmentName.bottom:
+                    bottom.ApplyDefense(damageType);
+                    break;
+                case WallSegmentName.middle:
+                    middle.ApplyDefense(damageType);
+                    break;
+                case WallSegmentName.top:
+                    top.ApplyDefense(damageType);
+                    break;
+                default:
+                    break;
+
             }
         }
+
         public void CheckSegmentFailure()
         {
             if (bottom.IsDestroyed())
@@ -38,61 +73,49 @@ namespace WallDefense
             {
                 top.Collapse();
             }
+
+            //TODO fail state
         }
     }
+    [System.Serializable]
     public struct WallSegment
     {
         public int wallIndex; //lowest is 0, highest is 2
-        public float health;
-        public bool hasBludgeoningDefense;
-        public bool hasCorrosionDefense;
-        public bool hasFinesseDefense;
-        public float damageReductionAmount;
-        public enum DamageType
+        public int health;
+        public DamageType currentDefenseType;
+        public float _damageReductionAmount;
+
+        public void Repair(int repairAmount)
         {
-            bludgeoning,
-            corrosion,
-            finesse
+            health += repairAmount;
         }
-        public void ApplyDefense(DamageType damageType)
+        public void ApplyDefense(DamageType defenseType)
         {
-            switch (damageType)
-            {
-                case DamageType.bludgeoning:
-                    hasBludgeoningDefense = true;
-                    break;
-                case DamageType.corrosion:
-                    hasCorrosionDefense = true;
-                    break;
-                case DamageType.finesse:
-                    hasFinesseDefense = true;
-                    break;
-                default:
-                    break;
-            }
+            currentDefenseType = defenseType;
         }
-        public void ApplyDamage(DamageType damageType, float baseDamage)
+        public void ApplyDamage(DamageType damageType, int baseDamage)
         {
             float finalDamage;
             switch (damageType)
             {
                 case DamageType.bludgeoning:
-                    finalDamage = baseDamage * (hasBludgeoningDefense ? damageReductionAmount : 1);
-                    hasBludgeoningDefense = false;
+                    finalDamage = baseDamage * (currentDefenseType == DamageType.bludgeoning ? _damageReductionAmount : 1);
+                    currentDefenseType = DamageType.none;
                     break;
                 case DamageType.corrosion:
-                    finalDamage = baseDamage * (hasCorrosionDefense ? 0 : 1);
-                    hasCorrosionDefense = false;
+                    finalDamage = baseDamage * (currentDefenseType == DamageType.corrosion ? 0 : 1);
+                    currentDefenseType = DamageType.none;
                     break;
                 case DamageType.finesse:
-                    finalDamage = baseDamage * (hasFinesseDefense ? damageReductionAmount : 1);
-                    hasFinesseDefense = false;
+                    finalDamage = baseDamage * (currentDefenseType == DamageType.finesse ? _damageReductionAmount : 1);
+                    currentDefenseType = DamageType.none;
                     break;
                 default:
                     finalDamage = baseDamage;
                     break;
             }
-            health -= finalDamage;
+            //TODO if health is already 0 fail state
+            health -= (int)math.round(finalDamage);
         }
         public readonly bool IsDestroyed()
         {
