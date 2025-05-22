@@ -171,14 +171,18 @@ MonoBehaviour:
   debug_CollectClue: 0
   debug_ApplyDefense: 0
   defenseType: 0
-  targetWallDefense: {fileID: 0}
+  targetWallDefense: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}
   targetSegementDefense: 0
   ghouls:
   - {fileID: 11400000, guid: f90739eeb21709f479581f843b1fa689, type: 2}
   - {fileID: 11400000, guid: 2b2960167e165f04bb0a0c96ce2362b3, type: 2}
+  - {fileID: 11400000, guid: 111abc881f2b08146b78be4569123d0c, type: 2}
+  - {fileID: 11400000, guid: 31dc8b24d3e55fe4386e3d7428f85533, type: 2}
   activeGhoul: {fileID: 0}
   clueMain: {fileID: 0}
   clueSecondary: {fileID: 0}
+  clueMainFound: 0
+  clueSecondaryFound: 0
   ghoulTargetWall: {fileID: 0}
 --- !u!1 &549322916
 GameObject:
