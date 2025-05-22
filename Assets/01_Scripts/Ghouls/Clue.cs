@@ -6,6 +6,7 @@ namespace WallDefense
     public class Clue : ScriptableObject
     {
         public ClueType clueType;
+        public string description;
         public enum ClueType
         {
             A, B, C, D

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3541b9f8c8bc7ee48993c1dafaa8a0f7, type: 3}
-  m_Name: Skarner
+  m_Name: Tank
   m_EditorClassIdentifier: 
-  clueMain: {fileID: 11400000, guid: aab2e5464e0d0c24c8127a9823c144d1, type: 2}
-  clueSecondary: {fileID: 11400000, guid: e4609c981be84884e8e500ac4f799db1, type: 2}
+  clueMain: {fileID: 11400000, guid: e4609c981be84884e8e500ac4f799db1, type: 2}
+  clueSecondary: {fileID: 11400000, guid: aab2e5464e0d0c24c8127a9823c144d1, type: 2}
   damageTypeMain: 0
   damageTypeSecondary: 1
   damageMagnitudeMain: 50
