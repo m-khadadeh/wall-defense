@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
+  m_Name: Making Goo
+  m_EditorClassIdentifier: 
+  _requirements:
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 4, y: 6}
+  _taskYieldType: 0
+  _resourceYieldPossibilities:
+  - <Type>k__BackingField: []
+    <MinMaxlYield>k__BackingField: []
+    <OptionalMeepleRequirment>k__BackingField: 
+    <OptionalMaterialRequirment>k__BackingField: 
+  - <Type>k__BackingField: []
+    <MinMaxlYield>k__BackingField: []
+    <OptionalMeepleRequirment>k__BackingField: 
+    <OptionalMaterialRequirment>k__BackingField: 0100
+  - <Type>k__BackingField: []
+    <MinMaxlYield>k__BackingField: []
+    <OptionalMeepleRequirment>k__BackingField: 
+    <OptionalMaterialRequirment>k__BackingField: 0001
+  - <Type>k__BackingField: []
+    <MinMaxlYield>k__BackingField: []
+    <OptionalMeepleRequirment>k__BackingField: 
+    <OptionalMaterialRequirment>k__BackingField: 0101
+  _timeToCompletePossibilities:
+  - <Hours>k__BackingField: 3
+    <OptionalMeepleRequirment>k__BackingField: 

@@ -12,7 +12,7 @@ namespace WallDefense
     protected List<DroppableSubscriber> _onAddSubscriptions;
     protected List<DroppableSubscriber> _onRemoveSubscriptions;
     public GameObject GameObject { get; protected set; }
-    [field: SerializeField] public MetadataValidator MetadataValidator { get; protected set; }
+    [field: SerializeField] public MetadataValidator MetadataValidator { get; set; }
     public abstract void UnsetIn(DraggableUI draggable);
     public abstract void SetIn(DraggableUI draggable);
     public abstract void OnDrop(PointerEventData eventData);
@@ -75,8 +75,8 @@ namespace WallDefense
     
     private void Awake()
     {
-      _onAddSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
-      _onRemoveSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
+      _onAddSubscriptions = new List<DroppableSubscriber>();
+      _onRemoveSubscriptions = new List<DroppableSubscriber>();
     }
   }
 }

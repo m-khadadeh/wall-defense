@@ -35,11 +35,5 @@ namespace WallDefense
         subscriber.Invoke(this, draggable);
       }
     }
-
-    private void Awake()
-    {
-      _onAddSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
-      _onRemoveSubscriptions = new List<Action<DroppableUI, DraggableUI>>();
-    }
   }
 }

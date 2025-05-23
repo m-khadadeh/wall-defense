@@ -8,12 +8,14 @@ namespace WallDefense
   public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
   {
     [SerializeField] private UnityEngine.UI.Image _image;
+    [SerializeField] private TMPro.TextMeshProUGUI _numberText;
     private DroppableUI _currentDroppable;
     private DroppableUI _nextDroppable;
     [field: SerializeField] public Metadata Metadata { get; set; }
     public void OnBeginDrag(PointerEventData eventData)
     {
       //Debug.Log("Begin Drag");
+      SetCount(1);
       _currentDroppable.UnsetIn(this);
       _nextDroppable = null;
       transform.SetParent(transform.root);
@@ -36,9 +38,10 @@ namespace WallDefense
       _image.raycastTarget = true;
     }
 
-    public void OnDroppingInto(DroppableUI droppable)
+    public void OnDroppingInto(DroppableUI droppable, int stackSize = 1)
     {
       _nextDroppable = droppable;
+      SetCount(stackSize);      
     }
 
     private void Awake()
@@ -48,6 +51,11 @@ namespace WallDefense
       {
         Debug.LogError($"{gameObject} initalized draggable without home droppable.");
       }
+    }
+
+    public void SetCount(int count)
+    {
+      _numberText.text = (count > 1) ? count.ToString() : "";
     }
   }
 }

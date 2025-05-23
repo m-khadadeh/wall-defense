@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf2f7dd83a71467da4583711db6afce, type: 3}
+  m_Name: ResourceStone
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: Stone
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f24dd046d738c26d3878f18abaa0c607, type: 3}
+  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: 34a0b6b5b10131a28a312dee893f7376, type: 3}
+  <Metadata>k__BackingField: {fileID: 11400000, guid: a3e3c3f293e894c6ca1ce2a61a257d83, type: 2}
+  <Validator>k__BackingField: {fileID: 11400000, guid: 39b02f3d68d9bda9a802029c3b22c875, type: 2}

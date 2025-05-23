@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf2f7dd83a71467da4583711db6afce, type: 3}
+  m_Name: MeepleANY
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: ANY
+  <Sprite>k__BackingField: {fileID: 21300000, guid: fe539a57996d5fde8a8164e6f681a871, type: 3}
+  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
+  <Metadata>k__BackingField: {fileID: 0}
+  <Validator>k__BackingField: {fileID: 11400000, guid: e9befe7b9d4fc7e9695470e01abfaa03, type: 2}
