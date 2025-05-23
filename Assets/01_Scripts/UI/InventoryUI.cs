@@ -10,24 +10,67 @@ namespace WallDefense
     [SerializeField] private DroppableZone _itemZone;
     [SerializeField] private ItemPrefabEntry[] _itemPrefabEntries;
 
+    private Dictionary<ItemType, List<GameObject>> _itemObjects;
+
     private Dictionary<ItemType, GameObject> _itemPrefabs;
     void Start()
     {
       // Set up dictionaries
       _itemPrefabs = new Dictionary<ItemType, GameObject>();
-      foreach (var meeple in _itemPrefabEntries)
+      foreach (var item in _itemPrefabEntries)
       {
-        _itemPrefabs.Add(meeple.Type, meeple.Prefab);
+        _itemPrefabs.Add(item.Type, item.Prefab);
       }
 
+      _data.Initialize(AddItemCallback, RemoveItemCallback);
+      _itemObjects = new Dictionary<ItemType, List<GameObject>>();
+      _itemZone.Subscribe(
+          (DroppableUI droppable, DraggableUI draggable) =>
+          {
+            ItemType type = draggable.Metadata.Type;
+            _data.DropItemIn(type);
+            if (!_itemObjects.ContainsKey(type))
+            {
+              _itemObjects[type] = new List<GameObject>();
+            }
+            _itemObjects[type].Add(draggable.gameObject);
+          },
+          (DroppableUI droppable, DraggableUI draggable) =>
+          {
+            ItemType type = draggable.Metadata.Type;
+            _data.DragItemOut(type);
+            _itemObjects[type].Remove(draggable.gameObject);
+          }
+        );
+
       // Create Inventory
-      foreach (var item in _data.Items)
+      foreach (var item in _data.CurrentItems)
       {
-        for (int i = 0; i < item.Amount; i++)
-        {
-          var newObject = GameObject.Instantiate(_itemPrefabs[item.Type], _itemZone.transform);
-          newObject.transform.SetAsLastSibling();
-        }
+        AddItemCallback(item.Key, item.Value);
+      }
+    }
+
+    public void AddItemCallback(ItemType type, int amount)
+    {
+      if (!_itemObjects.ContainsKey(type))
+      {
+        _itemObjects[type] = new List<GameObject>();
+      }
+      for (int i = 0; i < amount; i++)
+      {
+        var newObject = GameObject.Instantiate(_itemPrefabs[type], _itemZone.transform);
+        newObject.transform.SetAsLastSibling();
+        _itemObjects[type].Add(newObject);
+      }
+    }
+
+    public void RemoveItemCallback(ItemType type, int amount)
+    {
+      for (int i = 0; i < amount; i++)
+      {
+        GameObject currentItem = _itemObjects[type][0];
+        Destroy(currentItem);
+        _itemObjects[type].RemoveAt(0);
       }
     }
 

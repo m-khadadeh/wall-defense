@@ -54,5 +54,11 @@ namespace WallDefense
         subscriber.Invoke(this, draggable);
       }
     }
+
+    public override void ClearChildren()
+    {
+      _innerStack.Clear();
+      base.ClearChildren();
+    }
   }
 }

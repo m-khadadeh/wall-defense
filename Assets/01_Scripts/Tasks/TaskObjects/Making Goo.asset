@@ -15,26 +15,32 @@ MonoBehaviour:
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
+    <IsConsumed>k__BackingField: 0
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 4, y: 6}
-  _taskYieldType: 0
-  _resourceYieldPossibilities:
-  - <Type>k__BackingField: []
-    <MinMaxlYield>k__BackingField: []
-    <OptionalMeepleRequirment>k__BackingField: 
-    <OptionalMaterialRequirment>k__BackingField: 
-  - <Type>k__BackingField: []
-    <MinMaxlYield>k__BackingField: []
-    <OptionalMeepleRequirment>k__BackingField: 
-    <OptionalMaterialRequirment>k__BackingField: 0100
-  - <Type>k__BackingField: []
-    <MinMaxlYield>k__BackingField: []
-    <OptionalMeepleRequirment>k__BackingField: 
-    <OptionalMaterialRequirment>k__BackingField: 0001
-  - <Type>k__BackingField: []
-    <MinMaxlYield>k__BackingField: []
-    <OptionalMeepleRequirment>k__BackingField: 
-    <OptionalMaterialRequirment>k__BackingField: 0101
+    <IsConsumed>k__BackingField: 1
+  _yieldPossibilities:
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: f1c9192cd3b0fd65fb6fc5a09a22b4fe, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
+      <Amount>k__BackingField: 2
+    - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+      <Amount>k__BackingField: 4
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: 20f5392932beb0e86af512fa77c0ac99, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
+      <Amount>k__BackingField: 2
+    - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+      <Amount>k__BackingField: 5
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: e421eeeb1efe0921c95c3d7ca1799502, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
+      <Amount>k__BackingField: 2
+    - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+      <Amount>k__BackingField: 6
   _timeToCompletePossibilities:
   - <Hours>k__BackingField: 3
-    <OptionalMeepleRequirment>k__BackingField: 
+    <ItemAmounts>k__BackingField: []

@@ -17,3 +17,4 @@ MonoBehaviour:
     <Value>k__BackingField: meeple
   - <Key>k__BackingField: meeple_type
     <Value>k__BackingField: gatherer
+  <Type>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}

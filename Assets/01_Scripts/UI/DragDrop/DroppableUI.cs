@@ -17,6 +17,14 @@ namespace WallDefense
     public abstract void SetIn(DraggableUI draggable);
     public abstract void OnDrop(PointerEventData eventData);
 
+    public virtual void ClearChildren()
+    {
+      while (transform.childCount > 0)
+      {
+        DestroyImmediate(transform.GetChild(0).gameObject);
+      }
+    }
+
     /// <summary>
     /// <paramref name="addSubscriber"/> is triggered when SetIn() is called, when a draggable is dropped in this droppable.
     /// <paramref name="removeSubscriber"/> is triggered when UnsetIn() is called, when a draggable is removed from this droppable.

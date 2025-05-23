@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace WallDefense
 {
@@ -8,6 +9,8 @@ namespace WallDefense
     [SerializeField] private Task _task;
     [SerializeField] private List<TaskSlot> _itemSlots;
     [SerializeField] private TMPro.TextMeshProUGUI _textMesh;
+    [SerializeField] private Button _runButton;
+    [SerializeField] private ColonyData _colonyData;
     public void Start()
     {
       _task.Initialize();
@@ -18,14 +21,17 @@ namespace WallDefense
     {
       _textMesh.text = _task.name;
       _task.InitializeUI(_itemSlots, CheckFulfilled);
+      CheckFulfilled();
     }
 
     public void CheckFulfilled()
     {
-      if (_task.IsFulfilled)
-        Debug.Log("Fulfilled");
-      else
-        Debug.Log("Unfulfilled");
+      _runButton.interactable = _task.IsFulfilled;
+    }
+
+    public void RunTask()
+    {
+      _task.CompleteTask(_colonyData);
     }
   }
 }

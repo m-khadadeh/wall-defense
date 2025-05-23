@@ -1,0 +1,9 @@
+using UnityEngine;
+
+namespace WallDefense
+{
+  public abstract class TaskYield : ScriptableObject
+  {
+    public abstract void GetYield(ColonyData colony);
+  }
+}
