@@ -10,5 +10,6 @@ namespace WallDefense
     [field: SerializeField] public Sprite OutlineSprite { get; protected set; }
     [field: SerializeField] public Metadata Metadata { get; protected set; }
     [field: SerializeField] public MetadataValidator Validator { get; protected set; }
+    [field: SerializeField] public GameObject Prefab { get; protected set; }
   }
 }

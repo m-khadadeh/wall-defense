@@ -7,20 +7,12 @@ namespace WallDefense
   public class InventoryUI : MonoBehaviour
   {
     [SerializeField] private InventoryData _data;
-    [SerializeField] private DroppableZone _itemZone;
-    [SerializeField] private ItemPrefabEntry[] _itemPrefabEntries;
-
+    [SerializeField] private DroppableZoneStackable _itemZone;
     private Dictionary<ItemType, List<GameObject>> _itemObjects;
 
-    private Dictionary<ItemType, GameObject> _itemPrefabs;
-    void Start()
+    void Awake()
     {
-      // Set up dictionaries
-      _itemPrefabs = new Dictionary<ItemType, GameObject>();
-      foreach (var item in _itemPrefabEntries)
-      {
-        _itemPrefabs.Add(item.Type, item.Prefab);
-      }
+      _itemZone.Initialize();
 
       _data.Initialize(AddItemCallback, RemoveItemCallback);
       _itemObjects = new Dictionary<ItemType, List<GameObject>>();
@@ -58,8 +50,8 @@ namespace WallDefense
       }
       for (int i = 0; i < amount; i++)
       {
-        var newObject = GameObject.Instantiate(_itemPrefabs[type], _itemZone.transform);
-        newObject.transform.SetAsLastSibling();
+        var newObject = GameObject.Instantiate(type.Prefab, _itemZone.transform);
+        _itemZone.AddItemWithoutCallback(newObject.GetComponent<DraggableUI>());
         _itemObjects[type].Add(newObject);
       }
     }
@@ -69,16 +61,9 @@ namespace WallDefense
       for (int i = 0; i < amount; i++)
       {
         GameObject currentItem = _itemObjects[type][0];
-        Destroy(currentItem);
+        _itemZone.DeleteItem(currentItem.GetComponent<DraggableUI>());
         _itemObjects[type].RemoveAt(0);
       }
-    }
-
-    [Serializable]
-    public class ItemPrefabEntry
-    {
-      [field: SerializeField] public ItemType Type { get; private set; }
-      [field: SerializeField] public GameObject Prefab { get; private set; }
     }
   }
 }

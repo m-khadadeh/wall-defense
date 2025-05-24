@@ -113,11 +113,13 @@ namespace WallDefense
             (DroppableUI droppable, DraggableUI draggable) =>
             {
               requirement.Add(draggable.Metadata.Type);
+              slot.CheckAutoFillAvailable();
               checkAction.Invoke();
             },
             (DroppableUI droppable, DraggableUI draggable) =>
             {
               requirement.Remove(draggable.Metadata.Type);
+              slot.CheckAutoFillAvailable();
               checkAction.Invoke();
             }
           );

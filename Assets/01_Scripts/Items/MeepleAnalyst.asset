@@ -17,3 +17,4 @@ MonoBehaviour:
   <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: 136d85920a131a99c9022ccdc8b71aad, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: c8975adc97d7a69c59aa233822cb7eb8, type: 2}
+  <Prefab>k__BackingField: {fileID: 8556377724779848631, guid: 3ea778dd120f078c999bada90a823cec, type: 3}

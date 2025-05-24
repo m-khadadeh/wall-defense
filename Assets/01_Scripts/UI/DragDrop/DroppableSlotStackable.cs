@@ -19,14 +19,19 @@ namespace WallDefense
       if (transform.childCount < _maxAmount)
       {
         DraggableUI draggable = eventData.pointerDrag.GetComponent<DraggableUI>();
-        if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+        CheckAndDrop(draggable);
+      }
+    }
+
+    public void CheckAndDrop(DraggableUI draggable)
+    {
+      if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+      {
+        if (_innerStack.Count > 0)
         {
-          if (_innerStack.Count > 0)
-          {
-            _innerStack.Peek().SetCount(0);
-          }
-          draggable.OnDroppingInto(this, _innerStack.Count + 1);
+          _innerStack.Peek().SetCount(0);
         }
+        draggable.OnDroppingInto(this, _innerStack.Count + 1);
       }
     }
 

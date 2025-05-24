@@ -22,27 +22,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 91a0066635c7f2b4a8804b7c19a61703, type: 3}
     - target: {fileID: 8863090687824956145, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_Name
-      value: Crafter Variant
+      value: Metal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
