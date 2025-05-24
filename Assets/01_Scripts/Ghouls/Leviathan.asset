@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueMain: {fileID: 11400000, guid: 6d363072683af5d4ab69d9905ba95a4f, type: 2}
   clueSecondary: {fileID: 11400000, guid: aab2e5464e0d0c24c8127a9823c144d1, type: 2}
-  damageTypeMain: 2
-  damageTypeSecondary: 0
-  damageMagnitudeMain: 75
-  damageMagnitudeSecondary: 50
+  parametersMain: {fileID: 11400000, guid: 08b1e543966e8d048a8d77a7f4f02f63, type: 2}
+  parametersSecondary: {fileID: 11400000, guid: 779539c3b8890e4498a4142d687beef4, type: 2}
   damageTargetMain: 0
   damageTargetSecondary: 1
   targetWall: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}

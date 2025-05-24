@@ -10,8 +10,7 @@ namespace WallDefense
     public class Ghoul : ScriptableObject
     {
         public Clue clueMain, clueSecondary;
-        public DamageType damageTypeMain, damageTypeSecondary;
-        public int damageMagnitudeMain, damageMagnitudeSecondary;
+        public DamageParameters parametersMain, parametersSecondary;
         public WallSegmentName damageTargetMain, damageTargetSecondary;
         public Wall targetWall;
         /// <summary>
@@ -20,7 +19,7 @@ namespace WallDefense
         /// <returns>True, if wall was broken prior to attack</returns>
         public bool MainAttack()
         {
-            return Attack(damageTargetMain, damageTypeMain, damageMagnitudeMain);
+            return Attack(damageTargetMain, parametersMain);
         }
         /// <summary>
         /// Applies secondary attack effects
@@ -28,7 +27,7 @@ namespace WallDefense
         /// <returns>True, if wall was broken prior to attack</returns>
         public bool SecondaryAttack()
         {
-            return Attack(damageTargetSecondary, damageTypeSecondary, damageMagnitudeSecondary);
+            return Attack(damageTargetSecondary, parametersSecondary);
         }
         /// <summary>
         /// Applies attack damage to wall segment specified
@@ -37,7 +36,7 @@ namespace WallDefense
         /// <param name="damageType">Blugeoning, Corrosion, or Finesse</param>
         /// <param name="damageMagnitude">Unmitigated damage value</param>
         /// <returns>True, if wall was broken prior to attack</returns>
-        public bool Attack(WallSegmentName wallSegmentName, DamageType damageType, int damageMagnitude)
+        public bool Attack(WallSegmentName wallSegmentName, DamageParameters damageParameters)
         {
             switch (wallSegmentName)
             {
@@ -46,21 +45,21 @@ namespace WallDefense
                     {
                         return true;
                     }
-                    targetWall.bottom.ApplyDamage(damageType, damageMagnitude);
+                    targetWall.bottom.ApplyDamage(damageParameters);
                     break;
                 case WallSegmentName.middle:
                     if (targetWall.middle.IsDestroyed())
                     {
                         return true;
                     }
-                    targetWall.middle.ApplyDamage(damageType, damageMagnitude);
+                    targetWall.middle.ApplyDamage(damageParameters);
                     break;
                 case WallSegmentName.top:
                     if (targetWall.top.IsDestroyed())
                     {
                         return true;
                     }
-                    targetWall.top.ApplyDamage(damageType, damageMagnitude);
+                    targetWall.top.ApplyDamage(damageParameters);
                     break;
                 default:
                     break;

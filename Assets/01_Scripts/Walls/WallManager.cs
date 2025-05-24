@@ -14,7 +14,7 @@ namespace WallDefense
         public bool debug_Nightfall;
         public bool debug_CollectClue;
         public bool debug_ApplyDefense;
-        public DamageType defenseType;
+        public DamageParameters.Type defenseType;
         public Wall targetWallDefense;
         public WallSegmentName targetSegementDefense;
         public Ghoul[] ghouls;

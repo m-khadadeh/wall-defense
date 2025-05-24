@@ -4,13 +4,6 @@ using UnityEngine;
 
 namespace WallDefense
 {
-    public enum DamageType
-    {
-        bludgeoning,
-        corrosion,
-        finesse,
-        none
-    }
 
     [CreateAssetMenu(fileName = "Wall", menuName = "Scriptable Objects/Wall")]
     public class Wall : ScriptableObject
@@ -26,25 +19,22 @@ namespace WallDefense
             {
                 wallIndex = 0,
                 health = 200,
-                _damageReductionAmount = damageReductionAmount,
-                currentDefenseType = DamageType.none
+                currentDefenseType = DamageParameters.Type.none
             };
             middle = new()
             {
                 wallIndex = 1,
                 health = 150,
-                _damageReductionAmount = damageReductionAmount,
-                currentDefenseType = DamageType.none
+                currentDefenseType = DamageParameters.Type.none
             };
             top = new()
             {
                 wallIndex = 2,
                 health = 100,
-                _damageReductionAmount = damageReductionAmount,
-                currentDefenseType = DamageType.none
+                currentDefenseType = DamageParameters.Type.none
             };
         }
-        public void ApplyDefense(WallSegmentName segmentName, DamageType damageType)
+        public void ApplyDefense(WallSegmentName segmentName, DamageParameters.Type damageType)
         {
             switch (segmentName)
             {
@@ -82,40 +72,21 @@ namespace WallDefense
     {
         public int wallIndex; //lowest is 0, highest is 2
         public int health;
-        public DamageType currentDefenseType;
-        public float _damageReductionAmount;
+        public DamageParameters damageParameters;
+        public DamageParameters.Type currentDefenseType;
 
         public void Repair(int repairAmount)
         {
             health += repairAmount;
         }
-        public void ApplyDefense(DamageType defenseType)
+        public void ApplyDefense(DamageParameters.Type defenseType)
         {
             currentDefenseType = defenseType;
         }
-        public void ApplyDamage(DamageType damageType, int baseDamage)
+        public void ApplyDamage(DamageParameters damageParameters)
         {
-            float finalDamage;
-            switch (damageType)
-            {
-                case DamageType.bludgeoning:
-                    finalDamage = baseDamage * (currentDefenseType == DamageType.bludgeoning ? _damageReductionAmount : 1);
-                    currentDefenseType = DamageType.none;
-                    break;
-                case DamageType.corrosion:
-                    finalDamage = baseDamage * (currentDefenseType == DamageType.corrosion ? 0 : 1);
-                    currentDefenseType = DamageType.none;
-                    break;
-                case DamageType.finesse:
-                    finalDamage = baseDamage * (currentDefenseType == DamageType.finesse ? _damageReductionAmount : 1);
-                    currentDefenseType = DamageType.none;
-                    break;
-                default:
-                    finalDamage = baseDamage;
-                    break;
-            }
-            //TODO if health is already 0 fail state
-            health -= (int)math.round(finalDamage);
+            health -= (int)math.round(damageParameters.magnitude * (currentDefenseType == damageParameters.type ? damageParameters.reducedAmount : 1));
+            currentDefenseType = DamageParameters.Type.none;
         }
         public readonly bool IsDestroyed()
         {

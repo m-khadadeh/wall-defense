@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fd2a6d08b715c4bb8ebfbbe5275d30, type: 3}
-  m_Name: w_Rose
+  m_Name: w_default
   m_EditorClassIdentifier: 
-  ownerSettlement: 1
-  damageReductionAmount: 0.25
+  ownerSettlement: -1
+  damageReductionAmount: 0
   top:
     wallIndex: 2
     health: 100
