@@ -11,14 +11,10 @@ namespace WallDefense
     [SerializeField] private TMPro.TextMeshProUGUI _textMesh;
     [SerializeField] private Button _runButton;
     [SerializeField] private ColonyData _colonyData;
-    public void Start()
-    {
-      _task.Initialize();
-      Initialize();
-    }
 
     public void Initialize()
     {
+      _task.Initialize();
       _textMesh.text = _task.name;
       _task.InitializeUI(_itemSlots, CheckFulfilled);
       CheckFulfilled();
@@ -29,9 +25,21 @@ namespace WallDefense
       _runButton.interactable = _task.IsFulfilled;
     }
 
+    public void CheckAutoFillButtons()
+    {
+      foreach (var slot in _itemSlots)
+      {
+        if(slot.gameObject.activeSelf)
+          slot.CheckAutoFillAvailable();
+      }
+    }
+
     public void RunTask()
     {
+      // TODO: Implement with Day/Night cycle system
+      Debug.Log($"{_task.GetHours()} Hours.");
       _task.CompleteTask(_colonyData);
+      CheckFulfilled();
     }
   }
 }

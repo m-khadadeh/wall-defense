@@ -37,9 +37,11 @@ namespace WallDefense
     }
     public void CheckAutoFillAvailable()
     {
-      Debug.Log(_requirement.IsFulfilled);
-      _autoFillButton.interactable = (!_requirement.IsFulfilled &&
-          _requirement.Count + _inventoryData.CurrentItems[_requirement.RequirementType] >= _requirement.MinimumMaximumAmount.x);
+      if (_autoFillButton.gameObject.activeSelf)
+      {
+        _autoFillButton.interactable = (!_requirement.IsFulfilled &&
+          _requirement.Count + _inventoryData.CurrentItems[_requirement.RequirementType] >= _requirement.MinimumMaximumAmount.x); 
+      }
     }
 
     public void AutoFill()

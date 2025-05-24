@@ -10,11 +10,28 @@ namespace WallDefense
     [SerializeField] private DroppableZoneStackable _itemZone;
     private Dictionary<ItemType, List<GameObject>> _itemObjects;
 
-    void Awake()
+    public void Initialize(List<Action> addCallbacks, List<Action> removeCallbacks)
     {
       _itemZone.Initialize();
 
-      _data.Initialize(AddItemCallback, RemoveItemCallback);
+      _data.Initialize(
+          (ItemType type, int amount) =>
+          {
+            AddItemCallback(type, amount);
+            foreach (var callback in addCallbacks)
+            {
+              callback.Invoke();
+            }
+          },
+          (ItemType type, int amount) =>
+          {
+            RemoveItemCallback(type, amount);
+            foreach (var callback in removeCallbacks)
+            {
+              callback.Invoke();
+            }
+          }
+        );
       _itemObjects = new Dictionary<ItemType, List<GameObject>>();
       _itemZone.Subscribe(
           (DroppableUI droppable, DraggableUI draggable) =>
@@ -26,12 +43,20 @@ namespace WallDefense
               _itemObjects[type] = new List<GameObject>();
             }
             _itemObjects[type].Add(draggable.gameObject);
+            foreach (var callback in addCallbacks)
+            {
+              callback.Invoke();
+            }
           },
           (DroppableUI droppable, DraggableUI draggable) =>
           {
             ItemType type = draggable.Metadata.Type;
             _data.DragItemOut(type);
             _itemObjects[type].Remove(draggable.gameObject);
+            foreach (var callback in removeCallbacks)
+            {
+              callback.Invoke();
+            }
           }
         );
 

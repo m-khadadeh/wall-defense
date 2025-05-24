@@ -71,16 +71,33 @@ namespace WallDefense
         return;
       }
       foreach (var entry in _yieldPossibilities)
+      {
+        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts))
         {
-          if (CheckItemsAgainstPossibilityList(entry.ItemAmounts))
+          foreach (var yield in entry.Yield)
           {
-            foreach (var yield in entry.Yield)
-            {
-              yield.GetYield(data);
-            }
-            return;
+            yield.GetYield(data);
           }
+          return;
         }
+      }
+    }
+
+    public int GetHours()
+    {
+      if (_timeToCompletePossibilities.Count == 1)
+      {
+        // Skip the possibility list
+        return _timeToCompletePossibilities[0].Hours;
+      }
+      foreach (var entry in _timeToCompletePossibilities)
+      {
+        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts))
+        {
+          return entry.Hours;
+        }
+      }
+      throw new Exception("Hours not within possibility lists.");
     }
 
     private bool CheckItemsAgainstPossibilityList(InventoryData.ItemAmountEntry[] possibilityList)
@@ -113,19 +130,32 @@ namespace WallDefense
             (DroppableUI droppable, DraggableUI draggable) =>
             {
               requirement.Add(draggable.Metadata.Type);
-              slot.CheckAutoFillAvailable();
+              foreach (var element in itemSlots)
+              {
+                if(element.gameObject.activeSelf)
+                  element.CheckAutoFillAvailable();
+              }
               checkAction.Invoke();
             },
             (DroppableUI droppable, DraggableUI draggable) =>
             {
               requirement.Remove(draggable.Metadata.Type);
-              slot.CheckAutoFillAvailable();
+              foreach (var element in itemSlots)
+              {
+                if(element.gameObject.activeSelf)
+                  element.CheckAutoFillAvailable();
+              }
               checkAction.Invoke();
             }
           );
         requirement.InitializeUI(() =>
             {
               slot.Droppable.ClearChildren();
+              foreach (var element in itemSlots)
+              {
+                if(element.gameObject.activeSelf)
+                  element.CheckAutoFillAvailable();
+              }
             }
           );
       }

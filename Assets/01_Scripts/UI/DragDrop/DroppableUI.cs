@@ -36,10 +36,14 @@ namespace WallDefense
     /// </returns>
     public Unsubscriber Subscribe(DroppableSubscriber addSubscriber, DroppableSubscriber removeSubscriber)
     {
-      if (!_onAddSubscriptions.Contains(addSubscriber))
+      if (_onAddSubscriptions == null)
       {
-        _onAddSubscriptions.Add(addSubscriber);
+        InitializeSubscriptions();
       }
+      if (!_onAddSubscriptions.Contains(addSubscriber))
+        {
+          _onAddSubscriptions.Add(addSubscriber);
+        }
       if (!_onRemoveSubscriptions.Contains(removeSubscriber))
       {
         _onRemoveSubscriptions.Add(removeSubscriber);
@@ -80,8 +84,16 @@ namespace WallDefense
         }
       }
     }
-    
+
     private void Awake()
+    {
+      if (_onAddSubscriptions == null)
+      {
+        InitializeSubscriptions();
+      }
+    }
+
+    private void InitializeSubscriptions()
     {
       _onAddSubscriptions = new List<DroppableSubscriber>();
       _onRemoveSubscriptions = new List<DroppableSubscriber>();
