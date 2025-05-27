@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa15d6236c8cafc86a2acbd1443bfdc2, type: 3}
+  m_Name: MorseCodeDictionary
+  m_EditorClassIdentifier: 
+  _entries:
+  - <KeyCode>k__BackingField: A
+    <MorseCode>k__BackingField: .-
+  - <KeyCode>k__BackingField: B
+    <MorseCode>k__BackingField: -...
+  - <KeyCode>k__BackingField: C
+    <MorseCode>k__BackingField: -.-.
+  - <KeyCode>k__BackingField: D
+    <MorseCode>k__BackingField: -..
+  - <KeyCode>k__BackingField: E
+    <MorseCode>k__BackingField: .
+  - <KeyCode>k__BackingField: F
+    <MorseCode>k__BackingField: ..-.
+  - <KeyCode>k__BackingField: G
+    <MorseCode>k__BackingField: --.
+  - <KeyCode>k__BackingField: H
+    <MorseCode>k__BackingField: ....
+  - <KeyCode>k__BackingField: I
+    <MorseCode>k__BackingField: ..
+  - <KeyCode>k__BackingField: J
+    <MorseCode>k__BackingField: .---
+  - <KeyCode>k__BackingField: K
+    <MorseCode>k__BackingField: -.-
+  - <KeyCode>k__BackingField: L
+    <MorseCode>k__BackingField: .-..
+  - <KeyCode>k__BackingField: M
+    <MorseCode>k__BackingField: --
+  - <KeyCode>k__BackingField: N
+    <MorseCode>k__BackingField: -.
+  - <KeyCode>k__BackingField: O
+    <MorseCode>k__BackingField: ---
+  - <KeyCode>k__BackingField: P
+    <MorseCode>k__BackingField: .--.
+  - <KeyCode>k__BackingField: Q
+    <MorseCode>k__BackingField: --.-
+  - <KeyCode>k__BackingField: R
+    <MorseCode>k__BackingField: .-.
+  - <KeyCode>k__BackingField: S
+    <MorseCode>k__BackingField: ...
+  - <KeyCode>k__BackingField: T
+    <MorseCode>k__BackingField: '-'
+  - <KeyCode>k__BackingField: U
+    <MorseCode>k__BackingField: ..-
+  - <KeyCode>k__BackingField: V
+    <MorseCode>k__BackingField: ...-
+  - <KeyCode>k__BackingField: W
+    <MorseCode>k__BackingField: .--
+  - <KeyCode>k__BackingField: X
+    <MorseCode>k__BackingField: -..-
+  - <KeyCode>k__BackingField: Y
+    <MorseCode>k__BackingField: -.--
+  - <KeyCode>k__BackingField: Z
+    <MorseCode>k__BackingField: --..
+  - <KeyCode>k__BackingField: 1
+    <MorseCode>k__BackingField: .----
+  - <KeyCode>k__BackingField: 2
+    <MorseCode>k__BackingField: ..---
+  - <KeyCode>k__BackingField: 3
+    <MorseCode>k__BackingField: ...--
+  - <KeyCode>k__BackingField: 4
+    <MorseCode>k__BackingField: ....-
+  - <KeyCode>k__BackingField: 5
+    <MorseCode>k__BackingField: .....
+  - <KeyCode>k__BackingField: 6
+    <MorseCode>k__BackingField: -....
+  - <KeyCode>k__BackingField: 7
+    <MorseCode>k__BackingField: --...
+  - <KeyCode>k__BackingField: 8
+    <MorseCode>k__BackingField: ---..
+  - <KeyCode>k__BackingField: 9
+    <MorseCode>k__BackingField: ----.
+  - <KeyCode>k__BackingField: 0
+    <MorseCode>k__BackingField: -----
+  - <KeyCode>k__BackingField: SOS
+    <MorseCode>k__BackingField: ...---...
