@@ -79,8 +79,13 @@ namespace WallDefense
               {
                 pauseLength *= _dahDitLength;
               }
+              if (j != currentCharacterCode.Length)
+              {
+                AudioManager.PlayMorseWave(pauseLength);
+              }
               await YarnTask.Delay(TimeSpan.FromMilliseconds(pauseLength), token.HurryUpToken).SuppressCancellationThrow();
             }
+            AudioManager.PlaySound("typewriter");
           }
           else
           {
