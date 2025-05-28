@@ -1743,7 +1743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707023097}
-  - component: {fileID: 707023096}
+  - component: {fileID: 707023098}
   m_Layer: 0
   m_Name: Save Manager
   m_TagString: Untagged
@@ -1751,20 +1751,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &707023096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707023095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edb11103a35514429fa10d701745325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallManager: {fileID: 394246723}
-  dayNightManager: {fileID: 1290005893}
 --- !u!4 &707023097
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,6 +1766,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707023098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707023095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edb11103a35514429fa10d701745325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallManager: {fileID: 394246723}
+  dayNightManager: {fileID: 1290005893}
+  saveData:
+    maria:
+      ownerSettlement: 0
+      top:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      middle:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      bottom:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+    sina:
+      ownerSettlement: 0
+      top:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      middle:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      bottom:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+    rose:
+      ownerSettlement: 0
+      top:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      middle:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+      bottom:
+        wallIndex: 0
+        health: 0
+        damageParameters: {fileID: 0}
+        currentDefenseType: 0
+    dayNightData:
+      currentDay: 0
+      currentHour: 0
 --- !u!1 &773466728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2133,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707023096}
+      - m_Target: {fileID: 707023098}
         m_TargetAssemblyTypeName: WallDefense.SaveManager, Assembly-CSharp
         m_MethodName: Save
         m_Mode: 1
@@ -4858,7 +4913,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707023096}
+      - m_Target: {fileID: 707023098}
         m_TargetAssemblyTypeName: WallDefense.SaveManager, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
