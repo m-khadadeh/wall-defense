@@ -17,5 +17,5 @@ MonoBehaviour:
   parametersMain: {fileID: 11400000, guid: 907ec5a53d239dd44bdffc5a2684671d, type: 2}
   parametersSecondary: {fileID: 11400000, guid: 38ba1bce6d14a6e4cb17d8f5b7822131, type: 2}
   damageTargetMain: 2
-  damageTargetSecondary: 2
+  damageTargetSecondary: 3
   targetWall: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}

@@ -17,7 +17,25 @@ namespace WallDefense
         public int dayStart = 6;
         public int nextTaskCompletionHour = 0;
         public UnityEvent onBeforeHour, onAfterHour, onNewDay, onNightHour;
+        public bool triggerHourAdvance = false, advanceToTaskComplete = false;
 
+        void Start()
+        {
+            AdvanceHour();
+        }
+        void Update()
+        {
+            if (triggerHourAdvance)
+            {
+                AdvanceHour();
+                triggerHourAdvance = false;
+            }
+            if (advanceToTaskComplete)
+            {
+                AdvanceToTaskComplete();
+                advanceToTaskComplete = false;
+            }
+        }
         public void AdvanceHour()
         {
             onBeforeHour.Invoke();

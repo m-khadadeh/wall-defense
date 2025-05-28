@@ -4,7 +4,7 @@ namespace WallDefense
 {
     public enum WallSegmentName
     {
-        top, middle, bottom
+        top, middle, bottom, none
     }
     [CreateAssetMenu(fileName = "Ghoul", menuName = "Scriptable Objects/Ghoul")]
     public class Ghoul : ScriptableObject
