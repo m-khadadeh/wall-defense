@@ -21,7 +21,7 @@ namespace WallDefense
         public Wall targetWallDefense;
         public WallSegmentName targetSegementDefense;
         public Ghoul[] ghouls;
-        Wall[] walls = new Wall[3];
+        public Wall[] walls = new Wall[3];
         Ghoul activeGhoul;
         Clue clueMain, clueSecondary;
         bool clueMainFound, clueSecondaryFound;
@@ -165,4 +165,6 @@ namespace WallDefense
             }
         }
     }
+
 }
+

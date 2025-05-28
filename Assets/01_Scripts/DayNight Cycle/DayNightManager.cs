@@ -58,5 +58,10 @@ namespace WallDefense
                 AdvanceHour();
             }
         }
+        public void LoadData(DayNightData dayNightData)
+        {
+            currentDay = dayNightData.currentDay;
+            currentHour = dayNightData.currentHour;
+        }
     }
 }

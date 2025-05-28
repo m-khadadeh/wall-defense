@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: w_Maria
   m_EditorClassIdentifier: 
   ownerSettlement: 0
-  damageReductionAmount: 0.25
   top:
     wallIndex: 2
     health: 100
@@ -29,3 +28,4 @@ MonoBehaviour:
     health: 200
     damageParameters: {fileID: 0}
     currentDefenseType: 3
+  isFallen: 0

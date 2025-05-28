@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: w_Sina
   m_EditorClassIdentifier: 
   ownerSettlement: 2
-  damageReductionAmount: 0.25
   top:
     wallIndex: 2
     health: 100
+    damageParameters: {fileID: 0}
     currentDefenseType: 3
-    _damageReductionAmount: 0.25
   middle:
     wallIndex: 1
     health: 150
+    damageParameters: {fileID: 0}
     currentDefenseType: 3
-    _damageReductionAmount: 0.25
   bottom:
     wallIndex: 0
     health: 200
+    damageParameters: {fileID: 0}
     currentDefenseType: 3
-    _damageReductionAmount: 0.25
+  isFallen: 0

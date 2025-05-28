@@ -68,6 +68,14 @@ namespace WallDefense
                 top.Collapse();
             }
         }
+        public void LoadWallData(WallData wallData)
+        {
+            ownerSettlement = wallData.ownerSettlement;
+            top = wallData.top;
+            middle = wallData.middle;
+            bottom = wallData.bottom;
+
+        }
     }
     [System.Serializable]
     public struct WallSegment
