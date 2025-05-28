@@ -9,10 +9,12 @@ namespace WallDefense
     public class Wall : ScriptableObject
     {
         public int ownerSettlement;
-        public float damageReductionAmount;
         public WallSegment top;
         public WallSegment middle;
         public WallSegment bottom;
+        /// <summary>
+        /// Set Wall health and defense parameters to defaults
+        /// </summary>
         public void InitializeWalls()
         {
             bottom = new()
