@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace WallDefense
 {
     public class DayNightManager : MonoBehaviour
     {
-        [SerializeField]
-        int currentDay, currentHour;
+        public int currentDay, currentHour;
         /// <summary>
         /// Start of attack window
         /// </summary>
@@ -15,29 +16,23 @@ namespace WallDefense
         /// </summary>
         public int dayStart = 6;
         public int nextTaskCompletionHour = 0;
+        public UnityEvent onBeforeHour, onAfterHour, onNewDay, onNightHour;
 
         public void AdvanceHour()
         {
-            OnBeforeHour();
+            onBeforeHour.Invoke();
             currentHour = (currentHour + 1) % 24;
-            if (currentHour == 0)
+            if (currentHour == dayStart)
             {
-                OnNewDay();
+                onNewDay.Invoke();
             }
-            OnAfterHour();
+            if (currentHour >= nightStart || currentHour < dayStart)
+            {
+                onNightHour.Invoke();
+            }
+            onAfterHour.Invoke();
         }
-        public void OnBeforeHour()
-        {
 
-        }
-        public void OnAfterHour()
-        {
-
-        }
-        public void OnNewDay()
-        {
-
-        }
         public void AdvanceToTaskComplete()
         {
             while (currentHour != nextTaskCompletionHour)

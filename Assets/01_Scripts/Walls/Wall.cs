@@ -12,11 +12,13 @@ namespace WallDefense
         public WallSegment top;
         public WallSegment middle;
         public WallSegment bottom;
+        public bool isFallen;
         /// <summary>
         /// Set Wall health and defense parameters to defaults
         /// </summary>
         public void InitializeWalls()
         {
+            isFallen = false;
             bottom = new()
             {
                 wallIndex = 0,
@@ -65,8 +67,6 @@ namespace WallDefense
             {
                 top.Collapse();
             }
-
-            //TODO fail state
         }
     }
     [System.Serializable]
