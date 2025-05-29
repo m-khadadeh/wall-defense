@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
   m_Name: Making Goo
   m_EditorClassIdentifier: 
+  <TaskName>k__BackingField: Making goo
+  <TaskDescription>k__BackingField: Send off 2 crafters and up to 6 food
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
@@ -27,6 +29,7 @@ MonoBehaviour:
       <Amount>k__BackingField: 2
     - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
       <Amount>k__BackingField: 4
+    <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: 20f5392932beb0e86af512fa77c0ac99, type: 2}
     <ItemAmounts>k__BackingField:
@@ -34,6 +37,7 @@ MonoBehaviour:
       <Amount>k__BackingField: 2
     - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
       <Amount>k__BackingField: 5
+    <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: e421eeeb1efe0921c95c3d7ca1799502, type: 2}
     <ItemAmounts>k__BackingField:
@@ -41,6 +45,9 @@ MonoBehaviour:
       <Amount>k__BackingField: 2
     - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
       <Amount>k__BackingField: 6
+    <AdditionalChoice>k__BackingField: 
   _timeToCompletePossibilities:
   - <Hours>k__BackingField: 3
     <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _additionalChoices: []

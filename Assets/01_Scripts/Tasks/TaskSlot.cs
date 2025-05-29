@@ -40,7 +40,7 @@ namespace WallDefense
       if (_autoFillButton.gameObject.activeSelf)
       {
         _autoFillButton.interactable = (!_requirement.IsFulfilled &&
-          _requirement.Count + _inventoryData.CurrentItems[_requirement.RequirementType] >= _requirement.MinimumMaximumAmount.x); 
+          _requirement.Count + _inventoryData.CurrentItems[_requirement.RequirementType] >= _requirement.MinimumMaximumAmount.x);
       }
     }
 
@@ -56,6 +56,20 @@ namespace WallDefense
         Droppable.SetIn(draggable);
       }
       CheckAutoFillAvailable();
+    }
+
+    public void LockSlot(bool isLocked)
+    {
+      if (isLocked)
+      {
+        Droppable.LockDraggables(isLocked);
+        Droppable.enabled = !isLocked;
+      }
+      else
+      {
+        Droppable.enabled = !isLocked;
+        Droppable.LockDraggables(isLocked);
+      }
     }
   }
 }

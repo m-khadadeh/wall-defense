@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace WallDefense
 {
@@ -12,15 +13,19 @@ namespace WallDefense
     {
       Resource, Information, WallDefenseStateChange, WallHPChange
     }
+    [field: SerializeField] public string TaskName { get; private set; }
+    [field: SerializeField] public string TaskDescription { get; private set; }
     [SerializeField] private List<ItemRequirement> _requirements;
     [SerializeField] private List<YieldData> _yieldPossibilities;
     [SerializeField] private List<TimeToCompleteData> _timeToCompletePossibilities;
+    [SerializeField] private List<TMPro.TMP_Dropdown.OptionData> _additionalChoices;
 
     [System.Serializable]
     public class YieldData
     {
       [field: SerializeField] public TaskYield[] Yield { get; private set; }
       [field: SerializeField] public InventoryData.ItemAmountEntry[] ItemAmounts { get; private set; }
+      [field: SerializeField] public string AdditionalChoice { get; private set; }
     }
 
     [System.Serializable]
@@ -28,6 +33,7 @@ namespace WallDefense
     {
       [field: SerializeField] public int Hours { get; private set; }
       [field: SerializeField] public InventoryData.ItemAmountEntry[] ItemAmounts { get; private set; }
+      [field: SerializeField] public string AdditionalChoice { get; private set; }
     }
 
     public void Initialize()
@@ -38,9 +44,9 @@ namespace WallDefense
       }
     }
 
-    public void CompleteTask(ColonyData data)
+    public void CompleteTask(ColonyData data, string choice)
     {
-      GetYield(data);
+      GetYield(data, choice);
       ConsumeRequirements(data);
     }
 
@@ -59,31 +65,31 @@ namespace WallDefense
       }
     }
 
-    private void GetYield(ColonyData data)
+    private void GetYield(ColonyData data, string choice)
     {
       if (_yieldPossibilities.Count == 1)
       {
         // Skip the possibility list
         foreach (var yield in _yieldPossibilities[0].Yield)
         {
-          yield.GetYield(data);
+          yield.GetYield(data, choice);
         }
         return;
       }
       foreach (var entry in _yieldPossibilities)
       {
-        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts))
+        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts) && entry.AdditionalChoice == "")
         {
           foreach (var yield in entry.Yield)
           {
-            yield.GetYield(data);
+            yield.GetYield(data, choice);
           }
           return;
         }
       }
     }
 
-    public int GetHours()
+    public int GetHours(string choice)
     {
       if (_timeToCompletePossibilities.Count == 1)
       {
@@ -92,7 +98,7 @@ namespace WallDefense
       }
       foreach (var entry in _timeToCompletePossibilities)
       {
-        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts))
+        if (CheckItemsAgainstPossibilityList(entry.ItemAmounts) && entry.AdditionalChoice == "")
         {
           return entry.Hours;
         }
@@ -114,12 +120,21 @@ namespace WallDefense
       return true;
     }
 
-    public void InitializeUI(List<TaskSlot> itemSlots, Action checkAction)
+    public void InitializeUI(List<TaskSlot> itemSlots, TMPro.TMP_Dropdown dropdown, Action checkAction)
     {
-      foreach (var slot in itemSlots)
+      if (_additionalChoices.Count > 0)
       {
-        slot.gameObject.SetActive(false);
+        dropdown.gameObject.SetActive(true);
+        dropdown.options = _additionalChoices;
       }
+      else
+      {
+        dropdown.gameObject.SetActive(false);
+      }
+      foreach (var slot in itemSlots)
+        {
+          slot.gameObject.SetActive(false);
+        }
       for (int i = 0; i < _requirements.Count; i++)
       {
         var requirement = _requirements[i];

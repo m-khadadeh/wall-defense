@@ -4,6 +4,6 @@ namespace WallDefense
 {
   public abstract class TaskYield : ScriptableObject
   {
-    public abstract void GetYield(ColonyData colony);
+    public abstract void GetYield(ColonyData colony, string choice);
   }
 }

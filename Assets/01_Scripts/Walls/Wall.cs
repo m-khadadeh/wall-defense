@@ -1,3 +1,4 @@
+using System.IO;
 using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
@@ -54,6 +55,21 @@ namespace WallDefense
                 default:
                     break;
 
+            }
+        }
+
+        public WallSegment GetSegmentFromName(WallSegmentName segmentName)
+        {
+            switch (segmentName)
+            {
+                case WallSegmentName.bottom:
+                    return bottom;
+                case WallSegmentName.middle:
+                    return middle;
+                case WallSegmentName.top:
+                    return top;
+                default:
+                    throw new InvalidDataException("segment nonexistent");
             }
         }
 

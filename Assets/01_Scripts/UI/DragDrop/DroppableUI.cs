@@ -25,6 +25,14 @@ namespace WallDefense
       }
     }
 
+    public virtual void LockDraggables(bool isLocked)
+    {
+      foreach (var draggable in GetComponentsInChildren<DraggableUI>())
+      {
+        draggable.enabled = !isLocked;
+      }
+    }
+
     /// <summary>
     /// <paramref name="addSubscriber"/> is triggered when SetIn() is called, when a draggable is dropped in this droppable.
     /// <paramref name="removeSubscriber"/> is triggered when UnsetIn() is called, when a draggable is removed from this droppable.
@@ -41,9 +49,9 @@ namespace WallDefense
         InitializeSubscriptions();
       }
       if (!_onAddSubscriptions.Contains(addSubscriber))
-        {
-          _onAddSubscriptions.Add(addSubscriber);
-        }
+      {
+        _onAddSubscriptions.Add(addSubscriber);
+      }
       if (!_onRemoveSubscriptions.Contains(removeSubscriber))
       {
         _onRemoveSubscriptions.Add(removeSubscriber);

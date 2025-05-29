@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
+  m_Name: CoveringGoo
+  m_EditorClassIdentifier: 
+  <TaskName>k__BackingField: Place Goo On Wall
+  <TaskDescription>k__BackingField: Place goo on wall segment.
+  _requirements:
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}
+    <IsConsumed>k__BackingField: 0
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 1, y: 2}
+    <IsConsumed>k__BackingField: 0
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: a306a85bee7357d9c904743b7b542f92, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}
+    <IsConsumed>k__BackingField: 0
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 3, y: 3}
+    <IsConsumed>k__BackingField: 1
+  _yieldPossibilities:
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: dd45757427a89756fadbcb9418f94eab, type: 2}
+    <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _timeToCompletePossibilities:
+  - <Hours>k__BackingField: 3
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
+      <Amount>k__BackingField: 1
+    - <Type>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
+      <Amount>k__BackingField: 1
+    - <Type>k__BackingField: {fileID: 11400000, guid: a306a85bee7357d9c904743b7b542f92, type: 2}
+      <Amount>k__BackingField: 1
+    - <Type>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+      <Amount>k__BackingField: 3
+    <AdditionalChoice>k__BackingField: 
+  - <Hours>k__BackingField: 2
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
+      <Amount>k__BackingField: 1
+    - <Type>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
+      <Amount>k__BackingField: 2
+    - <Type>k__BackingField: {fileID: 11400000, guid: a306a85bee7357d9c904743b7b542f92, type: 2}
+      <Amount>k__BackingField: 1
+    - <Type>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+      <Amount>k__BackingField: 3
+    <AdditionalChoice>k__BackingField: 
+  _additionalChoices:
+  - m_Text: Bottom
+    m_Image: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_Text: Middle
+    m_Image: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_Text: Top
+    m_Image: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}

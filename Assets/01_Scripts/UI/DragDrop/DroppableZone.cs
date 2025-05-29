@@ -10,7 +10,7 @@ namespace WallDefense
     public override void OnDrop(PointerEventData eventData)
     {
       DraggableUI draggable = eventData.pointerDrag.GetComponent<DraggableUI>();
-      if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+      if (draggable != null && (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata)))
       {
         draggable.OnDroppingInto(this);
       }

@@ -7,25 +7,14 @@ namespace WallDefense
   public class UIManager : MonoBehaviour
   {
     [SerializeField] private InventoryUI _inventoryUI;
-    [SerializeField] private List<TaskUI> _taskUIs;
+    [SerializeField] private TaskManager _taskManager;
 
     private void Awake()
     {
-      List<Action> addCallbacks = new List<Action>() { CheckAllTaskAutoButtons };
-      List<Action> removeCallbacks = new List<Action>() { CheckAllTaskAutoButtons };
+      List<Action> addCallbacks = new List<Action>() { _taskManager.CheckAllTaskAutoButtons };
+      List<Action> removeCallbacks = new List<Action>() { _taskManager.CheckAllTaskAutoButtons };
       _inventoryUI.Initialize(addCallbacks, removeCallbacks);
-      foreach (var task in _taskUIs)
-      {
-        task.Initialize();
-      }
-    }
-
-    private void CheckAllTaskAutoButtons()
-    {
-      foreach (var task in _taskUIs)
-      {
-        task.CheckAutoFillButtons();
-      }
+      _taskManager.Initialize();
     }
   }
 }

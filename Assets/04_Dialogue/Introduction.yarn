@@ -1,8 +1,8 @@
 ﻿title: Introduction
 position: -350,-210
 ---
-Player: Hello there!
-NPC: Oh, hello! How can I help you today?
+MORSE_Player: Hello there!
+MORSE_NPC: Oh, hello! How can I help you today?
 -> I need information.
   NPC: What would you like to know?
 -> I'm just browsing.

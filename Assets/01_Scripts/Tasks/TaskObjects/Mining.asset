@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
   m_Name: Mining
   m_EditorClassIdentifier: 
+  <TaskName>k__BackingField: Mining
+  <TaskDescription>k__BackingField: Send off an overseer and up to 4 hands
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}
@@ -28,6 +30,7 @@ MonoBehaviour:
       <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 2
+    <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: 613ae326c80b3a8bab9f66de31f556ae, type: 2}
     - {fileID: 11400000, guid: d24c43d41002b51ad8b64de805650e5f, type: 2}
@@ -36,6 +39,7 @@ MonoBehaviour:
       <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 3
+    <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: c40627829f60d377293c4639cffc579e, type: 2}
     - {fileID: 11400000, guid: 951efde419ba72de480412104df5f5ad, type: 2}
@@ -44,6 +48,9 @@ MonoBehaviour:
       <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 4
+    <AdditionalChoice>k__BackingField: 
   _timeToCompletePossibilities:
   - <Hours>k__BackingField: 5
     <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _additionalChoices: []

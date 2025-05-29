@@ -10,14 +10,22 @@ namespace WallDefense
     [SerializeField] private List<TaskSlot> _itemSlots;
     [SerializeField] private TMPro.TextMeshProUGUI _textMesh;
     [SerializeField] private Button _runButton;
+    [SerializeField] private TMPro.TextMeshProUGUI _runButtonText;
     [SerializeField] private ColonyData _colonyData;
+    [SerializeField] private TMPro.TMP_Dropdown _additionalChoice;
+    private int _hoursRemaining;
+    private string _taskChoice;
+    public bool TaskRunning => _hoursRemaining > 0;
+    public int HoursRemaining => _hoursRemaining;
 
     public void Initialize()
     {
       _task.Initialize();
-      _textMesh.text = _task.name;
-      _task.InitializeUI(_itemSlots, CheckFulfilled);
+      _textMesh.text = _task.TaskName;
+      _task.InitializeUI(_itemSlots, _additionalChoice, CheckFulfilled);
       CheckFulfilled();
+      _hoursRemaining = -1;
+      SetButtons();
     }
 
     public void CheckFulfilled()
@@ -29,17 +37,57 @@ namespace WallDefense
     {
       foreach (var slot in _itemSlots)
       {
-        if(slot.gameObject.activeSelf)
+        if (slot.gameObject.activeSelf)
           slot.CheckAutoFillAvailable();
+      }
+    }
+
+    public void OnIncrementHour()
+    {
+      if (TaskRunning)
+      {
+        _hoursRemaining--;
+        if (_hoursRemaining == 0)
+        {
+          // Task ends
+          _task.CompleteTask(_colonyData, _taskChoice);
+          CheckFulfilled();
+          _hoursRemaining = -1;
+          LockResources(false);
+        }
+        SetButtons();
+      }
+    }
+
+    private void SetButtons()
+    {
+      _additionalChoice.interactable = !TaskRunning;
+      if (TaskRunning)
+      {
+        _runButtonText.text = $"{_hoursRemaining} Hours";
+      }
+      else
+      {
+        _runButtonText.text = "Lock In";
       }
     }
 
     public void RunTask()
     {
       // TODO: Implement with Day/Night cycle system
-      Debug.Log($"{_task.GetHours()} Hours.");
-      _task.CompleteTask(_colonyData);
-      CheckFulfilled();
+      _taskChoice = _additionalChoice.options[_additionalChoice.value].text;
+      _hoursRemaining = _task.GetHours(_taskChoice);
+      _runButton.interactable = false;
+      LockResources(true);
+      SetButtons();
+    }
+
+    private void LockResources(bool isLocked)
+    {
+      foreach (var slot in _itemSlots)
+      {
+        slot.LockSlot(isLocked);
+      }
     }
   }
 }

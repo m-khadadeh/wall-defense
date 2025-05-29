@@ -25,7 +25,7 @@ namespace WallDefense
 
     public void CheckAndDrop(DraggableUI draggable)
     {
-      if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+      if (draggable != null && (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata)))
       {
         if (_innerStack.Count > 0)
         {

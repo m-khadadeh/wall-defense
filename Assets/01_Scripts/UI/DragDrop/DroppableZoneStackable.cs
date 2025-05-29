@@ -26,7 +26,7 @@ namespace WallDefense
       if (transform.childCount < _maxAmount)
       {
         DraggableUI draggable = eventData.pointerDrag.GetComponent<DraggableUI>();
-        if (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata))
+        if (draggable != null && (MetadataValidator == null || MetadataValidator.Validate(draggable.Metadata)))
         {
           if (!_innerQueues.ContainsKey(draggable.Metadata.Type))
           {

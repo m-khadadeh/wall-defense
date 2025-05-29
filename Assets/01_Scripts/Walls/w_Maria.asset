@@ -15,7 +15,7 @@ MonoBehaviour:
   ownerSettlement: 0
   top:
     wallIndex: 2
-    health: 100
+    health: 0
     damageParameters: {fileID: 0}
     currentDefenseType: 3
   middle:
