@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace WallDefense
 {
-  [CreateAssetMenu(fileName = "Task", menuName = "Scriptable Objects/Task")]
+  [CreateAssetMenu(fileName = "Task", menuName = "Scriptable Objects/Tasks/Task")]
   public class Task : ScriptableObject
   {
     public enum YieldType

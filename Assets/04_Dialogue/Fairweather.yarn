@@ -11,7 +11,7 @@ MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
 title: Fairweather_PlayerInitiates
 position: -372,419
 ---
-MORSE_Player: WS1 CALLING STATION {$fairweather_station}
+MORSE_{$player_station_name}: WS1 CALLING STATION {$fairweather_station}
 MORSE_{$fairweather_station}: RECEIVED K
 <<jump Fairweather_PlayerMainMenu>>
 ===
@@ -19,7 +19,7 @@ MORSE_{$fairweather_station}: RECEIVED K
 title: Fairweather_PlayerMainMenu
 position: -79,419
 ---
-Player: What should I do?
+{$player_name}: What should I do?
 -> Introduce myself <<once if !$fairweather_player_introduced>>
   <<detour Fairweather_PlayerIntroduction>>
   MORSE_{$fairweather_station}: ANYTHING ELSE K
@@ -33,7 +33,7 @@ Player: What should I do?
 title: Fairweather_PlayerIntroduction
 position: 246,418
 ---
-MORSE_Player: THIS IS STATION WS1 AT WALL {$player_wall_name}
+MORSE_{$player_station_name}: THIS IS STATION WS1 AT WALL {$player_wall_name}
 => MORSE_{$fairweather_station}: WELL MET
 => MORSE_{$fairweather_station}: CHARMED
 <<set $fairweather_player_introduced = true>>

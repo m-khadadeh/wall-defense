@@ -16,5 +16,24 @@ namespace WallDefense
       _inventoryUI.Initialize(addCallbacks, removeCallbacks);
       _taskManager.Initialize();
     }
+
+    public void TestDialogueBox()
+    {
+      DialogBox.CreateDialogueBox(
+        transform,
+        "Hey, test out this dialogue box!",
+        new string[] { "Sure!", "No :["},
+        new DialogBox.ButtonEventHandler[] {
+          () =>
+          {
+            Debug.Log("Thanks!");
+          },
+          () =>
+          {
+            Debug.Log("Fuck you!");
+          }
+        }
+      );
+    }
   }
 }
