@@ -1,0 +1,37 @@
+title: Capitol_Introduction
+position: 104,441
+---
+<<detour Variable_Declaration>>
+<<set_variable_names>>
+Player: Oh. The Capitol wants to talk. Let's see what this is about.
+MORSE_Capitol: CS WS1 K
+Player: Been a while since I've gotten such a curt message. Better keep the reference sheet handy.
+Player: 'Calling station WS1.' That's me.
+MORSE_Player: COME IN
+MORSE_Capitol: INITIAL WEEKLY SHIPMENT
+MORSE_Capitol: WX BAD EARLY 
+Player: The ghouls?
+MORSE_Player: HOW SOON
+MORSE_Capitol: TONIGHT
+MORSE_Capitol: NIGHTLY
+Player: That's too soon. I thought we had a week!
+MORSE_Player: AT YOURS OR OURS?
+MORSE_Capitol: EVERYWHERE
+MORSE_Capitol: CNT HELP MORE
+Player: ...
+MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
+Player: They cut the line.
+<<capitol_initial_shipment>>
+Player: Well, the shipment is here.
+Player: ...
+Player: Tonight is way too soon. We're not ready.
+Player: We better get to work.
+===
+
+title: Variable_Declaration
+---
+<<declare $fairweather_player_introduced = false>>
+<<declare $fairweather_station = "">>
+<<declare $player_wall_name = "">>
+<<return>>
+===

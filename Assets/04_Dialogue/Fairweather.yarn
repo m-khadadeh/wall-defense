@@ -1,0 +1,41 @@
+title: Fairweather_NPCInitiates
+position: -83,235
+---
+MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
+<<once if !$fairweather_player_introduced>>
+  <<detour Fairweather_PlayerIntroduction>>
+<<endonce>>
+===
+
+
+title: Fairweather_PlayerInitiates
+position: -372,419
+---
+MORSE_Player: WS1 CALLING STATION {$fairweather_station}
+MORSE_{$fairweather_station}: RECEIVED K
+<<jump Fairweather_PlayerMainMenu>>
+===
+
+title: Fairweather_PlayerMainMenu
+position: -79,419
+---
+Player: What should I do?
+-> Introduce myself <<once if !$fairweather_player_introduced>>
+  <<detour Fairweather_PlayerIntroduction>>
+  MORSE_{$fairweather_station}: ANYTHING ELSE K
+-> Talk
+-> Ask for assistance
+-> End contact
+<<jump Fairweather_PlayerMainMenu>>
+===
+
+
+title: Fairweather_PlayerIntroduction
+position: 246,418
+---
+MORSE_Player: THIS IS STATION WS1 AT WALL {$player_wall_name}
+=> MORSE_{$fairweather_station}: WELL MET
+=> MORSE_{$fairweather_station}: CHARMED
+<<set $fairweather_player_introduced = true>>
+<<return>>
+===
