@@ -1,41 +1,175 @@
 title: Fairweather_NPCInitiates
-position: -83,235
+position: -690,947
 ---
+<<comms_start {$fairweather_station}>>
 MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
 <<once if !$fairweather_player_introduced>>
-  <<detour Fairweather_PlayerIntroduction>>
+  <<detour Fairweather_Player_Introduction>>
+<<else>>
+  MORSE_{$player_station_name}: COME IN {$fairweather_station}
 <<endonce>>
+<<return>>
 ===
 
 
 title: Fairweather_PlayerInitiates
-position: -372,419
+position: -684,701
 ---
 MORSE_{$player_station_name}: WS1 CALLING STATION {$fairweather_station}
-MORSE_{$fairweather_station}: RECEIVED K
-<<jump Fairweather_PlayerMainMenu>>
+<<comms_start {$fairweather_station}>>
+=> MORSE_{$fairweather_station}: RECEIVED K <<if !$fairweather_stress_distress>>
+=> MORSE_{$fairweather_station}: K <<if $fairweather_stress_distress>>
+  <<once>>
+  {$player_name}: Not even a "RECEIVED"?
+  <<else>>
+  {$player_name}: Must be a bad time.
+  <<endonce>>
+<<jump Fairweather_Player_MainMenu>>
 ===
 
-title: Fairweather_PlayerMainMenu
-position: -79,419
+title: Fairweather_Player_MainMenu
+position: -404,702
 ---
 {$player_name}: What should I do?
--> Introduce myself <<once if !$fairweather_player_introduced>>
-  <<detour Fairweather_PlayerIntroduction>>
+-> Introduce myself <<once if !$fairweather_player_introduced && !$fairweather_stress_distress>>
+  <<detour Fairweather_Player_Introduction>>
   MORSE_{$fairweather_station}: ANYTHING ELSE K
 -> Talk
+  <<jump Fairweather_Player_TalkMenu>>
 -> Ask for assistance
+  <<jump Fairweather_Player_AskForAssistance>>
 -> End contact
-<<jump Fairweather_PlayerMainMenu>>
+  MORSE_{$player_station_name}: THANKS
+  MORSE_{$player_station_name}: THAT IS ALL
+  <<if $fairweather_stress_distress>>
+    {$player_name}: ...
+    {$player_name}: Alright, I guess I'm cutting the comms.
+    <<comms_end>>
+  <<elseif $fairweather_stress_stressed>>
+    => MORSE_{$fairweather_station}: KEEP COMMS TO A MINIMUM SVP (RN) (SK) <<if $fairweather_relationship_bad>>
+      <<comms_end>>
+      {$player_name}: ...
+      <<if !$fairweather_explained_svp>>
+        <<once>>
+          {$player_name}: I don't even know what SVP means...
+          <<if !$fairweather_used_svp>>
+            <<set $fairweather_used_svp = true>>
+          <<endif>>
+        <<else>>
+          {$player_name}: There's that SVP again...
+        <<endonce>>
+      <<else>>
+        {$player_name}: Why can't you just use "PSE"?
+      <<endif>>
+    => MORSE_{$fairweather_station}: 73 (RN) (SK) <<if $fairweather_relationship_neutral>>
+      <<comms_end>>
+    => MORSE_{$fairweather_station}: HPE CUAGN (RN) (SK) <<if $fairweather_relationship_friendly>>
+      <<comms_end>>
+    => MORSE_{$fairweather_station}: TALK SOON (RN) (SK) <<if $fairweather_relationship_close>>
+      <<comms_end>>
+  <<else>>
+    => MORSE_{$fairweather_station}: FB (RN) (SK) <<if $fairweather_relationship_bad>>
+    => MORSE_{$fairweather_station}: GOOD LUCK TONIGHT (RN) (SK) <<if $fairweather_relationship_neutral>>
+    => MORSE_{$fairweather_station}: MY PLEASURE (RN) (SK) <<if $fairweather_relationship_friendly>>
+    => MORSE_{$fairweather_station}: I AWAIT OUR NEXT CONVERSATION (RN) (SK) <<if $fairweather_relationship_close>>
+    <<comms_end>>
+  <<endif>>
 ===
 
 
-title: Fairweather_PlayerIntroduction
-position: 246,418
+title: Fairweather_Player_Introduction
+position: -402,945
 ---
 MORSE_{$player_station_name}: THIS IS STATION WS1 AT WALL {$player_wall_name}
-=> MORSE_{$fairweather_station}: WELL MET
-=> MORSE_{$fairweather_station}: CHARMED
+=> MORSE_{$fairweather_station}: WELL MET <<if !$fairweather_stress_calm>>
+=> MORSE_{$fairweather_station}: CHARMED  <<if $fairweather_stress_calm>>
 <<set $fairweather_player_introduced = true>>
 <<return>>
+===
+
+
+title: Fairweather_Player_AskForAssistance
+position: -69,507
+---
+MORSE_{$player_station_name}: WE NEED ASSISTANCE
+<<if $fairweather_stress_calm>>
+  => MORSE_{$fairweather_station}: MAYBE TRY SOMEONE ELSE = <<if $fairweather_relationship_bad>>
+    MORSE_{$fairweather_station}: FB DR {$player_station_name} (RN) (SK)
+    <<comms_end>>
+    {$player_name}: Well, that was unnecessary.
+    <<stop>>
+  => MORSE_{$fairweather_station}: SURE <<if $fairweather_relationship_neutral>>
+  => MORSE_{$fairweather_station}: OF COURSE <<if $fairweather_relationship_friendly>>
+  => MORSE_{$fairweather_station}: ANYTHING YOU NEED <<if $fairweather_relationship_close>>
+  <<jump Fairweather_Player_AssistanceDiscussion>>
+<<elseif $fairweather_stress_stressed>>
+  => MORSE_{$fairweather_station}: NIL <<if $fairweather_relationship_bad>>
+    {$player_name}: Must be pissed...
+    MORSE_{$fairweather_station}: (RN) (SK)
+    <<comms_end>>
+    {$player_name}: Yeah. They're pissed
+    <<stop>>
+  => MORSE_{$fairweather_station}: UNFORTUNATELY THERES NOTHING I CAN DO <<if !$fairweather_relationship_bad>>
+    MORSE_{$fairweather_station}: BAD WX K
+  <<if $fairweather_relationship_neutral>>
+    {$player_name}: Must be dealing with a lot...
+    MORSE_{$player_station_name}: OK
+  <<elseif $fairweather_relationship_friendly>>
+    {$player_name}: Like I don't have to deal with "bad weather" myself.
+    {$player_name}: I thought we had something good here.
+    {$player_name}: Should I push this?
+    -> It's too important
+      => MORSE_{$player_station_name}: SVP << if $fairweather_explained_svp>>
+        <<once>>
+          {$player_name}: ...
+          {$player_name}: No response? Seriously?
+        <<endonce>>
+      => MORSE_{$player_station_name}: PLEASE <<if !$fairweather_explained_svp>>
+    -> Drop it
+      MORSE_{$player_station_name}: OK NO WORRIES
+    MORSE_{$fairweather_station}: IM REALLY SORRY K
+  <<elseif $fairweather_relationship_close>>
+    {$player_name}: Seriously? After all we've been through?
+    MORSE_{$player_station_name}: REALLY? ABSOLUTELY NOTHING?
+    MORSE_{$fairweather_station}: IM REALLY SORRY K
+    {$player_name}: How necessary is their help right now? Do I call them out?
+    -> It's necessary. Time for a talk.
+      <<jump Fairweather_Player_Confrontation>>
+    -> I can do without. Let it slide.
+      MORSE_{$player_station_name}: OK
+  <<endif>>
+<<else>>
+  <<if $fairweather_relationship_close>>
+    MORSE_{$fairweather_station}: NIL K
+    {$player_name}: Huh? What kind of a response is that?
+    {$player_name}: What should I do?
+    -> Ask if they need something.
+    -> Confront them. We've been through too much for "NIL K."
+      <<jump Fairweather_Player_Confrontation>>
+    -> Let it go.
+      {$player_name}: Maybe they've just got too much on their plate.
+  <<else>>
+    MORSE_{$fairweather_station}: NIL (RN) (SK)
+    <<comms_end>>
+    {$player_name}: What!?
+    {$player_name}: They just cut the line!
+    <<stop>>
+  <<endif>>
+<<endif>>
+<<jump Fairweather_Player_MainMenu>>
+===
+title: Fairweather_Player_Confrontation
+position: 311,307
+---
+
+===
+title: Fairweather_Player_AssistanceDiscussion
+position: 319,499
+---
+
+===
+title: Fairweather_Player_TalkMenu
+position: -66,698
+---
+
 ===
