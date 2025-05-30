@@ -10,7 +10,7 @@ namespace WallDefense
         public DayNightManager dayNightManager;
         public SaveManager saveManager;
         [SerializeField] GameState currentState;
-        [SerializeField] UIView currentView;
+        [SerializeField] UIView currentView, previousNotebookView;
         public GameObject startView, mainView, gameOverView;
         public GameObject[] mainSubViews;
         public delegate void OnStartDelegate();
@@ -64,16 +64,37 @@ namespace WallDefense
         {
             currentState = GameState.gameOver;
             currentView = UIView.none;
+            previousNotebookView = UIView.none;
             startView.SetActive(false);
             mainView.SetActive(false);
             gameOverView.SetActive(true);
             OnGameOver?.Invoke();
         }
+        public void OpenNotebookView()
+        {
+            if (previousNotebookView == UIView.dialogue || previousNotebookView == UIView.info || previousNotebookView == UIView.management)
+            {
+                OpenSubView(previousNotebookView);
+            }
+            else
+            {
+                OpenSubView(UIView.management);
+            }
+        }
         public void OpenSubView(UIViewComponent viewComponent)
         {
+            UIView view = viewComponent.uiView;
+            OpenSubView(view);
+        }
+        public void OpenSubView(UIView view)
+        {
+            if (currentView == UIView.dialogue || currentView == UIView.info || currentView == UIView.management)
+            {
+                previousNotebookView = currentView;
+            }
             CloseSubViews();
-            currentView = viewComponent.uiView;
-            mainSubViews[(int)viewComponent.uiView].SetActive(true);
+            currentView = view;
+            mainSubViews[(int)view].SetActive(true);
         }
 
         void CloseSubViews()
