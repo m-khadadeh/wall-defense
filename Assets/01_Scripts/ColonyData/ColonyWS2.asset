@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd33452abbe1874495d1c85578c2a32, type: 3}
-  m_Name: Clue D
+  m_Script: {fileID: 11500000, guid: 0cf33e08a9df212ffba4771b3e476163, type: 3}
+  m_Name: ColonyWS2
   m_EditorClassIdentifier: 
-  clueType: 3
-  description: Shed skin
-  found: 1
-  dialogBoxInfo: You found shed skin
+  <Inventory>k__BackingField: {fileID: 11400000, guid: e85384ea8e3325f4a907c20cc3484142, type: 2}
+  <Wall>k__BackingField: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}

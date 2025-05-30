@@ -8,7 +8,7 @@ namespace WallDefense
   public class WallHealthYield : WallSegmentYield
   {
     [SerializeField] private int _healthAmount;
-    public override void GetYield(ColonyData colony, string choice)
+    public override void GetYield(ColonyData colony, string choice, List<ItemType> consumed)
     {
       InitializeDictionaryIfNot();
       colony.Wall.RepairWall(_dictionary[choice], _healthAmount);

@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd33452abbe1874495d1c85578c2a32, type: 3}
-  m_Name: Clue D
+  m_Script: {fileID: 11500000, guid: 225f7b2f0267e2a368e904dffdc8c163, type: 3}
+  m_Name: Gift_AfterTime_Return_0
   m_EditorClassIdentifier: 
-  clueType: 3
-  description: Shed skin
-  found: 1
-  dialogBoxInfo: You found shed skin
+  _yield: {fileID: 11400000, guid: cfc47605c45bc570881817af0139a375, type: 2}
+  _hoursToTickDown: 6

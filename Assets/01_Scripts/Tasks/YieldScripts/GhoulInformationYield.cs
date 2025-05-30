@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WallDefense
@@ -7,7 +8,7 @@ namespace WallDefense
   {
     [SerializeField] private GhoulSelector _selector;
 
-    public override void GetYield(ColonyData colony, string choice)
+    public override void GetYield(ColonyData colony, string choice, List<ItemType> consumed)
     {
       Clue clue = _selector.FindClue();
       DialogBox.CreateDialogueBox(

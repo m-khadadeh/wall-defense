@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
+  m_Name: DeliverResources
+  m_EditorClassIdentifier: 
+  <TaskName>k__BackingField: Deliver Resources To
+  <TaskDescription>k__BackingField: Send resources to another settlement
+  _requirements:
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
+    <IsConsumed>k__BackingField: 1
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: fbc4276ce48520291a5d2b4aaf11b6a7, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 1, y: 5}
+    <IsConsumed>k__BackingField: 1
+  _yieldPossibilities:
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: 0211e879379f937a48712f05ef404151, type: 2}
+    - {fileID: 11400000, guid: 98800f06676736944b11f372aa8e0736, type: 2}
+    <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _timeToCompletePossibilities:
+  - <Hours>k__BackingField: 0
+    <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _additionalChoices:
+  - m_Text: WS2
+    m_Image: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_Text: WS3
+    m_Image: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}

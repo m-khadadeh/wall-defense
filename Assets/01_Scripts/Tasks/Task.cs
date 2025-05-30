@@ -21,6 +21,8 @@ namespace WallDefense
     [SerializeField] private List<TimeToCompleteData> _timeToCompletePossibilities;
     [SerializeField] private List<TMPro.TMP_Dropdown.OptionData> _additionalChoices;
 
+    private List<ItemType> _consumedItems;
+
     [System.Serializable]
     public class YieldData
     {
@@ -47,17 +49,29 @@ namespace WallDefense
 
     public void CompleteTask(ColonyData data, string choice)
     {
-      GetYield(data, choice);
+      _consumedItems = new List<ItemType>();
+      foreach (var requirement in _requirements)
+      {
+        foreach (var item in requirement.CurrentItems)
+        {
+          if (requirement.IsConsumed)
+          {
+            _consumedItems.Add(item);
+          }
+        }
+      }
+      GetYield(data, choice, _consumedItems);
       ConsumeRequirements(data);
     }
 
     private void ConsumeRequirements(ColonyData data)
     {
+      _consumedItems = new List<ItemType>();
       foreach (var requirement in _requirements)
       {
-        if (!requirement.IsConsumed)
+        foreach (var item in requirement.CurrentItems)
         {
-          foreach (var item in requirement.CurrentItems)
+          if (!requirement.IsConsumed)
           {
             data.Inventory.AddItem(item, 1);
           }
@@ -66,14 +80,14 @@ namespace WallDefense
       }
     }
 
-    private void GetYield(ColonyData data, string choice)
+    private void GetYield(ColonyData data, string choice, List<ItemType> consumed)
     {
       if (_yieldPossibilities.Count == 1)
       {
         // Skip the possibility list
         foreach (var yield in _yieldPossibilities[0].Yield)
         {
-          yield.GetYield(data, choice);
+          yield.GetYield(data, choice, consumed);
         }
         return;
       }
@@ -83,7 +97,7 @@ namespace WallDefense
         {
           foreach (var yield in entry.Yield)
           {
-            yield.GetYield(data, choice);
+            yield.GetYield(data, choice, consumed);
           }
           return;
         }

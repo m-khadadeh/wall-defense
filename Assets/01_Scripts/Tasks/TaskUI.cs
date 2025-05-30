@@ -47,16 +47,21 @@ namespace WallDefense
       if (TaskRunning)
       {
         _hoursRemaining--;
-        if (_hoursRemaining == 0)
-        {
-          // Task ends
-          _task.CompleteTask(_colonyData, _taskChoice);
-          CheckFulfilled();
-          _hoursRemaining = -1;
-          LockResources(false);
-        }
-        SetButtons();
+        CheckZeroHours();
       }
+    }
+
+    private void CheckZeroHours()
+    {
+      if (_hoursRemaining == 0)
+      {
+        // Task ends
+        _task.CompleteTask(_colonyData, _taskChoice);
+        CheckFulfilled();
+        _hoursRemaining = -1;
+        LockResources(false);
+      }
+      SetButtons();
     }
 
     private void SetButtons()
@@ -80,6 +85,7 @@ namespace WallDefense
       _runButton.interactable = false;
       LockResources(true);
       SetButtons();
+      CheckZeroHours();
     }
 
     private void LockResources(bool isLocked)

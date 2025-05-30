@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd33452abbe1874495d1c85578c2a32, type: 3}
-  m_Name: Clue D
+  m_Script: {fileID: 11500000, guid: 8509e93eff85bc946b10eb086f5a0ae1, type: 3}
+  m_Name: InventoryWS3
   m_EditorClassIdentifier: 
-  clueType: 3
-  description: Shed skin
-  found: 1
-  dialogBoxInfo: You found shed skin
+  _startingItems: []

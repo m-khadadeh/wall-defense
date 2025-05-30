@@ -24,6 +24,11 @@ namespace WallDefense
       _onRemove = removeCallback;
     }
 
+    public void Initialize()
+    {
+      Initialize(null, null);
+    }
+
     public void AddItem(ItemType type, int amount)
     {
       if (!_currentItems.ContainsKey(type))
@@ -31,12 +36,12 @@ namespace WallDefense
         _currentItems[type] = 0;
       }
       _currentItems[type] += amount;
-      _onAdd.Invoke(type, amount);
+      _onAdd?.Invoke(type, amount);
     }
     public void RemoveItem(ItemType type, int amount)
     {
       _currentItems[type] -= amount;
-      _onRemove.Invoke(type, amount);
+      _onRemove?.Invoke(type, amount);
     }
 
     public void DropItemIn(ItemType type)

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      watch_smallhand_0: 9008831866420948384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

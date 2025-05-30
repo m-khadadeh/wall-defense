@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueType: 2
   description: Damage atop a cliff
+  found: 0
+  dialogBoxInfo: You found damage on a cliff

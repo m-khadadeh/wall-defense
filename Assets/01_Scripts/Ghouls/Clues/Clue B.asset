@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueType: 1
   description: Shattered scales
+  found: 0
+  dialogBoxInfo: You found Shattered scales

@@ -9,7 +9,7 @@ namespace WallDefense
   {
     [SerializeField] private DamageParameters.Type _defenseType;
 
-    public override void GetYield(ColonyData colony, string choice)
+    public override void GetYield(ColonyData colony, string choice, List<ItemType> consumed)
     {
       InitializeDictionaryIfNot();
       if (_defenseType != DamageParameters.Type.none)
