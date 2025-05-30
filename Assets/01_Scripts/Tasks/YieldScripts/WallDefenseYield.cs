@@ -5,22 +5,13 @@ using UnityEngine;
 namespace WallDefense
 {
   [CreateAssetMenu(fileName = "WallDefenseYield", menuName = "Scriptable Objects/Tasks/Yields/Wall Defense Yield")]
-  public class WallDefenseYield : TaskYield
+  public class WallDefenseYield : WallSegmentYield
   {
     [SerializeField] private DamageParameters.Type _defenseType;
-    [SerializeField] private List<Entry> _wallSections;
-    private Dictionary<string, WallSegmentName> _dictionary;
 
     public override void GetYield(ColonyData colony, string choice)
     {
-      if (_dictionary == null)
-      {
-        _dictionary = new Dictionary<string, WallSegmentName>();
-        foreach (var section in _wallSections)
-        {
-          _dictionary.Add(section.ChoiceName, section.WallSegment);
-        }
-      }
+      InitializeDictionaryIfNot();
       if (_defenseType != DamageParameters.Type.none)
       {
         // Adding Defense
@@ -56,13 +47,6 @@ namespace WallDefense
           );
         }
       }
-    }
-
-    [Serializable]
-    public class Entry
-    {
-      [field: SerializeField] public string ChoiceName { get; private set; }
-      [field: SerializeField] public WallSegmentName WallSegment { get; private set; }
     }
   }
 }

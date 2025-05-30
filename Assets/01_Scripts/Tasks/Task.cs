@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -111,10 +112,12 @@ namespace WallDefense
       foreach (var requirement in _requirements)
       {
         var entry = Array.Find(possibilityList, possibility => possibility.Type == requirement.RequirementType);
-        int amountNeeded = entry != null ? entry.Amount : 0;
-        if (requirement.Count != amountNeeded)
+        if (entry != null)
         {
-          return false;
+          if (requirement.Count != entry.Amount)
+          {
+            return false;
+          }  
         }
       }
       return true;

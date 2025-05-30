@@ -24,18 +24,21 @@ namespace WallDefense
             {
                 wallIndex = 0,
                 health = 200,
+                maxhealth = 200,
                 currentDefenseType = DamageParameters.Type.none
             };
             middle = new()
             {
                 wallIndex = 1,
                 health = 150,
+                maxhealth = 150,
                 currentDefenseType = DamageParameters.Type.none
             };
             top = new()
             {
                 wallIndex = 2,
                 health = 100,
+                maxhealth = 100,
                 currentDefenseType = DamageParameters.Type.none
             };
         }
@@ -51,6 +54,24 @@ namespace WallDefense
                     break;
                 case WallSegmentName.top:
                     top.ApplyDefense(damageType);
+                    break;
+                default:
+                    break;
+
+            }
+        }
+        public void RepairWall(WallSegmentName segmentName, int amount)
+        {
+            switch (segmentName)
+            {
+                case WallSegmentName.bottom:
+                    bottom.Repair(amount);
+                    break;
+                case WallSegmentName.middle:
+                    middle.Repair(amount);
+                    break;
+                case WallSegmentName.top:
+                    top.Repair(amount);
                     break;
                 default:
                     break;
@@ -98,12 +119,15 @@ namespace WallDefense
     {
         public int wallIndex; //lowest is 0, highest is 2
         public int health;
+        public int maxhealth;
         public DamageParameters damageParameters;
         public DamageParameters.Type currentDefenseType;
 
         public void Repair(int repairAmount)
         {
             health += repairAmount;
+            health = Mathf.Min(health, maxhealth);
+            Debug.Log(health);
         }
         public void ApplyDefense(DamageParameters.Type defenseType)
         {

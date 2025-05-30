@@ -25,24 +25,18 @@ MonoBehaviour:
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: 556f9251467fcccc2acc401f3305e24e, type: 2}
     <ItemAmounts>k__BackingField:
-    - <Type>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
-      <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 2
     <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: f9c7e7bb1ed9fddfdaf0484df82256ad, type: 2}
     <ItemAmounts>k__BackingField:
-    - <Type>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
-      <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 3
     <AdditionalChoice>k__BackingField: 
   - <Yield>k__BackingField:
     - {fileID: 11400000, guid: 836b82467b408ed2b9c4d42857a28e00, type: 2}
     <ItemAmounts>k__BackingField:
-    - <Type>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
-      <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
       <Amount>k__BackingField: 4
     <AdditionalChoice>k__BackingField: 

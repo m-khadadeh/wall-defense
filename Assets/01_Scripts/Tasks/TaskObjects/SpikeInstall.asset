@@ -35,25 +35,13 @@ MonoBehaviour:
   _timeToCompletePossibilities:
   - <Hours>k__BackingField: 5
     <ItemAmounts>k__BackingField:
-    - <Type>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
-      <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
       <Amount>k__BackingField: 1
-    - <Type>k__BackingField: {fileID: 11400000, guid: a306a85bee7357d9c904743b7b542f92, type: 2}
-      <Amount>k__BackingField: 1
-    - <Type>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
-      <Amount>k__BackingField: 4
     <AdditionalChoice>k__BackingField: 
   - <Hours>k__BackingField: 4
     <ItemAmounts>k__BackingField:
-    - <Type>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
-      <Amount>k__BackingField: 1
     - <Type>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
       <Amount>k__BackingField: 2
-    - <Type>k__BackingField: {fileID: 11400000, guid: a306a85bee7357d9c904743b7b542f92, type: 2}
-      <Amount>k__BackingField: 1
-    - <Type>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
-      <Amount>k__BackingField: 4
     <AdditionalChoice>k__BackingField: 
   _additionalChoices:
   - m_Text: Bottom
