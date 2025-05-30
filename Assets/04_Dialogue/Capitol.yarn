@@ -1,5 +1,5 @@
 title: Capitol_Introduction
-position: 104,441
+position: -500,84
 ---
 <<detour Variable_Declaration>>
 <<set_variable_names>>
@@ -29,11 +29,73 @@ MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
 ===
 
 title: Variable_Declaration
+position: -137,51
 ---
 <<declare $fairweather_player_introduced = false>>
 <<declare $fairweather_station = "">>
 <<declare $player_station_name = "">>
 <<declare $player_name = "">>
 <<declare $player_wall_name = "">>
+<<declare $days_till_capitol_shipment = 0>>
 <<return>>
+===
+title: Capitol_PlayerInitiates
+position: -466,359
+---
+MORSE_{$player_station_name}: WS1 CALLING CAPITOL
+MORSE_Capitol: K
+<<jump Capitol_Menu>>
+===
+
+title: Capitol_Menu
+position: -139,356
+---
+{$player_name}: What should I ask the Capitol?
+-> What to do?
+  MORSE_{$player_station_name}: ANY ADVICE?
+  <<once>>
+  MORSE_Capitol: ALLOCATE UR RESOURCES
+  MORSE_Capitol: DEFEND UR WALL DE WX (RN)
+  MORSE_{$player_station_name}: ANYTHING YOU CAN DO?
+  MORSE_Capitol: N ASK WS2 ES WS3 ES WAIT FOR SHIPMENTS (RN)
+  {$player_name}: I guess that's all the help I'll get from them
+  <<else>>
+  MORSE_Capitol: NIL (RN)
+  {$player_name}: Well...
+  <<endonce>>
+  <<jump Capitol_Menu>>
+-> Any information to share?
+  MORSE_{$player_station_name}: ANY INFO?
+  MORSE_Capitol: NIL (RN)
+  {$player_name}: Ugh...
+  <<jump Capitol_Menu>>
+-> Updates on the next shipment
+  MORSE_{$player_station_name}: NEXT SHIPMENT?
+  MORSE_Capitol: {$days_till_capitol_shipment} DAYS (RN)
+  <<jump Capitol_Menu>>
+-> End communications
+  MORSE_{$player_station_name}: THANKS
+  MORSE_{$player_station_name}: THAT IS ALL
+  MORSE_Capitol: 73 (RN) (SK)
+===
+
+title: Capitol_WeeklyShipment
+position: -467,605
+---
+<<once>>
+{$player_name}: Oh. The Capitol?
+<<else>>
+=> {$player_name}: It's that time of the week!
+=> {$player_name}: Thank goodness...
+=> {$player_name}: Good timing!
+<<endonce>>
+MORSE_Capitol: CS {$player_station_name} K
+MORSE_{$player_station_name}: COME IN
+MORSE_Capitol: WEEKLY SHIPMENT RPT K
+<<capitol_weekly_shipment>>
+MORSE_{$player_station_name}: ARRIVED
+MORSE_Capitol: FB
+MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
+=> {$player_name}: Hope to see you again too... sooner rather than later.
+=> {$player_name}: Here's to another week...
 ===
