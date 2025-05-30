@@ -16,16 +16,21 @@ MonoBehaviour:
   top:
     wallIndex: 2
     health: 100
+    maxhealth: 0
     damageParameters: {fileID: 0}
     currentDefenseType: 3
   middle:
     wallIndex: 1
     health: 150
+    maxhealth: 0
     damageParameters: {fileID: 0}
     currentDefenseType: 3
   bottom:
     wallIndex: 0
     health: 200
+    maxhealth: 0
     damageParameters: {fileID: 0}
     currentDefenseType: 3
   isFallen: 0
+  maxHealths: 6400000096000000c8000000
+  startingHealths: 4b0000004b0000007d000000

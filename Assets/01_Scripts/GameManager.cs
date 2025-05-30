@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace WallDefense
         public SaveManager saveManager;
         [SerializeField] GameState currentState;
         [SerializeField] UIView currentView, previousNotebookView;
+
         public GameObject startView, mainView, gameOverView;
         public GameObject[] mainSubViews;
         public delegate void OnStartDelegate();
@@ -19,6 +21,11 @@ namespace WallDefense
         public static event OnStartDelegate OnStart;
         public static event OnMainDelegate OnMain;
         public static event OnGameOverDelegate OnGameOver;
+        public TaskManager taskManager;
+        public List<AfterTimeYield> afterTimeYields;
+        public List<InventoryData> otherInventoryDatas;
+        public InventoryUI inventoryUI;
+        public List<ColonyData> colonies;
 
         enum GameState
         {
@@ -33,6 +40,10 @@ namespace WallDefense
         void Start()
         {
             OpenStart();
+            foreach (var colony in colonies)
+            {
+                colony.Initialize();
+            }
         }
 
 
@@ -58,6 +69,18 @@ namespace WallDefense
             startView.SetActive(false);
             mainView.SetActive(true);
             gameOverView.SetActive(false);
+            foreach (var afterTimeYield in afterTimeYields)
+            {
+                afterTimeYield.Initialize();
+            }
+            foreach (var otherInventoryData in otherInventoryDatas)
+            {
+                otherInventoryData.Initialize();
+            }
+            List<Action> addCallbacks = new List<Action>() { taskManager.CheckAllTaskAutoButtons };
+            List<Action> removeCallbacks = new List<Action>() { taskManager.CheckAllTaskAutoButtons };
+            inventoryUI.Initialize(addCallbacks, removeCallbacks);
+            taskManager.Initialize();
             OnMain?.Invoke();
         }
         public void OpenGameOver()

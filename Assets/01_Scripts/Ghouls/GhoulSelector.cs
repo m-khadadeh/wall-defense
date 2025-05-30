@@ -9,10 +9,12 @@ namespace WallDefense
     [SerializeField] private List<Ghoul> _possibleGhouls;
     [SerializeField] private List<Clue> _allClues;
     private Ghoul _currentGhoul;
+    private int _attackHour;
 
     public void SelectGhoul()
     {
       _currentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
+      _attackHour = Random.Range(_currentGhoul.hourRange.x, _currentGhoul.hourRange.y + 1) % 24;
       WipeClues();
     }
 
@@ -46,6 +48,18 @@ namespace WallDefense
         return _currentGhoul.clueSecondary;
       }
       return null;
+    }
+
+    public void OnHour(int hour)
+    {
+      if (hour == _attackHour)
+      {
+        if (_currentGhoul.MainAttack() || _currentGhoul.SecondaryAttack())
+        {
+          // Lose condition
+          Debug.Log("LOSE CONDITION");
+        }
+      }
     }
   }
 }

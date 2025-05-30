@@ -32,3 +32,5 @@ MonoBehaviour:
     damageParameters: {fileID: 0}
     currentDefenseType: 2
   isFallen: 0
+  maxHealths: 6400000096000000c8000000
+  startingHealths: 4b0000007d000000af000000

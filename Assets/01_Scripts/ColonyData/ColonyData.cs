@@ -10,6 +10,11 @@ namespace WallDefense
     [field: SerializeField] public InventoryData Inventory { get; private set; }
     [field: SerializeField] public Wall Wall { get; private set; }
     List<Action<List<ItemType>>> _onGiftReceived;
+
+    public void Initialize()
+    {
+      Wall.InitializeWalls();
+    }
     public void ReceiveGift(List<ItemType> items)
     {
       foreach (var item in items)

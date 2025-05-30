@@ -16,7 +16,8 @@ namespace WallDefense
         /// </summary>
         public int dayStart = 6;
         public int nextTaskCompletionHour = 0;
-        public UnityEvent onBeforeHour, onAfterHour, onNewDay, onNightHour;
+        public UnityEvent onNewDay;
+        public UnityEvent<int> onBeforeHour, onAfterHour, onNightHour;
 		public bool triggerHourAdvance = false;
 
         void Start()
@@ -33,7 +34,7 @@ namespace WallDefense
         }
         public void AdvanceHour()
         {
-            onBeforeHour.Invoke();
+            onBeforeHour.Invoke(currentHour);
             currentHour = (currentHour + 1) % 24;
             if (currentHour == dayStart)
             {
@@ -41,9 +42,9 @@ namespace WallDefense
             }
             if (currentHour >= nightStart || currentHour < dayStart)
             {
-                onNightHour.Invoke();
+                onNightHour.Invoke(currentHour);
             }
-            onAfterHour.Invoke();
+            onAfterHour.Invoke(currentHour);
         }
 
         public void AdvanceToTaskComplete(TaskManager taskManager)

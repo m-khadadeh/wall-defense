@@ -14,6 +14,8 @@ namespace WallDefense
         public WallSegment middle;
         public WallSegment bottom;
         public bool isFallen;
+        public int[] maxHealths;
+        public int[] startingHealths;
         /// <summary>
         /// Set Wall health and defense parameters to defaults
         /// </summary>
@@ -23,22 +25,22 @@ namespace WallDefense
             bottom = new()
             {
                 wallIndex = 0,
-                health = 200,
-                maxhealth = 200,
+                health = startingHealths[0],
+                maxhealth = maxHealths[0],
                 currentDefenseType = DamageParameters.Type.none
             };
             middle = new()
             {
                 wallIndex = 1,
-                health = 150,
-                maxhealth = 150,
+                health = startingHealths[1],
+                maxhealth = maxHealths[1],
                 currentDefenseType = DamageParameters.Type.none
             };
             top = new()
             {
                 wallIndex = 2,
-                health = 100,
-                maxhealth = 100,
+                health = startingHealths[2],
+                maxhealth = maxHealths[2],
                 currentDefenseType = DamageParameters.Type.none
             };
         }

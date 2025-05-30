@@ -13,6 +13,7 @@ namespace WallDefense
         public DamageParameters parametersMain, parametersSecondary;
         public WallSegmentName damageTargetMain, damageTargetSecondary;
         public Wall targetWall;
+        public Vector2Int hourRange;
         /// <summary>
         /// Applies main attack effects
         /// </summary>

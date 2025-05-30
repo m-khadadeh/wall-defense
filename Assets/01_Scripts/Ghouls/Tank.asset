@@ -19,3 +19,4 @@ MonoBehaviour:
   damageTargetMain: 2
   damageTargetSecondary: 1
   targetWall: {fileID: 0}
+  hourRange: {x: 1, y: 3}
