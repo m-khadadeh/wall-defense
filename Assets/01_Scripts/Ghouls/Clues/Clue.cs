@@ -11,5 +11,9 @@ namespace WallDefense
         {
             A, B, C, D
         }
+
+        public bool found;
+
+        public string dialogBoxInfo;
     }
 }

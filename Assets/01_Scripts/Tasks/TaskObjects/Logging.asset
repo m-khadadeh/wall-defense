@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
+  m_Name: Logging
+  m_EditorClassIdentifier: 
+  <TaskName>k__BackingField: Logging
+  <TaskDescription>k__BackingField: Chop some trees for some wood.
+  _requirements:
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}
+    <IsConsumed>k__BackingField: 0
+  - <RequirementType>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
+    <MinimumMaximumAmount>k__BackingField: {x: 2, y: 4}
+    <IsConsumed>k__BackingField: 0
+  _yieldPossibilities:
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: 556f9251467fcccc2acc401f3305e24e, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
+      <Amount>k__BackingField: 2
+    <AdditionalChoice>k__BackingField: 
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: f9c7e7bb1ed9fddfdaf0484df82256ad, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
+      <Amount>k__BackingField: 3
+    <AdditionalChoice>k__BackingField: 
+  - <Yield>k__BackingField:
+    - {fileID: 11400000, guid: 836b82467b408ed2b9c4d42857a28e00, type: 2}
+    <ItemAmounts>k__BackingField:
+    - <Type>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
+      <Amount>k__BackingField: 4
+    <AdditionalChoice>k__BackingField: 
+  _timeToCompletePossibilities:
+  - <Hours>k__BackingField: 4
+    <ItemAmounts>k__BackingField: []
+    <AdditionalChoice>k__BackingField: 
+  _additionalChoices: []

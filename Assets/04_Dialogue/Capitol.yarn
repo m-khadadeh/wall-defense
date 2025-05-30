@@ -1,8 +1,9 @@
 title: Capitol_Introduction
-position: 104,441
+position: -500,84
 ---
 <<detour Variable_Declaration>>
 <<set_variable_names>>
+<<comms_start "capitol">>
 {$player_name}: Oh. The Capitol wants to talk. Let's see what this is about.
 MORSE_Capitol: CS {$player_station_name} K
 {$player_name}: Been a while since I've gotten such a curt message. Better keep the reference sheet handy.
@@ -21,6 +22,7 @@ MORSE_Capitol: CNT HELP MORE
 {$player_name}: ...
 MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
 {$player_name}: They cut the line.
+<<comms_end>>
 <<capitol_initial_shipment>>
 {$player_name}: Well, the shipment is here.
 {$player_name}: ...
@@ -29,11 +31,96 @@ MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
 ===
 
 title: Variable_Declaration
+position: -137,51
 ---
-<<declare $fairweather_player_introduced = false>>
-<<declare $fairweather_station = "">>
 <<declare $player_station_name = "">>
 <<declare $player_name = "">>
 <<declare $player_wall_name = "">>
+
+<<declare $requested_asset = "">>
+<<declare $requested_amount = 0>>
+
+<<declare $days_till_capitol_shipment = 0>>
+
+<<declare $fairweather_player_introduced = false>>
+<<declare $fairweather_station = "">>
+<<declare $fairweather_relationship = 30>>
+<<declare $fairweather_stress = 0>>
+
+<<declare $fairweather_relationship_bad = $fairweather_relationship < 20>>
+<<declare $fairweather_relationship_neutral = $fairweather_relationship < 50 && $fairweather_relationship >= 20>>
+<<declare $fairweather_relationship_friendly = $fairweather_relationship < 80 && $fairweather_relationship >= 50>>
+<<declare $fairweather_relationship_close = $fairweather_relationship >= 80>>
+<<declare $fairweather_stress_calm = $fairweather_stress < 20>>
+<<declare $fairweather_stress_stressed = $fairweather_stress < 60 && $fairweather_stress >= 20>>
+<<declare $fairweather_stress_distress = $fairweather_stress >= 60>>
+
+<<declare $fairweather_used_svp = false>>
+<<declare $fairweather_explained_svp = false>>
+
 <<return>>
+===
+title: Capitol_PlayerInitiates
+position: -466,359
+---
+MORSE_{$player_station_name}: WS1 CALLING CAPITOL
+<<comms_start "capitol">>
+MORSE_Capitol: K
+<<jump Capitol_Menu>>
+===
+
+title: Capitol_Menu
+position: -139,356
+---
+{$player_name}: What should I ask the Capitol?
+-> What to do?
+  MORSE_{$player_station_name}: ANY ADVICE?
+  <<once>>
+    MORSE_Capitol: ALLOCATE UR RESOURCES
+    MORSE_Capitol: DEFEND UR WALL DE WX (RN)
+    MORSE_{$player_station_name}: ANYTHING YOU CAN DO?
+    MORSE_Capitol: N ASK WS2 ES WS3 ES WAIT FOR SHIPMENTS (RN)
+    {$player_name}: I guess that's all the help I'll get from them
+  <<else>>
+    MORSE_Capitol: NIL (RN)
+    {$player_name}: Well...
+  <<endonce>>
+  <<jump Capitol_Menu>>
+-> Any information to share?
+  MORSE_{$player_station_name}: ANY INFO?
+  MORSE_Capitol: NIL (RN)
+  {$player_name}: Ugh...
+  <<jump Capitol_Menu>>
+-> Updates on the next shipment
+  MORSE_{$player_station_name}: NEXT SHIPMENT?
+  MORSE_Capitol: {$days_till_capitol_shipment} DAYS (RN)
+  <<jump Capitol_Menu>>
+-> End communications
+  MORSE_{$player_station_name}: THANKS
+  MORSE_{$player_station_name}: THAT IS ALL
+  MORSE_Capitol: 73 (RN) (SK)
+  <<comms_end>>
+===
+
+title: Capitol_WeeklyShipment
+position: -467,605
+---
+<<comms_start "capitol">>
+<<once>>
+  {$player_name}: Oh. The Capitol?
+<<else>>
+  => {$player_name}: It's that time of the week!
+  => {$player_name}: Thank goodness...
+  => {$player_name}: Good timing!
+<<endonce>>
+MORSE_Capitol: CS {$player_station_name} K
+MORSE_{$player_station_name}: COME IN
+MORSE_Capitol: WEEKLY SHIPMENT RPT K
+<<capitol_weekly_shipment>>
+MORSE_{$player_station_name}: ARRIVED
+MORSE_Capitol: FB
+MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
+<<comms_end>>
+=> {$player_name}: Hope to see you again too... sooner rather than later.
+=> {$player_name}: Here's to another week...
 ===
