@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      watchbutton_base_0: -9079679392125225745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
