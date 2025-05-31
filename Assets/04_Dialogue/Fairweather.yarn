@@ -82,14 +82,14 @@ position: -402,945
 ---
 MORSE_{$player_station_name}: THIS IS STATION WS1 AT WALL {$player_wall_name}
 => MORSE_{$fairweather_station}: WELL MET <<if !$fairweather_stress_calm>>
-=> MORSE_{$fairweather_station}: CHARMED  <<if $fairweather_stress_calm>>
+=> MORSE_{$fairweather_station}: CHARMED <<if $fairweather_stress_calm>>
 <<set $fairweather_player_introduced = true>>
 <<return>>
 ===
 
 
 title: Fairweather_Player_AskForAssistance
-position: -69,507
+position: -64,496
 ---
 MORSE_{$player_station_name}: WE NEED ASSISTANCE
 <<if $fairweather_stress_calm>>
@@ -159,17 +159,17 @@ MORSE_{$player_station_name}: WE NEED ASSISTANCE
 <<jump Fairweather_Player_MainMenu>>
 ===
 title: Fairweather_Player_Confrontation
-position: 311,307
+position: 321,302
 ---
 
 ===
 title: Fairweather_Player_AssistanceDiscussion
-position: 319,499
+position: 326,495
 ---
 
 ===
 title: Fairweather_Player_TalkMenu
-position: -66,698
+position: -70,702
 ---
 
 ===

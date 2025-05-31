@@ -1,0 +1,7 @@
+﻿title: Tester
+---
+<<detour Variable_Declaration>>
+MORSE_Capitol: C (RN) (SK) =
+MORSE_{$player_station_name}: (SOS) PLS
+{$player_name}: They cut the line.
+===

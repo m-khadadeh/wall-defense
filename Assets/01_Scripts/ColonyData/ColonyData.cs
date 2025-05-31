@@ -9,11 +9,17 @@ namespace WallDefense
   {
     [field: SerializeField] public InventoryData Inventory { get; private set; }
     [field: SerializeField] public Wall Wall { get; private set; }
+    [SerializeField] private SettlementAI _aiController;
     List<Action<List<ItemType>>> _onGiftReceived;
 
     public void Initialize()
     {
+      _onGiftReceived = new List<Action<List<ItemType>>>();
       Wall.InitializeWalls();
+      if (_aiController != null)
+      {
+        _aiController.Initialize(this);
+      }
     }
     public void ReceiveGift(List<ItemType> items)
     {
@@ -25,6 +31,13 @@ namespace WallDefense
       foreach (var subscriber in _onGiftReceived)
       {
         subscriber.Invoke(items);
+      }
+    }
+    public void Subscribe(Action<List<ItemType>> subscriber)
+    {
+      if (!_onGiftReceived.Contains(subscriber))
+      {
+        _onGiftReceived.Add(subscriber);
       }
     }
   }

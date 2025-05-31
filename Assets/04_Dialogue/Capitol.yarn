@@ -33,9 +33,9 @@ MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
 title: Variable_Declaration
 position: -137,51
 ---
-<<declare $player_station_name = "">>
-<<declare $player_name = "">>
-<<declare $player_wall_name = "">>
+<<declare $player_station_name = "WS1">>
+<<declare $player_name = "Operator">>
+<<declare $player_wall_name = "MARIA">>
 
 <<declare $requested_asset = "">>
 <<declare $requested_amount = 0>>
@@ -80,7 +80,10 @@ position: -139,356
     MORSE_Capitol: DEFEND UR WALL DE WX (RN)
     MORSE_{$player_station_name}: ANYTHING YOU CAN DO?
     MORSE_Capitol: N ASK WS2 ES WS3 ES WAIT FOR SHIPMENTS (RN)
-    {$player_name}: I guess that's all the help I'll get from them
+    {$player_name}: I guess that's all the help I'll get from them.
+    {$player_name}: I'll need to strategically allocate this settlement's resources so we can defend the wall from the ghouls each night.
+    {$player_name}: WS2 and WS3 are in it worse than we are, since the Capitol can't send them too much help.
+    {$player_name}: But establishing comms with them might not be a bad idea.
   <<else>>
     MORSE_Capitol: NIL (RN)
     {$player_name}: Well...

@@ -1,5 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -62,17 +66,47 @@ namespace WallDefense
         _characterTextMorse.text = line.CharacterName.Replace(_morseCodeCharacterPrefix, "");
         string stringToWrite = text.Text.ToUpper();
 
+        ParseData newTextData = new ParseData();
+        newTextData.plainText = stringToWrite;
+        newTextData.replacedUpperLineText = stringToWrite;
+        newTextData.prosignIndicesAndLengths = new Dictionary<int, int>();
+
+        string pattern = @"\((?<prosign>[A-Z]+)\)";
+        Regex rg = new Regex(pattern);
+        Match match = rg.Match(newTextData.plainText);
+        while (match.Success)
+        {
+          newTextData.plainText = newTextData.plainText.Substring(0, match.Index) + newTextData.plainText.Substring(match.Index + 1, match.Length - 2) +
+              ((match.Index + match.Length == newTextData.plainText.Length) ? "" : newTextData.plainText.Substring(match.Index + match.Length));
+          Match styled = rg.Match(newTextData.replacedUpperLineText);
+          newTextData.replacedUpperLineText = newTextData.replacedUpperLineText.Substring(0, styled.Index) + "<s>" + newTextData.replacedUpperLineText.Substring(styled.Index + 1, styled.Length - 2) + "</s>" +
+              ((styled.Index + styled.Length == newTextData.replacedUpperLineText.Length) ? "" : newTextData.replacedUpperLineText.Substring(styled.Index + styled.Length));
+          newTextData.prosignIndicesAndLengths.Add(match.Index, match.Length - 2);
+          match = rg.Match(newTextData.plainText);
+        }
+
         _lineTextMorse.maxVisibleCharacters = 0;
 
         if (_ditMilliseconds > 0)
         {
-          for (int i = 0; i < stringToWrite.Length; i++)
+          int currentMorseLength = 1;
+          int extraTagPadding = 0;
+          for (int i = 0; i < newTextData.plainText.Length; i += currentMorseLength)
           {
-            _lineTextMorse.text = stringToWrite.Substring(0, i);
-            if (_dictionary.CharacterCodes.ContainsKey(stringToWrite[i]))
+            string currentSubstr = newTextData.replacedUpperLineText.Substring(0, i + extraTagPadding);
+            if (newTextData.prosignIndicesAndLengths.TryGetValue(i, out currentMorseLength))
+            {
+              extraTagPadding += 7;
+            }
+            else
+            {
+              currentMorseLength = 1;
+            }
+            _lineTextMorse.text = currentSubstr;
+            if (currentMorseLength == 1 ? _dictionary.CharacterCodes.ContainsKey(newTextData.plainText[i]) : _dictionary.ProsignCodes.ContainsKey(newTextData.plainText.Substring(i, currentMorseLength)))
             {
               // Character exists
-              string currentCharacterCode = _dictionary.CharacterCodes[stringToWrite[i]];
+              string currentCharacterCode = currentMorseLength == 1 ? _dictionary.CharacterCodes[newTextData.plainText[i]] : _dictionary.ProsignCodes[newTextData.plainText.Substring(i, currentMorseLength)];
               _lineTextMorse.text += _morseCodeRTFOpenTags + currentCharacterCode + _morseCodeRTFClosingTags;
               for (int j = 0; j <= currentCharacterCode.Length; j++)
               {
@@ -88,12 +122,12 @@ namespace WallDefense
                 }
                 if (j != currentCharacterCode.Length)
                 {
-                  if(!token.IsNextLineRequested)
+                  if (!token.IsNextLineRequested)
                     AudioManager.PlayMorseWave(pauseLength);
                 }
                 await YarnTask.Delay(TimeSpan.FromMilliseconds(pauseLength), token.HurryUpToken).SuppressCancellationThrow();
               }
-              if(!token.IsNextLineRequested)
+              if (!token.IsNextLineRequested)
                 AudioManager.PlaySound("typewriter");
             }
             else
@@ -103,13 +137,14 @@ namespace WallDefense
             }
           }
         }
-        _lineTextMorse.text = stringToWrite.ToUpper();
-        _lineTextMorse.maxVisibleCharacters = stringToWrite.Length;
+        _lineTextMorse.text = newTextData.replacedUpperLineText.ToUpper();
+        _lineTextMorse.maxVisibleCharacters = newTextData.replacedUpperLineText.Length;
       }
       else
       {
         _dialogueContainerNonMorse.SetActive(true);
         _dialogueContainerMorse.SetActive(false);
+        _characterTextNonMorse.text = line.CharacterName;
         _lineTextNonMorse.text = text.Text;
         _lineTextNonMorse.maxVisibleCharacters = 0;
         if (_nonMorsePerCharacterMilliseconds > 0)
@@ -117,7 +152,7 @@ namespace WallDefense
           for (int i = 0; i < _lineTextNonMorse.text.Length; i++)
           {
             _lineTextNonMorse.maxVisibleCharacters++;
-            if(!token.IsNextLineRequested)
+            if (!token.IsNextLineRequested)
               AudioManager.PlaySound("typewriter");
             await YarnTask.Delay(TimeSpan.FromMilliseconds(_nonMorsePerCharacterMilliseconds), token.HurryUpToken).SuppressCancellationThrow();
           }
@@ -144,10 +179,11 @@ namespace WallDefense
       Debug.Log("Initialized");
     }
 
-    // Update is called once per frame
-    void Update()
+    private class ParseData
     {
-    
+      public string plainText;
+      public string replacedUpperLineText;
+      public Dictionary<int, int> prosignIndicesAndLengths;
     }
   }
 }
