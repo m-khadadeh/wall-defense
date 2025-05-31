@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sticky02_fill (2)_0: -250060843290926782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
