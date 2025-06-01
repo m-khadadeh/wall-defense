@@ -20,3 +20,4 @@ MonoBehaviour:
   damageTargetSecondary: 3
   targetWall: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}
   hourRange: {x: 0, y: 2}
+  morseTextRepresentation: WRM

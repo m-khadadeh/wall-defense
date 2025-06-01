@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Inventory>k__BackingField: {fileID: 11400000, guid: e85384ea8e3325f4a907c20cc3484142, type: 2}
   <Wall>k__BackingField: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
+  _aiController: {fileID: 11400000, guid: a1257faa09af5a840a7cbaf3ff225c59, type: 2}

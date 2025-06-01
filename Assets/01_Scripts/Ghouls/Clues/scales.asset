@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd33452abbe1874495d1c85578c2a32, type: 3}
-  m_Name: Clue B
+  m_Name: scales
   m_EditorClassIdentifier: 
   clueType: 1
   description: Shattered scales
   found: 0
   dialogBoxInfo: You found Shattered scales
+  morseTextRepresentation: SHATTERED SCALES

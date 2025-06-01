@@ -20,3 +20,4 @@ MonoBehaviour:
   damageTargetSecondary: 3
   targetWall: {fileID: 0}
   hourRange: {x: 21, y: 23}
+  morseTextRepresentation: BSK

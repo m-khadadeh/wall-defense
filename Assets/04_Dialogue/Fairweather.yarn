@@ -159,7 +159,7 @@ MORSE_{$player_station_name}: WE NEED ASSISTANCE
 <<jump Fairweather_Player_MainMenu>>
 ===
 title: Fairweather_Player_Confrontation
-position: 321,302
+position: 323,308
 ---
 
 ===
@@ -169,7 +169,166 @@ position: 326,495
 
 ===
 title: Fairweather_Player_TalkMenu
-position: -70,702
+position: -30,1161
+---
+{$player_name}: What should we talk about?
+-> Share Ghoul Sign Information <<if $fairweather_first_clue_shareable || $fairweather_second_clue_shareable>>
+  => MORSE_{$player_station_name}: WX {$first_clue_morse_text} AND {$second_clue_morse_text} <<if $fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
+    <<set $fairweather_receieved_first_clue = true>>
+    <<set $fairweather_receieved_second_clue = true>>
+    <<if !$fairweather_knows_ghoul_type>>
+      <<give_information {$fairweather_ai_object_name} {$first_clue}>>
+      <<give_information {$fairweather_ai_object_name} {$second_clue}>>
+      <<if $fairweather_knows_ghoul_type>>
+        <<jump Fairweather_Now_Knows_Ghoul>>
+      <<else>>
+        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
+      <<endif>>
+    <<else>>
+      <<jump Fairweather_Already_Knew_Ghoul>>
+    <<endif>>
+  => MORSE_{$player_station_name}: WX {$first_clue_morse_text} <<if $fairweather_first_clue_shareable && !$fairweather_second_clue_shareable>>
+    <<set $fairweather_receieved_first_clue = true>>
+    <<if !$fairweather_knows_ghoul_type>>
+      <<give_information {$fairweather_ai_object_name} {$first_clue}>>
+      <<if $fairweather_knows_ghoul_type>>
+        <<jump Fairweather_Now_Knows_Ghoul>>
+      <<else>>
+        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
+      <<endif>>
+    <<else>>
+      <<jump Fairweather_Already_Knew_Ghoul>>
+    <<endif>>
+  => MORSE_{$player_station_name}: WX {$second_clue_morse_text} <<if !$fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
+    <<set $fairweather_receieved_second_clue = true>>
+    <<if !$fairweather_knows_ghoul_type>>
+      <<give_information {$fairweather_ai_object_name} {$second_clue}>>
+      <<if $fairweather_knows_ghoul_type>>
+        <<jump Fairweather_Now_Knows_Ghoul>>
+      <<else>>
+        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
+      <<endif>>
+    <<else>>
+      <<jump Fairweather_Already_Knew_Ghoul>>
+    <<endif>>
+-> What's SVP mean? <<if $fairweather_used_svp && !$fairweather_explained_svp>>
+  <<jump Fairweather_SVP_Explanation>>
+===
+
+title: Fairweather_Already_Knew_Ghoul
+position: 322,686
+---
+<<if $fairweather_stress_calm>>
+  => MORSE_{$fairweather_station}: WE KNOW DR {$player_station_name} <<if $fairweather_relationship_bad>>
+    MORSE_{$fairweather_station}: ANYTHING USEFUL SVP? K
+    {$player_name}: ...
+    <<if !$fairweather_explained_svp>>
+      {$player_name}: Why can't you just say "we know" instead of wasting our time being petty?
+      <<once>>
+        {$player_name}: And what does SVP Mean?
+      <<endonce>>
+    <<else>>
+      {$player_name}: How about you stop wasting my time with petty messages, <i>s'il vous plait</i>?
+    <<endif>>
+  => MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} <<if $fairweather_relationship_neutral>>
+    MORSE_{$fairweather_station}: WE ARE AWARE BUT THANK YOU NONETHELESS K
+    <<set $fairweather_relationship += 1>>
+  => MORSE_{$fairweather_station}: INDEED WX {$ghoul_type_morse_text} K <<if $fairweather_relationship_friendly>>
+    <<set $fairweather_relationship += 1>>
+  => MORSE_{$fairweather_station}: SO ITS WX {$ghoul_type_morse_text} <<if $fairweather_relationship_close>>
+    MORSE_{$fairweather_station}: GOOD TO KNOW
+    MORSE_{$fairweather_station}: TAKE CARE SVP K
+    <<set $fairweather_relationship += 2>>
+<<elseif $fairweather_stress_stressed>>
+  => MORSE_{$fairweather_station}: WE KNOW K <<if $fairweather_relationship_bad>>
+  => MORSE_{$fairweather_station}: FB K <<if $fairweather_relationship_neutral>>
+    <<set $fairweather_relationship += 1>>
+  => MORSE_{$fairweather_station}: TU K <<if $fairweather_relationship_friendly>>
+    <<set $fairweather_relationship += 1>>
+  => MORSE_{$fairweather_station}: YES WX {$ghoul_type_morse_text}<<if $fairweather_relationship_close>>
+    MORSE_{$fairweather_station}: TAKE CARE SVP K
+    <<set $fairweather_relationship += 2>>
+<<else>>
+  => MORSE_{$fairweather_station}: (SK) <<if !$fairweather_relationship_close>>
+    <<comms_end>>
+    {$player_name}: What!?
+    {$player_name}: I give you info and you cut the line?
+    <<stop>>
+  => MORSE_{$fairweather_station}: K <<if $fairweather_relationship_close>>
+    <<set $fairweather_relationship += 2>>
+    {$player_name}: What? Nothing else to add?
+<<endif>>
+<<jump Fairweather_Player_TalkMenu>>
+===
+title: Fairweather_Now_Knows_Ghoul
+position: 325,831
+---
+<<if $fairweather_stress_calm>>
+  => MORSE_{$fairweather_station}: MUCH OBLIGED K <<if $fairweather_relationship_bad>>
+    <<set $fairweather_relationship += 3>>
+  => MORSE_{$fairweather_station}: THANK YOU FOR THE INFO <<if $fairweather_relationship_neutral>>
+    MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} IT SEEMS K
+    <<set $fairweather_relationship += 5>>
+  => MORSE_{$fairweather_station}: MUCH APPRECIATED DR FRIEND <<if $fairweather_relationship_friendly>>
+    MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} THEN K
+    <<set $fairweather_relationship += 10>>
+  => MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} <<if $fairweather_relationship_close>>
+    MORSE_{$fairweather_station}: YOU MAY HAVE JUST SAVED US AGAIN
+    <<set $fairweather_relationship += 10>>
+<<elseif $fairweather_stress_stressed>>
+  => MORSE_{$fairweather_station}: TU K <<if $fairweather_relationship_bad>>
+    <<set $fairweather_relationship += 5>>
+  => MORSE_{$fairweather_station}: SO ITS WX {$ghoul_type_morse_text} K <<if !$fairweather_relationship_bad>>
+    <<set $fairweather_relationship += 10>>
+<<else>>
+  => MORSE_{$fairweather_station}: K <<if !$fairweather_relationship_close>>
+    <<set $fairweather_relationship += 10>>
+    {$player_name}: Well, at least they're still on the line.
+  => MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} K <<if $fairweather_relationship_close>>
+    {$player_name}: Yeah...    
+<<endif>>
+<<jump Fairweather_Player_TalkMenu>>
+===
+title: Fairweather_Still_Doesnt_Know_Ghoul
+position: 327,965
+---
+<<if $fairweather_stress_calm>>
+  => MORSE_{$fairweather_station}: MUCH OBLIGED K <<if $fairweather_relationship_bad>>
+    <<set $fairweather_relationship += 2>>
+  => MORSE_{$fairweather_station}: THANK YOU FOR THE INFO K <<if $fairweather_relationship_neutral>>
+    <<set $fairweather_relationship += 4>>
+  => MORSE_{$fairweather_station}: MAY THE WX BE BUT A DRIZZLE K <<if $fairweather_relationship_friendly>>
+    <<set $fairweather_relationship += 4>>
+  => MORSE_{$fairweather_station}: WHAT WOULD I DO WITHOUT YOU K <<if $fairweather_relationship_close>>
+    <<set $fairweather_relationship += 5>>
+<<elseif $fairweather_stress_stressed>>
+  => MORSE_{$fairweather_station}: THATS IT? K <<if $fairweather_relationship_bad>>
+    {$player_name}: Not even a thank you?
+    MORSE_{$player_station_name}: YES
+    <<set $fairweather_relationship += 2>>
+  => MORSE_{$fairweather_station}: TU ES SVP SEND ANY OTHER WX YOU FIND <<if $fairweather_relationship_neutral || $fairweather_relationship_friendly>>
+    <<once if !$fairweather_explained_svp && !$fairweather_used_svp>>
+      {$player_name}: SVP? What's that mean?
+      <<set $fairweather_used_svp = true>>
+    <<endonce>>
+    <<set $fairweather_relationship += 4>>
+  => MORSE_{$fairweather_station}: TU TU TU K <<if $fairweather_relationship_close>>
+    <<set $fairweather_relationship += 5>>
+<<else>>
+  => MORSE_{$fairweather_station}: (SK) <<if !$fairweather_relationship_close>>
+    <<comms_end>>
+    {$player_name}: What!?
+    {$player_name}: I give you info and you cut the line?
+    <<stop>>
+  => MORSE_{$fairweather_station}: K <<if $fairweather_relationship_close>>
+    <<set $fairweather_relationship += 2>>
+    {$player_name}: What? Nothing else to add?
+<<endif>>
+<<jump Fairweather_Player_TalkMenu>>
+===
+
+title: Fairweather_SVP_Explanation
+position: 331,1163
 ---
 
 ===

@@ -14,6 +14,7 @@ namespace WallDefense
         public WallSegmentName damageTargetMain, damageTargetSecondary;
         public Wall targetWall;
         public Vector2Int hourRange;
+        public string morseTextRepresentation;
         /// <summary>
         /// Applies main attack effects
         /// </summary>

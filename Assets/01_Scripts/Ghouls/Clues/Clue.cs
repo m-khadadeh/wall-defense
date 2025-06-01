@@ -15,5 +15,6 @@ namespace WallDefense
         public bool found;
 
         public string dialogBoxInfo;
+        public string morseTextRepresentation;
     }
 }

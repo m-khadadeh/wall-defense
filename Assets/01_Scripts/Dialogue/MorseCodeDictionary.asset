@@ -93,3 +93,5 @@ MonoBehaviour:
     <MorseCode>k__BackingField: -...-
   - <KeyCode>k__BackingField: RN
     <MorseCode>k__BackingField: .-.-.
+  - <KeyCode>k__BackingField: '?'
+    <MorseCode>k__BackingField: ..--..

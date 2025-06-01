@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c01c800b2222c6e880f2e19e402b10, type: 3}
+  m_Name: FairweatherAI
+  m_EditorClassIdentifier: 
+  _dialogueManager: {fileID: 0}
+  _ghoulTypes:
+  - {fileID: 11400000, guid: 111abc881f2b08146b78be4569123d0c, type: 2}
+  - {fileID: 11400000, guid: 2b2960167e165f04bb0a0c96ce2362b3, type: 2}
+  - {fileID: 11400000, guid: f90739eeb21709f479581f843b1fa689, type: 2}
+  - {fileID: 11400000, guid: 31dc8b24d3e55fe4386e3d7428f85533, type: 2}
