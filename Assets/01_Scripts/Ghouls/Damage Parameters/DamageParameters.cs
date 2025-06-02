@@ -7,10 +7,10 @@ namespace WallDefense
     {
         public enum Type
         {
-            bludgeoning,
-            corrosion,
-            finesse,
-            none
+            none = 0,
+            bludgeoning = 1,
+            corrosion = 2,
+            finesse = 3
         }
         public Type type;
         public int magnitude;

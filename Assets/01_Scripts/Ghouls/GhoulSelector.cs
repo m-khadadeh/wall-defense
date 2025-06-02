@@ -8,13 +8,13 @@ namespace WallDefense
   {
     [SerializeField] private List<Ghoul> _possibleGhouls;
     [SerializeField] private List<Clue> _allClues;
-    private Ghoul _currentGhoul;
+    public Ghoul CurrentGhoul { get; private set; }
     private int _attackHour;
 
     public void SelectGhoul()
     {
-      _currentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
-      _attackHour = Random.Range(_currentGhoul.hourRange.x, _currentGhoul.hourRange.y + 1) % 24;
+      CurrentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
+      _attackHour = Random.Range(CurrentGhoul.hourRange.x, CurrentGhoul.hourRange.y + 1) % 24;
       WipeClues();
     }
 
@@ -29,23 +29,23 @@ namespace WallDefense
     public Clue FindClue()
     {
       int foundClueIndex = Random.Range(0, 2);
-      if (!_currentGhoul.clueMain.found)
+      if (!CurrentGhoul.clueMain.found)
       {
-        if (foundClueIndex == 0 || _currentGhoul.clueSecondary.found)
+        if (foundClueIndex == 0 || CurrentGhoul.clueSecondary.found)
         {
-          _currentGhoul.clueMain.found = true;
-          return _currentGhoul.clueMain;
+          CurrentGhoul.clueMain.found = true;
+          return CurrentGhoul.clueMain;
         }
-        else if (!_currentGhoul.clueSecondary.found)
+        else if (!CurrentGhoul.clueSecondary.found)
         {
-          _currentGhoul.clueSecondary.found = true;
-          return _currentGhoul.clueSecondary;
+          CurrentGhoul.clueSecondary.found = true;
+          return CurrentGhoul.clueSecondary;
         }
       }
-      else if (!_currentGhoul.clueSecondary.found)
+      else if (!CurrentGhoul.clueSecondary.found)
       {
-        _currentGhoul.clueSecondary.found = true;
-        return _currentGhoul.clueSecondary;
+        CurrentGhoul.clueSecondary.found = true;
+        return CurrentGhoul.clueSecondary;
       }
       return null;
     }
@@ -54,7 +54,7 @@ namespace WallDefense
     {
       if (hour == _attackHour)
       {
-        if (_currentGhoul.MainAttack() || _currentGhoul.SecondaryAttack())
+        if (CurrentGhoul.MainAttack() || CurrentGhoul.SecondaryAttack())
         {
           // Lose condition
           Debug.Log("LOSE CONDITION");

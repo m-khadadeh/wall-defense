@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
+  m_Name: WS2_InstallMetal_Collect_Middle
+  m_EditorClassIdentifier: 
+  _conditions:
+  - _state: {fileID: 11400000, guid: 1a5be1b199a22febba4a2b5139f46243, type: 2}
+    _conditionComparator: 0
+    _conditionValue: 1
+  - _state: {fileID: 11400000, guid: 2231a5a1ec66d6a598842d54ae8827c2, type: 2}
+    _conditionComparator: 0
+    _conditionValue: 2
+  _yields:
+  - {fileID: 11400000, guid: 4cc153f690d0dd85aa66b6f1fefdf3b2, type: 2}
+  - {fileID: 11400000, guid: d9ebcd66ab4a44de6a3ba275df7ebcfa, type: 2}
+  - {fileID: 11400000, guid: 2942354e8d765b344a53b0423126e213, type: 2}
+  - {fileID: 11400000, guid: add9c34979aed1ad3ad8c6f78209bb8a, type: 2}
+  - {fileID: 11400000, guid: c7242c3945254871db1a4f27d2348d0a, type: 2}
+  - {fileID: 11400000, guid: d77605005f09f079ea0ac43dd2901686, type: 2}
+  _cost: {fileID: 11400000, guid: 674ec9614f2b617abb5d8610ebdc41a0, type: 2}

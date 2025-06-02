@@ -44,7 +44,7 @@ namespace WallDefense
           DialogBox.QueueDialogueBox(new DialogueBoxParameters
           {
             parent = GameObject.Find("Canvas").transform,
-            prompt = $"Cannot remove defense on {choice} wall because there already is no defense there. Materials wasted.",
+            prompt = $"Cannot remove defense on {choice} wall because there already is no defense there.",
             choices = new string[] { "Okay" },
             eventHandlers = new DialogBox.ButtonEventHandler[] { () => { } }
           }

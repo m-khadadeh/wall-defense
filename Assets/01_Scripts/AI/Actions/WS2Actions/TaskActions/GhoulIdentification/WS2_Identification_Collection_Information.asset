@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cb3d1cd51f8006eb868c4a7ca18921, type: 3}
+  m_Name: WS2_Identification_Collection_Information
+  m_EditorClassIdentifier: 
+  _colony: {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}
+  <StateResult>k__BackingField:
+    _state: {fileID: 0}
+    _operator: 0
+    _value: 0
+  _chalkboard: {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a881c866cc90235abf3fba71129fc9b, type: 3}
+  m_Name: WS2_InstallDefense_Allocation_Operator
+  m_EditorClassIdentifier: 
+  _colony: {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}
+  <StateResult>k__BackingField:
+    _state: {fileID: 11400000, guid: 53c453911fd9ade21aeb1bc777bf29c0, type: 2}
+    _operator: 1
+    _value: 1
+  _addOrSubtract: 1
+  _item: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
+  _amount: 1

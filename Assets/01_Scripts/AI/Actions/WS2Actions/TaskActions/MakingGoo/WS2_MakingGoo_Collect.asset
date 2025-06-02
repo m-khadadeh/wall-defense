@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
+  m_Name: WS2_MakingGoo_Collect
+  m_EditorClassIdentifier: 
+  _conditions:
+  - _state: {fileID: 11400000, guid: 7fb2027576940d595a39c59a620b41b4, type: 2}
+    _conditionComparator: 0
+    _conditionValue: 1
+  _yields:
+  - {fileID: 11400000, guid: 422c1c623ae4479dd8cb018a224d62bf, type: 2}
+  - {fileID: 11400000, guid: ec9c866a2e7637f06b5f643d8e884337, type: 2}
+  - {fileID: 11400000, guid: 940549dc24fb9aee1a274a38968bcc62, type: 2}
+  _cost: {fileID: 11400000, guid: 674ec9614f2b617abb5d8610ebdc41a0, type: 2}

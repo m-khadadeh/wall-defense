@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
+  m_Name: WS2_MakingGoo_Allocate
+  m_EditorClassIdentifier: 
+  _conditions:
+  - _state: {fileID: 11400000, guid: 14e62402016be61d68752cab7d4b3b0b, type: 2}
+    _conditionComparator: 5
+    _conditionValue: 2
+  - _state: {fileID: 11400000, guid: e4d28972da4529bbfa4fc8d3988b2e42, type: 2}
+    _conditionComparator: 5
+    _conditionValue: 4
+  - _state: {fileID: 11400000, guid: 7fb2027576940d595a39c59a620b41b4, type: 2}
+    _conditionComparator: 0
+    _conditionValue: 0
+  _yields:
+  - {fileID: 11400000, guid: 182e428d1c63d0f5b8cc8c2648007fac, type: 2}
+  - {fileID: 11400000, guid: f32bc6c66e5c60a92807a331506ac018, type: 2}
+  - {fileID: 11400000, guid: 557dbef7310fb26ea9aa6e44dcf9b452, type: 2}
+  _cost: {fileID: 11400000, guid: 8f3dfb73dbfd3416fa8b95ead9fdf239, type: 2}

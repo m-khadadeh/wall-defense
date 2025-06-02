@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
+using WallDefense.AI;
 
 namespace WallDefense
 {
@@ -9,7 +11,8 @@ namespace WallDefense
   {
     [field: SerializeField] public InventoryData Inventory { get; private set; }
     [field: SerializeField] public Wall Wall { get; private set; }
-    [SerializeField] private SettlementAI _aiController;
+    [SerializeField] private AI.SettlementAI _aiController;
+    [SerializeField] private GhoulDiscernmentChalkboard _ghoulBoard;
     List<Action<List<ItemType>>> _onGiftReceived;
 
     public void Initialize()
@@ -18,7 +21,7 @@ namespace WallDefense
       Wall.InitializeWalls();
       if (_aiController != null)
       {
-        _aiController.Initialize(this);
+        _aiController.Initialize(this, _ghoulBoard);
       }
     }
     public void ReceiveGift(List<ItemType> items)
@@ -39,6 +42,11 @@ namespace WallDefense
       {
         _onGiftReceived.Add(subscriber);
       }
+    }
+
+    public int GetAIModifiedActionCost(int baseCost)
+    {
+      return baseCost;
     }
   }
 }

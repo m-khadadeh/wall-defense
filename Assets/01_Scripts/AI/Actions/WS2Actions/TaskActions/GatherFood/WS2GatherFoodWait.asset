@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
+  m_Name: WS2GatherFoodWait
+  m_EditorClassIdentifier: 
+  _conditions:
+  - _state: {fileID: 11400000, guid: 0f71c806048b40bd2a3bea93206c9b04, type: 2}
+    _conditionComparator: 3
+    _conditionValue: 1
+  _yields:
+  - {fileID: 11400000, guid: 378c13392435fb9538c5005699309eb0, type: 2}
+  _cost: {fileID: 11400000, guid: 674ec9614f2b617abb5d8610ebdc41a0, type: 2}

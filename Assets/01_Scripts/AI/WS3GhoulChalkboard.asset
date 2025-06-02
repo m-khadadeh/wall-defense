@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c4d7b11e4b8946eb76fb843849add0, type: 3}
+  m_Name: WS3GhoulChalkboard
+  m_EditorClassIdentifier: 
+  _ghoulTypes:
+  - {fileID: 11400000, guid: 111abc881f2b08146b78be4569123d0c, type: 2}
+  - {fileID: 11400000, guid: 2b2960167e165f04bb0a0c96ce2362b3, type: 2}
+  - {fileID: 11400000, guid: f90739eeb21709f479581f843b1fa689, type: 2}
+  - {fileID: 11400000, guid: 31dc8b24d3e55fe4386e3d7428f85533, type: 2}
+  _topWallAttackPossibilities: {fileID: 11400000, guid: 9a4b7b42a0986c905ab539921b5c4f60, type: 2}
+  _middleWallAttackPossibilities: {fileID: 11400000, guid: 7f3d96335824efbb4ba7171002cf223f, type: 2}
+  _bottomWallAttackPossibilities: {fileID: 11400000, guid: 2ef1a630039f4d7db86c090dba1f1ffc, type: 2}
+  _ghoulSelector: {fileID: 11400000, guid: 1a586bf88ae00c1adba93c76bb367e77, type: 2}
+  _topCorrosiveBoolean: {fileID: 11400000, guid: e75115ab4aaff93e5b7906afe550a930, type: 2}
+  _topFinesseBoolean: {fileID: 11400000, guid: 46a3075017edded8a8a6b9469c05f43f, type: 2}
+  _topBludgeoningBoolean: {fileID: 11400000, guid: 4817e506740c411028445c02737e5f08, type: 2}
+  _middleCorrosiveBoolean: {fileID: 11400000, guid: 03a68e869eee99add98e299738309321, type: 2}
+  _middleFinesseBoolean: {fileID: 11400000, guid: 0cb9ad017b5155ec1a5145ff95359f19, type: 2}
+  _middleBludgeoningBoolean: {fileID: 11400000, guid: 1d05b09932538a9ba9d984d1328847d6, type: 2}
+  _bottomCorrosiveBoolean: {fileID: 11400000, guid: 8c081c336ff69fdb6bab02fd343c7668, type: 2}
+  _bottomFinesseBoolean: {fileID: 11400000, guid: e743a187c98e6111e9c01122ebae215c, type: 2}
+  _bottomBludgeoningBoolean: {fileID: 11400000, guid: 2dd6716579a1498f298b7ddb153f3897, type: 2}
