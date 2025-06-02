@@ -34,7 +34,7 @@ namespace WallDefense
                 buttons[i].onClick.AddListener(delegate ()
                 {
                     thisButtonsAction?.Invoke();
-                    Destroy(gameObject); // Clicking a button should destroy the dialog box
+                    DialogBox.ClearBox(); // Clicking a button should destroy the dialog box
                 });
             }
         }

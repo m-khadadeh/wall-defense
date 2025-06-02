@@ -18,7 +18,7 @@ namespace WallDefense
         public int nextTaskCompletionHour = 0;
         public UnityEvent onNewDay;
         public UnityEvent<int> onBeforeHour, onAfterHour, onNightHour;
-		public bool triggerHourAdvance = false;
+        public bool triggerHourAdvance = false;
 
         void Start()
         {
@@ -36,6 +36,10 @@ namespace WallDefense
         {
             onBeforeHour.Invoke(currentHour);
             currentHour = (currentHour + 1) % 24;
+            if (currentHour == 0)
+            {
+                currentDay++;
+            }
             if (currentHour == dayStart)
             {
                 onNewDay.Invoke();
