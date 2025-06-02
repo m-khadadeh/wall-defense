@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33cb3d1cd51f8006eb868c4a7ca18921, type: 3}
-  m_Name: WS2_Identification_Collection_Information
+  m_Script: {fileID: 11500000, guid: cf0258722bcee46c3904b838140dd26b, type: 3}
+  m_Name: WS2_ClearWall_Collection_DeselectBottom
   m_EditorClassIdentifier: 
   _colony: {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}
   <StateResult>k__BackingField:
-    _state: {fileID: 11400000, guid: 6290415f76499344f80c3e8569b47e00, type: 2}
+    _state: {fileID: 11400000, guid: dd6fde054449a8b0dad2dc28142f6028, type: 2}
     _operator: 1
     _value: 1
-  _chalkboard: {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}

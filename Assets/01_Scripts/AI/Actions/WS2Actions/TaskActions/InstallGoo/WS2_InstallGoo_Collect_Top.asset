@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
-  m_Name: WS2_InstallMetal_Collect_Bottom
+  m_Name: WS2_InstallGoo_Collect_Top
   m_EditorClassIdentifier: 
   _conditions:
-  - _state: {fileID: 11400000, guid: 1a5be1b199a22febba4a2b5139f46243, type: 2}
+  - _state: {fileID: 11400000, guid: aa833cb3519f7b001ad360e737456da9, type: 2}
     _conditionComparator: 0
     _conditionValue: 1
-  - _state: {fileID: 11400000, guid: 2231a5a1ec66d6a598842d54ae8827c2, type: 2}
+  - _state: {fileID: 11400000, guid: cb49a3ebbc7a93e1e9ff5bd10bf1ad47, type: 2}
     _conditionComparator: 0
-    _conditionValue: 1
+    _conditionValue: 3
   _yields:
   - {fileID: 11400000, guid: 4cc153f690d0dd85aa66b6f1fefdf3b2, type: 2}
   - {fileID: 11400000, guid: d9ebcd66ab4a44de6a3ba275df7ebcfa, type: 2}
   - {fileID: 11400000, guid: 2942354e8d765b344a53b0423126e213, type: 2}
-  - {fileID: 11400000, guid: add9c34979aed1ad3ad8c6f78209bb8a, type: 2}
-  - {fileID: 11400000, guid: 2fda3551e12b4b74ead73ee48f5a16e7, type: 2}
-  - {fileID: 11400000, guid: 54df126952b64dba8ab69b956165b8b6, type: 2}
+  - {fileID: 11400000, guid: 2114ef1f02ecdb0ef8d7a4657aed534c, type: 2}
+  - {fileID: 11400000, guid: 5b29898ce7da13ce194a2d6246ba7a39, type: 2}
+  - {fileID: 11400000, guid: 9b55f37444d3ee455980a24ea8c0b9dd, type: 2}
   _cost: {fileID: 11400000, guid: 674ec9614f2b617abb5d8610ebdc41a0, type: 2}

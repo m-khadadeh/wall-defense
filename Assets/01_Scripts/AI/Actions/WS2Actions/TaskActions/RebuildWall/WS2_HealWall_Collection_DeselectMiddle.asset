@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa92f3e55c360d3628bb8e9871e0e019, type: 3}
-  m_Name: WS2_InstallMetal_Collection_Bottom
+  m_Script: {fileID: 11500000, guid: cf0258722bcee46c3904b838140dd26b, type: 3}
+  m_Name: WS2_HealWall_Collection_DeselectMiddle
   m_EditorClassIdentifier: 
   _colony: {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}
   <StateResult>k__BackingField:
-    _state: {fileID: 0}
-    _operator: 0
-    _value: 0
-  _wallSegment: 2
-  _damageType: 1
+    _state: {fileID: 11400000, guid: d5cd438719280f3dd9eda534b92c5fda, type: 2}
+    _operator: 1
+    _value: 2
