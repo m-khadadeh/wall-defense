@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      morse_tapDown_0: 7308160039881857081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

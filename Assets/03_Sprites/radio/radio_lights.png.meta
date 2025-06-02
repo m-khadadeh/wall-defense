@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      radio_lights_0: 6732092474123770932
+      radio_lights_1: 308025383326669783
+      radio_lights_2: -7881532344632227374
+      radio_lights_3: 2366295507206090064
+      radio_lights_4: -8699603755969297509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
