@@ -16,3 +16,4 @@ MonoBehaviour:
   <Wall>k__BackingField: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   _aiController: {fileID: 11400000, guid: a1257faa09af5a840a7cbaf3ff225c59, type: 2}
   _ghoulBoard: {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}
+  _planner: {fileID: 11400000, guid: 02ea5802068acc05899e495e37d8e746, type: 2}

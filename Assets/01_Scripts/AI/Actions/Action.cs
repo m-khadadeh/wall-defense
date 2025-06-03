@@ -17,6 +17,19 @@ namespace WallDefense.AI
       }
       return true;
     }
+    public virtual List<ActionCondition> GetUnfulfilledConditions()
+    {
+      List<ActionCondition> unfulfilledConditions = new List<ActionCondition>();
+      var conditions = GetConditions();
+      foreach (var condition in conditions)
+      {
+        if (!condition.CheckCondition())
+        {
+          unfulfilledConditions.Add(condition);
+        }
+      }
+      return unfulfilledConditions;
+    }
     public abstract void ApplyActionState();
     public abstract void UndoActionState();
   }

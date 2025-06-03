@@ -27,6 +27,7 @@ namespace WallDefense.AI
     [SerializeField] private WorldState _bottomCorrosiveBoolean;
     [SerializeField] private WorldState _bottomFinesseBoolean;
     [SerializeField] private WorldState _bottomBludgeoningBoolean;
+    [SerializeField] private WorldState _ghoulPossibilityAmount;
     private WallSegmentName[] _wallSegments;
 
     public void Initialize()
@@ -121,11 +122,11 @@ namespace WallDefense.AI
       }
       foreach (var ghoul in _ghoulPossibilities)
       {
-        if (ghoul.damageTargetMain != WallSegmentName.none)
+        if (ghoul.damageTargetMain != WallSegmentName.none && ghoul.parametersMain.type != DamageParameters.Type.none)
         {
           WallAttackPossibilities[ghoul.damageTargetMain].Add(ghoul.parametersMain.type);
         }
-        if (ghoul.damageTargetSecondary != WallSegmentName.none)
+        if (ghoul.damageTargetSecondary != WallSegmentName.none && ghoul.parametersSecondary.type != DamageParameters.Type.none)
         {
           WallAttackPossibilities[ghoul.damageTargetSecondary].Add(ghoul.parametersSecondary.type);
         }
@@ -138,6 +139,7 @@ namespace WallDefense.AI
           _wallAttackBooleanPossibilities[wallAttackPossibilitySet.Key][wallSegmentAttackPossibility].StateValue = 1;
         }
       }
+      _ghoulPossibilityAmount.StateValue = _ghoulPossibilities.Count();
     }
   }
 }

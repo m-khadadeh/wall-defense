@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8501891aeb8d3bc14967d119313493d8, type: 3}
-  m_Name: WS2WoodSensor
+  m_Name: WS2_InventorySensor_Food
   m_EditorClassIdentifier: 
-  _state: {fileID: 0}
+  _state: {fileID: 11400000, guid: e4d28972da4529bbfa4fc8d3988b2e42, type: 2}
   _inventory: {fileID: 11400000, guid: e85384ea8e3325f4a907c20cc3484142, type: 2}
-  _item: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+  _item: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}

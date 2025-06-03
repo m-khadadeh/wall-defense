@@ -1,7 +1,6 @@
 using UnityEngine;
-using WallDefense.AI;
 
-namespace WallDefense
+namespace WallDefense.AI
 {
   [CreateAssetMenu(fileName = "ActionWallHealYield", menuName = "Scriptable Objects/AI/GOAP/Yield/Action Wall Heal Yield")]
   public class ActionWallHealYield : ActionYield

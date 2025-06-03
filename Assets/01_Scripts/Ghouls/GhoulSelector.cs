@@ -10,6 +10,13 @@ namespace WallDefense
     [SerializeField] private List<Clue> _allClues;
     public Ghoul CurrentGhoul { get; private set; }
     private int _attackHour;
+    private bool _attacked;
+    public bool HasAttacked => _attacked;
+
+    public void Initialize()
+    {
+      _attacked = false;
+    }
 
     public void SelectGhoul()
     {
@@ -24,6 +31,11 @@ namespace WallDefense
       {
         clue.found = false;
       }
+    }
+
+    public void OnDayStart()
+    {
+      _attacked = false;
     }
 
     public Clue FindClue()
@@ -52,13 +64,18 @@ namespace WallDefense
 
     public void OnHour(int hour)
     {
-      if (hour == _attackHour)
+      if (hour == _attackHour && !_attacked)
       {
         if (CurrentGhoul.MainAttack() || CurrentGhoul.SecondaryAttack())
         {
           // Lose condition
           Debug.Log("LOSE CONDITION");
         }
+        else
+        {
+          SelectGhoul();
+        }
+        _attacked = true;
       }
     }
   }

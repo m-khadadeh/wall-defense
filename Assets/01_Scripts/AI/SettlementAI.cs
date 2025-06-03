@@ -10,14 +10,10 @@ namespace WallDefense.AI
   {
     private VariableStorageBehaviour _variableStorage => _dialogueManager.VariableStorage;
     private ColonyData _colony;
-    private GhoulDiscernmentChalkboard _ghoulChalkboard;
-    [SerializeField] private DialogueManager _dialogueManager; 
+    [SerializeField] private DialogueManager _dialogueManager;
 
-    public void Initialize(ColonyData data, GhoulDiscernmentChalkboard ghoulBoard)
+    public void Initialize(ColonyData data)
     {
-      _ghoulChalkboard = ghoulBoard;
-      _ghoulChalkboard.Initialize();
-
       _colony = data;
       _colony.Subscribe(OnGiftReceived);
     }
@@ -30,6 +26,6 @@ namespace WallDefense.AI
     {
 
     }
-    public void OnClueReceivedViaDialogue(string clueName) => _ghoulChalkboard.OnClueReceivedViaDialogue(clueName);
+    public void OnClueReceivedViaDialogue(string clueName) => _colony.OnClueReceivedViaDialogue(clueName);
   }
 }

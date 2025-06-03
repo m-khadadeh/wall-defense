@@ -13,6 +13,7 @@ namespace WallDefense
     [field: SerializeField] public Wall Wall { get; private set; }
     [SerializeField] private AI.SettlementAI _aiController;
     [SerializeField] private GhoulDiscernmentChalkboard _ghoulBoard;
+    [SerializeField] private AI.Planner _planner;
     List<Action<List<ItemType>>> _onGiftReceived;
 
     public void Initialize()
@@ -21,9 +22,13 @@ namespace WallDefense
       Wall.InitializeWalls();
       if (_aiController != null)
       {
-        _aiController.Initialize(this, _ghoulBoard);
+        Inventory.Initialize();
+        _ghoulBoard.Initialize();
+        _aiController.Initialize(this);
+        _planner.Initialize();
       }
     }
+
     public void ReceiveGift(List<ItemType> items)
     {
       foreach (var item in items)
@@ -48,5 +53,7 @@ namespace WallDefense
     {
       return baseCost;
     }
+
+    public void OnClueReceivedViaDialogue(string clueName) => _ghoulBoard.OnClueReceivedViaDialogue(clueName);
   }
 }

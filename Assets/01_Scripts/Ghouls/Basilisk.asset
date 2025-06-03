@@ -18,6 +18,6 @@ MonoBehaviour:
   parametersSecondary: {fileID: 11400000, guid: 2c1f5786864a2c245939b2da05593897, type: 2}
   damageTargetMain: 0
   damageTargetSecondary: 3
-  targetWall: {fileID: 0}
+  targetWall: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   hourRange: {x: 21, y: 23}
   morseTextRepresentation: BSK

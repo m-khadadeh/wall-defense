@@ -1,7 +1,6 @@
 using UnityEngine;
-using WallDefense.AI;
 
-namespace WallDefense
+namespace WallDefense.AI
 {
   [CreateAssetMenu(fileName = "ActionDirectWorldStateYield", menuName = "Scriptable Objects/AI/GOAP/Yield/Action Direct World State Yield")]
   public class ActionDirectWorldStateYield : ActionYield

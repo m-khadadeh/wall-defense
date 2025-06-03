@@ -22,4 +22,4 @@ MonoBehaviour:
   _yields:
   - {fileID: 11400000, guid: ca9636da0d5f096e09b87acea536f01a, type: 2}
   - {fileID: 11400000, guid: 18bd70bc4f87989aabb5419bb047f5de, type: 2}
-  _cost: {fileID: 11400000, guid: c19d737bda01326c0a11fa6b3002ad6d, type: 2}
+  _cost: {fileID: 11400000, guid: 75283761a4ff3732297603ff7f1af030, type: 2}

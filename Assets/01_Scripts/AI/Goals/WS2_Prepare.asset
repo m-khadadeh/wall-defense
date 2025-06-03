@@ -13,23 +13,27 @@ MonoBehaviour:
   m_Name: WS2_Prepare
   m_EditorClassIdentifier: 
   _goalConditions:
-  - _state: {fileID: 11400000, guid: 0342eb5c8b45c9d349f54f16ae204bc6, type: 2}
-    _conditionComparator: 4
-    _conditionValue: 1
-  - _state: {fileID: 11400000, guid: dfeb4dfeec470df07940752f1a4dd984, type: 2}
-    _conditionComparator: 4
-    _conditionValue: 1
-  - _state: {fileID: 11400000, guid: 94eb799bc0bb315a28fbcfd3e1069630, type: 2}
-    _conditionComparator: 4
-    _conditionValue: 1
-  - _state: {fileID: 11400000, guid: 9f8cb46891223d55a8152a3b33882319, type: 2}
-    _conditionComparator: 5
-    _conditionValue: 4
-  - _state: {fileID: 11400000, guid: 83b316c85a52aa29d8e3259b2d41155b, type: 2}
-    _conditionComparator: 5
-    _conditionValue: 4
-  - _state: {fileID: 11400000, guid: f0d3fe85221eb12958bf2a0fc67b9199, type: 2}
-    _conditionComparator: 5
-    _conditionValue: 3
-  _priority: {fileID: 0}
-  _maxAllowedCost: {fileID: 0}
+  - <Conditions>k__BackingField:
+    - _state: {fileID: 11400000, guid: 6290415f76499344f80c3e8569b47e00, type: 2}
+      _conditionComparator: 0
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 83b316c85a52aa29d8e3259b2d41155b, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 6
+    - _state: {fileID: 11400000, guid: f0d3fe85221eb12958bf2a0fc67b9199, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 3
+    - _state: {fileID: 11400000, guid: 9f8cb46891223d55a8152a3b33882319, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 4
+    - _state: {fileID: 11400000, guid: 53c453911fd9ade21aeb1bc777bf29c0, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 420c35fddff98984d95b1b347fcf5649, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 68b2dac522933e0ac9f76de0dcf4aa88, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 1
+  _priority: {fileID: 11400000, guid: 9e368db004e509ddaaa4f4aef44c8016, type: 2}
+  _maxAllowedCost: {fileID: 11400000, guid: defa7981294a12dc3bb103c1f0a1198e, type: 2}

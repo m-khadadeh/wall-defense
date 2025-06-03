@@ -4,11 +4,11 @@ namespace WallDefense.AI
 {
   public abstract class Priority : ScriptableObject
   {
-    [SerializeField] protected int _startingPriority;
-    [SerializeField] protected int _priority;
-    [SerializeField] protected WorldState[] _worldStates;
-    public int PriorityValue => _priority;
-
+    public virtual void Initialize()
+    {
+      
+    }
+    public abstract int PriorityValue { get; }
     public abstract void UpdatePriority();
   }
 }

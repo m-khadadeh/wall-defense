@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818b9140b8030ea479fdcaabb977338d, type: 3}
+  m_Name: WS2Planner
+  m_EditorClassIdentifier: 
+  _sensors:
+  - {fileID: 11400000, guid: eb278e35cde8a09f7b3c8182cf3d0df1, type: 2}
+  - {fileID: 11400000, guid: 0c11613b3babcac9498a48b835734bba, type: 2}
+  - {fileID: 11400000, guid: 5853a26914ef6f872abd8582ec65b9df, type: 2}
+  - {fileID: 11400000, guid: 5d2e375b64af9874781b0f608abf9522, type: 2}
+  - {fileID: 11400000, guid: 10ae7f9911302b6499164d122367d518, type: 2}
+  - {fileID: 11400000, guid: 38cd95755b7637bb4b0cbb71421b9ee8, type: 2}
+  - {fileID: 11400000, guid: 5eec2f802000e0b0e83ab2160f4e628b, type: 2}
+  - {fileID: 11400000, guid: 882420c388db7a23e99affba5f0920e8, type: 2}
+  - {fileID: 11400000, guid: 4730587a2ed60c8d7923a15b80a45cae, type: 2}
+  - {fileID: 11400000, guid: 13d49b80f6a05c78da048a7a85f55c87, type: 2}
+  - {fileID: 11400000, guid: 5f6f13933a096567f9e168c412a233af, type: 2}
+  - {fileID: 11400000, guid: e86ad60b459c2254fa24e293d842f6ad, type: 2}
+  - {fileID: 11400000, guid: 8fdbc99f9e45cc519918de020b434e6a, type: 2}
+  - {fileID: 11400000, guid: 4a6d357453dcb35fd9c456daa6105e8d, type: 2}
+  - {fileID: 11400000, guid: 7b4665145a136b37a9c86d1ceef4c02e, type: 2}
+  - {fileID: 11400000, guid: 7320a44eb8d65b637a6a7c2b3eb81103, type: 2}
+  - {fileID: 11400000, guid: d762b2e4983b1b89f813098d688ed974, type: 2}
+  - {fileID: 11400000, guid: 88d9a3fae636cd0f0b2b0ca0ffd1c792, type: 2}
+  _goals:
+  - {fileID: 11400000, guid: 0bc8e466005044810be4433180d66842, type: 2}
+  - {fileID: 11400000, guid: 7ea075cce7199051f99c94c2ff71a5f0, type: 2}
+  - {fileID: 11400000, guid: 7d86f7b4d1c6e1767b0d0ec2762c9f05, type: 2}
+  - {fileID: 11400000, guid: a1b3353326302be3898f6d290abb8195, type: 2}
+  _countdownCosts:
+  - {fileID: 11400000, guid: 91e12d470484d136aa18ece401028b24, type: 2}
+  - {fileID: 11400000, guid: defa7981294a12dc3bb103c1f0a1198e, type: 2}
+  - {fileID: 11400000, guid: 3c43aac99df14c6898327203e08d89b3, type: 2}
+  _hourPriorities:
+  - {fileID: 11400000, guid: e14bd21e8967661d998f4e16ef4f1029, type: 2}
+  - {fileID: 11400000, guid: 9e368db004e509ddaaa4f4aef44c8016, type: 2}
+  - {fileID: 11400000, guid: 9898211f13e7434359a8515b714a6eb4, type: 2}
+  - {fileID: 11400000, guid: 5dff5d47c29e1709ba445bd6cf9b83d7, type: 2}

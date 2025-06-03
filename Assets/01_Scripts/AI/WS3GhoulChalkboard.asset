@@ -30,3 +30,4 @@ MonoBehaviour:
   _bottomCorrosiveBoolean: {fileID: 11400000, guid: 8c081c336ff69fdb6bab02fd343c7668, type: 2}
   _bottomFinesseBoolean: {fileID: 11400000, guid: e743a187c98e6111e9c01122ebae215c, type: 2}
   _bottomBludgeoningBoolean: {fileID: 11400000, guid: 2dd6716579a1498f298b7ddb153f3897, type: 2}
+  _ghoulPossibilityAmount: {fileID: 11400000, guid: 08468daba836b7e99a806937b37bb770, type: 2}
