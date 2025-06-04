@@ -167,6 +167,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pocketwatch
       objectReference: {fileID: 0}
+    - target: {fileID: 5162720121481798836, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907010710733975106, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8930446893807229123, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1549,7 +1557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1765,7 +1773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
