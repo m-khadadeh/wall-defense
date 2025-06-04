@@ -13,7 +13,57 @@ MonoBehaviour:
   m_Name: SFXLibrary
   m_EditorClassIdentifier: 
   _clips:
-  - <ClipName>k__BackingField: morse_wave
-    <Clip>k__BackingField: {fileID: 8300000, guid: 3b5b33dc7b2900418ac3f65921a60057, type: 3}
+  - <ClipName>k__BackingField: start_game
+    <Clip>k__BackingField: {fileID: 8300000, guid: 497362e8e995fb447b905c7bb1de32cd, type: 3}
+  - <ClipName>k__BackingField: default_button
+    <Clip>k__BackingField: {fileID: 8300000, guid: c92c5e5edba067545a3cb4e55652bd55, type: 3}
+  - <ClipName>k__BackingField: open_book
+    <Clip>k__BackingField: {fileID: 8300000, guid: b6052bea9c1ea834eb12a48616482546, type: 3}
+  - <ClipName>k__BackingField: close_book
+    <Clip>k__BackingField: {fileID: 8300000, guid: 88af7929be0a2984ebca35be80364213, type: 3}
+  - <ClipName>k__BackingField: page_ghouls
+    <Clip>k__BackingField: {fileID: 8300000, guid: b06fa1639d18b884bbb656ff0bd198c6, type: 3}
+  - <ClipName>k__BackingField: page_management
+    <Clip>k__BackingField: {fileID: 8300000, guid: bbaa289cc658a184791a1adaa1cbdefe, type: 3}
+  - <ClipName>k__BackingField: auto_assign
+    <Clip>k__BackingField: {fileID: 8300000, guid: 7a9c215428060c24cb3b69a965dbc7cb, type: 3}
+  - <ClipName>k__BackingField: lockin_mining
+    <Clip>k__BackingField: {fileID: 8300000, guid: e72d57f662de2a94084a421c4992d16a, type: 3}
+  - <ClipName>k__BackingField: lockin_logging
+    <Clip>k__BackingField: {fileID: 8300000, guid: ad2e1f26e8cd5ff45bd1c60965049daf, type: 3}
+  - <ClipName>k__BackingField: lockin_harvesting
+    <Clip>k__BackingField: {fileID: 8300000, guid: 09033dffbc6d2a846844c8e8151be939, type: 3}
+  - <ClipName>k__BackingField: lockin_smelting
+    <Clip>k__BackingField: {fileID: 8300000, guid: ecda58e4d1a54874982dfb666992c191, type: 3}
+  - <ClipName>k__BackingField: lockin_spikes
+    <Clip>k__BackingField: {fileID: 8300000, guid: 91af79a59d64aee4680713e7230d68ba, type: 3}
+  - <ClipName>k__BackingField: lockin_goo
+    <Clip>k__BackingField: {fileID: 8300000, guid: 10d05b98ddde19d45822162b6c9dfdef, type: 3}
+  - <ClipName>k__BackingField: lockin_reinforce
+    <Clip>k__BackingField: {fileID: 8300000, guid: b6e26cf56b5fa9143bb7c9ae9b2d5610, type: 3}
+  - <ClipName>k__BackingField: lockin_placing_spikes
+    <Clip>k__BackingField: {fileID: 8300000, guid: 7f495a11a49999b49918087d0eb225e2, type: 3}
+  - <ClipName>k__BackingField: lockin_placing_goo
+    <Clip>k__BackingField: {fileID: 8300000, guid: 1d75b4cd53a78fc4c9db0674e9cd67c5, type: 3}
+  - <ClipName>k__BackingField: lockin_clearingdefense
+    <Clip>k__BackingField: {fileID: 8300000, guid: 46a98c136ea0c244cb9783d9761cdb52, type: 3}
+  - <ClipName>k__BackingField: lockin_repairdefense
+    <Clip>k__BackingField: {fileID: 8300000, guid: 37eddcf1b33ab71469ec5e3435998534, type: 3}
+  - <ClipName>k__BackingField: lockin_gatherinfo
+    <Clip>k__BackingField: {fileID: 8300000, guid: 97d03adaa3800a640801ac858eed0e05, type: 3}
+  - <ClipName>k__BackingField: lockin_delivery
+    <Clip>k__BackingField: {fileID: 8300000, guid: e0f0f9325b386e94891e26f2fc9a5ab6, type: 3}
+  - <ClipName>k__BackingField: view_wall
+    <Clip>k__BackingField: {fileID: 8300000, guid: 21ff1b1b29f09a4429a6d66528217704, type: 3}
+  - <ClipName>k__BackingField: open_morse
+    <Clip>k__BackingField: {fileID: 8300000, guid: 29fe9dd5b6542354fb7422f23dd4fd90, type: 3}
+  - <ClipName>k__BackingField: close_morse
+    <Clip>k__BackingField: {fileID: 8300000, guid: 5885b935ff58c7144a89bd6da57cd25c, type: 3}
   - <ClipName>k__BackingField: typewriter
-    <Clip>k__BackingField: {fileID: 8300000, guid: 4bccda19083a9139fa5e3ef617e609fd, type: 3}
+    <Clip>k__BackingField: {fileID: 8300000, guid: 37541debd179cd14e83b85cf050e0f18, type: 3}
+  - <ClipName>k__BackingField: morse_wave
+    <Clip>k__BackingField: {fileID: 8300000, guid: e6d5b805323366f4aa80d27667ec56c2, type: 3}
+  - <ClipName>k__BackingField: clock_tick
+    <Clip>k__BackingField: {fileID: 8300000, guid: 61d2574d6af78e34ba4bc82714a993cf, type: 3}
+  - <ClipName>k__BackingField: kms
+    <Clip>k__BackingField: {fileID: 8300000, guid: 9cb1608162f0ce347acc6f96487d45fa, type: 3}
