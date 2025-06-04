@@ -26,7 +26,11 @@ namespace WallDefense
         {
             int week = (int)math.floor((dayNightManager.currentDay % 42) / 7);
             int day = dayNightManager.currentDay % 7;
-            dateLines[week].transform.localScale = new Vector3((day + 1) / 7.0f, 1, 1);
+            dateLines[week].transform.localScale = new Vector3(day / 7.0f, 1, 1);
+            if (week > 1)
+            {
+                dateLines[week - 1].transform.localScale = new Vector3(1, 1, 1);
+            }
 
         }
 
