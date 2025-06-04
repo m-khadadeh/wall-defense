@@ -45,12 +45,19 @@ position: -137,51
 
 <<declare $requested_asset = "">>
 <<declare $requested_amount = 0>>
+<<declare $report = "">>
 
 <<declare $days_till_capitol_shipment = 0>>
 
 <<declare $fairweather_ai_object_name = "">>
 
 <<declare $fairweather_knows_ghoul_type = false>>
+<<declare $fairweather_first_ghooul_elimination = "">>
+<<declare $fairweather_second_ghooul_elimination = "">>
+
+<<declare $fairweather_ask_for_resources_request_type = "">>
+<<declare $fairweather_ask_for_resources_request_amount = 0>>
+<<declare $fairweather_ask_for_resources_response = false>>
 
 <<declare $fairweather_receieved_first_clue = false>>
 <<declare $fairweather_receieved_second_clue = false>>
@@ -65,14 +72,14 @@ position: -137,51
 <<declare $fairweather_relationship_bad = $fairweather_relationship < 20>>
 <<declare $fairweather_relationship_neutral = $fairweather_relationship < 50 && $fairweather_relationship >= 20>>
 <<declare $fairweather_relationship_friendly = $fairweather_relationship >= 50 && !$fairweather_relationship_close>>
-<<declare $fairweather_relationship_close = $fairweather_relationship >= 75 && $fairweather_explained_svp && $fairweather_saved_by_player>>
+<<declare $fairweather_relationship_close = $fairweather_relationship >= 75 && $fairweather_declared_friendship>>
 <<declare $fairweather_stress_calm = $fairweather_stress < 20>>
 <<declare $fairweather_stress_stressed = $fairweather_stress < 60 && $fairweather_stress >= 20>>
 <<declare $fairweather_stress_distress = $fairweather_stress >= 60>>
 
 <<declare $fairweather_used_svp = false>>
 <<declare $fairweather_explained_svp = false>>
-<<declare $fairweather_saved_by_player = false>>
+<<declare $fairweather_declared_friendship = false>>
 
 <<return>>
 ===
