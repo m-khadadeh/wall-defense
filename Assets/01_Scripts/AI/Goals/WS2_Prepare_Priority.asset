@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55833d6ae6ab6d8f3a88c351bfe1050d, type: 3}
   m_Name: WS2_Prepare_Priority
   m_EditorClassIdentifier: 
+  _startHour: 5
   _dayHour: 6
   _nightHour: 20
   _selector: {fileID: 11400000, guid: 1a586bf88ae00c1adba93c76bb367e77, type: 2}
@@ -20,5 +21,5 @@ MonoBehaviour:
     <PositionFromPOI>k__BackingField: 0
     <Value>k__BackingField: 800
   - <ReferencePoint>k__BackingField: 2
-    <PositionFromPOI>k__BackingField: -5
+    <PositionFromPOI>k__BackingField: -6
     <Value>k__BackingField: 0

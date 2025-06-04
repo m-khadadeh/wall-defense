@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca9bf2ea7ce60ee7a14868110bcae03, type: 3}
+  m_Name: WS2_Logging_Collect
+  m_EditorClassIdentifier: 
+  _conditions:
+  - _state: {fileID: 11400000, guid: c311f600634b81058a75afb163bc6186, type: 2}
+    _conditionComparator: 0
+    _conditionValue: 1
+  _yields:
+  - {fileID: 11400000, guid: fc2f58cc6977dd0098421fbee0cf5c61, type: 2}
+  - {fileID: 11400000, guid: 7f54b28c0d407dcd084747c0c7795645, type: 2}
+  - {fileID: 11400000, guid: 74d78fa15d732a7189cde0d23716d38e, type: 2}
+  - {fileID: 11400000, guid: 42775f6746510c4e48dfb34176e13cf4, type: 2}
+  _cost: {fileID: 11400000, guid: 674ec9614f2b617abb5d8610ebdc41a0, type: 2}

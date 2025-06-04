@@ -8,10 +8,13 @@ namespace WallDefense.AI
   [CreateAssetMenu(fileName = "GhoulTimeBasedPriority", menuName = "Scriptable Objects/AI/GOAP/Ghoul Time Based Priority")]
   public class GhoulTimeBasedPriority : Priority
   {
+    [SerializeField] private int _startHour;
     [SerializeField] private int _dayHour;
     [SerializeField] private int _nightHour;
     [SerializeField] private GhoulSelector _selector;
     [SerializeField] private List<CurvePoint> _curvePoints;
+    [SerializeField] private GhoulDiscernmentChalkboard _chalkboard;
+    [SerializeField] private Ghoul _toDefendAgainst;
     private int _priority;
     public override int PriorityValue => _priority;
     private int _attackHour;
@@ -22,7 +25,7 @@ namespace WallDefense.AI
     public override void Initialize()
     {
       _attackHour = 0;
-      _hourSinceAttack = _dayHour;
+      _hourSinceAttack = _startHour;
       UpdateCurve();
       UpdatePriority();
       _attackHourUpdatedPostAttack = false;
@@ -30,22 +33,30 @@ namespace WallDefense.AI
 
     public override void UpdatePriority()
     {
-      for (int i = 0; i < _priorityPoints.Count; i++)
+      int multiplier = 1;
+      if (_toDefendAgainst != null)
       {
-        if (_hourSinceAttack == _priorityPoints[i].x || i == _priorityPoints.Count - 1)
+        if (!_chalkboard.Possibilities.Contains(_toDefendAgainst))
         {
-          // Right on the money OR it's the last point so we'll stay constant.
-          _priority = _priorityPoints[i].y;
-          return;
-        }
-        else if (_hourSinceAttack > _priorityPoints[i].x && _hourSinceAttack < _priorityPoints[i + 1].x)
-        {
-          // Lerp between the two points
-          _priority = (int)Vector2.Lerp(_priorityPoints[i], _priorityPoints[i + 1],
-              (float)(_hourSinceAttack - _priorityPoints[i].x) / (float)(_priorityPoints[i + 1].x - _priorityPoints[i].x)).y;
-          return;
+          multiplier = 0;
         }
       }
+      for (int i = 0; i < _priorityPoints.Count; i++)
+        {
+          if (_hourSinceAttack == _priorityPoints[i].x || i == _priorityPoints.Count - 1)
+          {
+            // Right on the money OR it's the last point so we'll stay constant.
+            _priority = _priorityPoints[i].y * multiplier;
+            return;
+          }
+          else if (_hourSinceAttack > _priorityPoints[i].x && _hourSinceAttack < _priorityPoints[i + 1].x)
+          {
+            // Lerp between the two points
+            _priority = multiplier * (int)Vector2.Lerp(_priorityPoints[i], _priorityPoints[i + 1],
+                (float)(_hourSinceAttack - _priorityPoints[i].x) / (float)(_priorityPoints[i + 1].x - _priorityPoints[i].x)).y;
+            return;
+          }
+        }
       throw new Exception($"Priority wasn't calculated for {_hourSinceAttack} hours since {_attackHour}");
     }
 

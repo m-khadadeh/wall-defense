@@ -13,6 +13,7 @@ namespace WallDefense.AI
     [SerializeField] private WorldState _bottomWallAttackPossibilities;
     private HashSet<Ghoul> _ghoulPossibilities;
     public HashSet<Ghoul> ResearchedGhoulImpossibilites { get; private set; }
+    public HashSet<Ghoul> Possibilities => _ghoulPossibilities;
     private Dictionary<string, HashSet<Ghoul>> _ghoulsPerClueString;
     [SerializeField] private GhoulSelector _ghoulSelector;
     private Dictionary<WallSegmentName, WorldState> _wallAttackPossibilityCounts;
@@ -74,7 +75,7 @@ namespace WallDefense.AI
       OnGhoulReset();
     }
 
-    private void OnGhoulReset()
+    public void OnGhoulReset()
     {
       _ghoulPossibilities = _ghoulTypes.ToHashSet();
       ResearchedGhoulImpossibilites = new HashSet<Ghoul>();

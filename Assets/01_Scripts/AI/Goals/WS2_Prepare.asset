@@ -26,14 +26,6 @@ MonoBehaviour:
     - _state: {fileID: 11400000, guid: 9f8cb46891223d55a8152a3b33882319, type: 2}
       _conditionComparator: 5
       _conditionValue: 4
-    - _state: {fileID: 11400000, guid: 53c453911fd9ade21aeb1bc777bf29c0, type: 2}
-      _conditionComparator: 5
-      _conditionValue: 1
-    - _state: {fileID: 11400000, guid: 420c35fddff98984d95b1b347fcf5649, type: 2}
-      _conditionComparator: 5
-      _conditionValue: 1
-    - _state: {fileID: 11400000, guid: 68b2dac522933e0ac9f76de0dcf4aa88, type: 2}
-      _conditionComparator: 5
-      _conditionValue: 1
   _priority: {fileID: 11400000, guid: 9e368db004e509ddaaa4f4aef44c8016, type: 2}
   _maxAllowedCost: {fileID: 11400000, guid: defa7981294a12dc3bb103c1f0a1198e, type: 2}
+  <ProtectionGoal>k__BackingField: 0

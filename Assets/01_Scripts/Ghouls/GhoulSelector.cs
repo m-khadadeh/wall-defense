@@ -8,6 +8,7 @@ namespace WallDefense
   {
     [SerializeField] private List<Ghoul> _possibleGhouls;
     [SerializeField] private List<Clue> _allClues;
+    [SerializeField] private List<AI.GhoulDiscernmentChalkboard> _chalkBoards;
     public Ghoul CurrentGhoul { get; private set; }
     private int _attackHour;
     private bool _attacked;
@@ -22,6 +23,10 @@ namespace WallDefense
     {
       CurrentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
       _attackHour = Random.Range(CurrentGhoul.hourRange.x, CurrentGhoul.hourRange.y + 1) % 24;
+      foreach (var chalkboard in _chalkBoards)
+      {
+        chalkboard.OnGhoulReset();
+      }
       WipeClues();
     }
 

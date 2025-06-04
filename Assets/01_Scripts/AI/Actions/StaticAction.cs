@@ -9,6 +9,7 @@ namespace WallDefense.AI
     [SerializeField] List<ActionCondition> _conditions;
     [SerializeField] List<ActionYield> _yields;
     [SerializeField] ActionCost _cost;
+    public override List<ActionYield> Yields => _yields;
 
     public override void ApplyActionState()
     {

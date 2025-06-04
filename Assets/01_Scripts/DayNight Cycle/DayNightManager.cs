@@ -20,10 +20,6 @@ namespace WallDefense
         public UnityEvent<int> onBeforeHour, onAfterHour, onNightHour;
         public bool triggerHourAdvance = false;
 
-        void Start()
-        {
-            AdvanceHour();
-        }
         void Update()
         {
             if (triggerHourAdvance)

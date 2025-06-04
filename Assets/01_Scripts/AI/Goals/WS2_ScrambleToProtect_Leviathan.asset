@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b45e1a9ce973ce7db9e367493f0df11, type: 3}
+  m_Name: WS2_ScrambleToProtect_Leviathan
+  m_EditorClassIdentifier: 
+  _goalConditions:
+  - <Conditions>k__BackingField:
+    - _state: {fileID: 11400000, guid: 6290415f76499344f80c3e8569b47e00, type: 2}
+      _conditionComparator: 5
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 73856519fc1393ce68132cb1ae5c93a0, type: 2}
+      _conditionComparator: 0
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 6bedd3476eaaced0988a07e20620b334, type: 2}
+      _conditionComparator: 0
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: d705ff7f9e4d98e01aece16e8beb145e, type: 2}
+      _conditionComparator: 0
+      _conditionValue: 1
+    - _state: {fileID: 11400000, guid: 6dbaa9ece1b61efc2a53e882eb046cec, type: 2}
+      _conditionComparator: 0
+      _conditionValue: 3
+  _priority: {fileID: 11400000, guid: 5dff5d47c29e1709ba445bd6cf9b83d7, type: 2}
+  _maxAllowedCost: {fileID: 11400000, guid: 3c43aac99df14c6898327203e08d89b3, type: 2}
+  <ProtectionGoal>k__BackingField: 1

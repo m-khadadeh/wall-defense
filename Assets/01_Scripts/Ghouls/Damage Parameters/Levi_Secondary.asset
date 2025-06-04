@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1b8c6967ff2dd4b8b5d9b42c237f64, type: 3}
   m_Name: Levi_Secondary
   m_EditorClassIdentifier: 
-  type: 0
-  magnitude: 75
+  type: 1
+  magnitude: 50
   reducedAmount: 0.25

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1b8c6967ff2dd4b8b5d9b42c237f64, type: 3}
   m_Name: Wyrm_Primary
   m_EditorClassIdentifier: 
-  type: 2
+  type: 3
   magnitude: 150
   reducedAmount: 0.3

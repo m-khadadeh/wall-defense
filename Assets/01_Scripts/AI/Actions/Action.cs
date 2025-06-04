@@ -9,6 +9,7 @@ namespace WallDefense.AI
     public abstract ActionCost GetCost();
     public abstract List<ActionCondition> GetConditions();
     public abstract void GetYields();
+    public abstract List<ActionYield> Yields { get; }
     public virtual bool CheckConditions()
     {
       foreach (var condition in GetConditions())

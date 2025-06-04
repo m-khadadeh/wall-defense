@@ -22,3 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aab2e5464e0d0c24c8127a9823c144d1, type: 2}
   - {fileID: 11400000, guid: 6d363072683af5d4ab69d9905ba95a4f, type: 2}
   - {fileID: 11400000, guid: 576b2e95cc526a843b084408f6d2f216, type: 2}
+  _chalkBoards:
+  - {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}
