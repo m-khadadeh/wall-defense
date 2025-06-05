@@ -81,6 +81,8 @@ position: -137,51
 <<declare $fairweather_explained_svp = false>>
 <<declare $fairweather_declared_friendship = false>>
 
+<<declare $fairweather_cut_contact_after_distress_confrontation = false>>
+
 <<return>>
 ===
 title: Capitol_PlayerInitiates

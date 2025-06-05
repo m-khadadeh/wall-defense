@@ -1,5 +1,5 @@
-title: Fairweather_NPCInitiates
-position: -682,950
+title: Fairweather_NPC_Initiates
+position: -688,945
 ---
 <<comms_start {$fairweather_station}>>
 MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
@@ -11,8 +11,7 @@ MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
 <<return>>
 ===
 
-
-title: Fairweather_PlayerInitiates
+title: Fairweather_Player_Initiates
 position: -684,701
 ---
 MORSE_{$player_station_name}: WS1 CALLING STATION {$fairweather_station}
@@ -28,7 +27,7 @@ MORSE_{$player_station_name}: WS1 CALLING STATION {$fairweather_station}
 ===
 
 title: Fairweather_Player_MainMenu
-position: -404,702
+position: -129,702
 ---
 {$player_name}: What should I do?
 -> Introduce myself <<once if !$fairweather_player_introduced && !$fairweather_stress_distress>>
@@ -74,6 +73,7 @@ position: -404,702
     => MORSE_{$fairweather_station}: I AWAIT OUR NEXT CONVERSATION (RN) (SK) <<if $fairweather_relationship_close>>
     <<comms_end>>
   <<endif>>
+<<jump Fairweather_Player_MainMenu>>
 ===
 
 
@@ -131,9 +131,10 @@ MORSE_{$player_station_name}: WE NEED ASSISTANCE
   <<elseif $fairweather_relationship_close>>
     {$player_name}: Seriously? After all that about being "friends"?
     MORSE_{$player_station_name}: REALLY? ABSOLUTELY NOTHING?
-    MORSE_{$fairweather_station}: IM REALLY SORRY K
+    MORSE_{$fairweather_station}: IM REALLY SORRY
+    MORSE_{$fairweather_station}: NIL K
     {$player_name}: How necessary is their help right now? Do I call them out?
-    -> It's necessary. Time for a talk.
+    -> It's life or death. Time for a talk.
       <<jump Fairweather_Player_Confrontation>>
     -> I can do without. Let it slide.
       MORSE_{$player_station_name}: OK
@@ -144,6 +145,7 @@ MORSE_{$player_station_name}: WE NEED ASSISTANCE
     {$player_name}: Huh? What kind of a response is that?
     {$player_name}: What should I do?
     -> Ask if they need something.
+      <<jump Fairweather_Player_Report>>
     -> Confront them. We've been through too much for "NIL K."
       <<jump Fairweather_Player_Confrontation>>
     -> Let it go.
@@ -159,50 +161,122 @@ MORSE_{$player_station_name}: WE NEED ASSISTANCE
 <<jump Fairweather_Player_MainMenu>>
 ===
 title: Fairweather_Player_Confrontation
-position: 314,288
+position: 320,288
 ---
-
+<<once>>
+MORSE_{$player_station_name}: DO YOU HIT ALL YOUR FRIENDS WITH NIL WHEN THEY NEED YOU?
+<<else>>
+MORSE_{$player_station_name}: WE NEED TO TALK
+<<endonce>>
+<<if $fairweather_stress_distress>>
+  MORSE_{$fairweather_station}: (SOS)
+  MORSE_{$fairweather_station}: (SOS)
+  MORSE_{$fairweather_station}: (SOS)
+  <<once>>
+    {$player_name}: What's going on?
+    <<comms_end>>
+    {$player_name}: Hey! Hey, wait!
+    MORSE_{$player_station_name}: WS1 CALLING STATION {$fairweather_station}
+    {$player_name}: Come on! Come in!
+    MORSE_{$player_station_name}: WS1 CS {$fairweather_station}
+    MORSE_{$player_station_name}: CS {$fairweather_station}
+    {$player_name}: They're not responding.
+    <<set $fairweather_cut_contact_after_distress_confrontation = true>>
+  <<else>>
+    {$player_name}: This again?
+    <<comms_end>>
+    {$player_name}: How many times are we going to do this?
+  <<endonce>>
+<<else>>
+  MORSE_{$player_station_name}: WHEN WE AGREED TO BE FRIENDS THIS ISNT WHAT I HAD IN MIND
+  {$player_name}: No response?
+  MORSE_{$player_station_name}: COME IN {$fairweather_station}
+  MORSE_{$fairweather_station}: AGN I CANT HELP YOU AT PRESENT
+  MORSE_{$fairweather_station}: IM NOT IN A GOOD POSITION TO OFFER AID
+  MORSE_{$player_station_name}: SO WHEN ARE YOU
+  MORSE_{$fairweather_station}: WHEN WX ISNT THREATENING TO TEAR DOWN MY WALL
+  MORSE_{$player_station_name}: ARE YOU FORGETTING WE ARE BOTH GETTING HIT BY THE SAME WX
+  MORSE_{$player_station_name}: MY WALL IS ABOUT TO CRUMBLE
+  MORSE_{$fairweather_station}: OH STOP BEING SO DRAMATIC
+  {$player_name}: !!
+  {$player_name}: Are you kidding me?
+  MORSE_{$fairweather_station}: YOU HAVE THE CAPITOL ON YOUR SIDE
+  MORSE_{$fairweather_station}: {$player_station_name} WILL NEVER FALL BEFORE {$fairweather_station} DOES
+  MORSE_{$player_station_name}: YOU THINK IM LYING?
+  MORSE_{$fairweather_station}: NOT QUITE
+  MORSE_{$fairweather_station}: EXAGGERATING IS A BETTER WORD
+  MORSE_{$player_station_name}: YOURE CLEARLY NOT UNDER ENOUGH STRESS TO LOSE YOUR SENSE OF HUMOR
+  MORSE_{$fairweather_station}: WHAT DO YOU WANT FROM ME K
+  -> Admit you aren't a true friend
+    MORSE_{$player_station_name}: ADMIT YOU ARENT ACTUALLY INTERESTED IN THIS
+    MORSE_{$player_station_name}: WHATEVER THIS IS TO YOU ISNT WHAT IT IS TO ME
+    {$player_name}: Take your time...
+    MORSE_{$fairweather_station}: THEN IM NOT INTERESTED
+    MORSE_{$fairweather_station}: WHATEVER YOU THOUGHT THIS ARRANGEMENT WAS WAS CLEARLY AT ODDS WITH WHAT I THOUGHT
+  -> Start acting like a friend
+    MORSE_{$player_station_name}: START ACTING LIKE A FRIEND AND HELP ME OUT
+    MORSE_{$player_station_name}: ANYTHING YOU CAN OFFER IS HELPFUL
+    MORSE_{$fairweather_station}: AGN I CANNOT HELP YOU AT THIS MOMENT WHETHER YOU NEED IT OR NOT
+  MORSE_{$fairweather_station}: YES BEING FRIENDS MEANS WE GET TO LEAN ON EACH OTHER FROM TIME TO TIME
+  MORSE_{$fairweather_station}: BUT I AM IN NO POSITION TO BE LEANED ON
+  MORSE_{$fairweather_station}: AND I WILL NOT BE IN THE FORESEEABLE FUTURE
+  MORSE_{$fairweather_station}: CONSIDER OUR ARRANGEMENT TERMINATED
+  MORSE_{$fairweather_station}: FB {$player_station_name} (RN) (SK)
+  <<set $fairweather_declared_friendship = false>>
+  <<set $fairweather_relationship = -100>>
+  <<comms_end>>
+  {$player_name}: Some "friend" you were!
+  <<if $fairweather_cut_contact_after_distress_confrontation>>
+    {$player_name}: I should've seen this coming when after they hit me with that triple SOS. and came back like this.
+    {$player_name}: And came back like nothing happened.
+  <<endif>>
+<<endif>>
+<<stop>>
 ===
 title: Fairweather_Player_AssistanceDiscussion
 position: 326,495
 ---
 {$player_name}: What should I ask for?
--> Pointers
+-> Chat <<once if $fairweather_relationship_neutral>>
   MORSE_{$player_station_name}: ANY TIPS TO SHARE?
-  => MORSE_{$fairweather_station}: I RECOMMEND STARTING BY LOOKING INTO IDENTIFYING WX <<if $fairweather_relationship_neutral>>
-    MORSE_{$fairweather_station}: THEN APPLYING THAT KNOWLEDGE TO DEFENDING YOUR WALL K
-  => MORSE_{$fairweather_station}: KEEP YOUR WALL HEALTHY <<if $fairweather_relationship_friendly>>
-    MORSE_{$fairweather_station}: TRUST ME WHEN I SAY
-    MORSE_{$fairweather_station}: YOU CAN REALLY ENJOY THE END TIMES WHEN YOURE STRESS FREE
-    MORSE_{$fairweather_station}: YOU MIGHT EVEN FIND YOURSELF GETTING GENEROUS K
-  => MORSE_{$fairweather_station}: OH {$player_station_name} <<if $fairweather_relationship_close>>
-    MORSE_{$fairweather_station}: AS IF I CAN TEACH YOU ANYTHING YOU DONT KNOW ALREADY K
-    MORSE_{$player_station_name}: IM SURE YOU CAN
-    MORSE_{$fairweather_station}: ALRIGHT LET ME DIG UP A MORSEL FOR YOU =
-    MORSE_{$fairweather_station}: CONSIDER THE GHOULS PERSPECTIVE
-    {$player_name}: Huh?
-    MORSE_{$fairweather_station}: YOURE AWARE THE WX WASNT ALWAYS LIKE THIS
-    MORSE_{$fairweather_station}: GHOULS RARELY ATTACKED
-    MORSE_{$fairweather_station}: LET ALONE SO CONSISTENTLY
-    MORSE_{$fairweather_station}: AS IF THEYRE ON A SCHEDULE
-    {$player_name}: ...
-    {$player_name}: That's true. It's as if they're a team.
-    MORSE_{$fairweather_station}: CFM SVP K
-    MORSE_{$player_station_name}: DO THEY WORK TOGETHER?
-    MORSE_{$fairweather_station}: THATS MY THEORY
-    MORSE_{$fairweather_station}: IT EXPLAINS WHY THE WX IS NEVER THE SAME TWO NIGHTS IN A ROW K
-    MORSE_{$player_station_name}: WHATS YOUR POINT
-    MORSE_{$fairweather_station}: MY POINT = TEAMING UP HAS AFFORDED THE GHOULS PERIODIC RELAXATION
-    MORSE_{$fairweather_station}: WHILE ENSURING THE WX WHITTLES AWAY AT OUR DEFENSES
-    MORSE_{$fairweather_station}: SECURING THEM THEIR INEVITABLE FEAST
-    MORSE_{$player_station_name}: HOW DO WE STOP IT
-    MORSE_{$fairweather_station}: THERE IS NO STOPPING IT DR {$player_station_name}
-    MORSE_{$fairweather_station}: BUT WHAT WE CAN DO IS LEARN FROM THEM
-    {$player_name}: What can I even learn from world-eating monsters?
-    MORSE_{$fairweather_station}: IN TEAMING UP WE CAN SECURE A LONGER FUTURE
-    MORSE_{$fairweather_station}: WHILE TAKING TURNS SHOULDERING EACH OTHERS STRESS TO AFFORD EACH OTHER PERIODS OF RELAXATION
-    {$player_name}: I see.
-    MORSE_{$fairweather_station}: FOOD FOR THOUGHT K
+  MORSE_{$fairweather_station}: I RECOMMEND STARTING BY LOOKING INTO IDENTIFYING WX
+  MORSE_{$fairweather_station}: THEN APPLYING THAT KNOWLEDGE TO DEFENDING YOUR WALL K
+-> Friendly chat <<once if $fairweather_relationship_friendly>>
+  MORSE_{$player_station_name}: ANY TIPS TO SHARE?
+  MORSE_{$fairweather_station}: KEEP YOUR WALL HEALTHY
+  MORSE_{$fairweather_station}: TRUST ME WHEN I SAY
+  MORSE_{$fairweather_station}: YOU CAN REALLY ENJOY THE END TIMES WHEN YOURE STRESS FREE
+  MORSE_{$fairweather_station}: YOU MIGHT EVEN FIND YOURSELF GETTING GENEROUS K
+-> Anything new? <<once if $fairweather_relationship_close>>
+  MORSE_{$player_station_name}: ANY NEW TIPS TO SHARE?
+  MORSE_{$fairweather_station}: OH {$player_station_name}
+  MORSE_{$fairweather_station}: AS IF I CAN TEACH YOU ANYTHING YOU DONT KNOW ALREADY K
+  MORSE_{$player_station_name}: IM SURE YOU CAN
+  MORSE_{$fairweather_station}: ALRIGHT LET ME DIG UP A MORSEL FOR YOU =
+  MORSE_{$fairweather_station}: CONSIDER THE GHOULS PERSPECTIVE
+  {$player_name}: Huh?
+  MORSE_{$fairweather_station}: YOURE AWARE THE WX WASNT ALWAYS LIKE THIS
+  MORSE_{$fairweather_station}: GHOULS RARELY ATTACKED
+  MORSE_{$fairweather_station}: LET ALONE SO CONSISTENTLY
+  MORSE_{$fairweather_station}: AS IF THEYRE ON A SCHEDULE
+  {$player_name}: ...
+  {$player_name}: That's true. It's as if they're a team.
+  MORSE_{$fairweather_station}: CFM SVP K
+  MORSE_{$player_station_name}: DO THEY WORK TOGETHER?
+  MORSE_{$fairweather_station}: THATS MY THEORY
+  MORSE_{$fairweather_station}: IT EXPLAINS WHY THE WX IS NEVER THE SAME TWO NIGHTS IN A ROW K
+  MORSE_{$player_station_name}: WHATS YOUR POINT
+  MORSE_{$fairweather_station}: MY POINT = TEAMING UP HAS AFFORDED THE GHOULS PERIODIC RELAXATION
+  MORSE_{$fairweather_station}: WHILE ENSURING THE WX WHITTLES AWAY AT OUR DEFENSES
+  MORSE_{$fairweather_station}: SECURING THEM THEIR INEVITABLE FEAST
+  MORSE_{$player_station_name}: HOW DO WE STOP IT
+  MORSE_{$fairweather_station}: THERE IS NO STOPPING IT DR {$player_station_name}
+  MORSE_{$fairweather_station}: BUT WHAT WE CAN DO IS LEARN FROM THEM
+  {$player_name}: What can I even learn from world-eating monsters?
+  MORSE_{$fairweather_station}: IN TEAMING UP WE CAN SECURE A LONGER FUTURE
+  MORSE_{$fairweather_station}: WHILE TAKING TURNS SHOULDERING EACH OTHERS STRESS TO AFFORD EACH OTHER PERIODS OF RELAXATION
+  {$player_name}: I see.
+  MORSE_{$fairweather_station}: FOOD FOR THOUGHT K
 -> Ghoul Forecast
   MORSE_{$player_station_name}: WX RPT?
   => MORSE_{$fairweather_station}: NIL IM AFRAID <<if $fairweather_relationship_neutral && $fairweather_first_ghooul_elimination == "">>
@@ -288,58 +362,34 @@ position: 636,495
 ===
 
 title: Fairweather_Player_TalkMenu
-position: -30,1161
+position: -127,960
 ---
 {$player_name}: What should we talk about?
 -> Share Ghoul Sign Information <<if $fairweather_first_clue_shareable || $fairweather_second_clue_shareable>>
-  => MORSE_{$player_station_name}: WX {$first_clue_morse_text} AND {$second_clue_morse_text} <<if $fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
-    <<set $fairweather_receieved_first_clue = true>>
-    <<set $fairweather_receieved_second_clue = true>>
-    <<if !$fairweather_knows_ghoul_type>>
-      <<give_information {$fairweather_ai_object_name} {$first_clue}>>
-      <<give_information {$fairweather_ai_object_name} {$second_clue}>>
-      <<if $fairweather_knows_ghoul_type>>
-        <<jump Fairweather_Now_Knows_Ghoul>>
-      <<else>>
-        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
-      <<endif>>
-    <<else>>
-      <<jump Fairweather_Already_Knew_Ghoul>>
-    <<endif>>
-  => MORSE_{$player_station_name}: WX {$first_clue_morse_text} <<if $fairweather_first_clue_shareable && !$fairweather_second_clue_shareable>>
-    <<set $fairweather_receieved_first_clue = true>>
-    <<if !$fairweather_knows_ghoul_type>>
-      <<give_information {$fairweather_ai_object_name} {$first_clue}>>
-      <<if $fairweather_knows_ghoul_type>>
-        <<jump Fairweather_Now_Knows_Ghoul>>
-      <<else>>
-        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
-      <<endif>>
-    <<else>>
-      <<jump Fairweather_Already_Knew_Ghoul>>
-    <<endif>>
-  => MORSE_{$player_station_name}: WX {$second_clue_morse_text} <<if !$fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
-    <<set $fairweather_receieved_second_clue = true>>
-    <<if !$fairweather_knows_ghoul_type>>
-      <<give_information {$fairweather_ai_object_name} {$second_clue}>>
-      <<if $fairweather_knows_ghoul_type>>
-        <<jump Fairweather_Now_Knows_Ghoul>>
-      <<else>>
-        <<jump Fairweather_Still_Doesnt_Know_Ghoul>>
-      <<endif>>
-    <<else>>
-      <<jump Fairweather_Already_Knew_Ghoul>>
-    <<endif>>
+  <<detour Fairweather_Player_GhoulInformation>>
+  <<jump Fairweather_Player_MainMenu>>
 -> What's SVP mean? <<if $fairweather_used_svp && !$fairweather_explained_svp>>
   <<jump Fairweather_SVP_Explanation>>
 -> How are things on your end?
   <<jump Fairweather_Player_Report>>
+-> What happened? Are you alright? <<once if $fairweather_cut_contact_after_distress_confrontation>>
+  MORSE_{$player_station_name}: ARE YOU OK?
+  => MORSE_{$fairweather_station}: (RN) (SK) <<if $fairweather_stress_distress>>
+    <<comms_end>>
+    {$player_name}: I guess not.
+    <<stop>>
+  => MORSE_{$fairweather_station}: SORRY ABOUT THAT <<if !$fairweather_stress_distress>>
+    => MORSE_{$fairweather_station}: STILL DEALING WITH TOO MUCH <<if $fairweather_stress_stressed>>
+      MORSE_{$fairweather_station}: BUT ITS MORE MANAGEABLE K
+    => MORSE_{$fairweather_station}: IM DOING BETTER NOW K <<if $fairweather_stress_calm>>
+      MORSE_{$player_station_name}: GOOD
+  <<jump Fairweather_Player_MainMenu>>
 -> Nevermind
   <<jump Fairweather_Player_MainMenu>>
 ===
 
 title: Fairweather_Already_Knew_Ghoul
-position: 322,686
+position: 333,1384
 ---
 <<if $fairweather_stress_calm>>
   => MORSE_{$fairweather_station}: WE KNOW DR {$player_station_name} <<if $fairweather_relationship_bad>>
@@ -381,10 +431,10 @@ position: 322,686
     <<set $fairweather_relationship += 2>>
     {$player_name}: What? Nothing else to add?
 <<endif>>
-<<jump Fairweather_Player_MainMenu>>
+<<return>>
 ===
 title: Fairweather_Now_Knows_Ghoul
-position: 325,831
+position: 333,1235
 ---
 <<if $fairweather_stress_calm>>
   => MORSE_{$fairweather_station}: MUCH OBLIGED K <<if $fairweather_relationship_bad>>
@@ -410,10 +460,10 @@ position: 325,831
   => MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} K <<if $fairweather_relationship_close>>
     {$player_name}: Yeah...    
 <<endif>>
-<<jump Fairweather_Player_MainMenu>>
+<<return>>
 ===
 title: Fairweather_Still_Doesnt_Know_Ghoul
-position: 327,965
+position: 329,1527
 ---
 <<if $fairweather_stress_calm>>
   => MORSE_{$fairweather_station}: MUCH OBLIGED K <<if $fairweather_relationship_bad>>
@@ -447,11 +497,11 @@ position: 327,965
     <<set $fairweather_relationship += 2>>
     {$player_name}: What? Nothing else to add?
 <<endif>>
-<<jump Fairweather_Player_MainMenu>>
+<<return>>
 ===
 
 title: Fairweather_SVP_Explanation
-position: 322,1159
+position: 337,955
 ---
 <<once>>
 MORSE_{$player_station_name}: YOU USED THE ABBREVIATION SVP
@@ -538,7 +588,8 @@ MORSE_{$player_station_name}: COULD YOU EXPLAIN SVP NOW?
     {$player_name}: I thought they'd be more excited about this.
     MORSE_{$fairweather_station}: IM SURE THEY WILL OVER TIME
     MORSE_{$fairweather_station}: BUT FOR NOW IM ELATED
-    MORSE_{$fairweather_station}: I LOOK FORWARD TO TALKING MORE FRIEND
+    MORSE_{$fairweather_station}: I LOOK FORWARD TO TALKING MORE
+    MORSE_{$fairweather_station}: FRIEND K
     <<set $fairweather_declared_friendship = true>>
   -> No. I have a responsibility to my people.
     MORSE_{$player_station_name}: I CANT ACCEPT {$fairweather_station}
@@ -556,13 +607,13 @@ MORSE_{$player_station_name}: COULD YOU EXPLAIN SVP NOW?
     MORSE_{$fairweather_station}: BUT YOURE RIGHT
     MORSE_{$fairweather_station}: I UNDERSTAND NOW K
     MORSE_{$player_station_name}: NO HARD FEELINGS?
-    MORSE_{$fairweather_station}: OF COURSE NOT DR {$player_station_name}
+    MORSE_{$fairweather_station}: OF COURSE NOT DR {$player_station_name} K
     <<set $fairweather_relationship += 30>>
   <<set $fairweather_explained_svp = true>>
 <<jump Fairweather_Player_MainMenu>>
 ===
 title: Fairweather_Player_Report
-position: 323,1346
+position: 330,692
 ---
 MORSE_{$player_station_name}: ANYTHING TO REPORT?
 <<get_required_materials {$fairweather_ai_object_name}>>
@@ -587,4 +638,119 @@ MORSE_{$player_station_name}: ANYTHING TO REPORT?
     => MORSE_{$fairweather_station}: IF YOU CAN SPARE SOME {$requested_asset} THOUGH ID APPRECIATE IT <<if $fairweather_relationship_friendly>>
     => MORSE_{$fairweather_station}: ID BE FOREVER IN YOUR DEBT IF YOU COULD SPARE SOME {$requested_asset} <<if $fairweather_relationship_close>>
 <<jump Fairweather_Player_MainMenu>>
+===
+title: Fairweather_NPC_NeedResources
+position: -984,1183
+---
+<<detour Fairweather_NPC_Initiates>>
+<<if $fairweather_stress_calm>>
+=> MORSE_{$fairweather_station}: I NEED YOUR ASSITANCE SVP <<if $fairweather_relationship_neutral || $fairweather_relationship_bad>>
+  <<once if !$fairweather_used_svp>>
+    {$player_name}: SVP? What's that?
+    <<set $fairweather_used_svp = true>>
+  <<endonce>>
+=> MORSE_{$fairweather_station}: COULD I ASK YOU A FAVOR {$player_station_name} <<if $fairweather_relationship_friendly>>
+=> MORSE_{$fairweather_station}: I NEED YOUR HELP FRIEND <<if $fairweather_relationship_close>>
+MORSE_{$fairweather_station}: COULD YOU SPARE {$requested_amount} {$requested_asset} K
+<<elseif $fairweather_stress_stressed>>
+  MORSE_{$fairweather_station}: ASSISTANCE SVP
+  <<once if !$fairweather_used_svp>>
+    {$player_name}: SVP? What's that?
+    <<set $fairweather_used_svp = true>>
+  <<endonce>>
+  MORSE_{$fairweather_station}: {$requested_amount} {$requested_asset} SVP K
+<<else>>
+  MORSE_{$fairweather_station}: (SOS) {$requested_amount} {$requested_asset}
+  <<comms_end>>
+  {$player_name}: Must be dire.
+<<endif>>
+-> Sure. (Should arrive in less than 6 hours)
+  MORSE_{$player_station_name}: SURE
+  MORSE_{$player_station_name}: IT SHOULD REACH YOU IN UNDER 6 HOURS
+  MORSE_{$fairweather_station}: THANKS (RN) (SK)
+  <<make_promise {$fairweather_ai_object_name} {$requested_asset} {$requested_amount}>>
+  <<comms_end>>
+  <<set $fairweather_relationship += 5>>
+-> No.
+  MORSE_{$player_station_name}: I CANT
+  MORSE_{$fairweather_station}: R (RN) (SK)
+  <<comms_end>>
+  <<set $fairweather_relationship -= 5>>
+===
+title: Fairweather_NPC_NeedInformation
+position: -983,1371
+---
+<<detour Fairweather_NPC_Initiates>>
+<<if $fairweather_stress_calm>>
+  => MORSE_{$fairweather_station}: I NEED YOUR ASSITANCE SVP <<if $fairweather_relationship_neutral || $fairweather_relationship_bad>>
+    <<once if !$fairweather_used_svp>>
+      {$player_name}: SVP? What's that?
+      <<set $fairweather_used_svp = true>>
+    <<endonce>>
+  => MORSE_{$fairweather_station}: COULD I ASK YOU A FAVOR {$player_station_name} <<if $fairweather_relationship_friendly>>
+  => MORSE_{$fairweather_station}: I NEED YOUR HELP FRIEND <<if $fairweather_relationship_close>>
+  MORSE_{$fairweather_station}: ANY INFO ON THE WX?
+<<elseif $fairweather_stress_stressed>>
+  MORSE_{$fairweather_station}: ASSISTANCE SVP
+  <<once if !$fairweather_used_svp>>
+    {$player_name}: SVP? What's that?
+    <<set $fairweather_used_svp = true>>
+  <<endonce>>
+  MORSE_{$fairweather_station}: ANY WX INFO?
+<<else>>
+  MORSE_{$fairweather_station}: (SOS) WX INFO?
+<<endif>>
+-> Yes <<if $fairweather_first_clue_shareable || $fairweather_second_clue_shareable>>
+  <<detour Fairweather_Player_GhoulInformation>>
+  MORSE_{$fairweather_station}: THANK YOU (RN) (SK)
+-> No
+  MORSE_{$player_name}: I GOT NOTHING
+  => MORSE_{$fairweather_station}: R (RN) (SK) <<if !$fairweather_relationship_close || $fairweather_stress_distress>>
+    <<set $fairweather_relationship -= 3>>
+  => MORSE_{$fairweather_station}: NO WORRIES <<if $fairweather_relationship_close && !$fairweather_stress_distress>>
+    MORSE_{$fairweather_station}: (RN) (SK)
+<<comms_end>>
+===
+title: Fairweather_Player_GhoulInformation
+position: -128,1371
+---
+=> MORSE_{$player_station_name}: WX {$first_clue_morse_text} AND {$second_clue_morse_text} <<if $fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
+  <<set $fairweather_receieved_first_clue = true>>
+  <<set $fairweather_receieved_second_clue = true>>
+  <<if !$fairweather_knows_ghoul_type>>
+    <<give_information {$fairweather_ai_object_name} {$first_clue}>>
+    <<give_information {$fairweather_ai_object_name} {$second_clue}>>
+    <<if $fairweather_knows_ghoul_type>>
+      <<detour Fairweather_Now_Knows_Ghoul>>
+    <<else>>
+      <<detour Fairweather_Still_Doesnt_Know_Ghoul>>
+    <<endif>>
+  <<else>>
+    <<detour Fairweather_Already_Knew_Ghoul>>
+  <<endif>>
+=> MORSE_{$player_station_name}: WX {$first_clue_morse_text} <<if $fairweather_first_clue_shareable && !$fairweather_second_clue_shareable>>
+  <<set $fairweather_receieved_first_clue = true>>
+  <<if !$fairweather_knows_ghoul_type>>
+    <<give_information {$fairweather_ai_object_name} {$first_clue}>>
+    <<if $fairweather_knows_ghoul_type>>
+      <<detour Fairweather_Now_Knows_Ghoul>>
+    <<else>>
+      <<detour Fairweather_Still_Doesnt_Know_Ghoul>>
+    <<endif>>
+  <<else>>
+    <<detour Fairweather_Already_Knew_Ghoul>>
+  <<endif>>
+=> MORSE_{$player_station_name}: WX {$second_clue_morse_text} <<if !$fairweather_first_clue_shareable && $fairweather_second_clue_shareable>>
+  <<set $fairweather_receieved_second_clue = true>>
+  <<if !$fairweather_knows_ghoul_type>>
+    <<give_information {$fairweather_ai_object_name} {$second_clue}>>
+    <<if $fairweather_knows_ghoul_type>>
+      <<detour Fairweather_Now_Knows_Ghoul>>
+    <<else>>
+      <<detour Fairweather_Still_Doesnt_Know_Ghoul>>
+    <<endif>>
+  <<else>>
+    <<detour Fairweather_Already_Knew_Ghoul>>
+  <<endif>>
+<<return>>
 ===
