@@ -47,10 +47,12 @@ namespace WallDefense
     private void Awake()
     {
       _currentDroppable = transform.parent.GetComponent<DroppableUI>();
+      if(_currentDroppable == null)
+        _currentDroppable = transform.parent.parent.GetComponent<DroppableUI>();
       if (_currentDroppable == null)
-      {
-        Debug.LogError($"{gameObject} initalized draggable without home droppable.");
-      }
+        {
+          Debug.LogError($"{gameObject} initalized draggable without home droppable.");
+        }
     }
 
     public void SetCount(int count)

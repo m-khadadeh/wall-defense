@@ -15,7 +15,8 @@ namespace WallDefense
       Resource, Information, WallDefenseStateChange, WallHPChange
     }
     [field: SerializeField] public string TaskName { get; private set; }
-    [field: SerializeField] public string TaskDescription { get; private set; }
+    [SerializeField] [TextArea(15,20)] private string _taskDescription;
+    public string TaskDescription => _taskDescription;
     [SerializeField] private List<ItemRequirement> _requirements;
     [SerializeField] private List<YieldData> _yieldPossibilities;
     [SerializeField] private List<TimeToCompleteData> _timeToCompletePossibilities;

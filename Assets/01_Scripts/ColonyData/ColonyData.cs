@@ -12,7 +12,7 @@ namespace WallDefense
   {
     [field: SerializeField] public InventoryData Inventory { get; private set; }
     [field: SerializeField] public Wall Wall { get; private set; }
-    [field: SerializeField] public AI.SettlementAI AIController { get; private set; }
+    [field: SerializeField] public AI.SettlementAI AIController { get; set; }
     [SerializeField] private GhoulDiscernmentChalkboard _ghoulBoard;
     [SerializeField] private AI.Planner _planner;
     [field: SerializeField] public string StationName { get; private set; }
@@ -30,10 +30,14 @@ namespace WallDefense
       Wall.InitializeWalls();
       if (AIController != null)
       {
-        Inventory.Initialize();
         _ghoulBoard.Initialize(AIController.VariableNamePrefix);
         AIController.Initialize(this);
         _planner.Initialize(AIController);
+        _onGiftReceived.Add(AIController.OnGiftReceived);
+      }
+      foreach (var timeYield in _afterTimeYields)
+      {
+        timeYield.Initialize();
       }
       _weeksToShipment = _capitolShipmentsXWeekly;
     }

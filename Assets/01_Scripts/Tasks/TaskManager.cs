@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +11,11 @@ namespace WallDefense
     [SerializeField] private TMPro.TextMeshProUGUI _taskInfoName;
     [SerializeField] private TMPro.TextMeshProUGUI _taskInfoDescription;
 
-    public void Initialize()
+    public void Initialize(Action watchUpdate)
     {
       foreach (var task in _tasksUIs)
       {
-        task.Initialize();
+        task.Initialize(watchUpdate);
       }
     }
     public void OnIncrementHour()

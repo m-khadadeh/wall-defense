@@ -9,7 +9,8 @@ namespace WallDefense
   {
     [SerializeField] private List<ColonyData> _colonies;
     [SerializeField] private DialogueManager _dialogueManager;
-    [YarnCommand("capitol_initial_shipment")]
+    private int _dayCounter;
+    [SerializeField] private int _everyXDays;
     public void InitialCapitolShipment()
     {
       foreach (var colony in _colonies)
@@ -17,12 +18,31 @@ namespace WallDefense
         colony.InitialCapitolShipment();
       }
     }
-    [YarnCommand("capitol_weekly_shipment")]
     public void WeeklyCapitolShipment()
     {
       foreach (var colony in _colonies)
       {
         colony.WeeklyCapitolShipment();
+      }
+    }
+
+    public void Initialize()
+    {
+      _dayCounter = -1;
+      InitialDay();
+    }
+
+    private void InitialDay()
+    {
+      _dialogueManager.QueueUpDialogue("Capitol_Introduction", 7);
+    }
+
+    public void OnNewDay()
+    {
+      _dayCounter++;
+      if (_dayCounter != 0 && _dayCounter % _everyXDays == 0)
+      {
+        _dialogueManager.QueueUpDialogue("Capitol_WeeklyShipment", 7);
       }
     }
   }

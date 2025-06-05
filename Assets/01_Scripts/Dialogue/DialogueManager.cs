@@ -14,23 +14,30 @@ namespace WallDefense
     public VariableStorageBehaviour VariableStorage => _runner.VariableStorage;
     private Dictionary<string, ColonyData> _aiColonies;
     private ColonyData _playerColony;
-    private AI.SettlementAI _fairweatherAI;
+    [SerializeField] private AI.SettlementAI _fairweatherAI;
     private int _currentHour;
     [SerializeField] private List<ResourceEntry> _resourceKeys;
     private Dictionary<string, ItemType> _resourceDictionary;
     private List<Deliverable> _deliveries;
-    public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony)
+    public bool NodeQueued { get; private set; }
+    private string _nextNode;
+    public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony, System.Action continueSetup)
     {
+      NodeQueued = false;
       _runner = runner;
+      _nextNode = "";
       _queuedDialogueNodes = new Dictionary<int, List<string>>();
       _playerColony = playerColony;
       _aiColonies = aiColonies.ToDictionary(e => e.AIController.name, e => e);
-      _runner.StartDialogue("Variable_Declaration");
-      _runner.onDialogueComplete.AddListener(RunNextNode);
-      _deliveries = new List<Deliverable>();
-      _resourceDictionary = _resourceDictionary.ToDictionary(e => e.Key, e => e.Value);
-      SetStartDialogueVariables();
+      _resourceDictionary = _resourceKeys.ToDictionary(e => e.Key, e => e.Item);
       ResetDictionary();
+      _deliveries = new List<Deliverable>();
+      _runner.onDialogueComplete.AddListener(() =>
+      {
+        SetStartDialogueVariables();
+        continueSetup.Invoke();
+      });
+      _runner.StartDialogue("Variable_Declaration");
     }
 
     private void ResetDictionary()
@@ -56,17 +63,27 @@ namespace WallDefense
       {
         _deliveries.Remove(deliverable);
       }
-      RunNextNode();
+      QueueUpNextNode();
     }
 
-    private void RunNextNode()
+    private void QueueUpNextNode()
     {
-      if (_queuedDialogueNodes[_currentHour].Count > 1)
+      if (_queuedDialogueNodes[_currentHour].Count > 0)
       {
-        string node = _queuedDialogueNodes[_currentHour][0];
+        NodeQueued = true;
+        _nextNode = _queuedDialogueNodes[_currentHour][0];
         _queuedDialogueNodes[_currentHour].RemoveAt(0);
-        _runner.StartDialogue(node);
       }
+      else
+      {
+        NodeQueued = false;
+      }
+    }
+
+    public void RunNextNode()
+    {
+      if(_nextNode != "")
+        _runner.StartDialogue(_nextNode);
     }
 
     public void QueueUpDialogue(string nodeName, int hour)
@@ -81,9 +98,10 @@ namespace WallDefense
       VariableStorage.SetValue("$player_name", _playerColony.PlayerName);
       VariableStorage.SetValue("$player_wall_name", _playerColony.Wall.wallName);
       VariableStorage.SetValue("$fairweather_ai_object_name", _fairweatherAI.name);
+      _runner.onDialogueComplete.RemoveAllListeners();
+      _runner.onDialogueComplete.AddListener(QueueUpNextNode);
     }
 
-    [YarnCommand("request_material")]
     public void RequestMaterial(string aiObjectName, string materialType, int amount)
     {
       if (_aiColonies[aiObjectName].AIController.RequestMaterial(materialType, amount))
@@ -95,19 +113,16 @@ namespace WallDefense
       VariableStorage.SetValue($"{_aiColonies[aiObjectName].AIController.VariableNamePrefix}_ask_for_resources_response", false);
     }
 
-    [YarnCommand("get_required_materials")]
     public void GetRequiredMaterials(string aiObjectName)
     {
       _aiColonies[aiObjectName].AIController.SetRequiredMaterialsVariable();
     }
 
-    [YarnCommand("make_promise")]
     public void MakePromise(string aiObjectName, string materialType, int amount)
     {
       _aiColonies[aiObjectName].AIController.OnPromise(_resourceDictionary[materialType], amount, 6);
     }
 
-    [YarnCommand("give_information")]
     public void GiveInfo(string aiObjectName, string clue)
     {
       _aiColonies[aiObjectName].AIController.OnClueReceivedViaDialogue(clue);

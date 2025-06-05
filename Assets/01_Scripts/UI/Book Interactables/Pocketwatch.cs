@@ -1,6 +1,7 @@
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace WallDefense
 {
@@ -10,11 +11,10 @@ namespace WallDefense
         public GameObject[] slices;
         public DayNightManager dayNightManager;
         public Calendar calendar;
-
-        void Start()
-        {
-            OnAdvanceHour();
-        }
+        public TMPro.TextMeshProUGUI hoursTill;
+        public Button xButton;
+        public Button nextHourButton;
+        private bool _clickable;
 
         public void OnAdvanceHour()
         {
@@ -43,6 +43,24 @@ namespace WallDefense
             {
                 slice.SetActive(false);
             }
+        }
+
+        public void UpdateXButton(int amount)
+        {
+            if (amount == 0)
+            {
+                hoursTill.text = "";
+            }
+            else
+            {
+                hoursTill.text = amount.ToString();
+            }
+        }
+
+        public void CanClickButtons(bool clickable)
+        {
+            nextHourButton.interactable = clickable;
+            xButton.interactable = hoursTill.text != "" && clickable;
         }
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e545abf1d00f71e318b1b81043ecdc37, type: 3}
   m_Name: DialogueManager
   m_EditorClassIdentifier: 
+  _fairweatherAI: {fileID: 11400000, guid: a1257faa09af5a840a7cbaf3ff225c59, type: 2}
   _resourceKeys:
   - <Key>k__BackingField: WOOD
     <Item>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}

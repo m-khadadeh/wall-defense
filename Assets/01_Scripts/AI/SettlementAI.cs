@@ -92,7 +92,7 @@ namespace WallDefense.AI
         _dialogueManager.QueueUpDialogue(_promiseUnkeptNode, _currentHour + 1);
       }
     }
-    private void OnGiftReceived(List<ItemType> items)
+    public void OnGiftReceived(List<ItemType> items)
     {
       Dictionary<ItemType, int> counts = new Dictionary<ItemType, int>();
       List<ItemType> _promisesKept = new();
@@ -128,8 +128,8 @@ namespace WallDefense.AI
       {
         _dialogueManager.QueueUpDialogue(_promiseKeptNode, _currentHour + 1);
       }
-      _variableStorage.TryGetValue<int>($"{VariableNamePrefix}_relationship", out int currentFriendship);
-      _variableStorage.SetValue($"{VariableNamePrefix}_relationship", currentFriendship + friendShipAmount);
+      _variableStorage.TryGetValue<int>($"${VariableNamePrefix}_relationship", out int currentFriendship);
+      _variableStorage.SetValue($"${VariableNamePrefix}_relationship", currentFriendship + friendShipAmount);
     }
     public void OnClueReceivedViaDialogue(string clueName) => _colony.OnClueReceivedViaDialogue(clueName);
     public bool RequestMaterial(string type, int amount)
@@ -137,13 +137,13 @@ namespace WallDefense.AI
       bool allowedStress = false;
       foreach (var level in _acceptableStressLevelsForRequest)
       {
-        _variableStorage.TryGetValue<bool>($"{VariableNamePrefix}_stress_{level}", out bool levelValue);
+        _variableStorage.TryGetValue<bool>($"${VariableNamePrefix}_stress_{level}", out bool levelValue);
         allowedStress |= levelValue;
       }
       bool allowedFriend = false;
       foreach (var level in _acceptableStressLevelsForRequest)
       {
-        _variableStorage.TryGetValue<bool>($"{VariableNamePrefix}_relationship_{level}", out bool levelValue);
+        _variableStorage.TryGetValue<bool>($"${VariableNamePrefix}_relationship_{level}", out bool levelValue);
         allowedFriend |= levelValue;
       }
       return allowedStress && allowedFriend && SparableAmounts[type].SpareableAmount <= amount;
@@ -154,7 +154,7 @@ namespace WallDefense.AI
       stress += (int)(_wallHPStressCurve.Evaluate((float)_colony.Wall.bottom.health / (float)_colony.Wall.bottom.maxhealth) * _maxStressPerSegment);
       stress += (int)(_wallHPStressCurve.Evaluate((float)_colony.Wall.middle.health / (float)_colony.Wall.middle.maxhealth) * _maxStressPerSegment);
       stress += (int)(_wallHPStressCurve.Evaluate((float)_colony.Wall.top.health / (float)_colony.Wall.top.maxhealth) * _maxStressPerSegment);
-      _variableStorage.SetValue($"{VariableNamePrefix}_stress", stress);
+      _variableStorage.SetValue($"${VariableNamePrefix}_stress", stress);
     }
     public void SetRequiredMaterialsVariable()
     {
@@ -168,8 +168,8 @@ namespace WallDefense.AI
           resourceType = material.Value.DialogueKey;
         }
       }
-      _variableStorage.SetValue($"requested_asset", resourceType);
-      _variableStorage.SetValue($"requested_amount", Random.Range(4, 6));
+      _variableStorage.SetValue("$requested_asset", resourceType);
+      _variableStorage.SetValue("$requested_amount", Random.Range(4, 6));
     }
 
     public void OnPromise(ItemType type, int amount, int time)

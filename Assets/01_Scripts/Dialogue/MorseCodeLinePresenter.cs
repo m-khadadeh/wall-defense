@@ -27,6 +27,10 @@ namespace WallDefense
     [SerializeField] private string _morseCodeRTFClosingTags;
     [SerializeField] private string _morseCodeCharacterPrefix;
     [SerializeField] private int _nonMorsePerCharacterMilliseconds;
+    [SerializeField] private GameObject _morseKeyOn;
+    [SerializeField] private GameObject _morseKeyOff;
+    [SerializeField] private string _playerMorseName;
+    private bool _lineRunning;
 
     public override YarnTask OnDialogueCompleteAsync()
     {
@@ -59,6 +63,7 @@ namespace WallDefense
       }
 
       bool morse = line.CharacterName.StartsWith(_morseCodeCharacterPrefix);
+      _lineRunning = true;
       if (morse)
       {
         _dialogueContainerMorse.SetActive(true);
@@ -111,23 +116,34 @@ namespace WallDefense
               for (int j = 0; j <= currentCharacterCode.Length; j++)
               {
                 _lineTextMorse.maxVisibleCharacters = i + j;
-                int pauseLength = _ditMilliseconds;
-                if (j == currentCharacterCode.Length)
+
+                int waveLength = _ditMilliseconds;
+                if (j != currentCharacterCode.Length && currentCharacterCode[j] == '-')
                 {
-                  pauseLength *= _characterEndDitLength;
-                }
-                else if (currentCharacterCode[j] == '-')
-                {
-                  pauseLength *= _dahDitLength;
+                  waveLength *= _dahDitLength;
                 }
                 if (j != currentCharacterCode.Length)
                 {
-                  if (!token.IsNextLineRequested)
-                    AudioManager.PlayMorseWave(pauseLength);
+                  if (!token.IsNextLineRequested && !token.IsHurryUpRequested)
+                  {
+                    AudioManager.PlayMorseWave(waveLength);
+                    if (line.CharacterName == $"{_morseCodeCharacterPrefix}{_playerMorseName}")
+                    {
+                      _morseKeyOn.SetActive(true);
+                      _morseKeyOff.SetActive(false);
+                    }
+                  }
+                  await YarnTask.Delay(TimeSpan.FromMilliseconds(waveLength), token.HurryUpToken).SuppressCancellationThrow();
+                  _morseKeyOn.SetActive(false);
+                  _morseKeyOff.SetActive(true);
+                  await YarnTask.Delay(TimeSpan.FromMilliseconds(_ditMilliseconds), token.HurryUpToken).SuppressCancellationThrow();
                 }
-                await YarnTask.Delay(TimeSpan.FromMilliseconds(pauseLength), token.HurryUpToken).SuppressCancellationThrow();
+                else
+                {
+                  await YarnTask.Delay(TimeSpan.FromMilliseconds(_ditMilliseconds * _characterEndDitLength), token.HurryUpToken).SuppressCancellationThrow();
+                }
               }
-              if (!token.IsNextLineRequested)
+              if (!token.IsNextLineRequested && !token.IsHurryUpRequested)
                 AudioManager.PlaySound("typewriter");
             }
             else
@@ -152,7 +168,7 @@ namespace WallDefense
           for (int i = 0; i < _lineTextNonMorse.text.Length; i++)
           {
             _lineTextNonMorse.maxVisibleCharacters++;
-            if (!token.IsNextLineRequested)
+            if (!token.IsNextLineRequested && !token.IsHurryUpRequested)
               AudioManager.PlaySound("typewriter");
             await YarnTask.Delay(TimeSpan.FromMilliseconds(_nonMorsePerCharacterMilliseconds), token.HurryUpToken).SuppressCancellationThrow();
           }
@@ -162,9 +178,24 @@ namespace WallDefense
           _lineTextNonMorse.maxVisibleCharacters = _lineTextNonMorse.text.Length;
         }
       }
+      _lineRunning = false;
+      _morseKeyOn.SetActive(false);
+      _morseKeyOff.SetActive(true);
       await YarnTask.WaitUntilCanceled(token.NextLineToken).SuppressCancellationThrow();
       _dialogueContainerNonMorse.SetActive(false);
       _dialogueContainerMorse.SetActive(false);
+    }
+
+    public void OnNextButtonClicked(DialogueRunner runner)
+    {
+      if (_lineRunning)
+      {
+        runner.RequestHurryUpLine();
+      }
+      else
+      {
+        runner.RequestNextLine();
+      }
     }
 
     public override YarnTask<DialogueOption> RunOptionsAsync(DialogueOption[] dialogueOptions, CancellationToken cancellationToken)

@@ -31,12 +31,10 @@ namespace WallDefense.AI
     private Dictionary<WorldState, int> _stateBoard;
     private HashSet<Action> _freeActionsToTakeThisHour;
     private SettlementAI _aiType;
-    private System.Random _rng;
 
     public void Initialize(SettlementAI aiType)
     {
-      _rng = new System.Random();
-      aiType = _aiType;
+      _aiType = aiType;
       _planPerGoal = new Dictionary<Goal, List<ActionChoice>>();
       _locks = new HashSet<WorldState>();
       foreach (var goal in _goals)
@@ -106,7 +104,7 @@ namespace WallDefense.AI
 
       foreach (var action in _freeActionsToTakeThisHour)
       {
-        Debug.Log($"Collecting Free Action {action}");
+        //Debug.Log($"Collecting Free Action {action}");
         action.GetYields();
       }
 
@@ -128,7 +126,7 @@ namespace WallDefense.AI
           CheckSensors();
           if (choice.StartAction.CheckConditions())
           {
-            Debug.Log($"Allocating for {choice.StartAction}");
+            //Debug.Log($"Allocating for {choice.StartAction}");
             if (_collectionActions.Contains(choice.StartAction))
             {
               collectionAllocations++;
@@ -141,7 +139,7 @@ namespace WallDefense.AI
       // Random collection based action in order to keep resources up
       if (collectionAllocations == 0 && UnityEngine.Random.Range(0, _sidesForRandomCollectionAction + hour) <= 1)
       {
-        _collectionActions.OrderBy(_ => _rng.Next());
+        _collectionActions.OrderBy(_ => UnityEngine.Random.Range(0, int.MaxValue));;
         foreach (var action in _collectionActions)
         {
           CheckSensors();

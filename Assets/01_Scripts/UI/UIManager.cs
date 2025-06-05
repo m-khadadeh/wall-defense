@@ -14,7 +14,7 @@ namespace WallDefense
       List<Action> addCallbacks = new List<Action>() { _taskManager.CheckAllTaskAutoButtons };
       List<Action> removeCallbacks = new List<Action>() { _taskManager.CheckAllTaskAutoButtons };
       _inventoryUI.Initialize(addCallbacks, removeCallbacks);
-      _taskManager.Initialize();
+      _taskManager.Initialize(null);
     }
 
     public void TestDialogueBox()

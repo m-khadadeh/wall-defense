@@ -30,7 +30,7 @@ namespace WallDefense.AI
     [SerializeField] private WorldState _bottomBludgeoningBoolean;
     [SerializeField] private WorldState _ghoulPossibilityAmount;
     private WallSegmentName[] _wallSegments;
-    private DialogueManager _dialogueManager;
+    [SerializeField] private DialogueManager _dialogueManager;
     private string _aiNamePrefix;
 
     public void Initialize(string aiNamePrefix)

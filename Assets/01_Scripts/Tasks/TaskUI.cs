@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,12 +18,14 @@ namespace WallDefense
     private string _taskChoice;
     public bool TaskRunning => _hoursRemaining > 0;
     public int HoursRemaining => _hoursRemaining;
+    private Action _upDateWatch;
 
-    public void Initialize()
+    public void Initialize(Action updateWatch)
     {
       _task.Initialize();
       _textMesh.text = _task.TaskName;
       _task.InitializeUI(_itemSlots, _additionalChoice, CheckFulfilled);
+      _upDateWatch = updateWatch;
       CheckFulfilled();
       _hoursRemaining = -1;
       SetButtons();
@@ -86,6 +89,7 @@ namespace WallDefense
       LockResources(true);
       SetButtons();
       CheckZeroHours();
+      _upDateWatch?.Invoke();
     }
 
     private void LockResources(bool isLocked)

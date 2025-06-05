@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8509e93eff85bc946b10eb086f5a0ae1, type: 3}
   m_Name: InventoryWS3
   m_EditorClassIdentifier: 
-  _startingItems: []
+  _startingItems:
+  - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: ac1b76074aa0da6af814e3d008dff22d, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: a75fb6c469438418cb715225a04d49e1, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+    <Amount>k__BackingField: 0
+  - <Type>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+    <Amount>k__BackingField: 0
