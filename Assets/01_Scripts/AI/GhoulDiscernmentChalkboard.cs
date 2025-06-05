@@ -30,9 +30,12 @@ namespace WallDefense.AI
     [SerializeField] private WorldState _bottomBludgeoningBoolean;
     [SerializeField] private WorldState _ghoulPossibilityAmount;
     private WallSegmentName[] _wallSegments;
+    private DialogueManager _dialogueManager;
+    private string _aiNamePrefix;
 
-    public void Initialize()
+    public void Initialize(string aiNamePrefix)
     {
+      _aiNamePrefix = aiNamePrefix;
       _ghoulsPerClueString = new Dictionary<string, HashSet<Ghoul>>();
       _wallAttackPossibilityCounts = new Dictionary<WallSegmentName, WorldState>();
       _wallAttackPossibilityCounts[WallSegmentName.top] = _topWallAttackPossibilities;
@@ -79,6 +82,10 @@ namespace WallDefense.AI
     {
       _ghoulPossibilities = _ghoulTypes.ToHashSet();
       ResearchedGhoulImpossibilites = new HashSet<Ghoul>();
+      _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_knows_ghoul_type", false);
+      _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_first_ghoul_elimination", "");
+      _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_receieved_first_clue", false);
+      _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_receieved_second_clue", false);
       UpdateGhoulAttackPossibilities();
     }
 
@@ -97,15 +104,33 @@ namespace WallDefense.AI
         {
           _ghoulPossibilities.Remove(removableGhouls[0]);
           ResearchedGhoulImpossibilites.Add(removableGhouls[0]);
+          UpdateDialogueVariables(removableGhouls[0]);
         }
         else
         {
           int randomIndex = Random.Range(0, removableGhouls.Length);
           _ghoulPossibilities.Remove(removableGhouls[randomIndex]);
           ResearchedGhoulImpossibilites.Add(removableGhouls[randomIndex]);
+          UpdateDialogueVariables(removableGhouls[randomIndex]);
         }
       }
       UpdateGhoulAttackPossibilities();
+    }
+
+    private void UpdateDialogueVariables(Ghoul removingGhoul)
+    {
+      if (_ghoulPossibilities.Count == 3)
+      {
+        _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_first_ghoul_elimination", removingGhoul.morseTextRepresentation);
+      }
+      else if (_ghoulPossibilities.Count == 2)
+      {
+        _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_second_ghoul_elimination", removingGhoul.morseTextRepresentation);
+      }
+      else
+      {
+        _dialogueManager.VariableStorage.SetValue($"${_aiNamePrefix}_knows_ghoul_type", true);
+      }
     }
 
     public void UpdateGhoulAttackPossibilities()

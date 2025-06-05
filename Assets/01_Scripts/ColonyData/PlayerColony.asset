@@ -14,3 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Inventory>k__BackingField: {fileID: 11400000, guid: 1f5d5ca1aa8334fd19266044c4c0a74a, type: 2}
   <Wall>k__BackingField: {fileID: 11400000, guid: 8f4befd412f8996428a77ab7228ac775, type: 2}
+  <AIController>k__BackingField: {fileID: 0}
+  _ghoulBoard: {fileID: 0}
+  _planner: {fileID: 0}
+  <StationName>k__BackingField: WS1
+  <PlayerName>k__BackingField: Operator
+  _initialCapitolShipment:
+  - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <Amount>k__BackingField: 20
+  - <Type>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+    <Amount>k__BackingField: 20
+  - <Type>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+    <Amount>k__BackingField: 20
+  - <Type>k__BackingField: {fileID: 11400000, guid: a75fb6c469438418cb715225a04d49e1, type: 2}
+    <Amount>k__BackingField: 20
+  - <Type>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+    <Amount>k__BackingField: 6
+  - <Type>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
+    <Amount>k__BackingField: 8
+  - <Type>k__BackingField: {fileID: 11400000, guid: ac1b76074aa0da6af814e3d008dff22d, type: 2}
+    <Amount>k__BackingField: 8
+  _weeklyCapitolShipment:
+  - <Type>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: a75fb6c469438418cb715225a04d49e1, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <Amount>k__BackingField: 10
+  _capitolShipmentsXWeekly: 1
+  _afterTimeYields:
+  - {fileID: 11400000, guid: 0211e879379f937a48712f05ef404151, type: 2}
+  - {fileID: 11400000, guid: 98800f06676736944b11f372aa8e0736, type: 2}

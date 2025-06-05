@@ -9,6 +9,7 @@ namespace WallDefense
     [CreateAssetMenu(fileName = "Wall", menuName = "Scriptable Objects/Wall")]
     public class Wall : ScriptableObject
     {
+        public string wallName;
         public int ownerSettlement;
         public WallSegment top;
         public WallSegment middle;

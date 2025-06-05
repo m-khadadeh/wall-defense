@@ -390,4 +390,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4d28972da4529bbfa4fc8d3988b2e42, type: 2}
   - {fileID: 11400000, guid: f0d3fe85221eb12958bf2a0fc67b9199, type: 2}
   - {fileID: 11400000, guid: 7685f95bd5ebcdc8c9483bad71217c3f, type: 2}
+  _tallies:
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: ed0d6e5628d27255db0104dec72cddf8, type: 2}
+    <DialogueKey>k__BackingField: WOOD
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: e4d28972da4529bbfa4fc8d3988b2e42, type: 2}
+    <DialogueKey>k__BackingField: FOOD
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: f0d3fe85221eb12958bf2a0fc67b9199, type: 2}
+    <DialogueKey>k__BackingField: GOO
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: 83b316c85a52aa29d8e3259b2d41155b, type: 2}
+    <DialogueKey>k__BackingField: SPIKES
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: 9f8cb46891223d55a8152a3b33882319, type: 2}
+    <DialogueKey>k__BackingField: METAL
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: 028255c800f26f9fa957ed121348c9f0, type: 2}
+    <DialogueKey>k__BackingField: STONE
+  - <ResourceState>k__BackingField: {fileID: 11400000, guid: 7685f95bd5ebcdc8c9483bad71217c3f, type: 2}
+    <DialogueKey>k__BackingField: ORE
   _maxRecursionLevels: 4
+  _collectionActions:
+  - {fileID: 11400000, guid: 306a45de64764edf8942eaaa6fa1b75f, type: 2}
+  - {fileID: 11400000, guid: 8e995b6d756c23abc8d35970d7cefbf6, type: 2}
+  - {fileID: 11400000, guid: 699717453e6598b6d82ab7f4fc525acf, type: 2}
+  _sidesForRandomCollectionAction: 3

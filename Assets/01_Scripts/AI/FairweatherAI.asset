@@ -12,9 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c01c800b2222c6e880f2e19e402b10, type: 3}
   m_Name: FairweatherAI
   m_EditorClassIdentifier: 
-  _dialogueManager: {fileID: 0}
-  _ghoulTypes:
-  - {fileID: 11400000, guid: 111abc881f2b08146b78be4569123d0c, type: 2}
-  - {fileID: 11400000, guid: 2b2960167e165f04bb0a0c96ce2362b3, type: 2}
-  - {fileID: 11400000, guid: f90739eeb21709f479581f843b1fa689, type: 2}
-  - {fileID: 11400000, guid: 31dc8b24d3e55fe4386e3d7428f85533, type: 2}
+  _dialogueManager: {fileID: 11400000, guid: 49c38ea25f628ab3daf607d29b95cdb2, type: 2}
+  <VariableNamePrefix>k__BackingField: fairweather
+  _acceptableStressLevelsForRequest:
+  - calm
+  _acceptableFriendLevelsForRequest:
+  - neutral
+  - friendly
+  - close
+  _wallHPStressCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.00025774544
+      value: 0.9995065
+      inSlope: -0.26664254
+      outSlope: -0.26664254
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.38682294
+    - serializedVersion: 3
+      time: 0.4449139
+      value: 0.5579221
+      inSlope: -2.9067566
+      outSlope: -2.9067566
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05656916
+      outWeight: 0.06224321
+    - serializedVersion: 3
+      time: 1.0018854
+      value: -0.000099390745
+      inSlope: -0.106590495
+      outSlope: -0.106590495
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21407756
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxStressPerSegment: 50
+  _friendShipPerItemGift: 2
+  _friendShipPerPromiseKept: 15
+  _friendShipPerPromiseUnkept: -15
+  _promiseKeptNode: Fairweather_Promise_Kept
+  _promiseUnkeptNode: Fairweather_Promise_Unkept
+  _askForItemsNode: Fairweather_NPC_NeedResources
+  _askForGhoulInfoNode: Fairweather_NPC_NeedInformation
+  _sidesAskForItems: 20
+  _sidesAskForGhoulInfo: 10
+  _ghoulInfo: {fileID: 11400000, guid: 6290415f76499344f80c3e8569b47e00, type: 2}

@@ -2,7 +2,8 @@ title: Fairweather_NPC_Initiates
 position: -688,945
 ---
 <<comms_start {$fairweather_station}>>
-MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K
+=> MORSE_{$fairweather_station}: {$fairweather_station} CALLING STATION WS1 K <<if !$fairweather_stress_distress>>
+=> MORSE_{$fairweather_station}: CS CS WS1 K <<if $fairweather_stress_distress>>
 <<once if !$fairweather_player_introduced>>
   <<detour Fairweather_Player_Introduction>>
 <<else>>
@@ -81,7 +82,8 @@ title: Fairweather_Player_Introduction
 position: -402,945
 ---
 MORSE_{$player_station_name}: THIS IS STATION WS1 AT WALL {$player_wall_name}
-=> MORSE_{$fairweather_station}: WELL MET <<if !$fairweather_stress_calm>>
+=> MORSE_{$fairweather_station}: K <<if $fairweather_stress_distress>>
+=> MORSE_{$fairweather_station}: WELL MET <<if $fairweather_stress_stressed>>
 => MORSE_{$fairweather_station}: CHARMED <<if $fairweather_stress_calm>>
 <<set $fairweather_player_introduced = true>>
 <<return>>
@@ -279,22 +281,22 @@ position: 326,495
   MORSE_{$fairweather_station}: FOOD FOR THOUGHT K
 -> Ghoul Forecast
   MORSE_{$player_station_name}: WX RPT?
-  => MORSE_{$fairweather_station}: NIL IM AFRAID <<if $fairweather_relationship_neutral && $fairweather_first_ghooul_elimination == "">>
-  => MORSE_{$fairweather_station}: WX IS NOT ${$fairweather_first_ghooul_elimination} <<if $fairweather_relationship_neutral && $fairweather_first_ghooul_elimination != "">>
-  => MORSE_{$fairweather_station}: UNFORTUNATELY I HAVE NOTHING YET <<if !$fairweather_relationship_neutral && $fairweather_first_ghooul_elimination == "">>
+  => MORSE_{$fairweather_station}: NIL IM AFRAID <<if $fairweather_relationship_neutral && $fairweather_first_ghoul_elimination == "">>
+  => MORSE_{$fairweather_station}: WX IS NOT ${$fairweather_first_ghoul_elimination} <<if $fairweather_relationship_neutral && $fairweather_first_ghoul_elimination != "">>
+  => MORSE_{$fairweather_station}: UNFORTUNATELY I HAVE NOTHING YET <<if !$fairweather_relationship_neutral && $fairweather_first_ghoul_elimination == "">>
     MORSE_{$fairweather_station}: MAYBE LATER IN THE DAY K
-  => MORSE_{$fairweather_station}: ONE MOMENT SVP <<if !$fairweather_relationship_neutral && $fairweather_first_ghooul_elimination != "">>
+  => MORSE_{$fairweather_station}: ONE MOMENT SVP <<if !$fairweather_relationship_neutral && $fairweather_first_ghoul_elimination != "">>
     <<once if !$fairweather_used_svp>>
       {$player_name}: SVP? I don't know that abbreviation.
       <<set $fairweather_used_svp = true>>
     <<endonce>>
     <<if $fairweather_knows_ghoul_type>>
       MORSE_{$fairweather_station}: WX {$ghoul_type_morse_text} IT SEEMS
-    <<elseif $fairweather_second_ghooul_elimination != "">>
-      MORSE_{$fairweather_station}: WX IS NOT {$fairweather_first_ghooul_elimination} NOR {$fairweather_second_ghooul_elimination}
+    <<elseif $fairweather_second_ghoul_elimination != "">>
+      MORSE_{$fairweather_station}: WX IS NOT {$fairweather_first_ghoul_elimination} NOR {$fairweather_second_ghoul_elimination}
       MORSE_{$fairweather_station}: STILL TRYING TO CONFIRM THE EXACT TYPE
     <<else>>
-      MORSE_{$fairweather_station}: WX IS NOT {$fairweather_first_ghooul_elimination}
+      MORSE_{$fairweather_station}: WX IS NOT {$fairweather_first_ghoul_elimination}
       MORSE_{$fairweather_station}: STILL TRYING TO CONFIRM THE EXACT TYPE
     <<endif>>
     MORSE_{$fairweather_station}: TAKE CARE K
@@ -347,7 +349,6 @@ position: 636,495
   MORSE_{$player_station_name}: I NEED {$fairweather_ask_for_resources_request_amount} {$fairweather_ask_for_resources_request_type}
   <<request_material {$fairweather_ai_object_name} {$fairweather_ask_for_resources_request_type} {$fairweather_ask_for_resources_request_amount}>>
   <<if $fairweather_ask_for_resources_response>>
-    => MORSE_{$fairweather_station}: FINE K <<if $fairweather_relationship_bad>>
     => MORSE_{$fairweather_station}: I SHOULD BE ABLE TO SPARE THAT K <<if $fairweather_relationship_neutral>>
     => MORSE_{$fairweather_station}: SENDING IT YOUR WAY MOMENTARILY K <<if $fairweather_relationship_friendly>>
     => MORSE_{$fairweather_station}: NEED NO MORE DR {$player_station_name} K <<if $fairweather_relationship_close>>
@@ -617,10 +618,8 @@ position: 330,692
 ---
 MORSE_{$player_station_name}: ANYTHING TO REPORT?
 <<get_required_materials {$fairweather_ai_object_name}>>
-<<get_report {$fairweather_ai_object_name}>>
 => MORSE_{$fairweather_station}: (SOS) SEND {$requested_asset} <<if $fairweather_stress_distress>>
 => MORSE_{$fairweather_station}: NEED HELP <<if $fairweather_stress_stressed>>
-  MORSE_{$fairweather_station}: {$report}
   => MORSE_{$fairweather_station}: SEND {$requested_asset} <<if $fairweather_relationship_bad>>
   => MORSE_{$fairweather_station}: NEED {$requested_asset} <<if $fairweather_relationship_neutral>>
   => MORSE_{$fairweather_station}: SEND {$requested_asset} SVP <<if $fairweather_relationship_friendly>>
@@ -633,14 +632,13 @@ MORSE_{$player_station_name}: ANYTHING TO REPORT?
   => MORSE_{$fairweather_station}: THOUGH YOU PROBABLY HAVE BETTER THINGS TO DO THAN ASK ABOUT MY DAY <<if $fairweather_relationship_bad>>
     MORSE_{$fairweather_station}: DID THE CAPITOL NOT WANT TO CHAT WITH YOU EITHER K
     {$player_name}: For someone who doesn't want to talk to me you sure are talking a <i>lot</i>.
-  => MORSE_{$fairweather_station}: {$report} <<if !$fairweather_relationship_bad>>
-    => MORSE_{$fairweather_station}: I COULD USE SOME {$requested_asset} SOON THOUGH <<if $fairweather_relationship_neutral>>
-    => MORSE_{$fairweather_station}: IF YOU CAN SPARE SOME {$requested_asset} THOUGH ID APPRECIATE IT <<if $fairweather_relationship_friendly>>
-    => MORSE_{$fairweather_station}: ID BE FOREVER IN YOUR DEBT IF YOU COULD SPARE SOME {$requested_asset} <<if $fairweather_relationship_close>>
+  => MORSE_{$fairweather_station}: I COULD USE SOME {$requested_asset} SOON THOUGH <<if $fairweather_relationship_neutral>>
+  => MORSE_{$fairweather_station}: IF YOU CAN SPARE SOME {$requested_asset} THOUGH ID APPRECIATE IT <<if $fairweather_relationship_friendly>>
+  => MORSE_{$fairweather_station}: ID BE FOREVER IN YOUR DEBT IF YOU COULD SPARE SOME {$requested_asset} <<if $fairweather_relationship_close>>
 <<jump Fairweather_Player_MainMenu>>
 ===
 title: Fairweather_NPC_NeedResources
-position: -984,1183
+position: -1282,1186
 ---
 <<detour Fairweather_NPC_Initiates>>
 <<if $fairweather_stress_calm>>
@@ -678,7 +676,7 @@ MORSE_{$fairweather_station}: COULD YOU SPARE {$requested_amount} {$requested_as
   <<set $fairweather_relationship -= 5>>
 ===
 title: Fairweather_NPC_NeedInformation
-position: -983,1371
+position: -1278,1366
 ---
 <<detour Fairweather_NPC_Initiates>>
 <<if $fairweather_stress_calm>>
@@ -753,4 +751,65 @@ position: -128,1371
     <<detour Fairweather_Already_Knew_Ghoul>>
   <<endif>>
 <<return>>
+===
+title: Fairweather_Promise_Kept
+position: -1277,785
+---
+<<detour Fairweather_NPC_Initiates>>
+=> MORSE_{$fairweather_station}: TU (RN) (SK) <<if $fairweather_stress_distress>>
+  <<comms_end>>
+  {$player_name}: You're welcome?
+=> MORSE_{$fairweather_station}: TU FOR THE DELIVERY <<if $fairweather_stress_stressed>>
+  MORSE_{$player_station_name}: YOURE WELCOME
+  MORSE_{$fairweather_station}: FB ES HPE CUGAN SOON (RN) (SK)
+  <<comms_end>>
+=> MORSE_{$fairweather_station}: THANK YOU FOR THE DELIVERY <<if $fairweather_stress_calm>>
+  <<if $fairweather_relationship_close>>
+    MORSE_{$fairweather_station}: I HOPE TO REPAY YOU SOON FRIEND
+  <<endif>>
+  MORSE_{$player_station_name}: DONT MENTION IT
+  => MORSE_{$fairweather_station}: FB (RN) (SK) <<if $fairweather_relationship_bad>>
+  => MORSE_{$fairweather_station}: TALK SOON (RN) (SK) <<if !$fairweather_relationship_bad>>
+  <<comms_end>>
+===
+title: Fairweather_Promise_Unkept
+position: -1278,1006
+---
+<<detour Fairweather_NPC_Initiates>>
+<<if $fairweather_stress_distress>>
+  MORSE_{$fairweather_station}: (SOS) (SOS) (RN) (SK)
+  <<comms_end>>
+  {$player_name}: Huh? Maybe I should send help...
+<<elseif $fairweather_stress_stressed>>
+  => MORSE_{$fairweather_station}: DONT MAKE PROMISES YOU CANT KEEP (RN) (SK) <<if $fairweather_relationship_bad>>
+    <<comms_end>>
+    {$player_name}: Ah. I did make a promise didn't I?
+  => MORSE_{$fairweather_station}: YOUR AID DIDNT ARRIVE <<if !$fairweather_relationship_bad>>
+    MORSE_{$player_station_name}: AH SORRY ABOUT THAT
+    MORSE_{$fairweather_station}: DONT MAKE A PROMISE YOU CANT KEEP SVP (RN) (SK)
+    <<comms_end>>
+    <<once if !$fairweather_used_svp>>
+      {$player_name}: SVP? What's that?
+      <<set $fairweather_used_svp = true>>
+    <<endonce>>
+    <<if $fairweather_relationship_close>>
+      {$player_name}: A bit harsh, friend...
+    <<endif>>
+<<else>>
+  => MORSE_{$fairweather_station}: UNSURE IF YOURE AWARE DR {$player_station_name} <<if $fairweather_relationship_bad || $fairweather_relationship_neutral>>
+    MORSE_{$fairweather_station}: BUT YOU PROMISED A DELIVERY AND IT HASNT ARRIVED
+    MORSE_{$player_station_name}: AH SORRY ABOUT THAT
+    MORSE_{$fairweather_station}: SORRY WONT CUT IT WHEN PEOPLE DIE BECAUSE OF AN UNKEPT PROMISE
+    MORSE_{$fairweather_station}: FORTUNATELY I DONT EXACTLY NEED YOUR DELIVERY AT PRESENT
+    MORSE_{$fairweather_station}: FB (RN) (SK)
+  => MORSE_{$fairweather_station}: ARENT YOU FORGETTING SOMETHING {$player_station_name} <<if $fairweather_relationship_friendly || $fairweather_relationship_close>>
+    MORSE_{$player_station_name}: OH
+    MORSE_{$player_station_name}: THE DELIVERY
+    MORSE_{$fairweather_station}: RIGHT YOU ARE
+    MORSE_{$player_station_name}: SORRY ABOUT THAT
+    MORSE_{$fairweather_station}: NO WORRIES THOUGH
+    MORSE_{$fairweather_station}: WE MANAGED TO SCRAPE BY
+    MORSE_{$fairweather_station}: TALK SOON (RN) (SK)
+  <<comms_end>>
+<<endif>>
 ===

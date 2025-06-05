@@ -14,6 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Inventory>k__BackingField: {fileID: 11400000, guid: e85384ea8e3325f4a907c20cc3484142, type: 2}
   <Wall>k__BackingField: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
-  _aiController: {fileID: 11400000, guid: a1257faa09af5a840a7cbaf3ff225c59, type: 2}
+  <AIController>k__BackingField: {fileID: 0}
   _ghoulBoard: {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}
   _planner: {fileID: 11400000, guid: 02ea5802068acc05899e495e37d8e746, type: 2}
+  <StationName>k__BackingField: WS2
+  <PlayerName>k__BackingField: 
+  _initialCapitolShipment:
+  - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 24617de8e260751f0a3f86f46ba420c8, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: ac1b76074aa0da6af814e3d008dff22d, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: a75fb6c469438418cb715225a04d49e1, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+    <Amount>k__BackingField: 10
+  _weeklyCapitolShipment:
+  - <Type>k__BackingField: {fileID: 11400000, guid: 7b1d67711e372d0799ce6c5fb956b3c2, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: a75fb6c469438418cb715225a04d49e1, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+    <Amount>k__BackingField: 10
+  - <Type>k__BackingField: {fileID: 11400000, guid: ee0bca1b83e69fca8aa8565b58668b33, type: 2}
+    <Amount>k__BackingField: 10
+  _capitolShipmentsXWeekly: 2
+  _afterTimeYields: []

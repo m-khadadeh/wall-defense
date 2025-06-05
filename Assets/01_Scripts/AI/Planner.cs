@@ -21,15 +21,22 @@ namespace WallDefense.AI
     [SerializeField] private List<ActionCost> _costs;
     [SerializeField] private List<WorldState> _taskLocks;
     [SerializeField] private List<WorldState> _allStates;
+    [SerializeField] private List<ResourceTally> _tallies;
     [SerializeField] private int _maxRecursionLevels;
+    [SerializeField] private List<Action> _collectionActions;
+    [SerializeField] private int _sidesForRandomCollectionAction;
     private HashSet<WorldState> _locks;
-
+    private Dictionary<WorldState, ResourceTally> _tallyByState;
     private Dictionary<Goal, List<ActionChoice>> _planPerGoal;
     private Dictionary<WorldState, int> _stateBoard;
     private HashSet<Action> _freeActionsToTakeThisHour;
+    private SettlementAI _aiType;
+    private System.Random _rng;
 
-    public void Initialize()
+    public void Initialize(SettlementAI aiType)
     {
+      _rng = new System.Random();
+      aiType = _aiType;
       _planPerGoal = new Dictionary<Goal, List<ActionChoice>>();
       _locks = new HashSet<WorldState>();
       foreach (var goal in _goals)
@@ -52,6 +59,8 @@ namespace WallDefense.AI
         _locks.Add(taskLock);
       }
       _stateBoard = _allStates.ToDictionary(e => e, e => e.StateValue);
+      _tallyByState = _tallies.ToDictionary(e => e.ResourceState, e => e);
+      _aiType.SparableAmounts = _tallies.ToDictionary(e => e.DialogueKey, e => e);
     }
 
     private void CheckSensors()
@@ -101,8 +110,15 @@ namespace WallDefense.AI
         action.GetYields();
       }
 
+      foreach (var tally in _tallies)
+      {
+        tally.SpareableAmount = tally.ResourceState.StateValue;
+      }
+
       // Plan new allocations
       PlanCourseOfAction();
+
+      int collectionAllocations = 0;
 
       // Allocate new actions
       foreach (var goal in _goals)
@@ -113,10 +129,51 @@ namespace WallDefense.AI
           if (choice.StartAction.CheckConditions())
           {
             Debug.Log($"Allocating for {choice.StartAction}");
+            if (_collectionActions.Contains(choice.StartAction))
+            {
+              collectionAllocations++;
+            }
             choice.StartAction.GetYields();
           }
         }
       }
+
+      // Random collection based action in order to keep resources up
+      if (collectionAllocations == 0 && UnityEngine.Random.Range(0, _sidesForRandomCollectionAction + hour) <= 1)
+      {
+        _collectionActions.OrderBy(_ => _rng.Next());
+        foreach (var action in _collectionActions)
+        {
+          CheckSensors();
+          if (action.CheckConditions())
+          {
+            action.GetYields();
+            break;
+          }
+        }
+      }
+
+      // Calculate SpareableAmounts
+        foreach (var sensor in _sensors)
+        {
+          sensor.UpdateState();
+        }
+      foreach (var goal in _goals)
+      {
+        var conditionList = goal.GetEasiestConditionList();
+        foreach (var condition in conditionList)
+        {
+          if (_tallyByState.ContainsKey(condition.State))
+          {
+            int amount = condition.SpareableAmount();
+            if (amount < _tallyByState[condition.State].SpareableAmount)
+            {
+              _tallyByState[condition.State].SpareableAmount = amount;
+            }
+          }
+        }
+      }
+
     }
     private Goal _currentGoal;
 
@@ -143,10 +200,10 @@ namespace WallDefense.AI
         var list = new List<(ActionChoice, int)>(choices.Select(e => (e.Key, e.Key.Hours)));
         list.Sort((x, y) => y.Item2.CompareTo(x.Item2));
         _planPerGoal[goal] = list.Select(e => e.Item1).ToList();
-        foreach (var action in _planPerGoal[goal])
-        {
-          // Debug.Log($"Attempting to {action.StartAction} for {goal}");
-        }
+        // foreach (var action in _planPerGoal[goal])
+        // {
+        //   // Debug.Log($"Attempting to {action.StartAction} for {goal}");
+        // }
       }
     }
 
@@ -169,7 +226,7 @@ namespace WallDefense.AI
           action.CollectAction.ApplyActionState();
           int newAmount = condition.NeededToFulfill();
           action.CollectAction.UndoActionState();
-          if ((Mathf.Abs(newAmount) < difference && ! action.ProtectionTask && !_currentGoal.ProtectionGoal) || (Mathf.Abs(newAmount) == 0 && action.ProtectionTask && _currentGoal.ProtectionGoal))
+          if ((Mathf.Abs(newAmount) < difference && !action.ProtectionTask && !_currentGoal.ProtectionGoal) || (Mathf.Abs(newAmount) == 0 && action.ProtectionTask && _currentGoal.ProtectionGoal))
           {
             bestChoice = action;
             difference = Mathf.Abs(newAmount);
@@ -225,6 +282,14 @@ namespace WallDefense.AI
       [field: SerializeField] public WorldState TaskLock { get; private set; }
       [field: SerializeField] public int Hours { get; private set; }
       [field: SerializeField] public bool ProtectionTask { get; set; }
+    }
+
+    [Serializable]
+    public class ResourceTally
+    {
+      [field: SerializeField] public WorldState ResourceState { get; private set; }
+      [field: SerializeField] public string DialogueKey { get; private set; }
+      public int SpareableAmount { get; set; }
     }
   }
 }

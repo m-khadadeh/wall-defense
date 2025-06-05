@@ -53,5 +53,17 @@ namespace WallDefense.AI
       }
     }
     public int NeededToFulfill() => NeededToFulfill(_state.StateValue);
+
+    public int SpareableAmount()
+    {
+      if (_conditionComparator == Comparator.Equal || _conditionComparator == Comparator.GreaterThan || _conditionComparator == Comparator.GreaterThanOrEqual)
+      {
+        return _state.StateValue - _conditionValue - (_conditionComparator == Comparator.GreaterThan ? 1 : 0); 
+      }
+      else
+      {
+        return 0;
+      }
+    }
   }
 }
