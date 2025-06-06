@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -37,7 +38,8 @@ namespace WallDefense
         public Pocketwatch watch;
 
         public Button dialogueScreenBackButton;
-        
+        public ScreenFader screenFader;
+
 
         enum GameState
         {
@@ -137,34 +139,48 @@ namespace WallDefense
                 AdvanceOneHour();
             }
         }
-
-
         // Update is called once per frame
         void Update()
         {
             watch.CanClickButtons(!dialogueManager.NodeQueued);
         }
-
         public void OpenStart()
         {
+            StartCoroutine(OpenStartCoroutine());
+        }
+        IEnumerator OpenStartCoroutine()
+        {
+            yield return screenFader.StartFadeCoroutine();
             currentState = GameState.start;
             currentView = UIView.none;
             startView.SetActive(true);
             mainView.SetActive(false);
             gameOverView.SetActive(false);
             OnStart?.Invoke();
+            yield return screenFader.EndFadeCoroutine();
         }
         public void OpenMain()
         {
+            StartCoroutine(OpenMainCoroutine());
+        }
+        IEnumerator OpenMainCoroutine()
+        {
+            yield return screenFader.StartFadeCoroutine();
             currentState = GameState.main;
             currentView = UIView.main;
             startView.SetActive(false);
             mainView.SetActive(true);
             gameOverView.SetActive(false);
             OnMain?.Invoke();
+            yield return screenFader.EndFadeCoroutine();
         }
         public void OpenGameOver()
         {
+            StartCoroutine(OpenGameOverCoroutine());
+        }
+        IEnumerator OpenGameOverCoroutine()
+        {
+            yield return screenFader.StartFadeCoroutine();
             currentState = GameState.gameOver;
             currentView = UIView.none;
             previousNotebookView = UIView.none;
@@ -172,6 +188,7 @@ namespace WallDefense
             mainView.SetActive(false);
             gameOverView.SetActive(true);
             OnGameOver?.Invoke();
+            yield return screenFader.EndFadeCoroutine();
         }
         public void OpenNotebookView()
         {
@@ -191,6 +208,12 @@ namespace WallDefense
         }
         public void OpenSubView(UIView view)
         {
+            StartCoroutine(OpenSubViewCoroutine(view));
+        }
+
+        IEnumerator OpenSubViewCoroutine(UIView view)
+        {
+            yield return screenFader.StartFadeCoroutine();
             if (currentView == UIView.dialogue || currentView == UIView.info || currentView == UIView.management)
             {
                 previousNotebookView = currentView;
@@ -198,6 +221,7 @@ namespace WallDefense
             CloseSubViews();
             currentView = view;
             mainSubViews[(int)view].SetActive(true);
+            yield return screenFader.EndFadeCoroutine();
         }
 
         void CloseSubViews()
