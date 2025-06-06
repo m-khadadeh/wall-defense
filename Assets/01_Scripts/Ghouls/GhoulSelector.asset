@@ -25,3 +25,6 @@ MonoBehaviour:
   _chalkBoards:
   - {fileID: 11400000, guid: 487d6a798de71132c9b4922c8a003468, type: 2}
   _dialogueManager: {fileID: 11400000, guid: 49c38ea25f628ab3daf607d29b95cdb2, type: 2}
+  _colonies:
+  - {fileID: 11400000, guid: 5fc01a52098431e2e9c5e4c3cd6eb7cc, type: 2}
+  - {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}

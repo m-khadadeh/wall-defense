@@ -17,3 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04583cedac068a706977efe143e153fa, type: 2}
   _dialogueManager: {fileID: 11400000, guid: 49c38ea25f628ab3daf607d29b95cdb2, type: 2}
   _everyXDays: 7
+  <PlayerInitiationNode>k__BackingField: Capitol_PlayerInitiates

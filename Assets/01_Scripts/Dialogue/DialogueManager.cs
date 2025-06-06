@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -18,9 +19,11 @@ namespace WallDefense
     private int _currentHour;
     [SerializeField] private List<ResourceEntry> _resourceKeys;
     private Dictionary<string, ItemType> _resourceDictionary;
+    [SerializeField] private string _playerInitiatesNode;
     private List<Deliverable> _deliveries;
     public bool NodeQueued { get; private set; }
     private string _nextNode;
+    private GameManager.UIView _currentView;
     public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony, System.Action continueSetup)
     {
       NodeQueued = false;
@@ -48,9 +51,10 @@ namespace WallDefense
       }
     }
 
-    public void OnAfterHour(int hour)
+    public void OnAfterHour(int hour, GameManager.UIView view)
     {
       _currentHour = hour;
+      _currentView = view;
       List<Deliverable> toDelete = new List<Deliverable>();
       foreach (var deliverable in _deliveries)
       {
@@ -64,6 +68,10 @@ namespace WallDefense
         _deliveries.Remove(deliverable);
       }
       QueueUpNextNode();
+      if (view == GameManager.UIView.morse)
+      {
+        RunNextNode();
+      }
     }
 
     private void QueueUpNextNode()
@@ -77,13 +85,39 @@ namespace WallDefense
       else
       {
         NodeQueued = false;
+        _nextNode = "";
       }
     }
 
-    public void RunNextNode()
+    public async void RunNextNode()
     {
-      if(_nextNode != "")
+      await YarnTask.Delay(20);
+      if (_nextNode == "")
+      {
+        QueueUpNextNode();
+      }
+      if (_nextNode != "")
+      {
         _runner.StartDialogue(_nextNode);
+        _nextNode = "";
+      }
+    }
+
+    public void RunPlayerInititation()
+    {
+      _runner.StartDialogue(_playerInitiatesNode);
+    }
+
+    public void OnScreenEntry()
+    {
+      if (_nextNode == "")
+      {
+        RunPlayerInititation();
+      }
+      else
+      {
+        RunNextNode();
+      }
     }
 
     public void QueueUpDialogue(string nodeName, int hour)
@@ -99,7 +133,7 @@ namespace WallDefense
       VariableStorage.SetValue("$player_wall_name", _playerColony.Wall.wallName);
       VariableStorage.SetValue("$fairweather_ai_object_name", _fairweatherAI.name);
       _runner.onDialogueComplete.RemoveAllListeners();
-      _runner.onDialogueComplete.AddListener(QueueUpNextNode);
+      _runner.onDialogueComplete.AddListener(RunNextNode);
     }
 
     public void RequestMaterial(string aiObjectName, string materialType, int amount)
@@ -108,9 +142,9 @@ namespace WallDefense
       {
         _aiColonies[aiObjectName].Inventory.RemoveItem(_resourceDictionary[materialType], amount);
         _deliveries.Add(new Deliverable(_resourceDictionary[materialType], amount, 3, _playerColony));
-        VariableStorage.SetValue($"{_aiColonies[aiObjectName].AIController.VariableNamePrefix}_ask_for_resources_response", true);
+        VariableStorage.SetValue($"${_aiColonies[aiObjectName].AIController.VariableNamePrefix}_ask_for_resources_response", true);
       }
-      VariableStorage.SetValue($"{_aiColonies[aiObjectName].AIController.VariableNamePrefix}_ask_for_resources_response", false);
+      VariableStorage.SetValue($"${_aiColonies[aiObjectName].AIController.VariableNamePrefix}_ask_for_resources_response", false);
     }
 
     public void GetRequiredMaterials(string aiObjectName)
@@ -164,5 +198,10 @@ namespace WallDefense
         }
       }
     }
+
+    public void QueueNodeNow(string node)
+    {
+      _nextNode = node;
+    } 
   }
 }

@@ -29,6 +29,7 @@ namespace WallDefense.AI
     [SerializeField] private int _sidesAskForItems;
     [SerializeField] private int _sidesAskForGhoulInfo;
     [SerializeField] private WorldState _ghoulInfo;
+    [field: SerializeField] public string PlayerInitiationNode { get; private set; }
 
     private bool _askedForItemsToday;
     private bool _askedForInfoToday;
@@ -45,6 +46,11 @@ namespace WallDefense.AI
     {
       _askedForInfoToday = false;
       _askedForItemsToday = false;
+    }
+
+    public void OnDie()
+    {
+      _variableStorage.SetValue($"${VariableNamePrefix}_dead", true);
     }
 
     public void OnBeforeHour(int hour)

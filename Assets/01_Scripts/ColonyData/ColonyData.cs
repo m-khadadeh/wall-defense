@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using WallDefense.AI;
 using Yarn.Unity;
 
@@ -23,6 +24,7 @@ namespace WallDefense
     [SerializeField] private int _capitolShipmentsXWeekly;
     [SerializeField] private List<AfterTimeYield> _afterTimeYields;
     private int _weeksToShipment;
+    [SerializeField] private bool _dead;
 
     public void Initialize()
     {
@@ -44,16 +46,22 @@ namespace WallDefense
 
     public void OnBeforeHour(int hour)
     {
-      AIController?.OnBeforeHour(hour);
+      if (!_dead)
+      {
+        AIController?.OnBeforeHour(hour);
+      }
     }
 
     public void OnAfterHour(int hour)
     {
-      _planner?.OnAfterHour(hour);
-      AIController?.OnAfterHour(hour);
-      foreach (var afterYield in _afterTimeYields)
+      if (!_dead)
       {
-        afterYield.TickDown();
+        _planner?.OnAfterHour(hour);
+        AIController?.OnAfterHour(hour);
+        foreach (var afterYield in _afterTimeYields)
+        {
+          afterYield.TickDown();
+        }
       }
     }
 
@@ -103,6 +111,34 @@ namespace WallDefense
         }
         _weeksToShipment = _capitolShipmentsXWeekly;
       }
+    }
+
+    public void Die()
+    {
+      if (AIController == null)
+      {
+        // Player is dead.
+        DialogBox.QueueDialogueBox(
+          new DialogueBoxParameters(
+            GameObject.Find("Canvas").transform,
+            "Your settlement has fallen!",
+            new string[] {
+              "Restart",
+              "Quit"
+            },
+            new DialogBox.ButtonEventHandler[]
+            {
+              () => SceneManager.LoadScene(0),
+              () => Application.Quit()
+            }
+          )
+        );
+      }
+      else
+      {
+        AIController.OnDie();
+      }
+      _dead = true;
     }
   }
 }

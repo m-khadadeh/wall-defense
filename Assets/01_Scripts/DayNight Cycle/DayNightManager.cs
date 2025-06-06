@@ -47,15 +47,6 @@ namespace WallDefense
             onAfterHour.Invoke(currentHour);
         }
 
-        public void AdvanceToTaskComplete(TaskManager taskManager)
-        {
-            int hoursToAdvance = taskManager.GetShortestTimeToTaskCompletion();
-            Debug.Log(hoursToAdvance);
-            for (int i = 0; i < hoursToAdvance; i++)
-            {
-                AdvanceHour();
-            }
-        }
         public void LoadData(DayNightData dayNightData)
         {
             currentDay = dayNightData.currentDay;

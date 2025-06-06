@@ -1,8 +1,10 @@
 title: Capitol_Introduction
 position: -500,84
 ---
-<<comms_start DialogueSystem "capitol">>
-{$player_name}: Oh. The Capitol wants to talk. Let's see what this is about.
+<<set_receiving DialogueSystem true>>
+{$player_name}: The "Receiving" light is on. Lets see who it is.
+<<comms_start DialogueSystem "capitol" false>>
+{$player_name}: The Capitol.
 MORSE_Capitol: CS {$player_station_name} K
 {$player_name}: Been a while since I've gotten such a curt message. Better keep the reference sheet handy.
 {$player_name}: 'Calling station {$player_station_name}.' That's me.
@@ -19,8 +21,8 @@ MORSE_Capitol: EVERYWHERE
 MORSE_Capitol: CNT HELP MORE
 {$player_name}: ...
 MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
-{$player_name}: They cut the line.
 <<comms_end DialogueSystem>>
+{$player_name}: They cut the line.
 <<capitol_initial_shipment DialogueSystem>>
 {$player_name}: Well, the shipment is here.
 {$player_name}: ...
@@ -34,6 +36,10 @@ position: -137,51
 <<declare $player_station_name = "WS1">>
 <<declare $player_name = "Operator">>
 <<declare $player_wall_name = "MARIA">>
+
+<<declare $player_called_capitol_today = false>>
+<<declare $player_called_ws2_today = false>>
+<<declare $player_called_ws3_today = false>>
 
 <<declare $first_clue = "">>
 <<declare $first_clue_morse_text = "">>
@@ -78,6 +84,8 @@ position: -137,51
 <<declare $fairweather_explained_svp = false>>
 <<declare $fairweather_declared_friendship = false>>
 
+<<declare $fairweather_dead = false>>
+
 <<declare $fairweather_cut_contact_after_distress_confrontation = false>>
 
 <<return>>
@@ -86,7 +94,7 @@ title: Capitol_PlayerInitiates
 position: -466,359
 ---
 MORSE_{$player_station_name}: WS1 CALLING CAPITOL
-<<comms_start DialogueSystem "capitol">>
+<<comms_start DialogueSystem "capitol" true>>
 MORSE_Capitol: K
 <<jump Capitol_Menu>>
 ===
@@ -130,7 +138,7 @@ position: -139,356
 title: Capitol_WeeklyShipment
 position: -467,605
 ---
-<<comms_start DialogueSystem "capitol">>
+<<comms_start DialogueSystem "capitol" false>>
 <<once>>
   {$player_name}: Oh. The Capitol?
 <<else>>
@@ -148,4 +156,16 @@ MORSE_Capitol: 73 ES HPE CUAGN (RN) (SK)
 <<comms_end DialogueSystem>>
 => {$player_name}: Hope to see you again too... sooner rather than later.
 => {$player_name}: Here's to another week...
+===
+
+title: Who_To_Call
+---
+{$player_name}: Who should I signal? (I shouldn't signal anyone more than once per day.)
+-> The Capitol <<if !$player_called_capitol_today>>
+  <<set $player_called_capitol_today = true>>
+  <<initiate DialogueSystem "capitol">>
+-> Wall Station 2 <<if !$player_called_ws2_today>>
+  <<set $player_called_ws2_today = true>>
+  <<initiate DialogueSystem "WS2">>
+-> Nevermind
 ===

@@ -30,6 +30,10 @@ namespace WallDefense
     [SerializeField] private GameObject _morseKeyOn;
     [SerializeField] private GameObject _morseKeyOff;
     [SerializeField] private string _playerMorseName;
+    [SerializeField] private Button _morseNextButton;
+    [SerializeField] private TMPro.TextMeshProUGUI[] _optionText;
+    [SerializeField] private Button[] _optionButtons;
+    private (string, string) _lastLine;
     private bool _lineRunning;
 
     public override YarnTask OnDialogueCompleteAsync()
@@ -53,6 +57,10 @@ namespace WallDefense
       {
         Debug.LogError($"Line view doesn't have character view. Skipping line {line.TextID} (\"{line.RawText}\")");
         return;
+      }
+      foreach (var button in _optionButtons)
+      {
+        button.gameObject.SetActive(false);
       }
 
       var text = line.TextWithoutCharacterName;
@@ -91,6 +99,7 @@ namespace WallDefense
         }
 
         _lineTextMorse.maxVisibleCharacters = 0;
+        _lastLine = (_characterTextMorse.text, newTextData.replacedUpperLineText);
 
         if (_ditMilliseconds > 0)
         {
@@ -163,6 +172,7 @@ namespace WallDefense
         _characterTextNonMorse.text = line.CharacterName;
         _lineTextNonMorse.text = text.Text;
         _lineTextNonMorse.maxVisibleCharacters = 0;
+        _lastLine = (line.CharacterName, text.Text);
         if (_nonMorsePerCharacterMilliseconds > 0)
         {
           for (int i = 0; i < _lineTextNonMorse.text.Length; i++)
@@ -198,9 +208,66 @@ namespace WallDefense
       }
     }
 
-    public override YarnTask<DialogueOption> RunOptionsAsync(DialogueOption[] dialogueOptions, CancellationToken cancellationToken)
+    public override async YarnTask<DialogueOption> RunOptionsAsync(DialogueOption[] dialogueOptions, CancellationToken cancellationToken)
     {
-      return YarnTask<DialogueOption>.FromResult(null);
+      _dialogueContainerMorse.SetActive(true);
+      _dialogueContainerNonMorse.SetActive(false);
+      _characterTextMorse.text = _lastLine.Item1;
+      _lineTextMorse.text = _lastLine.Item2;
+      _lineTextMorse.maxVisibleCharacters = _lastLine.Item2.Length;
+      _morseNextButton.gameObject.SetActive(false);
+
+      YarnTaskCompletionSource<DialogueOption> selectedOptionCompletionSource = new YarnTaskCompletionSource<DialogueOption>();
+      var completionCancellationSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+
+      async YarnTask CancelSourceWhenDialogueCancelled()
+      {
+        await YarnTask.WaitUntilCanceled(completionCancellationSource.Token);
+        if (cancellationToken.IsCancellationRequested == true)
+        {
+          selectedOptionCompletionSource.TrySetResult(null);
+        }
+      }
+
+      CancelSourceWhenDialogueCancelled().Forget();
+      
+      for (int i = 0, j = 0; i < dialogueOptions.Length; i++)
+      {
+        DialogueOption thisOption = dialogueOptions[i];
+        if (thisOption.IsAvailable)
+        {
+          _optionButtons[j].gameObject.SetActive(true);
+          _optionText[j].text = thisOption.Line.Text.Text;
+          _optionButtons[j].onClick.RemoveAllListeners();
+          _optionButtons[j].onClick.AddListener(() =>
+          {
+            if (!completionCancellationSource.IsCancellationRequested)
+            {
+              selectedOptionCompletionSource.TrySetResult(thisOption);
+            }
+          });
+          j++;
+        }
+      }
+
+      var completedTask = await selectedOptionCompletionSource.Task;
+      completionCancellationSource.Cancel();
+
+      if (cancellationToken.IsCancellationRequested)
+      {
+        return await DialogueRunner.NoOptionSelected;
+      }
+
+      foreach (var button in _optionButtons)
+      {
+        button.onClick.RemoveAllListeners();
+        button.gameObject.SetActive(false);
+      }
+      
+      _morseNextButton.gameObject.SetActive(true);
+      _dialogueContainerMorse.SetActive(false);
+
+      return completedTask;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

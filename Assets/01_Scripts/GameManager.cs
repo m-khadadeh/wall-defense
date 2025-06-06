@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace WallDefense
@@ -34,6 +35,8 @@ namespace WallDefense
 
         public GhoulSelector ghoulSelector;
         public Pocketwatch watch;
+
+        public Button dialogueScreenBackButton;
         
 
         enum GameState
@@ -78,12 +81,17 @@ namespace WallDefense
             watch.OnAdvanceHour();
             UpdateWatch();
             theCapitol.Initialize();
+            dialogueRunner.onDialogueStart.AddListener(() => dialogueScreenBackButton.enabled = false);
+            dialogueRunner.onDialogueComplete.AddListener(() => dialogueScreenBackButton.enabled = true);
         }
 
         public void OnNewDay()
         {
             ghoulSelector.OnDayStart();
             theCapitol.OnNewDay();
+            dialogueRunner.VariableStorage.SetValue("$player_called_capitol_today", false);
+            dialogueRunner.VariableStorage.SetValue("$player_called_ws2_today", false);
+            dialogueRunner.VariableStorage.SetValue("$player_called_ws3_today", false);
         }
         public void OnBeforeHour(int hour)
         {
@@ -104,7 +112,7 @@ namespace WallDefense
             ghoulSelector.OnHour(hour);
             watch.OnAdvanceHour();
             UpdateWatch();
-            dialogueManager.OnAfterHour(hour);
+            dialogueManager.OnAfterHour(hour, currentView);
         }
         public void UpdateWatch()
         {
@@ -114,6 +122,20 @@ namespace WallDefense
         public void OnNightHour(int hour)
         {
 
+        }
+
+        public void AdvanceOneHour()
+        {
+            dayNightManager.AdvanceHour();
+        }
+
+        public void AdvanceToTaskComplete()
+        {
+            int hoursToAdvance = taskManager.GetShortestTimeToTaskCompletion();
+            for (int i = 0; i < hoursToAdvance && !dialogueManager.NodeQueued; i++)
+            {
+                AdvanceOneHour();
+            }
         }
 
 

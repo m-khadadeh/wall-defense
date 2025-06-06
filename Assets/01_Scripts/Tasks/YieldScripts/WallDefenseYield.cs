@@ -23,12 +23,12 @@ namespace WallDefense
         else
         {
           DialogBox.QueueDialogueBox(new DialogueBoxParameters
-          {
-            parent = GameObject.Find("Canvas").transform,
-            prompt = $"Cannot install {_defenseType.ToString()} defense on {choice} wall because there already is defense there. Materials wasted.",
-            choices = new string[] { "Okay" },
-            eventHandlers = new DialogBox.ButtonEventHandler[] { () => { } }
-          }
+            (
+              GameObject.Find("Canvas").transform,
+              $"Cannot install {_defenseType.ToString()} defense on {choice} wall because there already is defense there. Materials wasted.",
+              new string[] { "Okay" },
+              new DialogBox.ButtonEventHandler[] { () => { } }
+            )
           );
         }
       }
@@ -42,12 +42,12 @@ namespace WallDefense
         else
         {
           DialogBox.QueueDialogueBox(new DialogueBoxParameters
-          {
-            parent = GameObject.Find("Canvas").transform,
-            prompt = $"Cannot remove defense on {choice} wall because there already is no defense there.",
-            choices = new string[] { "Okay" },
-            eventHandlers = new DialogBox.ButtonEventHandler[] { () => { } }
-          }
+            (
+              GameObject.Find("Canvas").transform,
+              $"Cannot remove defense on {choice} wall because there already is no defense there.",
+              new string[] { "Okay" },
+              new DialogBox.ButtonEventHandler[] { () => { } }
+            )
           );
         }
       }

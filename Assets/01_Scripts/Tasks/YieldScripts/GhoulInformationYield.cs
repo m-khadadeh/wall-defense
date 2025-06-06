@@ -12,12 +12,12 @@ namespace WallDefense
     {
       Clue clue = _selector.FindClue();
       DialogBox.QueueDialogueBox(new DialogueBoxParameters
-      {
-        parent = GameObject.Find("Canvas").transform,
-        prompt = clue != null ? clue.dialogBoxInfo : "There was nothing else",
-        choices = new string[] { "Okay" },
-        eventHandlers = new DialogBox.ButtonEventHandler[] { () => { } }
-      });
+      (
+        GameObject.Find("Canvas").transform,
+        clue != null ? clue.dialogBoxInfo : "There was nothing else",
+        new string[] { "Okay" },
+        new DialogBox.ButtonEventHandler[] { () => { } }
+      ));
     }
   }
 }

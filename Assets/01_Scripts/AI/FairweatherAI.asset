@@ -64,3 +64,4 @@ MonoBehaviour:
   _sidesAskForItems: 20
   _sidesAskForGhoulInfo: 10
   _ghoulInfo: {fileID: 11400000, guid: 6290415f76499344f80c3e8569b47e00, type: 2}
+  <PlayerInitiationNode>k__BackingField: Fairweather_Player_Initiates

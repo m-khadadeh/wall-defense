@@ -71,24 +71,31 @@ namespace WallDefense
             );
         }
     }
-    public class DialogueBoxParameters
-    {
-        /// <summary>
-        /// The parent transform for the DialogBoxComponent, should be on a canvas.
-        /// </summary>
-        public Transform parent;
-        /// <summary>
-        /// The prompt / question / information to provide the player.
-        /// </summary>
-        public string prompt;
-        /// <summary>
-        /// The choices to provide the player. Each is placed on its own button.
-        /// </summary>
-        public string[] choices;
-        /// <summary>
-        /// The respective actions for each choice. Should be the same number of options as <c><paramref name="choices"/></c>.
-        /// </summary>
-        public DialogBox.ButtonEventHandler[] eventHandlers;
+	public class DialogueBoxParameters
+	{
+		/// <summary>
+		/// The parent transform for the DialogBoxComponent, should be on a canvas.
+		/// </summary>
+		public Transform parent;
+		/// <summary>
+		/// The prompt / question / information to provide the player.
+		/// </summary>
+		public string prompt;
+		/// <summary>
+		/// The choices to provide the player. Each is placed on its own button.
+		/// </summary>
+		public string[] choices;
+		/// <summary>
+		/// The respective actions for each choice. Should be the same number of options as <c><paramref name="choices"/></c>.
+		/// </summary>
+		public DialogBox.ButtonEventHandler[] eventHandlers;
+		public DialogueBoxParameters(Transform m_parent, string m_prompt, string[] m_choices, DialogBox.ButtonEventHandler[] m_callbacks)
+		{
+			parent = m_parent;
+			prompt = m_prompt;
+			choices = m_choices;
+			eventHandlers = m_callbacks;
+		}
     }
 }
 

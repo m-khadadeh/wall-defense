@@ -19,11 +19,11 @@ namespace WallDefense
         public void TestDialogueBox()
         {
             DialogBox.QueueDialogueBox(new DialogueBoxParameters
-            {
-                parent = transform,
-                prompt = "Hey, test out this dialogue box!",
-                choices = new string[] { "Sure!", "No :[" },
-                eventHandlers = new DialogBox.ButtonEventHandler[] {
+            (
+                transform,
+                "Hey, test out this dialogue box!",
+                new string[] { "Sure!", "No :[" },
+                new DialogBox.ButtonEventHandler[] {
                     () =>
                     {
                         Debug.Log("Thanks!");
@@ -33,14 +33,14 @@ namespace WallDefense
                         Debug.Log("Fuck you!");
                     }
                }
-            }
+            )
             );
             DialogBox.QueueDialogueBox(new DialogueBoxParameters
-            {
-                parent = transform,
-                prompt = "anotha one",
-                choices = new string[] { "Sure!", "No :[" },
-                eventHandlers = new DialogBox.ButtonEventHandler[] {
+            (
+                transform,
+                "anotha one",
+                new string[] { "Sure!", "No :[" },
+                new DialogBox.ButtonEventHandler[] {
                     () =>
                     {
                         Debug.Log("yay!");
@@ -50,7 +50,7 @@ namespace WallDefense
                         Debug.Log("wtfbro!");
                     }
                }
-            }
+            )
             );
         }
     }

@@ -28,3 +28,4 @@ MonoBehaviour:
     <Item>k__BackingField: {fileID: 11400000, guid: 9b4cb085a84a8545690192f9d1419379, type: 2}
   - <Key>k__BackingField: STONE
     <Item>k__BackingField: {fileID: 11400000, guid: 3ac471d4f61c8d2d5a8165b04de4c4b5, type: 2}
+  _playerInitiatesNode: Who_To_Call

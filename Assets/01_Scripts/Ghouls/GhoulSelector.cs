@@ -10,6 +10,7 @@ namespace WallDefense
     [SerializeField] private List<Clue> _allClues;
     [SerializeField] private List<AI.GhoulDiscernmentChalkboard> _chalkBoards;
     [SerializeField] private DialogueManager _dialogueManager;
+    [SerializeField] private List<ColonyData> _colonies;
     public Ghoul CurrentGhoul { get; private set; }
     private int _attackHour;
     private bool _attacked;
@@ -57,21 +58,21 @@ namespace WallDefense
         if (foundClueIndex == 0 || CurrentGhoul.clueSecondary.found)
         {
           CurrentGhoul.clueMain.found = true;
-          _dialogueManager.VariableStorage.SetValue("$first_clue", CurrentGhoul.clueMain);
+          _dialogueManager.VariableStorage.SetValue("$first_clue", CurrentGhoul.clueMain.name);
           _dialogueManager.VariableStorage.SetValue("$first_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
           return CurrentGhoul.clueMain;
         }
         else if (!CurrentGhoul.clueSecondary.found)
         {
           CurrentGhoul.clueSecondary.found = true;
-          _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueMain);
+          _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
           _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
           return CurrentGhoul.clueSecondary;
         }
       }
       else if (!CurrentGhoul.clueSecondary.found)
       {
-        _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueMain);
+        _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
         _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
         CurrentGhoul.clueSecondary.found = true;
         return CurrentGhoul.clueSecondary;
@@ -83,15 +84,16 @@ namespace WallDefense
     {
       if (hour == _attackHour && !_attacked)
       {
-        if (CurrentGhoul.MainAttack() || CurrentGhoul.SecondaryAttack())
+        foreach (var colony in _colonies)
         {
-          // Lose condition
-          Debug.Log("LOSE CONDITION");
+          CurrentGhoul.targetWall = colony.Wall;
+          if (CurrentGhoul.MainAttack() || CurrentGhoul.SecondaryAttack())
+          {
+            // Lose condition
+            colony.Die();
+          }
         }
-        else
-        {
-          SelectGhoul();
-        }
+        SelectGhoul();
         _attacked = true;
       }
     }
