@@ -58,7 +58,7 @@ namespace WallDefense
             OpenStartFirstCall();
             foreach (var buttonToLock in buttonsToLockBeforeFirstDialogue)
             {
-                buttonToLock.enabled = false;
+                buttonToLock.interactable = false;
             }
             buttonsUnlockedYet = false;
             settlementAIs.OrderBy(_ => UnityEngine.Random.Range(0, int.MaxValue));
@@ -99,14 +99,14 @@ namespace WallDefense
             {
                 foreach (var button in dialogueBlockButtons)
                 {
-                    button.enabled = false;
+                    button.interactable = false;
                 }
             });
             dialogueRunner.onDialogueComplete.AddListener(() =>
             {
                 foreach (var button in dialogueBlockButtons)
                 {
-                    button.enabled = true;
+                    button.interactable = true;
                 }
             });
         }
@@ -172,7 +172,7 @@ namespace WallDefense
                 buttonsUnlockedYet = true;
                 foreach (var button in buttonsToLockBeforeFirstDialogue)
                 {
-                    button.enabled = true;
+                    button.interactable = true;
                 }
             }
         }

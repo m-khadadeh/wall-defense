@@ -72,7 +72,7 @@ namespace WallDefense
         {
           CurrentGhoul.clueSecondary.found = true;
           _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
-          _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
+          _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueSecondary.morseTextRepresentation);
           ClueFoundEvent?.Invoke();
           return CurrentGhoul.clueSecondary;
         }
@@ -81,7 +81,7 @@ namespace WallDefense
       {
         CurrentGhoul.clueSecondary.found = true;
         _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
-        _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
+        _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueSecondary.morseTextRepresentation);
         ClueFoundEvent?.Invoke();
         return CurrentGhoul.clueSecondary;
       }

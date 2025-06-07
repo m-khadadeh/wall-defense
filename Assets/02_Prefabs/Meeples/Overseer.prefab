@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: <Metadata>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 48a3e18b681832fc8ac63c2992390d0b, type: 2}
+    - target: {fileID: 2989041649191855144, guid: 3ea778dd120f078c999bada90a823cec, type: 3}
+      propertyPath: text
+      value: Overseer
+      objectReference: {fileID: 0}
     - target: {fileID: 4454490632992935026, guid: 3ea778dd120f078c999bada90a823cec, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

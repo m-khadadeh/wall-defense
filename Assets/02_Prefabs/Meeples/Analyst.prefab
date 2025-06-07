@@ -95,7 +95,19 @@ PrefabInstance:
     - target: {fileID: 8094501352323751697, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d85059422b34feac4a4da94337b133e8, type: 3}
+      objectReference: {fileID: -3264693568074714215, guid: b952f28f365ef70afa8fbcd723ffc487, type: 3}
+    - target: {fileID: 8094501352323751697, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.41221303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094501352323751697, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.0851454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094501352323751697, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.10940935
+      objectReference: {fileID: 0}
     - target: {fileID: 8977625718937603913, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
       propertyPath: m_Name
       value: Analyst
@@ -103,5 +115,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8977625718937603913, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2989041649191855144}
   m_SourcePrefab: {fileID: 100100000, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+--- !u!1 &8556377724779848631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8977625718937603913, guid: ba8bf4673483613d48f5462e6fdefafc, type: 3}
+  m_PrefabInstance: {fileID: 732031973727317246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2989041649191855144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556377724779848631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723b78f74cf10934fb1832105793fc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipDisplay: {fileID: 0}
+  text: Analyst

@@ -5,18 +5,21 @@ namespace WallDefense
 {
     public class TooltipHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        public Tooltip tooltipDisplay;
+        private Tooltip tooltipDisplay;
         public string text;
+
+        public void Awake()
+        {
+            tooltipDisplay = GameObject.Find("Tooltip").GetComponent<Tooltip>();
+        }
         public void OnPointerEnter(PointerEventData eventData)
         {
-            tooltipDisplay.tmpContainer.SetActive(true);
             tooltipDisplay.SetText(text);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             tooltipDisplay.SetText("");
-            tooltipDisplay.tmpContainer.SetActive(false);
         }
     }
 }

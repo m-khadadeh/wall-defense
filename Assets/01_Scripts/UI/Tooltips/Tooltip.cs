@@ -8,6 +8,7 @@ namespace WallDefense
     public class Tooltip : MonoBehaviour
     {
         public GameObject tmpContainer;
+        public GameObject background;
         TMP_Text tmp;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -23,6 +24,16 @@ namespace WallDefense
         }
         public void SetText(string text)
         {
+            if (text == "")
+            {
+                tmpContainer.SetActive(false);
+                background.SetActive(false);
+            }
+            else
+            {
+                tmpContainer.SetActive(true);
+                background.SetActive(true);
+            }
             tmp.text = text;
         }
     }

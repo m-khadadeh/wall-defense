@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5832106542708342227, guid: f11d27804f4681563b868cb3e8631ca2, type: 3}
+      propertyPath: text
+      value: Crafter
+      objectReference: {fileID: 0}
     - target: {fileID: 6990901122503051135, guid: f11d27804f4681563b868cb3e8631ca2, type: 3}
       propertyPath: <Metadata>k__BackingField
       value: 
