@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0778a03e106eb339aeed1e8e5ceb06, type: 3}
   m_Name: Making Goo
   m_EditorClassIdentifier: 
-  <TaskName>k__BackingField: Making goo
-  <TaskDescription>k__BackingField: Send off 2 crafters and up to 6 food
+  <TaskName>k__BackingField: Making Goo
+  <TaskDescriptionName>k__BackingField: Making Goo
+  _taskDescription: "Workforce: 2 <sprite name=\"crafter\"> Crafters\nResource Cost:
+    4-6 <sprite name=\"food\"> Food\n(Optional Costs) - Time to complete: \n<indent=5%>
+    - 3 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>(+0<sprite name=\"food\">)
+    - 3 <sprite name=\"goo\"> Goo\n<indent=5%>(+1<sprite name=\"food\">) - 5 <sprite
+    name=\"goo\"> Goo\n<indent=5%>(+2<sprite name=\"food\">) - 6 <sprite name=\"goo\">
+    Goo"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}

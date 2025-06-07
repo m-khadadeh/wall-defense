@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: CraftingSpikes
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Crafting Spikes
-  <TaskDescription>k__BackingField: Crafting Spikes from wood and metal
+  <TaskDescriptionName>k__BackingField: Crafting Spikes
+  _taskDescription: "Workforce: 2 <sprite name=\"crafter\"> Crafters\nResource Cost:
+    3 <sprite name=\"wood\"> Wood, 1 <sprite name=\"metal\"> Metal\n(Optional Costs)
+    - Time to complete: \n<indent=5%> - 2 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>-
+    4 <sprite name=\"spikes\"> Spikes"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}

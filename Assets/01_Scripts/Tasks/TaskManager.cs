@@ -30,7 +30,7 @@ namespace WallDefense
     {
       if (task != null)
       {
-        _taskInfoName.text = task.TaskName;
+        _taskInfoName.text = task.TaskDescriptionName;
         _taskInfoDescription.text = task.TaskDescription;
       }
       else

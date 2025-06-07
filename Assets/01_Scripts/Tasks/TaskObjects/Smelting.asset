@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Smelting
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Smelting Ore
-  <TaskDescription>k__BackingField: Smelting ore into metal
+  <TaskDescriptionName>k__BackingField: Smelting Ore into Metal
+  _taskDescription: "Workforce: 2 <sprite name=\"crafter\"> Crafters\nResource Cost:
+    3 <sprite name=\"ore\"> Ore\n(Optional Costs) - Time to complete: \n<indent=5%>
+    - 2 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>- 2 <sprite name=\"metal\">
+    Metal"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
