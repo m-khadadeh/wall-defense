@@ -173,7 +173,7 @@ namespace WallDefense
         // Update is called once per frame
         void Update()
         {
-            watch.CanClickButtons(!dialogueManager.NodeQueued);
+            watch.CanClickButtons(!dialogueManager.NodeQueued && DialogBox.Instance == null);
             if (!buttonsUnlockedYet && dialogueManager.NodeQueued)
             {
                 buttonsUnlockedYet = true;
