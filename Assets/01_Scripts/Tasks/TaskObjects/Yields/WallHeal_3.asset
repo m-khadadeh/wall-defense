@@ -19,4 +19,4 @@ MonoBehaviour:
     <WallSegment>k__BackingField: 1
   - <ChoiceName>k__BackingField: Bottom
     <WallSegment>k__BackingField: 2
-  _healthAmount: 12
+  _healthAmount: 18

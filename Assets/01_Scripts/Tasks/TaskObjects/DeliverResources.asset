@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: DeliverResources
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Deliver Resources To
-  <TaskDescription>k__BackingField: Send resources to another settlement
+  <TaskDescriptionName>k__BackingField: Delivering Resources
+  _taskDescription: "Workforce: 2 <sprite name=\"meeple\"> Any\nResource Cost: 1-5
+    <sprite name=\"resource\"> Any\n(Optional Costs) - Time to complete: \n<indent=5%>
+    - 3 hours for the delivery to arrive\n<indent=5%> - Another 3 hours for the 2
+    <sprite name=\"meeple\"> to return\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>
+    - Delivers the 1-5 <sprite name=\"resource\"> to the selected station"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: b91d98d97478ef7ad803e17c57eecc7e, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 2}
@@ -33,8 +38,5 @@ MonoBehaviour:
     <AdditionalChoice>k__BackingField: 
   _additionalChoices:
   - m_Text: WS2
-    m_Image: {fileID: 0}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
-  - m_Text: WS3
     m_Image: {fileID: 0}
     m_Color: {r: 0, g: 0, b: 0, a: 0}

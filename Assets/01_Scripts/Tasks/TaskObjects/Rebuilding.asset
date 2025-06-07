@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: Rebuilding
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Rebuilding the Wall
-  <TaskDescription>k__BackingField: Heals the wall
+  <TaskDescriptionName>k__BackingField: Rebuilding the Wall
+  _taskDescription: "Workforce: 1 <sprite name=\"overseer\"> Overseer, 0-1 <sprite
+    name=\"operator\"> Operators, 2-4 <sprite name=\"meeple\"> Any\nResource Cost:
+    5 <sprite name=\"wood\"> Wood, 3-7 <sprite name=\"stone\"> Stone\n(Optional Costs)
+    - Time to complete: \n<indent=5%> - 6 hours. -2 hour if using an extra <sprite
+    name=\"operator\"> Operator. -1 hour per extra <sprite name=\"meeple\"> Any.\n<indent=0%>(Optional
+    Costs) - Yields:\n<indent=5%> - +3 HP per <sprite name=\"stone\"> Stone (i.e.
+    9 - 21HP) to the selected wall segment."
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}

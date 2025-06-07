@@ -16,7 +16,7 @@ MonoBehaviour:
   <TaskDescriptionName>k__BackingField: Smelting Ore into Metal
   _taskDescription: "Workforce: 2 <sprite name=\"crafter\"> Crafters\nResource Cost:
     3 <sprite name=\"ore\"> Ore\n(Optional Costs) - Time to complete: \n<indent=5%>
-    - 2 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>- 2 <sprite name=\"metal\">
+    - 2 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%> - 2 <sprite name=\"metal\">
     Metal"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: deda55bb13fca6e4e84d2a1986ac9edb, type: 2}
