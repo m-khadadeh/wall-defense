@@ -30,10 +30,6 @@ namespace WallDefense
       _hoursRemaining = -1;
       SetButtons();
     }
-    public void OnDestroy()
-    {
-      _task.Unbind();
-    }
 
     public void CheckFulfilled()
     {

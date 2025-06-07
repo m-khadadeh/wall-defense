@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MeepleCrafter
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Crafter
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 958e6fb872ff5e7a58f86bfc7232cf2c, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
+  <Sprite>k__BackingField: {fileID: 1920018917743168936, guid: 5322184044ea47629b167e670ea8974a, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: 9caf3f0b7283d61468c21e8a356fb1e8, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: 0d0ffe2d4107426a092fa660c0649664, type: 2}
   <Prefab>k__BackingField: {fileID: 476024473564204494, guid: 9d95d3be5e69cd5cf8084a3f8c2829c2, type: 3}
+  <SlotColor>k__BackingField: {r: 0.38039216, g: 0.1254902, b: 0.12156863, a: 0.5019608}

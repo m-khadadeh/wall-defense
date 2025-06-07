@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: edfd7f7e6672c60d8b1f2532e980b69d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6290361245358169090
+    second: ResourcesGoo_0
+  - first:
+      213: 6445084202488824664
+    second: ResourcesGoo_1
+  - first:
+      213: 7342953060980971509
+    second: ResourcesGoo_2
+  - first:
+      213: 8417435791124579622
+    second: ResourcesGoo_3
+  - first:
+      213: 9116359560880706634
+    second: ResourcesGoo_4
+  - first:
+      213: -1532263928389514051
+    second: ResourcesGoo_5
+  - first:
+      213: -4608150219567119228
+    second: ResourcesGoo_6
+  - first:
+      213: -2683755969411310639
+    second: ResourcesGoo_7
+  - first:
+      213: 3185642134795552243
+    second: ResourcesGoo_8
+  - first:
+      213: -8453561704057926246
+    second: ResourcesGoo_9
+  - first:
+      213: 1515525483733326356
+    second: ResourcesGoo_10
+  - first:
+      213: 5127543066753924804
+    second: ResourcesGoo_11
+  - first:
+      213: 2299094851522296847
+    second: ResourcesGoo_12
+  - first:
+      213: -8260208494064909050
+    second: ResourcesGoo_13
+  - first:
+      213: 7492903627914887156
+    second: ResourcesGoo_14
+  - first:
+      213: -4961423760778493989
+    second: ResourcesGoo_15
+  - first:
+      213: 2161132862241146615
+    second: ResourcesGoo_16
+  - first:
+      213: -8148195571265183833
+    second: ResourcesGoo_17
+  - first:
+      213: 7539063643601891731
+    second: ResourcesGoo_18
+  - first:
+      213: -346499651665079430
+    second: ResourcesGoo_19
+  - first:
+      213: -5232483891107302413
+    second: ResourcesGoo_20
+  - first:
+      213: -1028719487465196094
+    second: ResourcesGoo_21
+  - first:
+      213: 8851270602183987287
+    second: ResourcesGoo_22
+  - first:
+      213: 5545113702286269135
+    second: ResourcesGoo_23
+  - first:
+      213: 2985616879872290040
+    second: ResourcesGoo_24
+  - first:
+      213: -73613745270591481
+    second: ResourcesGoo_25
+  - first:
+      213: 5454181460194627892
+    second: ResourcesGoo_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesGoo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c1572993adb4750800000000000000
+      internalID: 6290361245358169090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 349
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85304d44fe9817950800000000000000
+      internalID: 6445084202488824664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 350
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7532287e867e560800000000000000
+      internalID: 7342953060980971509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 352
+        width: 49
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625c3a9214db0d470800000000000000
+      internalID: 8417435791124579622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44d70758b0d38e70800000000000000
+      internalID: 9116359560880706634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 353
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcc23e431e4cbae0800000000000000
+      internalID: -1532263928389514051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 313
+        width: 9
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48440135acf8c00c0800000000000000
+      internalID: -4608150219567119228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 345
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db976b3a2261cad0800000000000000
+      internalID: -2683755969411310639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 125
+        width: 189
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f58102b4aca53c20800000000000000
+      internalID: 3185642134795552243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 280
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d08c64b6aeeaa80800000000000000
+      internalID: -8453561704057926246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 257
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a1af9d56a380510800000000000000
+      internalID: 1515525483733326356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 241
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce72689041b82740800000000000000
+      internalID: 5127543066753924804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 231
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c7ae9169608ef10800000000000000
+      internalID: 2299094851522296847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 129
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605c89c9328dd5d80800000000000000
+      internalID: -8260208494064909050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff3a1686242cf760800000000000000
+      internalID: 7492903627914887156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 216
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf7d96506b752bb0800000000000000
+      internalID: -4961423760778493989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 11
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f68e4653e2edfd10800000000000000
+      internalID: 2161132862241146615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 124
+        width: 9
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afd3568c4bcbee80800000000000000
+      internalID: -8148195571265183833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_18
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 85
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391f3ffa07220a860800000000000000
+      internalID: 7539063643601891731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73d4b3176cf03bf0800000000000000
+      internalID: -346499651665079430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f37899bf9b7267b0800000000000000
+      internalID: -5232483891107302413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 82
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c57d18931149b1f0800000000000000
+      internalID: -1028719487465196094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 53
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750d80677b706da70800000000000000
+      internalID: 8851270602183987287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca9cef688334fc40800000000000000
+      internalID: 5545113702286269135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fca238dbba0f6920800000000000000
+      internalID: 2985616879872290040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7007f8e40b87afef0800000000000000
+      internalID: -73613745270591481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesGoo_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4311c6bf32521bb40800000000000000
+      internalID: 5454181460194627892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 515bd6208f0dae823a3d9ffbce3cd2fc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ResourcesGoo_0: 6290361245358169090
+      ResourcesGoo_1: 6445084202488824664
+      ResourcesGoo_10: 1515525483733326356
+      ResourcesGoo_11: 5127543066753924804
+      ResourcesGoo_12: 2299094851522296847
+      ResourcesGoo_13: -8260208494064909050
+      ResourcesGoo_14: 7492903627914887156
+      ResourcesGoo_15: -4961423760778493989
+      ResourcesGoo_16: 2161132862241146615
+      ResourcesGoo_17: -8148195571265183833
+      ResourcesGoo_18: 7539063643601891731
+      ResourcesGoo_19: -346499651665079430
+      ResourcesGoo_2: 7342953060980971509
+      ResourcesGoo_20: -5232483891107302413
+      ResourcesGoo_21: -1028719487465196094
+      ResourcesGoo_22: 8851270602183987287
+      ResourcesGoo_23: 5545113702286269135
+      ResourcesGoo_24: 2985616879872290040
+      ResourcesGoo_25: -73613745270591481
+      ResourcesGoo_26: 5454181460194627892
+      ResourcesGoo_3: 8417435791124579622
+      ResourcesGoo_4: 9116359560880706634
+      ResourcesGoo_5: -1532263928389514051
+      ResourcesGoo_6: -4608150219567119228
+      ResourcesGoo_7: -2683755969411310639
+      ResourcesGoo_8: 3185642134795552243
+      ResourcesGoo_9: -8453561704057926246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

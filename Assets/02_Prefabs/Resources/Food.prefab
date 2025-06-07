@@ -15,7 +15,23 @@ PrefabInstance:
     - target: {fileID: 2122575298693232350, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5df2615bcc95365df9f166be7a4257cb, type: 3}
+      objectReference: {fileID: -6386234616150195891, guid: b5951323e083c665291974fc2fea4bf5, type: 3}
+    - target: {fileID: 2122575298693232350, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.050980397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122575298693232350, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.050980397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122575298693232350, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652600632618443033, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
+      propertyPath: text
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 6546158502894242115, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

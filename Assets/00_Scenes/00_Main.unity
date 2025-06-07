@@ -1968,7 +1968,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 715128847}
         m_TargetAssemblyTypeName: WallDefense.GameManager, Assembly-CSharp
-        m_MethodName: OpenGameOver
+        m_MethodName: ResetScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7386,11 +7386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6842103160494232713, guid: af38c325d1ade90c4bbdecc76da25b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 181
+      value: 218
       objectReference: {fileID: 0}
     - target: {fileID: 6842103160494232713, guid: af38c325d1ade90c4bbdecc76da25b18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -28.399994
       objectReference: {fileID: 0}
     - target: {fileID: 6842103160494232713, guid: af38c325d1ade90c4bbdecc76da25b18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7799,6 +7799,21 @@ MonoBehaviour:
   - {fileID: 593064525}
   - {fileID: 436555988}
   - {fileID: 433634225}
+  tasks:
+  - {fileID: 11400000, guid: 55a6dfb02c593d724a829c16317e5d8e, type: 2}
+  - {fileID: 11400000, guid: dfeeb2991335245cd9be214f0b80282e, type: 2}
+  - {fileID: 11400000, guid: 3d518d1c0b777e3ac84a29b1e61774a9, type: 2}
+  - {fileID: 11400000, guid: 95ebd52639035f4768a92714e1f87620, type: 2}
+  - {fileID: 11400000, guid: 0ebf6aef2bd3cf12f9ac9142636a7e7e, type: 2}
+  - {fileID: 11400000, guid: b55366942359f09cf80264b3bd97f3b5, type: 2}
+  - {fileID: 11400000, guid: 18feb8f8cb3babba48c24d278da36489, type: 2}
+  - {fileID: 11400000, guid: c2612bf5536bb8e4796dc886ce65f408, type: 2}
+  - {fileID: 11400000, guid: faa0624dedfb94acfb648eed6fb1f844, type: 2}
+  - {fileID: 11400000, guid: 09f272270f506ffdb9c14bf4392a3d4c, type: 2}
+  - {fileID: 11400000, guid: 65fafc786bbcf43e7891dba89a3f4d52, type: 2}
+  - {fileID: 11400000, guid: af4812f970fba793bb6c69f48e8a022b, type: 2}
+  - {fileID: 11400000, guid: ad195df33014734e78b32a74d8dbacf4, type: 2}
+  - {fileID: 11400000, guid: 35008f019bc7b3f209662fd14aa9ba67, type: 2}
 --- !u!1 &716967851
 GameObject:
   m_ObjectHideFlags: 0
@@ -11608,7 +11623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1166493497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17991,7 +18006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 966847350450967633, guid: 9ee1b243e7e6215a79d996079c53ae76, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.9999999
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 966847350450967633, guid: 9ee1b243e7e6215a79d996079c53ae76, type: 3}
       propertyPath: m_AnchorMax.y

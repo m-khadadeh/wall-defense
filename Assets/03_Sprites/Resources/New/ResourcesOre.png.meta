@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 23af4dd5970caf789b3911693d51d907
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2780339485605129362
+    second: ResourcesOre_0
+  - first:
+      213: 1331650686340531198
+    second: ResourcesOre_1
+  - first:
+      213: 4811886714027958199
+    second: ResourcesOre_2
+  - first:
+      213: -2209340586697728265
+    second: ResourcesOre_3
+  - first:
+      213: 4816588706042274919
+    second: ResourcesOre_4
+  - first:
+      213: 6765936749812446403
+    second: ResourcesOre_5
+  - first:
+      213: 2528707181024548
+    second: ResourcesOre_6
+  - first:
+      213: -2304142080410608475
+    second: ResourcesOre_7
+  - first:
+      213: -8195373331107026450
+    second: ResourcesOre_8
+  - first:
+      213: 1105977943627794701
+    second: ResourcesOre_9
+  - first:
+      213: -8080513074060990370
+    second: ResourcesOre_10
+  - first:
+      213: -631051257041335634
+    second: ResourcesOre_11
+  - first:
+      213: -2803784969025066020
+    second: ResourcesOre_12
+  - first:
+      213: 6592053595761935527
+    second: ResourcesOre_13
+  - first:
+      213: -8052988787043899382
+    second: ResourcesOre_14
+  - first:
+      213: 2930678669710503133
+    second: ResourcesOre_15
+  - first:
+      213: -3901647467333225394
+    second: ResourcesOre_16
+  - first:
+      213: 8919960418685597779
+    second: ResourcesOre_17
+  - first:
+      213: -3548179502301717094
+    second: ResourcesOre_18
+  - first:
+      213: -7280020122724618373
+    second: ResourcesOre_19
+  - first:
+      213: 4424973217065652332
+    second: ResourcesOre_20
+  - first:
+      213: 8305547932695499663
+    second: ResourcesOre_21
+  - first:
+      213: -166223267926196517
+    second: ResourcesOre_22
+  - first:
+      213: 6099997310683513125
+    second: ResourcesOre_23
+  - first:
+      213: -1678119560626300419
+    second: ResourcesOre_24
+  - first:
+      213: 5034471067787250724
+    second: ResourcesOre_25
+  - first:
+      213: 5064677038243062565
+    second: ResourcesOre_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesOre_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63938df7ff3a69d0800000000000000
+      internalID: -2780339485605129362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 349
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef38b3c6e39fa7210800000000000000
+      internalID: 1331650686340531198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 350
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfde01d87147c240800000000000000
+      internalID: 4811886714027958199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 352
+        width: 49
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe57062178d651e0800000000000000
+      internalID: -2209340586697728265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764eec4a8e5f7d240800000000000000
+      internalID: 4816588706042274919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 353
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4f45160af65ed50800000000000000
+      internalID: 6765936749812446403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 313
+        width: 9
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425144588dbf80000800000000000000
+      internalID: 2528707181024548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 345
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac98195cfa0600e0800000000000000
+      internalID: -2304142080410608475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 223
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9e7a5506f244e80800000000000000
+      internalID: -8195373331107026450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 280
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d090a5b7419395f00800000000000000
+      internalID: 1105977943627794701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 257
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58e1b9eb204cdf80800000000000000
+      internalID: -8080513074060990370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 241
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaaccf4a93e0e37f0800000000000000
+      internalID: -631051257041335634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 231
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb6eaefc64f619d0800000000000000
+      internalID: -2803784969025066020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 129
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a40ab3b1ddab7b50800000000000000
+      internalID: 6592053595761935527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a086b006d590e3090800000000000000
+      internalID: -8052988787043899382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 216
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddca8e209bcdba820800000000000000
+      internalID: 2930678669710503133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 11
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44fccedc409ad9c0800000000000000
+      internalID: -3901647467333225394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 124
+        width: 9
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358bc46adb01acb70800000000000000
+      internalID: 8919960418685597779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_18
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 85
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ddbfdaa8552cec0800000000000000
+      internalID: -3548179502301717094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fad43054c28fa90800000000000000
+      internalID: -7280020122724618373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60d0d742b9a86d30800000000000000
+      internalID: 4424973217065652332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 82
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f839b4117db334370800000000000000
+      internalID: 8305547932695499663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 53
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdebad981d471bdf0800000000000000
+      internalID: -166223267926196517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52101222c3b87a450800000000000000
+      internalID: 6099997310683513125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df91c32962f16b8e0800000000000000
+      internalID: -1678119560626300419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42cc07b23c80ed540800000000000000
+      internalID: 5034471067787250724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesOre_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5232e86bee8594640800000000000000
+      internalID: 5064677038243062565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f09ca4060a4e1c6989eca65252a30334
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ResourcesOre_0: -2780339485605129362
+      ResourcesOre_1: 1331650686340531198
+      ResourcesOre_10: -8080513074060990370
+      ResourcesOre_11: -631051257041335634
+      ResourcesOre_12: -2803784969025066020
+      ResourcesOre_13: 6592053595761935527
+      ResourcesOre_14: -8052988787043899382
+      ResourcesOre_15: 2930678669710503133
+      ResourcesOre_16: -3901647467333225394
+      ResourcesOre_17: 8919960418685597779
+      ResourcesOre_18: -3548179502301717094
+      ResourcesOre_19: -7280020122724618373
+      ResourcesOre_2: 4811886714027958199
+      ResourcesOre_20: 4424973217065652332
+      ResourcesOre_21: 8305547932695499663
+      ResourcesOre_22: -166223267926196517
+      ResourcesOre_23: 6099997310683513125
+      ResourcesOre_24: -1678119560626300419
+      ResourcesOre_25: 5034471067787250724
+      ResourcesOre_26: 5064677038243062565
+      ResourcesOre_3: -2209340586697728265
+      ResourcesOre_4: 4816588706042274919
+      ResourcesOre_5: 6765936749812446403
+      ResourcesOre_6: 2528707181024548
+      ResourcesOre_7: -2304142080410608475
+      ResourcesOre_8: -8195373331107026450
+      ResourcesOre_9: 1105977943627794701
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

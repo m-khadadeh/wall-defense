@@ -92,10 +92,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3597730689234581686, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+      propertyPath: text
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 7127863057042583409, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5240aca7a675f48cfb6fc3c918e851c8, type: 3}
+      objectReference: {fileID: -2872492102823084060, guid: 906370e2cf9d023069a8d8dd8e06e69d, type: 3}
+    - target: {fileID: 7127863057042583409, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.0731769
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127863057042583409, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1454251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127863057042583409, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.28735465
+      objectReference: {fileID: 0}
     - target: {fileID: 7937837051945549609, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
       propertyPath: m_Name
       value: Wood

@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 894726a85a49acbdebc5851cbcaf3f95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3199310724735825305
+    second: ResourcesSpikes_0
+  - first:
+      213: 1963158532163302573
+    second: ResourcesSpikes_1
+  - first:
+      213: 5888788378985495964
+    second: ResourcesSpikes_2
+  - first:
+      213: 5197794531305668289
+    second: ResourcesSpikes_3
+  - first:
+      213: -1817952839612010127
+    second: ResourcesSpikes_4
+  - first:
+      213: 3188837365048127902
+    second: ResourcesSpikes_5
+  - first:
+      213: -4347373800030202967
+    second: ResourcesSpikes_6
+  - first:
+      213: -8666399499531248452
+    second: ResourcesSpikes_7
+  - first:
+      213: -3160128927489870654
+    second: ResourcesSpikes_8
+  - first:
+      213: 6413281940881535840
+    second: ResourcesSpikes_9
+  - first:
+      213: -1322382333457942830
+    second: ResourcesSpikes_10
+  - first:
+      213: -4892157560950934587
+    second: ResourcesSpikes_11
+  - first:
+      213: 4770815555779553046
+    second: ResourcesSpikes_12
+  - first:
+      213: -6632193120024859526
+    second: ResourcesSpikes_13
+  - first:
+      213: -6269808090348864422
+    second: ResourcesSpikes_14
+  - first:
+      213: -7764482867777761334
+    second: ResourcesSpikes_15
+  - first:
+      213: 2801966619154784428
+    second: ResourcesSpikes_16
+  - first:
+      213: 6906402932180765262
+    second: ResourcesSpikes_17
+  - first:
+      213: 5789505046183019676
+    second: ResourcesSpikes_18
+  - first:
+      213: -8298720837467013291
+    second: ResourcesSpikes_19
+  - first:
+      213: 2877440980469149978
+    second: ResourcesSpikes_20
+  - first:
+      213: -3364905432381746502
+    second: ResourcesSpikes_21
+  - first:
+      213: -7661700450960441943
+    second: ResourcesSpikes_22
+  - first:
+      213: 6076905653751056061
+    second: ResourcesSpikes_23
+  - first:
+      213: -6106188694444061333
+    second: ResourcesSpikes_24
+  - first:
+      213: 4614173071717793026
+    second: ResourcesSpikes_25
+  - first:
+      213: 4323748010459373330
+    second: ResourcesSpikes_26
+  - first:
+      213: 5320429545471632411
+    second: ResourcesSpikes_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesSpikes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995f9f9472c366c20800000000000000
+      internalID: 3199310724735825305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 349
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4fe53a84a8e3b10800000000000000
+      internalID: 1963158532163302573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 350
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9df0ee94dd29b150800000000000000
+      internalID: 5888788378985495964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 352
+        width: 49
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce31fd4696422840800000000000000
+      internalID: 5197794531305668289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1717388368555c6e0800000000000000
+      internalID: -1817952839612010127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 353
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91bf2630b6014c20800000000000000
+      internalID: 3188837365048127902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 313
+        width: 9
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a31c5fef860ba3c0800000000000000
+      internalID: -4347373800030202967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 345
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc11dc5293cab780800000000000000
+      internalID: -8666399499531248452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_8
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 280
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4b788cb77f424d0800000000000000
+      internalID: -3160128927489870654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 257
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063fbaa32fd800950800000000000000
+      internalID: 6413281940881535840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 241
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6bcf42644f5ade0800000000000000
+      internalID: -1322382333457942830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 162
+        width: 239
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3374a3e909b1cb0800000000000000
+      internalID: -4892157560950934587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 231
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617e52b9877553240800000000000000
+      internalID: 4770815555779553046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 129
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ce0270f77b5f3a0800000000000000
+      internalID: -6632193120024859526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cb2ecb2ca2df8a0800000000000000
+      internalID: -6269808090348864422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 216
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf008148f30f3490800000000000000
+      internalID: -7764482867777761334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 11
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0293f6bc592e620800000000000000
+      internalID: 2801966619154784428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 152
+        width: 76
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ac95800e878df50800000000000000
+      internalID: 6906402932180765262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_18
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 124
+        width: 9
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9402175a24785050800000000000000
+      internalID: 5789505046183019676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_19
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 85
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f75a8ed5505dc80800000000000000
+      internalID: -8298720837467013291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_20
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11f30f8359bee720800000000000000
+      internalID: 2877440980469149978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab29a1856547d41d0800000000000000
+      internalID: -3364905432381746502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_22
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 82
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad7d05880c2ca590800000000000000
+      internalID: -7661700450960441943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_23
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 53
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db60569ce71855450800000000000000
+      internalID: 6076905653751056061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6dc7200cb5724ba0800000000000000
+      internalID: -6106188694444061333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_25
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d79e736f5d80040800000000000000
+      internalID: 4614173071717793026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_26
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f9bb548e9010c30800000000000000
+      internalID: 4323748010459373330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesSpikes_27
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1464569b76f5d940800000000000000
+      internalID: 5320429545471632411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1b4bb47fcaff60d8da1c13b3e524b407
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ResourcesSpikes_0: 3199310724735825305
+      ResourcesSpikes_1: 1963158532163302573
+      ResourcesSpikes_10: -1322382333457942830
+      ResourcesSpikes_11: -4892157560950934587
+      ResourcesSpikes_12: 4770815555779553046
+      ResourcesSpikes_13: -6632193120024859526
+      ResourcesSpikes_14: -6269808090348864422
+      ResourcesSpikes_15: -7764482867777761334
+      ResourcesSpikes_16: 2801966619154784428
+      ResourcesSpikes_17: 6906402932180765262
+      ResourcesSpikes_18: 5789505046183019676
+      ResourcesSpikes_19: -8298720837467013291
+      ResourcesSpikes_2: 5888788378985495964
+      ResourcesSpikes_20: 2877440980469149978
+      ResourcesSpikes_21: -3364905432381746502
+      ResourcesSpikes_22: -7661700450960441943
+      ResourcesSpikes_23: 6076905653751056061
+      ResourcesSpikes_24: -6106188694444061333
+      ResourcesSpikes_25: 4614173071717793026
+      ResourcesSpikes_26: 4323748010459373330
+      ResourcesSpikes_27: 5320429545471632411
+      ResourcesSpikes_3: 5197794531305668289
+      ResourcesSpikes_4: -1817952839612010127
+      ResourcesSpikes_5: 3188837365048127902
+      ResourcesSpikes_6: -4347373800030202967
+      ResourcesSpikes_7: -8666399499531248452
+      ResourcesSpikes_8: -3160128927489870654
+      ResourcesSpikes_9: 6413281940881535840
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

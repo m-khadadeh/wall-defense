@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 9d38ca0c5d84c4f4ea052fc49ded11a8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5125905696030939781
+    second: ResourcesStone_0
+  - first:
+      213: -8083210152562274965
+    second: ResourcesStone_1
+  - first:
+      213: -202091364764585317
+    second: ResourcesStone_2
+  - first:
+      213: -6760892139399380107
+    second: ResourcesStone_3
+  - first:
+      213: 1509242664719114414
+    second: ResourcesStone_4
+  - first:
+      213: -4938630508636447366
+    second: ResourcesStone_5
+  - first:
+      213: 1460825779676941768
+    second: ResourcesStone_6
+  - first:
+      213: 7019902882152800169
+    second: ResourcesStone_7
+  - first:
+      213: -3468694413782771707
+    second: ResourcesStone_8
+  - first:
+      213: 3209751466261439520
+    second: ResourcesStone_9
+  - first:
+      213: 8402212646686718725
+    second: ResourcesStone_10
+  - first:
+      213: -286941417543460746
+    second: ResourcesStone_11
+  - first:
+      213: 3076236374237674951
+    second: ResourcesStone_12
+  - first:
+      213: -8959124107338661765
+    second: ResourcesStone_13
+  - first:
+      213: 5569901679408461182
+    second: ResourcesStone_14
+  - first:
+      213: -5987227330016585441
+    second: ResourcesStone_15
+  - first:
+      213: -2948105345748072551
+    second: ResourcesStone_16
+  - first:
+      213: -168620352317854232
+    second: ResourcesStone_17
+  - first:
+      213: 6112659740774945661
+    second: ResourcesStone_18
+  - first:
+      213: 424685539404869562
+    second: ResourcesStone_19
+  - first:
+      213: 719239506493097961
+    second: ResourcesStone_20
+  - first:
+      213: 467356938582783932
+    second: ResourcesStone_21
+  - first:
+      213: 4983237412099634743
+    second: ResourcesStone_22
+  - first:
+      213: -1394467719587958842
+    second: ResourcesStone_23
+  - first:
+      213: -2977778407408154041
+    second: ResourcesStone_24
+  - first:
+      213: -8798609780274460260
+    second: ResourcesStone_25
+  - first:
+      213: -2003055584277683859
+    second: ResourcesStone_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesStone_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75aceb7def1dd8b0800000000000000
+      internalID: -5125905696030939781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 349
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6dc1b3613ba2df80800000000000000
+      internalID: -8083210152562274965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 350
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92780779f6023df0800000000000000
+      internalID: -202091364764585317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 352
+        width: 49
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5738e528b6c7c22a0800000000000000
+      internalID: -6760892139399380107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0627e0538e1f410800000000000000
+      internalID: 1509242664719114414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 353
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d51d7e7b5767bb0800000000000000
+      internalID: -4938630508636447366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 313
+        width: 9
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd806c8e45e54410800000000000000
+      internalID: 1460825779676941768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 345
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af55707a74bb6160800000000000000
+      internalID: 7019902882152800169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 142
+        width: 225
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50898100fc8bcdfc0800000000000000
+      internalID: -3468694413782771707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 280
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0246dcbd3f35b8c20800000000000000
+      internalID: 3209751466261439520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 257
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b7e05a2e7aa9470800000000000000
+      internalID: 8402212646686718725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 241
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67899ff0d44940cf0800000000000000
+      internalID: -286941417543460746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 231
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd729b0facf0ba20800000000000000
+      internalID: 3076236374237674951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 129
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70c073871ccaa380800000000000000
+      internalID: -8959124107338661765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e753efa11144c4d40800000000000000
+      internalID: 5569901679408461182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 216
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19d9dc077819eca0800000000000000
+      internalID: -5987227330016585441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 11
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997814acec93617d0800000000000000
+      internalID: -2948105345748072551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 124
+        width: 9
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed6136dea0f8adf0800000000000000
+      internalID: -168620352317854232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_18
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 85
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73d8b1e5a784d450800000000000000
+      internalID: 6112659740774945661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfe87d7f39c4e500800000000000000
+      internalID: 424685539404869562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7c2fc35804bf900800000000000000
+      internalID: 719239506493097961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 82
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb77a83d8a26c7600800000000000000
+      internalID: 467356938582783932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 53
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736b2a32604082540800000000000000
+      internalID: 4983237412099634743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfe53b4ffad5ace0800000000000000
+      internalID: -1394467719587958842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74acb9eb05ecca6d0800000000000000
+      internalID: -2977778407408154041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c998679950f05e580800000000000000
+      internalID: -8798609780274460260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesStone_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6124c90f87b334e0800000000000000
+      internalID: -2003055584277683859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 865bd06a7feb93d6a86d96bfa0672381
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ResourcesStone_0: -5125905696030939781
+      ResourcesStone_1: -8083210152562274965
+      ResourcesStone_10: 8402212646686718725
+      ResourcesStone_11: -286941417543460746
+      ResourcesStone_12: 3076236374237674951
+      ResourcesStone_13: -8959124107338661765
+      ResourcesStone_14: 5569901679408461182
+      ResourcesStone_15: -5987227330016585441
+      ResourcesStone_16: -2948105345748072551
+      ResourcesStone_17: -168620352317854232
+      ResourcesStone_18: 6112659740774945661
+      ResourcesStone_19: 424685539404869562
+      ResourcesStone_2: -202091364764585317
+      ResourcesStone_20: 719239506493097961
+      ResourcesStone_21: 467356938582783932
+      ResourcesStone_22: 4983237412099634743
+      ResourcesStone_23: -1394467719587958842
+      ResourcesStone_24: -2977778407408154041
+      ResourcesStone_25: -8798609780274460260
+      ResourcesStone_26: -2003055584277683859
+      ResourcesStone_3: -6760892139399380107
+      ResourcesStone_4: 1509242664719114414
+      ResourcesStone_5: -4938630508636447366
+      ResourcesStone_6: 1460825779676941768
+      ResourcesStone_7: 7019902882152800169
+      ResourcesStone_8: -3468694413782771707
+      ResourcesStone_9: 3209751466261439520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

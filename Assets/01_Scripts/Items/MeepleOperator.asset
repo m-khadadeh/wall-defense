@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MeepleOperator
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Operator
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 069c7a27f172d87e083fe9e77acb9920, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
+  <Sprite>k__BackingField: {fileID: -4253865271233887870, guid: cc03fc28a91a540a7a70d25fd919a1df, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: d9a7dea8903a130da882a8e03e7e47ee, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: 4d0b387574e1c9982a253fc66b9d3f7d, type: 2}
   <Prefab>k__BackingField: {fileID: 1276625279554561670, guid: 7e827251337aa8e04afefcfd5372b2f9, type: 3}
+  <SlotColor>k__BackingField: {r: 0.11372549, g: 0.26666668, b: 0.30588236, a: 0.5019608}

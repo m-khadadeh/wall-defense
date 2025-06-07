@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MeepleGatherer
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Gatherer
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 55ed602047ff442bca229905f8347664, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
+  <Sprite>k__BackingField: {fileID: -5353500748922821697, guid: 0d484e9a629116a2abf56c768e7f08f0, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: 24353b044408543ad8b642069b9c9769, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: ecfaee435cad2d7a9bec8ad82f44c187, type: 2}
   <Prefab>k__BackingField: {fileID: 717636401245000897, guid: 2d48d5c2ba1040a2da2be245de46ba2d, type: 3}
+  <SlotColor>k__BackingField: {r: 0.11372549, g: 0.30588236, b: 0.15294118, a: 0.5019608}

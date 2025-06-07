@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
 
@@ -41,6 +42,8 @@ namespace WallDefense
 
         public Button[] buttonsToLockBeforeFirstDialogue;
         private bool buttonsUnlockedYet;
+
+        public Task[] tasks;
 
 
         enum GameState
@@ -82,6 +85,10 @@ namespace WallDefense
         void OnDestroy()
         {
             dialogueManager.Unbind();
+            foreach (var task in tasks)
+            {
+                task.Unbind();
+            }
         }
 
         private void ContinueSetUp()
@@ -281,6 +288,11 @@ namespace WallDefense
             {
                 obj.SetActive(false);
             }
+        }
+
+        public void ResetScene()
+        {
+            SceneManager.LoadScene("00_Main");
         }
     }
 }

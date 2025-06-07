@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 2453b3084356dd1368982b586de4c140
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5377821826885366297
+    second: ResourcesMetal_0
+  - first:
+      213: -5992306545123130791
+    second: ResourcesMetal_1
+  - first:
+      213: -2249487896033955104
+    second: ResourcesMetal_2
+  - first:
+      213: -4044691348756103102
+    second: ResourcesMetal_3
+  - first:
+      213: 40907988702655283
+    second: ResourcesMetal_4
+  - first:
+      213: -4364858509738687083
+    second: ResourcesMetal_5
+  - first:
+      213: -6765468488981013449
+    second: ResourcesMetal_6
+  - first:
+      213: 8387502923153866727
+    second: ResourcesMetal_7
+  - first:
+      213: 2489832848877063889
+    second: ResourcesMetal_8
+  - first:
+      213: 1111724498873856264
+    second: ResourcesMetal_9
+  - first:
+      213: 4989072029364898647
+    second: ResourcesMetal_10
+  - first:
+      213: 1857420982572482172
+    second: ResourcesMetal_11
+  - first:
+      213: -5095310823336026377
+    second: ResourcesMetal_12
+  - first:
+      213: 3195032971870580920
+    second: ResourcesMetal_13
+  - first:
+      213: -5775009406037446694
+    second: ResourcesMetal_14
+  - first:
+      213: -2235353164198536296
+    second: ResourcesMetal_15
+  - first:
+      213: 4240249828324948980
+    second: ResourcesMetal_16
+  - first:
+      213: -3408898932944267838
+    second: ResourcesMetal_17
+  - first:
+      213: 4392833426336905596
+    second: ResourcesMetal_18
+  - first:
+      213: -2463510980199467588
+    second: ResourcesMetal_19
+  - first:
+      213: 4666143159196342587
+    second: ResourcesMetal_20
+  - first:
+      213: -2036889792161599827
+    second: ResourcesMetal_21
+  - first:
+      213: -9191971256119676900
+    second: ResourcesMetal_22
+  - first:
+      213: 1082462335112434137
+    second: ResourcesMetal_23
+  - first:
+      213: 4075737132644755260
+    second: ResourcesMetal_24
+  - first:
+      213: -8542146072278559811
+    second: ResourcesMetal_25
+  - first:
+      213: 1391684678803865895
+    second: ResourcesMetal_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesMetal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91238d8657cd1aa40800000000000000
+      internalID: 5377821826885366297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 349
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95200b022fc07dca0800000000000000
+      internalID: -5992306545123130791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 350
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2fa564da638c0e0800000000000000
+      internalID: -2249487896033955104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 352
+        width: 49
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2400c43e5ae5ed7c0800000000000000
+      internalID: -4044691348756103102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333f8175995519000800000000000000
+      internalID: 40907988702655283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 353
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5954f28bf48ec63c0800000000000000
+      internalID: -4364858509738687083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 313
+        width: 9
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c1037114a3c12a0800000000000000
+      internalID: -6765468488981013449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 345
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eff22f3875666470800000000000000
+      internalID: 8387502923153866727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_8
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 280
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de8a6bc8c9ad8220800000000000000
+      internalID: 2489832848877063889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 257
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 801b973aa83ad6f00800000000000000
+      internalID: 1111724498873856264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 241
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bc125d39ebc3540800000000000000
+      internalID: 4989072029364898647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 137
+        width: 233
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ef698ea82e6c910800000000000000
+      internalID: 1857420982572482172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 231
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe5ad26dc1d949b0800000000000000
+      internalID: -5095310823336026377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 129
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0b1065f89075c20800000000000000
+      internalID: 3195032971870580920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 6
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf2992ea8b0bdfa0800000000000000
+      internalID: -5775009406037446694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 216
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b966cf32e6af0e0800000000000000
+      internalID: -2235353164198536296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 11
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb3838c0c468da30800000000000000
+      internalID: 4240249828324948980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 124
+        width: 9
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c516aa4b7821b0d0800000000000000
+      internalID: -3408898932944267838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_18
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 85
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79f54e1aba76fc30800000000000000
+      internalID: 4392833426336905596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5bfe4d0d9dfcdd0800000000000000
+      internalID: -2463510980199467588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3954032b7871c040800000000000000
+      internalID: 4666143159196342587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 82
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daea693a6838bb3e0800000000000000
+      internalID: -2036889792161599827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 53
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10b26df7de8f6080800000000000000
+      internalID: -9191971256119676900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1dd1732cda50f00800000000000000
+      internalID: 1082462335112434137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 52
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37e825f35def8830800000000000000
+      internalID: 4075737132644755260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3965ec763347980800000000000000
+      internalID: -8542146072278559811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesMetal_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721457787d1405310800000000000000
+      internalID: 1391684678803865895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 810bdf36d0a227e38a9cd8780efe17a8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ResourcesMetal_0: 5377821826885366297
+      ResourcesMetal_1: -5992306545123130791
+      ResourcesMetal_10: 4989072029364898647
+      ResourcesMetal_11: 1857420982572482172
+      ResourcesMetal_12: -5095310823336026377
+      ResourcesMetal_13: 3195032971870580920
+      ResourcesMetal_14: -5775009406037446694
+      ResourcesMetal_15: -2235353164198536296
+      ResourcesMetal_16: 4240249828324948980
+      ResourcesMetal_17: -3408898932944267838
+      ResourcesMetal_18: 4392833426336905596
+      ResourcesMetal_19: -2463510980199467588
+      ResourcesMetal_2: -2249487896033955104
+      ResourcesMetal_20: 4666143159196342587
+      ResourcesMetal_21: -2036889792161599827
+      ResourcesMetal_22: -9191971256119676900
+      ResourcesMetal_23: 1082462335112434137
+      ResourcesMetal_24: 4075737132644755260
+      ResourcesMetal_25: -8542146072278559811
+      ResourcesMetal_26: 1391684678803865895
+      ResourcesMetal_3: -4044691348756103102
+      ResourcesMetal_4: 40907988702655283
+      ResourcesMetal_5: -4364858509738687083
+      ResourcesMetal_6: -6765468488981013449
+      ResourcesMetal_7: 8387502923153866727
+      ResourcesMetal_8: 2489832848877063889
+      ResourcesMetal_9: 1111724498873856264
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

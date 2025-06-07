@@ -11,9 +11,25 @@ PrefabInstance:
     - target: {fileID: 1357100288605303283, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f24dd046d738c26d3878f18abaa0c607, type: 3}
+      objectReference: {fileID: -5125905696030939781, guid: 9d38ca0c5d84c4f4ea052fc49ded11a8, type: 3}
+    - target: {fileID: 1357100288605303283, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
+      propertyPath: m_Color.b
+      value: 0.17641693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357100288605303283, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
+      propertyPath: m_Color.g
+      value: 0.112987846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357100288605303283, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
+      propertyPath: m_Color.r
+      value: 0.11637072
+      objectReference: {fileID: 0}
     - target: {fileID: 2168200185562587563, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
       propertyPath: m_Name
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743301042703705652, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}
+      propertyPath: text
       value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6158994651583663726, guid: 6b485c655a03e1e31b9b443a6bae8c80, type: 3}

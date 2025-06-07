@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ResourcesANY
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: ANY
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 04a26af393c8742a3bdf84b43bed6c16, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: 34a0b6b5b10131a28a312dee893f7376, type: 3}
+  <Sprite>k__BackingField: {fileID: -6400913422314380486, guid: bd47760cd463b8d30811e396d0d2b09c, type: 3}
   <Metadata>k__BackingField: {fileID: 0}
   <Validator>k__BackingField: {fileID: 11400000, guid: f81e116380820764c8aa17207a1119fc, type: 2}
   <Prefab>k__BackingField: {fileID: 0}
+  <SlotColor>k__BackingField: {r: 0, g: 0, b: 0, a: 0.5019608}

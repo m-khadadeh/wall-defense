@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ResourceFood
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Food
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 5df2615bcc95365df9f166be7a4257cb, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: 34a0b6b5b10131a28a312dee893f7376, type: 3}
+  <Sprite>k__BackingField: {fileID: -6386234616150195891, guid: b5951323e083c665291974fc2fea4bf5, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: 62dfeb9011272c898bdaed9974940b5c, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: d9e9cb2f5db752b05bf2129abb96dfb2, type: 2}
   <Prefab>k__BackingField: {fileID: 1780014211682436134, guid: 35292d302e6e4eeeaa5bc437a50123b1, type: 3}
+  <SlotColor>k__BackingField: {r: 0.3882353, g: 0.050980393, b: 0.050980393, a: 0.5019608}

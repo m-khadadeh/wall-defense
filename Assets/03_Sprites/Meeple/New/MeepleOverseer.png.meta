@@ -122,12 +122,12 @@ TextureImporter:
       name: MeepleOverseer_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 5
-        width: 353
-        height: 350
+        x: 0
+        y: 0
+        width: 360
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,7 +149,7 @@ TextureImporter:
         width: 23
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,7 +171,7 @@ TextureImporter:
         width: 51
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 84ee4665553caca02ab5c007239b21a2
     internalID: 0
     vertices: []
     indices: 
@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MeepleOverseer_0: 1037545260774564111
+      MeepleOverseer_1: 4836241779543172138
+      MeepleOverseer_2: 517291221634226029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

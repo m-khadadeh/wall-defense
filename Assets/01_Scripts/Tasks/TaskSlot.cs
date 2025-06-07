@@ -6,14 +6,14 @@ namespace WallDefense
   public class TaskSlot : MonoBehaviour
   {
     [SerializeField] private Image _slotColor;
-    [SerializeField] private Image _slotOutline;
+    //[SerializeField] private Image _slotOutline;
     [SerializeField] private DroppableSlotStackable _droppable;
-    [SerializeField] private Sprite _meepleOutline;
-    [SerializeField] private Sprite _resourceOutline;
     [SerializeField] private TMPro.TextMeshProUGUI _minAmount;
     [SerializeField] private TMPro.TextMeshProUGUI _maxAmount;
     [SerializeField] private Button _autoFillButton;
     [SerializeField] private InventoryData _inventoryData;
+    [SerializeField] private GameObject _requiredStamp;
+    [SerializeField] private GameObject _optionalStamp;
 
     private ItemRequirement _requirement;
 
@@ -24,11 +24,16 @@ namespace WallDefense
       _requirement = requirement;
       var entry = _requirement.RequirementType;
       _slotColor.sprite = entry.Sprite;
-      _slotOutline.sprite = entry.OutlineSprite;
+      _slotColor.color = entry.SlotColor;
+      //_slotOutline.sprite = entry.OutlineSprite;
       _droppable.MetadataValidator = entry.Validator;
       _droppable.Initialize(requirement.MinimumMaximumAmount.y);
-      _minAmount.text = (requirement.MinimumMaximumAmount.x == 1 && requirement.MinimumMaximumAmount.x == requirement.MinimumMaximumAmount.y) ? "*" : requirement.MinimumMaximumAmount.x.ToString();
-      _maxAmount.text = (requirement.MinimumMaximumAmount.x != requirement.MinimumMaximumAmount.y) ? requirement.MinimumMaximumAmount.y.ToString() : "";
+      string minAmtString = (requirement.MinimumMaximumAmount.x == 1 && requirement.MinimumMaximumAmount.x == requirement.MinimumMaximumAmount.y) ? "*" : requirement.MinimumMaximumAmount.x.ToString();
+      _minAmount.text = minAmtString;
+      string maxAmtString = (requirement.MinimumMaximumAmount.x != requirement.MinimumMaximumAmount.y) ? requirement.MinimumMaximumAmount.y.ToString() : "";
+      _maxAmount.text = maxAmtString;
+      _requiredStamp.SetActive(minAmtString != "");
+      _optionalStamp.SetActive(maxAmtString != "");
       _autoFillButton.gameObject.SetActive(requirement.RequirementType.Metadata != null);
       if (_autoFillButton.gameObject.activeSelf)
       {

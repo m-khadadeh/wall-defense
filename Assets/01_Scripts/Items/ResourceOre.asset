@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ResourceOre
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Ore
-  <Sprite>k__BackingField: {fileID: 21300000, guid: df909f03d20788232b398900b394523a, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: 34a0b6b5b10131a28a312dee893f7376, type: 3}
+  <Sprite>k__BackingField: {fileID: -2780339485605129362, guid: 23af4dd5970caf789b3911693d51d907, type: 3}
   <Metadata>k__BackingField: {fileID: 11400000, guid: 08ba5058f0cc9c1068f243f6b1ec057c, type: 2}
   <Validator>k__BackingField: {fileID: 11400000, guid: 1ee3937a3c1829733bc99e40ee1e35ec, type: 2}
   <Prefab>k__BackingField: {fileID: 5608528884127370855, guid: 8154281536262d313b0d24393016d071, type: 3}
+  <SlotColor>k__BackingField: {r: 0.08627451, g: 0.21176471, b: 0.28627452, a: 0.5019608}

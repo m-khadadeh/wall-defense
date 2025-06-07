@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MeepleANY
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: ANY
-  <Sprite>k__BackingField: {fileID: 21300000, guid: fe539a57996d5fde8a8164e6f681a871, type: 3}
-  <OutlineSprite>k__BackingField: {fileID: 21300000, guid: c3150bb2dcb02b86baddf6639e2f1617, type: 3}
+  <Sprite>k__BackingField: {fileID: 731502265392244147, guid: 716a15cc4b0bd138db547da83347c595, type: 3}
   <Metadata>k__BackingField: {fileID: 0}
   <Validator>k__BackingField: {fileID: 11400000, guid: e9befe7b9d4fc7e9695470e01abfaa03, type: 2}
+  <Prefab>k__BackingField: {fileID: 0}
+  <SlotColor>k__BackingField: {r: 0, g: 0, b: 0, a: 0.5019608}

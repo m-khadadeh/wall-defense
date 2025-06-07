@@ -249,7 +249,7 @@ position: 326,495
 -> Ghoul Forecast
   MORSE_{$player_station_name}: WX RPT?
   => MORSE_{$fairweather_station}: NIL IM AFRAID <<if $fairweather_relationship_neutral && $fairweather_first_ghoul_elimination == "">>
-  => MORSE_{$fairweather_station}: WX IS NOT ${$fairweather_first_ghoul_elimination} <<if $fairweather_relationship_neutral && $fairweather_first_ghoul_elimination != "">>
+  => MORSE_{$fairweather_station}: WX IS NOT {$fairweather_first_ghoul_elimination} <<if $fairweather_relationship_neutral && $fairweather_first_ghoul_elimination != "">>
   => MORSE_{$fairweather_station}: UNFORTUNATELY I HAVE NOTHING YET <<if !$fairweather_relationship_neutral && $fairweather_first_ghoul_elimination == "">>
     MORSE_{$fairweather_station}: MAYBE LATER IN THE DAY K
   => MORSE_{$fairweather_station}: ONE MOMENT SVP <<if !$fairweather_relationship_neutral && $fairweather_first_ghoul_elimination != "">>
@@ -268,9 +268,9 @@ position: 326,495
     <<endif>>
     MORSE_{$fairweather_station}: TAKE CARE K
   <<if $fairweather_relationship_neutral>>
-    <<set $fairweather_relationship -= 5>>
+    <<set $fairweather_relationship -= 2>>
   <<elseif $fairweather_relationship_friendly>>
-    <<set $fairweather_relationship -= 10>>
+    <<set $fairweather_relationship -= 3>>
   <<endif>>
 -> Resources
   <<jump Fairweather_Player_AskForResources>>

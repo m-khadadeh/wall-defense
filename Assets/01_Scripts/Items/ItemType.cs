@@ -7,9 +7,9 @@ namespace WallDefense
   {
     [field: SerializeField] public string ItemName { get; protected set; }
     [field: SerializeField] public Sprite Sprite { get; protected set; }
-    [field: SerializeField] public Sprite OutlineSprite { get; protected set; }
     [field: SerializeField] public Metadata Metadata { get; protected set; }
     [field: SerializeField] public MetadataValidator Validator { get; protected set; }
     [field: SerializeField] public GameObject Prefab { get; protected set; }
+    [field: SerializeField] public Color SlotColor{ get;  protected set;}
   }
 }

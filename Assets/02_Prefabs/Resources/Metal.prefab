@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: <Metadata>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 6a6b195a32a4281ec9be9ec0853d4308, type: 2}
+    - target: {fileID: 2649646807086124398, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
+      propertyPath: text
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: 3490251853770859828, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -95,7 +99,19 @@ PrefabInstance:
     - target: {fileID: 8629911825189952169, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 91a0066635c7f2b4a8804b7c19a61703, type: 3}
+      objectReference: {fileID: 5377821826885366297, guid: 2453b3084356dd1368982b586de4c140, type: 3}
+    - target: {fileID: 8629911825189952169, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2939409
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629911825189952169, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.35637736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629911825189952169, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.01945162
+      objectReference: {fileID: 0}
     - target: {fileID: 8863090687824956145, guid: adb351e7d38cefcc8b32445dfda8efd9, type: 3}
       propertyPath: m_Name
       value: Metal
