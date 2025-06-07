@@ -294,5 +294,9 @@ namespace WallDefense
         {
             SceneManager.LoadScene("00_Main");
         }
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }

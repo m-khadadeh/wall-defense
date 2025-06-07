@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4dbe73cb735cbc6180e5d413a1e55f4, type: 3}
   m_Name: MusicLibrary
   m_EditorClassIdentifier: 
-  _clips: []
+  _clips:
+  - <ClipName>k__BackingField: bgm
+    <Clip>k__BackingField: {fileID: 8300000, guid: a80e9d343bd4d3e46a929d1a622861ca, type: 3}
