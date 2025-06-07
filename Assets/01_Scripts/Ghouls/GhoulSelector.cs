@@ -15,6 +15,10 @@ namespace WallDefense
     private int _attackHour;
     private bool _attacked;
     public bool HasAttacked => _attacked;
+    public delegate void ClueFound();
+    public static event ClueFound ClueFoundEvent;
+    public delegate void ClearClue();
+    public static event ClearClue ClearClueEvent;
 
     public void Initialize()
     {
@@ -43,6 +47,7 @@ namespace WallDefense
       _dialogueManager.VariableStorage.SetValue("$first_clue_morse_text", "");
       _dialogueManager.VariableStorage.SetValue("$second_clue", "");
       _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", "");
+      ClearClueEvent?.Invoke();
     }
 
     public void OnDayStart()
@@ -60,6 +65,7 @@ namespace WallDefense
           CurrentGhoul.clueMain.found = true;
           _dialogueManager.VariableStorage.SetValue("$first_clue", CurrentGhoul.clueMain.name);
           _dialogueManager.VariableStorage.SetValue("$first_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
+          ClueFoundEvent?.Invoke();
           return CurrentGhoul.clueMain;
         }
         else if (!CurrentGhoul.clueSecondary.found)
@@ -67,14 +73,16 @@ namespace WallDefense
           CurrentGhoul.clueSecondary.found = true;
           _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
           _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
+          ClueFoundEvent?.Invoke();
           return CurrentGhoul.clueSecondary;
         }
       }
       else if (!CurrentGhoul.clueSecondary.found)
       {
+        CurrentGhoul.clueSecondary.found = true;
         _dialogueManager.VariableStorage.SetValue("$second_clue", CurrentGhoul.clueSecondary.name);
         _dialogueManager.VariableStorage.SetValue("$second_clue_morse_text", CurrentGhoul.clueMain.morseTextRepresentation);
-        CurrentGhoul.clueSecondary.found = true;
+        ClueFoundEvent?.Invoke();
         return CurrentGhoul.clueSecondary;
       }
       return null;

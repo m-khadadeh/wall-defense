@@ -9524,7 +9524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &918129771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20758,6 +20758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878538567}
+  - component: {fileID: 1878538568}
   m_Layer: 5
   m_Name: sticky01
   m_TagString: Untagged
@@ -20788,6 +20789,20 @@ RectTransform:
   m_AnchoredPosition: {x: 1762, y: -753}
   m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1878538568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc3ab7181aa82940ae43782fd1d1464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghoulSelector: {fileID: 11400000, guid: 1a586bf88ae00c1adba93c76bb367e77, type: 2}
+  clueDescriptions: {fileID: 2131174549}
 --- !u!1 &1885895876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7863916004766053625, guid: 9ee1b243e7e6215a79d996079c53ae76, type: 3}
@@ -22622,7 +22637,7 @@ GameObject:
   - component: {fileID: 2131174550}
   - component: {fileID: 2131174549}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: clue descriptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

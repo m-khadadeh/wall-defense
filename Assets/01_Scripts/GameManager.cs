@@ -55,7 +55,7 @@ namespace WallDefense
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            OpenStart();
+            OpenStartFirstCall();
             foreach (var buttonToLock in buttonsToLockBeforeFirstDialogue)
             {
                 buttonToLock.enabled = false;
@@ -85,31 +85,31 @@ namespace WallDefense
         }
 
         private void ContinueSetUp()
+        {
+            foreach (var colony in aiColonies)
             {
-                foreach (var colony in aiColonies)
-                {
-                    colony.Initialize();
-                }
-                playerColony.Initialize();
-                ghoulSelector.SelectGhoul();
-                watch.OnAdvanceHour();
-                UpdateWatch();
-                theCapitol.Initialize();
-                dialogueRunner.onDialogueStart.AddListener(() =>
-                {
-                    foreach (var button in dialogueBlockButtons)
-                    {
-                        button.enabled = false;
-                    }
-                });
-                dialogueRunner.onDialogueComplete.AddListener(() =>
-                {
-                    foreach (var button in dialogueBlockButtons)
-                    {
-                        button.enabled = true;
-                    }
-                });
+                colony.Initialize();
             }
+            playerColony.Initialize();
+            ghoulSelector.SelectGhoul();
+            watch.OnAdvanceHour();
+            UpdateWatch();
+            theCapitol.Initialize();
+            dialogueRunner.onDialogueStart.AddListener(() =>
+            {
+                foreach (var button in dialogueBlockButtons)
+                {
+                    button.enabled = false;
+                }
+            });
+            dialogueRunner.onDialogueComplete.AddListener(() =>
+            {
+                foreach (var button in dialogueBlockButtons)
+                {
+                    button.enabled = true;
+                }
+            });
+        }
 
         public void OnNewDay()
         {
@@ -176,6 +176,21 @@ namespace WallDefense
                 }
             }
         }
+        public void OpenStartFirstCall()
+        {
+            StartCoroutine(OpenStartFirstCallCoroutine());
+        }
+        IEnumerator OpenStartFirstCallCoroutine()
+        {
+            currentState = GameState.start;
+            currentView = UIView.none;
+            startView.SetActive(true);
+            mainView.SetActive(false);
+            gameOverView.SetActive(false);
+            OnStart?.Invoke();
+            yield return screenFader.EndFadeCoroutine();
+        }
+
         public void OpenStart()
         {
             StartCoroutine(OpenStartCoroutine());
