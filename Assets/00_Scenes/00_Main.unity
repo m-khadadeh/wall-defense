@@ -14236,7 +14236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1166493497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22157,8 +22157,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Serpentine and impossibly strong, care for large patterned valleys in
-    the sand, as it tends to hunt by burrowing and striking at unaware prey.
+  m_text: '- Many-legged and impossibly strong, care for large patterned valleys
+    in the sand, as it tends to hunt by burrowing and striking at unaware prey.
 
     -
     Its shed skin goes for a high market price inland, smooth, glossy, and highly
