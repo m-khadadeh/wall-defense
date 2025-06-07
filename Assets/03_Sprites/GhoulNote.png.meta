@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 1635a8ac04c243bbe9df2c2546b9313a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7863952162779553291
+    second: GhoulNote_0
+  - first:
+      213: -7187685803859636882
+    second: GhoulNote_1
+  - first:
+      213: 5053908058897953721
+    second: GhoulNote_2
+  - first:
+      213: 4930302633184686371
+    second: GhoulNote_3
+  - first:
+      213: 1710810038862843946
+    second: GhoulNote_4
+  - first:
+      213: 5408341176587686192
+    second: GhoulNote_5
+  - first:
+      213: -4336182005634995539
+    second: GhoulNote_6
+  - first:
+      213: -8768300891923839309
+    second: GhoulNote_7
+  - first:
+      213: 2955945622218952171
+    second: GhoulNote_8
+  - first:
+      213: 88111799991415252
+    second: GhoulNote_9
+  - first:
+      213: 5566631920853566176
+    second: GhoulNote_10
+  - first:
+      213: 3792135815223194812
+    second: GhoulNote_11
+  - first:
+      213: -3030825723563898637
+    second: GhoulNote_12
+  - first:
+      213: 8653756167942061030
+    second: GhoulNote_13
+  - first:
+      213: -5012923086039331800
+    second: GhoulNote_14
+  - first:
+      213: 6139169245809468058
+    second: GhoulNote_15
+  - first:
+      213: 4415812854279814219
+    second: GhoulNote_16
+  - first:
+      213: -2168488991141666777
+    second: GhoulNote_17
+  - first:
+      213: -2209796680681553078
+    second: GhoulNote_18
+  - first:
+      213: -5178206320490067830
+    second: GhoulNote_19
+  - first:
+      213: 3789159789045520983
+    second: GhoulNote_20
+  - first:
+      213: -8634798003556542618
+    second: GhoulNote_21
+  - first:
+      213: -3975999730148146952
+    second: GhoulNote_22
+  - first:
+      213: 3282254667679054434
+    second: GhoulNote_23
+  - first:
+      213: -2590164101458306592
+    second: GhoulNote_24
+  - first:
+      213: -4612100768692353649
+    second: GhoulNote_25
+  - first:
+      213: 5620010342645241704
+    second: GhoulNote_26
+  - first:
+      213: 8604180257691577926
+    second: GhoulNote_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GhoulNote_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 248
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ed329b3de522d60800000000000000
+      internalID: 7863952162779553291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 197
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d04d7e7d5304c90800000000000000
+      internalID: -7187685803859636882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 198
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3b8125a96132640800000000000000
+      internalID: 5053908058897953721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 205
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321752e7f14fb6440800000000000000
+      internalID: 4930302633184686371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 200
+        width: 51
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2097948aa40eb710800000000000000
+      internalID: 1710810038862843946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 226
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03190ae35a94e0b40800000000000000
+      internalID: 5408341176587686192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 166
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa6fa0a079c2d3c0800000000000000
+      internalID: -4336182005634995539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_7
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 200
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b683259bccb05680800000000000000
+      internalID: -8768300891923839309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 176
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed4bb3d1e0a50920800000000000000
+      internalID: 2955945622218952171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_9
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 170
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1320b1739093100800000000000000
+      internalID: 88111799991415252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_10
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 137
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2c3dd1d36a04d40800000000000000
+      internalID: 5566631920853566176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 152
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb43a6eae6f50a430800000000000000
+      internalID: 3792135815223194812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 158
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f88bdaff0850f5d0800000000000000
+      internalID: -3030825723563898637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_13
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 141
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb380b9261581870800000000000000
+      internalID: 8653756167942061030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 170
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c454a43058e6ab0800000000000000
+      internalID: -5012923086039331800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 145
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92e97007e5b23550800000000000000
+      internalID: 6139169245809468058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_16
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 149
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cb3fd156e184d30800000000000000
+      internalID: 4415812854279814219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 78
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720e7af60caf7e1e0800000000000000
+      internalID: -2168488991141666777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_18
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 80
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43832e70a93551e0800000000000000
+      internalID: -2209796680681553078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_19
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 82
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88c18d69c05328b0800000000000000
+      internalID: -5178206320490067830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 90
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a904790ccc59430800000000000000
+      internalID: 3789159789045520983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_21
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 92
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66792c207f80b2880800000000000000
+      internalID: -8634798003556542618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 93
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f08879af4962d8c0800000000000000
+      internalID: -3975999730148146952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_23
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 25
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ab069ea39ec8d20800000000000000
+      internalID: 3282254667679054434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_24
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 28
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9db961973ed0cd0800000000000000
+      internalID: -2590164101458306592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_25
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 28
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8549cd69c68effb0800000000000000
+      internalID: -4612100768692353649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_26
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 30
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867146b61a94efd40800000000000000
+      internalID: 5620010342645241704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhoulNote_27
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 36
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ea2238b50386770800000000000000
+      internalID: 8604180257691577926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fce3064ca679a5e139430749cb29def8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GhoulNote_0: 7863952162779553291
+      GhoulNote_1: -7187685803859636882
+      GhoulNote_10: 5566631920853566176
+      GhoulNote_11: 3792135815223194812
+      GhoulNote_12: -3030825723563898637
+      GhoulNote_13: 8653756167942061030
+      GhoulNote_14: -5012923086039331800
+      GhoulNote_15: 6139169245809468058
+      GhoulNote_16: 4415812854279814219
+      GhoulNote_17: -2168488991141666777
+      GhoulNote_18: -2209796680681553078
+      GhoulNote_19: -5178206320490067830
+      GhoulNote_2: 5053908058897953721
+      GhoulNote_20: 3789159789045520983
+      GhoulNote_21: -8634798003556542618
+      GhoulNote_22: -3975999730148146952
+      GhoulNote_23: 3282254667679054434
+      GhoulNote_24: -2590164101458306592
+      GhoulNote_25: -4612100768692353649
+      GhoulNote_26: 5620010342645241704
+      GhoulNote_27: 8604180257691577926
+      GhoulNote_3: 4930302633184686371
+      GhoulNote_4: 1710810038862843946
+      GhoulNote_5: 5408341176587686192
+      GhoulNote_6: -4336182005634995539
+      GhoulNote_7: -8768300891923839309
+      GhoulNote_8: 2955945622218952171
+      GhoulNote_9: 88111799991415252
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
