@@ -9,6 +9,7 @@ namespace WallDefense
     {
         public GameObject tmpContainer;
         public GameObject background;
+        public Vector3 offset;
         TMP_Text tmp;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -20,7 +21,7 @@ namespace WallDefense
         // Update is called once per frame
         void Update()
         {
-            transform.position = Input.mousePosition;
+            transform.position = Input.mousePosition + offset;
         }
         public void SetText(string text)
         {
