@@ -38,11 +38,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2686123580750418156, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2686123580750418156, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2686123580750418156, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,7 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4702592739475668300, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+    - {fileID: 8907544067049916337, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
+    - {fileID: 4375646244517829548, guid: 0782b66a6ad085e79943916c248aa8c2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

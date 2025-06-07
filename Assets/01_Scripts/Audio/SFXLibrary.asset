@@ -67,3 +67,7 @@ MonoBehaviour:
     <Clip>k__BackingField: {fileID: 8300000, guid: 61d2574d6af78e34ba4bc82714a993cf, type: 3}
   - <ClipName>k__BackingField: kms
     <Clip>k__BackingField: {fileID: 8300000, guid: 9cb1608162f0ce347acc6f96487d45fa, type: 3}
+  - <ClipName>k__BackingField: drag
+    <Clip>k__BackingField: {fileID: 8300000, guid: fcee35a65aec29981ae69ab298a57bb4, type: 3}
+  - <ClipName>k__BackingField: drop
+    <Clip>k__BackingField: {fileID: 8300000, guid: 6a0e76eb926ff91ad985321c26131b03, type: 3}

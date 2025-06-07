@@ -30,6 +30,10 @@ namespace WallDefense
       _hoursRemaining = -1;
       SetButtons();
     }
+    public void OnDestroy()
+    {
+      _task.Unbind();
+    }
 
     public void CheckFulfilled()
     {
@@ -76,7 +80,7 @@ namespace WallDefense
       }
       else
       {
-        _runButtonText.text = "Lock In";
+        _runButtonText.text = "Approve";
       }
     }
 

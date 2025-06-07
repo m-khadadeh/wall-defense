@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: f5f5134d838c5744ca2fcc63a65a2e87
+guid: 21d91c8eabec3a1f483db02682e504a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3730010181900671626
-    second: innerdialogue_box_0
-  - first:
-      213: 1045086693338959736
-    second: innerdialogue_box_1
-  - first:
-      213: -1636897649738171163
-    second: innerdialogue_box_2
+      213: -8402460069398001634
+    second: dropdown_checkbox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,67 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: innerdialogue_box_0
+      name: dropdown_checkbox_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 846
-        height: 425
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 675683380875c3cc0800000000000000
-      internalID: -3730010181900671626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: innerdialogue_box_1
-      rect:
-        serializedVersion: 2
-        x: 445
-        y: 416
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87fc4fb7fc4e08e00800000000000000
-      internalID: 1045086693338959736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: innerdialogue_box_2
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 416
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ec3fad92429849e0800000000000000
-      internalID: -1636897649738171163
+      spriteID: e18c024c517746b80800000000000000
+      internalID: -8402460069398001634
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14f18c38d42b2e6a88f6338341debc25
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      innerdialogue_box_0: -3730010181900671626
-      innerdialogue_box_1: 1045086693338959736
-      innerdialogue_box_2: -1636897649738171163
+      dropdown_checkbox_0: -8402460069398001634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f4bf71ede14526118f986387cb730c5
+guid: 82e367feb8a5be44695205ed4e868978
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kabel Bd
+  - Quantico
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -18,7 +18,8 @@ namespace WallDefense
     public void Awake()
     {
       _stationDictionary = _stationsAtIndices.ToDictionary(e => e, e => _stationsAtIndices.IndexOf(e));
-      OnRadioOff();
+      _playerCallingLight.SetActive(false);
+      _playerReceivingLight.SetActive(false);
     }
 
     public void OnRadioOff()

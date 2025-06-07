@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042769579492682723, guid: 35292d302e6e4eeeaa5bc437a50123b1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6042769579492682723, guid: 35292d302e6e4eeeaa5bc437a50123b1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6042769579492682723, guid: 35292d302e6e4eeeaa5bc437a50123b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,7 +100,8 @@ PrefabInstance:
       propertyPath: <Metadata>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: be43b3f2a7d986eb1afc85bfcaca6153, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5198901167922854333, guid: 35292d302e6e4eeeaa5bc437a50123b1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

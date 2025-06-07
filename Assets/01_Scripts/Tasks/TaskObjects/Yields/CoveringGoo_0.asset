@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e904f1889b8549f2dafeb803eb77c157, type: 3}
   m_Name: CoveringGoo_0
   m_EditorClassIdentifier: 
-  _defenseType: 1
   _wallSections:
   - <ChoiceName>k__BackingField: Top
     <WallSegment>k__BackingField: 0
@@ -20,3 +19,4 @@ MonoBehaviour:
     <WallSegment>k__BackingField: 1
   - <ChoiceName>k__BackingField: Bottom
     <WallSegment>k__BackingField: 2
+  _defenseType: 2

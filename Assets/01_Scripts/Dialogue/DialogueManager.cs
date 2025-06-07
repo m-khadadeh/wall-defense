@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 namespace WallDefense
@@ -24,8 +25,9 @@ namespace WallDefense
     public bool NodeQueued { get; private set; }
     private string _nextNode;
     private GameManager.UIView _currentView;
-    public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony, System.Action continueSetup)
+    public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony, System.Action continueSetup, int currentHour)
     {
+      _currentHour = currentHour;
       NodeQueued = false;
       _runner = runner;
       _nextNode = "";
@@ -41,6 +43,11 @@ namespace WallDefense
         continueSetup.Invoke();
       });
       _runner.StartDialogue("Variable_Declaration");
+    }
+
+    public void Unbind()
+    {
+      _runner = null;
     }
 
     private void ResetDictionary()

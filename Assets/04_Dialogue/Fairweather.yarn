@@ -672,12 +672,12 @@ MORSE_{$fairweather_station}: COULD YOU SPARE {$requested_amount} {$requested_as
   MORSE_{$player_station_name}: IT SHOULD REACH YOU IN UNDER 6 HOURS
   MORSE_{$fairweather_station}: THANKS (RN) (SK)
   <<make_promise DialogueSystem {$fairweather_ai_object_name} {$requested_asset} {$requested_amount}>>
-  <<comms_end>>
+  <<comms_end DialogueSystem>>
   <<set $fairweather_relationship += 5>>
 -> No.
   MORSE_{$player_station_name}: I CANT
   MORSE_{$fairweather_station}: R (RN) (SK)
-  <<comms_end>>
+  <<comms_end DialogueSystem>>
   <<set $fairweather_relationship -= 5>>
 ===
 title: Fairweather_NPC_NeedInformation

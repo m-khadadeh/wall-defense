@@ -116,13 +116,13 @@ TextureImporter:
       name: empty_pressed_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 77
-        width: 919
-        height: 913
+        x: 0
+        y: 0
+        width: 1058
+        height: 1058
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 52, y: 52, z: 52, w: 52}
+      border: {x: 103, y: 112, z: 112, w: 103}
       customData: 
       outline: []
       physicsShape: []

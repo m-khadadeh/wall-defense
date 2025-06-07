@@ -38,5 +38,10 @@ namespace WallDefense
       _currentItems = new List<ItemType>();
       _onReset = resetCallback;
     }
+
+    public void Unbind()
+    {
+      _onReset = null;
+    }
   }
 }

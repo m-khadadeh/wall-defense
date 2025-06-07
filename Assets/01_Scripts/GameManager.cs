@@ -11,7 +11,6 @@ namespace WallDefense
 {
     public class GameManager : MonoBehaviour
     {
-        public WallManager wallManager;
         public DayNightManager dayNightManager;
         public SaveManager saveManager;
         [SerializeField] GameState currentState;
@@ -37,8 +36,11 @@ namespace WallDefense
         public GhoulSelector ghoulSelector;
         public Pocketwatch watch;
 
-        public Button dialogueScreenBackButton;
+        public List<Button> dialogueBlockButtons;
         public ScreenFader screenFader;
+
+        public Button[] buttonsToLockBeforeFirstDialogue;
+        private bool buttonsUnlockedYet;
 
 
         enum GameState
@@ -54,6 +56,11 @@ namespace WallDefense
         void Start()
         {
             OpenStart();
+            foreach (var buttonToLock in buttonsToLockBeforeFirstDialogue)
+            {
+                buttonToLock.enabled = false;
+            }
+            buttonsUnlockedYet = false;
             settlementAIs.OrderBy(_ => UnityEngine.Random.Range(0, int.MaxValue));
             int selectedAI = 0;
             foreach (var colony in aiColonies)
@@ -69,23 +76,40 @@ namespace WallDefense
             inventoryUI.Initialize(addCallbacks, removeCallbacks);
             taskManager.Initialize(UpdateWatch);
             taskManager.SetInfo(null);
-            dialogueManager.Initialize(dialogueRunner, aiColonies, playerColony, ContinueSetUp);
+            dialogueManager.Initialize(dialogueRunner, aiColonies, playerColony, ContinueSetUp, dayNightManager.currentHour);
+        }
+
+        void OnDestroy()
+        {
+            dialogueManager.Unbind();
         }
 
         private void ContinueSetUp()
-        {
-            foreach (var colony in aiColonies)
             {
-                colony.Initialize();
+                foreach (var colony in aiColonies)
+                {
+                    colony.Initialize();
+                }
+                playerColony.Initialize();
+                ghoulSelector.SelectGhoul();
+                watch.OnAdvanceHour();
+                UpdateWatch();
+                theCapitol.Initialize();
+                dialogueRunner.onDialogueStart.AddListener(() =>
+                {
+                    foreach (var button in dialogueBlockButtons)
+                    {
+                        button.enabled = false;
+                    }
+                });
+                dialogueRunner.onDialogueComplete.AddListener(() =>
+                {
+                    foreach (var button in dialogueBlockButtons)
+                    {
+                        button.enabled = true;
+                    }
+                });
             }
-            playerColony.Initialize();
-            ghoulSelector.SelectGhoul();
-            watch.OnAdvanceHour();
-            UpdateWatch();
-            theCapitol.Initialize();
-            dialogueRunner.onDialogueStart.AddListener(() => dialogueScreenBackButton.enabled = false);
-            dialogueRunner.onDialogueComplete.AddListener(() => dialogueScreenBackButton.enabled = true);
-        }
 
         public void OnNewDay()
         {
@@ -143,6 +167,14 @@ namespace WallDefense
         void Update()
         {
             watch.CanClickButtons(!dialogueManager.NodeQueued);
+            if (!buttonsUnlockedYet && dialogueManager.NodeQueued)
+            {
+                buttonsUnlockedYet = true;
+                foreach (var button in buttonsToLockBeforeFirstDialogue)
+                {
+                    button.enabled = true;
+                }
+            }
         }
         public void OpenStart()
         {
@@ -222,6 +254,10 @@ namespace WallDefense
             currentView = view;
             mainSubViews[(int)view].SetActive(true);
             yield return screenFader.EndFadeCoroutine();
+            if (currentView == UIView.morse)
+            {
+                dialogueManager.OnScreenEntry();
+            }
         }
 
         void CloseSubViews()

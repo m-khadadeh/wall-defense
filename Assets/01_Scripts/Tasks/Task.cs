@@ -194,6 +194,14 @@ namespace WallDefense
       }
     }
 
+    public void Unbind()
+    {
+      foreach (var requirement in _requirements)
+      {
+        requirement.Unbind();
+      }
+    }
+
     public bool IsFulfilled
     {
       get

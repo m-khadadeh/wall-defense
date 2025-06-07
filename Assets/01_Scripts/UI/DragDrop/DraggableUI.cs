@@ -21,6 +21,7 @@ namespace WallDefense
       transform.SetParent(transform.root);
       transform.SetAsLastSibling();
       _image.raycastTarget = false;
+      AudioManager.PlaySound("drag");
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -36,6 +37,7 @@ namespace WallDefense
       _nextDroppable.SetIn(this);
       _currentDroppable = _nextDroppable;
       _image.raycastTarget = true;
+      AudioManager.PlaySound("drop");
     }
 
     public void OnDroppingInto(DroppableUI droppable, int stackSize = 1)

@@ -38,6 +38,7 @@ namespace WallDefense
 
     public override YarnTask OnDialogueCompleteAsync()
     {
+      _characterTextMorse.text = "";
       return YarnTask.CompletedTask;
     }
 
@@ -121,13 +122,14 @@ namespace WallDefense
             {
               // Character exists
               string currentCharacterCode = currentMorseLength == 1 ? _dictionary.CharacterCodes[newTextData.plainText[i]] : _dictionary.ProsignCodes[newTextData.plainText.Substring(i, currentMorseLength)];
+              currentCharacterCode = currentCharacterCode.Replace('-', '—');
               _lineTextMorse.text += _morseCodeRTFOpenTags + currentCharacterCode + _morseCodeRTFClosingTags;
               for (int j = 0; j <= currentCharacterCode.Length; j++)
               {
                 _lineTextMorse.maxVisibleCharacters = i + j;
 
                 int waveLength = _ditMilliseconds;
-                if (j != currentCharacterCode.Length && currentCharacterCode[j] == '-')
+                if (j != currentCharacterCode.Length && currentCharacterCode[j] == '—')
                 {
                   waveLength *= _dahDitLength;
                 }
@@ -194,6 +196,7 @@ namespace WallDefense
       await YarnTask.WaitUntilCanceled(token.NextLineToken).SuppressCancellationThrow();
       _dialogueContainerNonMorse.SetActive(false);
       _dialogueContainerMorse.SetActive(false);
+      _characterTextMorse.text = "";
     }
 
     public void OnNextButtonClicked(DialogueRunner runner)
@@ -207,6 +210,8 @@ namespace WallDefense
         runner.RequestNextLine();
       }
     }
+    
+    
 
     public override async YarnTask<DialogueOption> RunOptionsAsync(DialogueOption[] dialogueOptions, CancellationToken cancellationToken)
     {
@@ -230,7 +235,7 @@ namespace WallDefense
       }
 
       CancelSourceWhenDialogueCancelled().Forget();
-      
+
       for (int i = 0, j = 0; i < dialogueOptions.Length; i++)
       {
         DialogueOption thisOption = dialogueOptions[i];
@@ -263,7 +268,7 @@ namespace WallDefense
         button.onClick.RemoveAllListeners();
         button.gameObject.SetActive(false);
       }
-      
+
       _morseNextButton.gameObject.SetActive(true);
       _dialogueContainerMorse.SetActive(false);
 
