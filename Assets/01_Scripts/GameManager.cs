@@ -60,6 +60,7 @@ namespace WallDefense
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            dayNightManager.Initialize();
             tutorialKun.Initialize();
             OpenStartFirstCall();
             foreach (var buttonToLock in buttonsToLockBeforeFirstDialogue)

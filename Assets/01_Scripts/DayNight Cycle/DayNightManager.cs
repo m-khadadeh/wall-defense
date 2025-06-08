@@ -21,7 +21,12 @@ namespace WallDefense
         public UnityEvent<int> onBeforeHour, onAfterHour, onNightHour;
         public bool triggerHourAdvance = false;
 
-        public Image skyImage;
+        public Material skyMat;
+
+        public void Initialize()
+        {
+            skyMat.SetFloat("_Hour", (float)currentHour);
+        }
 
         void Update()
         {
@@ -48,7 +53,7 @@ namespace WallDefense
                 onNightHour.Invoke(currentHour);
             }
             onAfterHour.Invoke(currentHour);
-            skyImage.canvasRenderer.GetMaterial().SetFloat("_Hour", (float)currentHour);
+            skyMat.SetFloat("_Hour", (float)currentHour);
         }
 
         public void LoadData(DayNightData dayNightData)
