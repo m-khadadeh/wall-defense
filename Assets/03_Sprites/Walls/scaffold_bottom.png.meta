@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4efb9b72d316a892bd74634cb0fe9ff
+guid: e0da786a7473f4449bb398d1ee9958fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9057227018046245596
-    second: ReportPage_0
+      213: 7195781601506459016
+    second: scaffold_bottom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ReportPage_0
+      name: scaffold_bottom_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 607
-        height: 813
+        x: 1
+        y: 0
+        width: 1936
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cda87b45cfbb1bd70800000000000000
-      internalID: 9057227018046245596
+      spriteID: 88d751fdd3d8cd360800000000000000
+      internalID: 7195781601506459016
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ReportPage_0: 9057227018046245596
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
