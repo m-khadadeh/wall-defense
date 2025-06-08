@@ -7396,9 +7396,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5018569121889279452, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
       insertIndex: -1
       addedObject: {fileID: 852294404}
-    - targetCorrespondingSourceObject: {fileID: 5018569121889279452, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 852294405}
     - targetCorrespondingSourceObject: {fileID: 5760869498857342291, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983840796}
@@ -7414,9 +7411,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5760869498857342291, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983840800}
-    - targetCorrespondingSourceObject: {fileID: 5760869498857342291, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1983840801}
   m_SourcePrefab: {fileID: 100100000, guid: 4124d83ef541fe444a3eb02358e4f344, type: 3}
 --- !u!224 &454882346 stripped
 RectTransform:
@@ -12401,19 +12395,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxKey: clock_tick
   _overrideInteractable: 0
---- !u!114 &852294405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852294399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 723b78f74cf10934fb1832105793fc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Advance 1 Hour
 --- !u!224 &859800645 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 10901985251805851, guid: d67015bc73eb5cf439f7fa5364aa6dd1, type: 3}
@@ -28992,19 +28973,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxKey: clock_tick
   _overrideInteractable: 0
---- !u!114 &1983840801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983840795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 723b78f74cf10934fb1832105793fc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Advance until next task is complete
 --- !u!1 &1998182347
 GameObject:
   m_ObjectHideFlags: 0
