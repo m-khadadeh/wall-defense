@@ -16,6 +16,7 @@ namespace WallDefense
         private void Awake()
         {
             _image = GetComponent<Image>();
+            _image.enabled = true;
             Material mat = _image.material;
             _image.material = new Material(mat);
             _material = _image.material;
