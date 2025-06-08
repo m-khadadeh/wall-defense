@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   magnitude: 30
-  reducedAmount: 0
+  reducedAmount: 0.25

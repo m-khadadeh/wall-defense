@@ -46,6 +46,9 @@ namespace WallDefense
         public TutorialKun tutorialKun;
 
         public Task[] tasks;
+        public GameObject topWallSegment;
+        public GameObject middleWallSegment;
+        public GameObject bottomWallSegment;
 
 
         enum GameState
@@ -153,6 +156,9 @@ namespace WallDefense
             watch.OnAdvanceHour();
             UpdateWatch();
             dialogueManager.OnAfterHour(hour, currentView);
+            bottomWallSegment.SetActive(!playerColony.Wall.bottom.IsDestroyed());
+            middleWallSegment.SetActive(!playerColony.Wall.middle.IsDestroyed());
+            topWallSegment.SetActive(!playerColony.Wall.top.IsDestroyed());
         }
         public void UpdateWatch()
         {

@@ -78,8 +78,8 @@ namespace WallDefense
                     break;
                 default:
                     break;
-
             }
+            CheckSegmentFailure();
         }
 
         public WallSegment GetSegmentFromName(WallSegmentName segmentName)
@@ -147,6 +147,7 @@ namespace WallDefense
         {
             health -= (int)math.round((float)damageParameters.magnitude * (currentDefenseType == damageParameters.type ? damageParameters.reducedAmount : 1.0f));
             currentDefenseType = DamageParameters.Type.none;
+            health = Mathf.Max(0, health);
         }
         public readonly bool IsDestroyed()
         {

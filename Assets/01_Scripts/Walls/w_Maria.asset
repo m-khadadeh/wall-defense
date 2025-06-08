@@ -16,22 +16,22 @@ MonoBehaviour:
   ownerSettlement: 0
   top:
     wallIndex: 2
-    health: 175
+    health: 0
     maxhealth: 200
     damageParameters: {fileID: 0}
     currentDefenseType: 0
   middle:
     wallIndex: 1
-    health: 125
+    health: 0
     maxhealth: 150
     damageParameters: {fileID: 0}
     currentDefenseType: 0
   bottom:
     wallIndex: 0
-    health: 75
+    health: -45
     maxhealth: 100
     damageParameters: {fileID: 0}
     currentDefenseType: 0
   isFallen: 0
-  maxHealths: 6400000096000000c8000000
-  startingHealths: 4b0000007d000000af000000
+  maxHealths: c80000009600000064000000
+  startingHealths: af0000007d0000004b000000
