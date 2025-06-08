@@ -14,11 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Harvesting Food
   <TaskDescriptionName>k__BackingField: Harvesting Food
-  _taskDescription: "Workforce: 2-3 <sprite name=\"gatherer\"> Gatherers\nResource
-    Cost: None\n(Optional Costs) - Time to complete: \n<indent=5%> - 4 hours\n<indent=0%>(Optional
-    Costs) - Yields:\n<indent=5%>(+0<sprite name=\"gatherer\">) - 5-10 <sprite name=\"food\">
-    Food\n<indent=5%>(+1<sprite name=\"gatherer\">) - 8-10 <sprite name=\"food\">
-    Food"
+  _taskDescription: '<b>Workforce:</b> 2-3 <sprite name="gatherer"> Gatherers
+
+    <b>Resource
+    Cost:</b> None
+
+    <b>Time to complete: </b>
+
+    <indent=5%>4 hours
+
+    <indent=0%><b>Yields
+    (+ Optional Costs):</b>
+
+    <indent=5%>5-10 <sprite name="food"> Food (+0<sprite
+    name="gatherer">)
+
+    <indent=5%>8-10 <sprite name="food"> Food (+1<sprite name="gatherer">)'
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 2, y: 3}

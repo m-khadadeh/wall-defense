@@ -14,12 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Clear Defense
   <TaskDescriptionName>k__BackingField: Clear Wall Defense on Segment
-  _taskDescription: "Workforce: 1 <sprite name=\"overseer\"> Overseer, 1-2 <sprite
-    name=\"operator\"> Operators\nResource Cost: 4 <sprite name=\"metal\"> Metal\n(Optional
-    Costs) - Time to complete: \n<indent=5%>(+0<sprite name=\"operator\">) - 4 hours\n<indent=5%>(+1<sprite
-    name=\"operator\">) - 2 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>
-    - Installed defense cleared from selected wall segment <b>if it has defenses
-    installed.</b>"
+  _taskDescription: '<b>Workforce:</b> 1 <sprite name="overseer"> Overseer, 1-2 <sprite
+    name="operator"> Operators
+
+    <b>Resource Cost:</b> 4 <sprite name="metal">
+    Metal
+
+    <b>Time to complete (+Optional Costs):</b>
+
+    <indent=5%>4 hours
+    (+0<sprite name="operator">)
+
+    <indent=5%>2 hours (+1<sprite name="operator">)
+
+    <indent=0%><b>Yields:</b>
+
+    <indent=5%>Installed
+    defense cleared from selected wall segment <b>if it has defenses installed.</b>'
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}

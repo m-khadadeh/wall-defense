@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Logging
   <TaskDescriptionName>k__BackingField: Logging
-  _taskDescription: "Workforce: 1 <sprite name=\"gatherer\"> Gatherer, 2-4 <sprite
-    name=\"meeple\"> Any\nResource Cost: None\n(Optional Costs) - Time to complete:
-    \n<indent=5%> - 4 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>(+0<sprite
-    name=\"meeple\">) - 6-8 <sprite name=\"wood\"> Wood\n<indent=5%>(+1<sprite name=\"meeple\">)
-    - 7-9 <sprite name=\"wood\"> Wood\n<indent=5%>(+2<sprite name=\"meeple\">) -
-    8-10 <sprite name=\"wood\"> Wood"
+  _taskDescription: "<b>Workforce:</b> 1 <sprite name=\"gatherer\"> Gatherer, 2-4
+    <sprite name=\"meeple\"> Any\n<b>Resource Cost:</b> None\n<b>Time to complete:</b>
+    \n<indent=5%>4 hours\n<b><indent=0%>Yields (+ Optional Costs):</b>\n<indent=5%>6-8
+    <sprite name=\"wood\"> Wood (+0<sprite name=\"meeple\">)\n<indent=5%>7-9 <sprite
+    name=\"wood\"> Wood (+1<sprite name=\"meeple\">)\n<indent=5%>8-10 <sprite name=\"wood\">
+    Wood (+2<sprite name=\"meeple\">)"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: fba954af20612e4938d93a25c0e6a73d, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}

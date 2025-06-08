@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: 'Defense: Anti-Corrosive'
   <TaskDescriptionName>k__BackingField: Anti-Corrosive Defense
-  _taskDescription: "Workforce: 1 <sprite name=\"overseer\"> Overseer, 1-2 <sprite
-    name=\"operator\"> Operators, 1 <sprite name=\"analyst\"> Analyst\nResource Cost:
-    3 <sprite name=\"goo\"> Goo\n(Optional Costs) - Time to complete: \n<indent=5%>(+0<sprite
-    name=\"operator\">) - 3 hours\n<indent=5%>(+1<sprite name=\"operator\">) - 2
-    hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%> - Anti-Corrosive attack
+  _taskDescription: "<b>Workforce:</b> 1 <sprite name=\"overseer\"> Overseer, 1-2
+    <sprite name=\"operator\"> Operators, 1 <sprite name=\"analyst\"> Analyst\n<b>Resource
+    Cost:</b> 3 <sprite name=\"goo\"> Goo\n<b>Time to complete (+Optional Costs):</b>
+    \n<indent=5%>3 hours (+0<sprite name=\"operator\">)\n<indent=5%>2 hours (+1<sprite
+    name=\"operator\">)\n<indent=0%><b>Yields:</b>\n<indent=5%>Anti-Corrosive attack
     defense installed on selected wall segment <b>if it doesn't have any defense
     currently installed.</b>"
   _requirements:

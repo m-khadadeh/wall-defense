@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Mining
   <TaskDescriptionName>k__BackingField: Mining
-  _taskDescription: "Workforce: 1 <sprite name=\"overseer\"> Overseer, 2-4 <sprite
-    name=\"meeple\"> Any\nResource Cost: None\n(Optional Costs) - Time to complete:
-    \n<indent=5%> - 5 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>(+0<sprite
-    name=\"meeple\">) - 3-5 <sprite name=\"ore\"> Ore, 5-6 <sprite name=\"stone\">
-    Stone\n<indent=5%>(+1<sprite name=\"meeple\">) - 3-6 <sprite name=\"ore\"> Ore,
-    7-8 <sprite name=\"stone\"> Stone\n<indent=5%>(+2<sprite name=\"meeple\">) -
-    4-7 <sprite name=\"ore\"> Ore, 8-9 <sprite name=\"stone\"> Stone"
+  _taskDescription: "<b>Workforce:</b> 1 <sprite name=\"overseer\"> Overseer, 2-4
+    <sprite name=\"meeple\"> Any\n<b>Resource Cost:</b> None\n<b>Time to complete:</b>
+    \n<indent=5%>5 hours\n<indent=0%><b>Yields (+ Optional Costs):</b>\n<indent=5%>3-5
+    <sprite name=\"ore\"> Ore, 5-6 <sprite name=\"stone\"> Stone (+0<sprite name=\"meeple\">)\n<indent=5%>3-6
+    <sprite name=\"ore\"> Ore, 7-8 <sprite name=\"stone\"> Stone (+1<sprite name=\"meeple\">)\n<indent=5%>4-7
+    <sprite name=\"ore\"> Ore, 8-9 <sprite name=\"stone\"> Stone (+2<sprite name=\"meeple\">)"
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}

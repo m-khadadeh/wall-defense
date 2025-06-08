@@ -34,14 +34,14 @@ MonoBehaviour:
   _goals:
   - {fileID: 11400000, guid: 0bc8e466005044810be4433180d66842, type: 2}
   - {fileID: 11400000, guid: 7ea075cce7199051f99c94c2ff71a5f0, type: 2}
-  - {fileID: 11400000, guid: 505d284e47ffb155b8dbae92707f89d7, type: 2}
+  - {fileID: 11400000, guid: a1b3353326302be3898f6d290abb8195, type: 2}
+  - {fileID: 11400000, guid: 4d3cf0f3233aa20f2a7354d752a70ff4, type: 2}
+  - {fileID: 11400000, guid: 66f481de8b60c9ae0a6d4b971331134b, type: 2}
   - {fileID: 11400000, guid: 7d86f7b4d1c6e1767b0d0ec2762c9f05, type: 2}
   - {fileID: 11400000, guid: e9529ab3076ee07f5b68c70d62b2ab91, type: 2}
+  - {fileID: 11400000, guid: 505d284e47ffb155b8dbae92707f89d7, type: 2}
   - {fileID: 11400000, guid: 92b0735847eb9c16ea87fe49c4aa1271, type: 2}
-  - {fileID: 11400000, guid: 4d3cf0f3233aa20f2a7354d752a70ff4, type: 2}
-  - {fileID: 11400000, guid: a1b3353326302be3898f6d290abb8195, type: 2}
   - {fileID: 11400000, guid: 2c63f6dd0befbf48084d8d7754189e6e, type: 2}
-  - {fileID: 11400000, guid: 66f481de8b60c9ae0a6d4b971331134b, type: 2}
   _countdownCosts:
   - {fileID: 11400000, guid: 91e12d470484d136aa18ece401028b24, type: 2}
   - {fileID: 11400000, guid: defa7981294a12dc3bb103c1f0a1198e, type: 2}
@@ -92,7 +92,7 @@ MonoBehaviour:
     <WaitAction>k__BackingField: {fileID: 11400000, guid: 92d602021fef03f57a7c375812417c7e, type: 2}
     <CollectAction>k__BackingField: {fileID: 11400000, guid: 514ca790057500f3fad9efdbe55463df, type: 2}
     <TaskLock>k__BackingField: {fileID: 11400000, guid: 5837b918cb0ed5259b3c1bf0d3fee565, type: 2}
-    <Hours>k__BackingField: 4
+    <Hours>k__BackingField: 5
     <ProtectionTask>k__BackingField: 0
   - <StartAction>k__BackingField: {fileID: 11400000, guid: 9184285c65de60406b4e0d6cecc0bad0, type: 2}
     <WaitAction>k__BackingField: {fileID: 11400000, guid: 41f6d298915822295b2839770c2e821d, type: 2}

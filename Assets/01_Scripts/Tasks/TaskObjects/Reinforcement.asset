@@ -14,13 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: 'Defense: Anti-Bludgeoning'
   <TaskDescriptionName>k__BackingField: Anti-Bludgeoning Wall Defense
-  _taskDescription: "Workforce: 1 <sprite name=\"overseer\"> Overseer, 1-2 <sprite
-    name=\"operator\"> Operators, 1 <sprite name=\"analyst\"> Analyst\nResource Cost:
-    4 <sprite name=\"metal\"> Metal\n(Optional Costs) - Time to complete: \n<indent=5%>(+0<sprite
-    name=\"operator\">) - 6 hours\n<indent=5%>(+1<sprite name=\"operator\">) - 4
-    hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%> - Anti-Bludgeoning
-    attack defense installed on selected wall segment <b>if it doesn't have any defense
-    currently installed.</b>"
+  _taskDescription: '<b>Workforce:</b> 1 <sprite name="overseer"> Overseer, 1-2 <sprite
+    name="operator"> Operators, 1 <sprite name="analyst"> Analyst
+
+    <b>Resource
+    Cost:</b> 4 <sprite name="metal"> Metal
+
+    <b>Time to complete (Optional Costs):
+    </b>
+
+    <indent=5%>6 hours (+0<sprite name="operator">)
+
+    <indent=5%>4 hours
+    (+1<sprite name="operator">)
+
+    <indent=0%><b>Yields:</b>
+
+    <indent=5%>Anti-Bludgeoning
+    attack defense installed on selected wall segment <b>if it doesn''t have any
+    defense currently installed.</b>'
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 1396e361150c95489a2f8e69a4b6fe17, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}

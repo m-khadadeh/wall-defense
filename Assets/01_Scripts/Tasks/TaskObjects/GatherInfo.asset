@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TaskName>k__BackingField: Find Ghoul Signs
   <TaskDescriptionName>k__BackingField: Investigate Tonight's Attack
-  _taskDescription: "Workforce: 1 <sprite name=\"operator\"> Operator, 1 <sprite
-    name=\"analyst\"> Analyst, 1 <sprite name=\"meeple\"> Any\n(Optional Costs) -
-    Time to complete: \n<indent=5%> - 5 hours\n<indent=0%>(Optional Costs) - Yields:\n<indent=5%>
-    - Uncovers a clue about the ghoul that will be attacking tonight."
+  _taskDescription: '<b>Workforce:</b> 1 <sprite name="operator"> Operator, 1 <sprite
+    name="analyst"> Analyst, 1 <sprite name="meeple"> Any
+
+    <b>Time to complete:
+    </b>
+
+    <indent=5%>5 hours
+
+    <indent=0%><b>Yields:</b>
+
+    <indent=5%>Uncovers
+    a clue about the ghoul that will be attacking tonight.'
   _requirements:
   - <RequirementType>k__BackingField: {fileID: 11400000, guid: 59a80dad15093d1afb9dc4b699830dde, type: 2}
     <MinimumMaximumAmount>k__BackingField: {x: 1, y: 1}
