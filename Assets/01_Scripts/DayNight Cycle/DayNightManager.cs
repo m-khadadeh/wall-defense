@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace WallDefense
 {
@@ -19,6 +20,8 @@ namespace WallDefense
         public UnityEvent onNewDay;
         public UnityEvent<int> onBeforeHour, onAfterHour, onNightHour;
         public bool triggerHourAdvance = false;
+
+        public Image skyImage;
 
         void Update()
         {
