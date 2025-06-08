@@ -24,12 +24,13 @@ namespace WallDefense
     [SerializeField] private int _capitolShipmentsXWeekly;
     [SerializeField] private List<AfterTimeYield> _afterTimeYields;
     private int _weeksToShipment;
-    [SerializeField] private bool _dead;
+    private bool _dead;
 
     public void Initialize()
     {
       _onGiftReceived = new List<Action<List<ItemType>>>();
       Wall.InitializeWalls();
+      _dead = false;
       if (AIController != null)
       {
         _ghoulBoard.Initialize(AIController.VariableNamePrefix);

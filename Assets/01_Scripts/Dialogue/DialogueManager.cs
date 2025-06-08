@@ -24,6 +24,7 @@ namespace WallDefense
     public bool NodeQueued { get; private set; }
     private string _nextNode;
     private GameManager.UIView _currentView;
+    public bool IsRunning => _runner.IsDialogueRunning;
     public void Initialize(DialogueRunner runner, List<ColonyData> aiColonies, ColonyData playerColony, System.Action continueSetup, int currentHour)
     {
       _currentHour = currentHour;

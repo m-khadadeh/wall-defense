@@ -178,7 +178,7 @@ namespace WallDefense
         public void AdvanceToTaskComplete()
         {
             int hoursToAdvance = taskManager.GetShortestTimeToTaskCompletion();
-            for (int i = 0; i < hoursToAdvance && !dialogueManager.NodeQueued; i++)
+            for (int i = 0; i < hoursToAdvance && !dialogueManager.NodeQueued && DialogBox.Instance == null; i++)
             {
                 AdvanceOneHour();
             }
@@ -194,7 +194,7 @@ namespace WallDefense
             {
                 tutorialKun.ShowRadioArrows(false);
             }
-            watch.CanClickButtons(!dialogueManager.NodeQueued && DialogBox.Instance == null);
+            watch.CanClickButtons(!dialogueManager.NodeQueued && DialogBox.Instance == null && !dialogueManager.IsRunning);
             if (!buttonsUnlockedYet && dialogueManager.NodeQueued)
             {
                 buttonsUnlockedYet = true;

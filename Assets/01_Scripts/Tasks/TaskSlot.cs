@@ -34,7 +34,7 @@ namespace WallDefense
       _maxAmount.text = maxAmtString;
       _requiredStamp.SetActive(minAmtString != "");
       _optionalStamp.SetActive(maxAmtString != "");
-      _autoFillButton.gameObject.SetActive(requirement.RequirementType.Metadata != null);
+      _autoFillButton.gameObject.SetActive(requirement.RequirementType.Metadata != null && requirement.MinimumMaximumAmount.x > 0);
       if (_autoFillButton.gameObject.activeSelf)
       {
         CheckAutoFillAvailable();
