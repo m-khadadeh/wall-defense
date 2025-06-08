@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4286743170
   m_fontColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4322,7 +4322,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 715128847}
         m_TargetAssemblyTypeName: WallDefense.GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: RequestQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14737,7 +14737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1166493497
 RectTransform:
   m_ObjectHideFlags: 0

@@ -315,6 +315,17 @@ namespace WallDefense
         {
             SceneManager.LoadScene("00_Main");
         }
+
+        public void RequestQuit()
+        {
+            DialogBox.QueueDialogueBox(new DialogueBoxParameters(
+                GameObject.Find("Canvas").transform,
+                "<align=\"center\"><size=40>Do you wish to quit the game?</size>",
+                new string[] { "Yes", "No" },
+                new DialogBox.ButtonEventHandler[] { () => { QuitGame(); }, () => { } }
+              ));
+        }
+
         public void QuitGame()
         {
             Application.Quit();
