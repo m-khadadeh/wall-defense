@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 1856987069944497700}
   - component: {fileID: 469369660236335657}
   - component: {fileID: 2986613326395613139}
+  - component: {fileID: 3725255374057590811}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -280,6 +281,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &3725255374057590811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815899135391959752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72af28ec540073966bd6e83b5c39b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxKey: default_button
+  _overrideInteractable: 0
 --- !u!1 &8339038979480036233
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +308,7 @@ GameObject:
   - component: {fileID: 8339038979480036277}
   - component: {fileID: 8339038979480036234}
   - component: {fileID: 8339038979480036235}
+  - component: {fileID: 8161384516580392509}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -422,6 +438,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8161384516580392509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339038979480036233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72af28ec540073966bd6e83b5c39b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxKey: default_button
+  _overrideInteractable: 0
 --- !u!1 &8339038979503984638
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +465,7 @@ GameObject:
   - component: {fileID: 8339038979503984634}
   - component: {fileID: 8339038979503984635}
   - component: {fileID: 8339038979503984632}
+  - component: {fileID: 8691699001028197503}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -564,6 +595,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8691699001028197503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339038979503984638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72af28ec540073966bd6e83b5c39b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxKey: default_button
+  _overrideInteractable: 0
 --- !u!1 &8339038979741562446
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +916,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: -80, y: -290}
+  m_SizeDelta: {x: -80, y: -305.54}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8339038979926877870
 CanvasRenderer:

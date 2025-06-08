@@ -48,6 +48,7 @@ namespace WallDefense
                 onNightHour.Invoke(currentHour);
             }
             onAfterHour.Invoke(currentHour);
+            skyImage.canvasRenderer.GetMaterial().SetFloat("_Hour", (float)currentHour);
         }
 
         public void LoadData(DayNightData dayNightData)

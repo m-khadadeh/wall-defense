@@ -82,6 +82,7 @@ namespace WallDefense
     private static void PlaySFX(AudioClip clip, float volume, float clipLength)
     {
       GameObject newSFXObject = new GameObject();
+      DontDestroyOnLoad(newSFXObject);
       newSFXObject.transform.SetParent(_instance.transform);
       AudioSource newAudioSource = newSFXObject.AddComponent<AudioSource>();
       newAudioSource.volume = volume;

@@ -22,11 +22,16 @@ namespace WallDefense
         }
         else
         {
+          string memo = "<indent=0%><align=\"center\">-------------------------------------\n";
+          memo += "<size=40>DEFENSE INSTALLATION ISSUE</size>\n";
+          memo += "-------------------------------------\n";
+          memo += $"<size=26>Could not install {_defenseType.ToString()} on {choice} wall because there is already defense installed there.</size>\n";
+          memo += $"<size=26>Materials wasted.\n";
           DialogBox.QueueDialogueBox(new DialogueBoxParameters
             (
               GameObject.Find("Canvas").transform,
-              $"Cannot install {_defenseType.ToString()} defense on {choice} wall because there already is defense there. Materials wasted.",
-              new string[] { "Okay" },
+              memo,
+              new string[] { "Understood" },
               new DialogBox.ButtonEventHandler[] { () => { } }
             )
           );
@@ -34,6 +39,11 @@ namespace WallDefense
       }
       else
       {
+        string memo = "<indent=0%><align=\"center\">-------------------------------------\n";
+        memo += "<size=40>DEFENSE INSTALLATION ISSUE</size>\n";
+        memo += "-------------------------------------\n";
+        memo += $"<size=26>Could not install {_defenseType.ToString()} on {choice} wall because there is already defense installed there.</size>\n";
+        memo += $"<size=26>Materials wasted.\n";
         // Clearing Defense
         if (colony.Wall.GetSegmentFromName(_dictionary[choice]).currentDefenseType != DamageParameters.Type.none)
         {
@@ -45,7 +55,7 @@ namespace WallDefense
             (
               GameObject.Find("Canvas").transform,
               $"Cannot remove defense on {choice} wall because there already is no defense there.",
-              new string[] { "Okay" },
+              new string[] { "Understood" },
               new DialogBox.ButtonEventHandler[] { () => { } }
             )
           );

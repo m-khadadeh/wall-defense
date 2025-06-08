@@ -171,7 +171,7 @@ namespace WallDefense
           attackMessage += $"<indent=5%> - Wall MIDDLE: {middleSegment.health} / {middleSegment.maxhealth}. Currently installed defense: {_defenseRep[middleSegment.currentDefenseType]}\n";
           var bottomSegment = colony.Wall.GetSegmentFromName(WallSegmentName.bottom);
           attackMessage += $"<indent=5%> - Wall BOTTOM: {bottomSegment.health} / {bottomSegment.maxhealth}. Currently installed defense: {_defenseRep[bottomSegment.currentDefenseType]}\n";
-          attackMessage += "<indent=0%>-------------------------------------";
+          attackMessage += "<indent=0%><align=\"center\">-------------------------------------";
           if (firstAttackKills || secondAttackKills)
           {
             // Lose condition
@@ -185,7 +185,7 @@ namespace WallDefense
               DialogBox.QueueDialogueBox(new DialogueBoxParameters(
                 GameObject.Find("Canvas").transform,
                 attackMessage,
-                new string[] { "Understood." },
+                new string[] { "Understood" },
                 new DialogBox.ButtonEventHandler[] { () => { } }
               ));
               bool fullyBlocked = firstAttackDefended.Item1 && (CurrentGhoul.secondAttackRep != "" || secondAttackDefended.Item1);
