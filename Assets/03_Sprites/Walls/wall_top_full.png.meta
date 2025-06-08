@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc1187f33980b124d8a976f2adce967e
+guid: 4f8bd3e14f4d3102ca5be72caa9d8894
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3013333029314254900
-    second: scaffold_top_0
+      213: 1607323391944731084
+    second: wall_top_full_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scaffold_top_0
+      name: wall_top_full_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3
-        width: 1938
-        height: 211
+        x: 4
+        y: 299
+        width: 1939
+        height: 323
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc7a5cd339d7e26d0800000000000000
-      internalID: -3013333029314254900
+      spriteID: cc9aa08eb1c5e4610800000000000000
+      internalID: 1607323391944731084
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      scaffold_top_0: -3013333029314254900
+      wall_top_full_0: 1607323391944731084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

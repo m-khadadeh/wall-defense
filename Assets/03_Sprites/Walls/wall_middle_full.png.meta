@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: bc1187f33980b124d8a976f2adce967e
+guid: 4f8807b6b7d7179dfb272c171428dfee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3013333029314254900
-    second: scaffold_top_0
+      213: -7274304312737018833
+    second: wall_middle_full_0
+  - first:
+      213: 8114027062541762252
+    second: wall_middle_full_1
+  - first:
+      213: -4726289626698335039
+    second: wall_middle_full_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scaffold_top_0
+      name: wall_middle_full_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 1938
-        height: 211
+        y: 7
+        width: 1943
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc7a5cd339d7e26d0800000000000000
-      internalID: -3013333029314254900
+      spriteID: f2cc73bb4ca7c0b90800000000000000
+      internalID: -7274304312737018833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_middle_full_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 57
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce35b89f90da9070800000000000000
+      internalID: 8114027062541762252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_middle_full_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 38
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc380f10a8d86eb0800000000000000
+      internalID: -4726289626698335039
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      scaffold_top_0: -3013333029314254900
+      wall_middle_full_0: -7274304312737018833
+      wall_middle_full_1: 8114027062541762252
+      wall_middle_full_2: -4726289626698335039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
