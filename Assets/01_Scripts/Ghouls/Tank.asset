@@ -26,3 +26,4 @@ MonoBehaviour:
   secondAttackRep: The middle of the wall has been splashed with corrosive oil
   ghoulBreachRep: Amidst the crumbled remains of the wall, a giant silhoutte drags
     itself towards the inhabitants of the settlement. The Titan has breached.
+  attackSound: attack_titan

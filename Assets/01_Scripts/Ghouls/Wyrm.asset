@@ -27,3 +27,4 @@ MonoBehaviour:
   secondAttackRep: 
   ghoulBreachRep: A stampede is heard and felt from beyond the crumbled wall. It
     grows louder by the second. The Wyrm has breached.
+  attackSound: attack_wyrm

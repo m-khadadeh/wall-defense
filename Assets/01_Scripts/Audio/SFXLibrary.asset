@@ -71,3 +71,17 @@ MonoBehaviour:
     <Clip>k__BackingField: {fileID: 8300000, guid: fcee35a65aec29981ae69ab298a57bb4, type: 3}
   - <ClipName>k__BackingField: drop
     <Clip>k__BackingField: {fileID: 8300000, guid: 6a0e76eb926ff91ad985321c26131b03, type: 3}
+  - <ClipName>k__BackingField: attack_basilisk
+    <Clip>k__BackingField: {fileID: 8300000, guid: 9c8ba4f3d2e3c0e21ae5b57f55e35ffc, type: 3}
+  - <ClipName>k__BackingField: attack_leviathan
+    <Clip>k__BackingField: {fileID: 8300000, guid: efa91be9fd6b7db7e87cd2cb6b735911, type: 3}
+  - <ClipName>k__BackingField: attack_titan
+    <Clip>k__BackingField: {fileID: 8300000, guid: 6268035a38d943057afa8ca58b7c7fd6, type: 3}
+  - <ClipName>k__BackingField: attack_wyrm
+    <Clip>k__BackingField: {fileID: 8300000, guid: 69d77dc4a092bf8b5ae1357a037ca447, type: 3}
+  - <ClipName>k__BackingField: attack_notblocked
+    <Clip>k__BackingField: {fileID: 8300000, guid: 01931e30df61645ccaea3871d63031fa, type: 3}
+  - <ClipName>k__BackingField: attack_blocked
+    <Clip>k__BackingField: {fileID: 8300000, guid: 29b5315ab44e1aae8a30027cf8a8141a, type: 3}
+  - <ClipName>k__BackingField: operator_type
+    <Clip>k__BackingField: {fileID: 8300000, guid: 2ef368381e5e452e8bf6bcdd6304a9ff, type: 3}

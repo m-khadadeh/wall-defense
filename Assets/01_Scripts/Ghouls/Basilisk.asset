@@ -26,3 +26,4 @@ MonoBehaviour:
   secondAttackRep: 
   ghoulBreachRep: Acid rain pours down onto the settlement from the skies. The Basilisk
     has breached.
+  attackSound: attack_basilisk

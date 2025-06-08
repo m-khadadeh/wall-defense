@@ -181,7 +181,7 @@ namespace WallDefense
           {
             _lineTextNonMorse.maxVisibleCharacters++;
             if (!token.IsNextLineRequested && !token.IsHurryUpRequested)
-              AudioManager.PlaySound("typewriter");
+              AudioManager.PlaySound("operator_type");
             await YarnTask.Delay(TimeSpan.FromMilliseconds(_nonMorsePerCharacterMilliseconds), token.HurryUpToken).SuppressCancellationThrow();
           }
         }

@@ -24,6 +24,7 @@ namespace WallDefense
     public void Initialize()
     {
       _attacked = false;
+      CurrentGhoul = null;
       _defenseRep = new Dictionary<DamageParameters.Type, string>()
       {
         {DamageParameters.Type.none, "None"},
@@ -35,7 +36,20 @@ namespace WallDefense
 
     public void SelectGhoul()
     {
-      CurrentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
+      if (CurrentGhoul = null)
+      {
+        CurrentGhoul = _possibleGhouls[Random.Range(0, _possibleGhouls.Count)];
+      }
+      else
+      {
+        var newGhoulList = new List<Ghoul>();
+        foreach (var ghoul in _possibleGhouls)
+        {
+          newGhoulList.Add(ghoul);
+        }
+        newGhoulList.Remove(CurrentGhoul);
+        CurrentGhoul = newGhoulList[Random.Range(0, newGhoulList.Count)];
+      }
       _attackHour = Random.Range(CurrentGhoul.hourRange.x, CurrentGhoul.hourRange.y + 1) % 24;
       foreach (var chalkboard in _chalkBoards)
       {
@@ -100,7 +114,7 @@ namespace WallDefense
     {
       if (hour == _attackHour && !_attacked)
       {
-        AudioManager.PlaySound("page_ghouls");
+        AudioManager.PlaySound(CurrentGhoul.attackSound);
         foreach (var colony in _colonies)
         {
           CurrentGhoul.targetWall = colony.Wall;
@@ -123,7 +137,7 @@ namespace WallDefense
             }
           }
 
-          (bool, DamageParameters.Type) secondAttackDefended;
+          (bool, DamageParameters.Type) secondAttackDefended = (false, DamageParameters.Type.none);
           bool secondAttackKills = false;
           if (!firstAttackKills)
           {
@@ -174,6 +188,8 @@ namespace WallDefense
                 new string[] { "Understood." },
                 new DialogBox.ButtonEventHandler[] { () => { } }
               ));
+              bool fullyBlocked = firstAttackDefended.Item1 && (CurrentGhoul.secondAttackRep != "" || secondAttackDefended.Item1);
+              AudioManager.PlaySound(fullyBlocked ? "attack_blocked" : "attack_notblocked");
             }
           }
         }

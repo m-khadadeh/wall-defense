@@ -18,6 +18,7 @@ namespace WallDefense
         public string firstAttackRep;
         public string secondAttackRep;
         public string ghoulBreachRep;
+        public string attackSound;
         /// <summary>
         /// Applies main attack effects
         /// </summary>

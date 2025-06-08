@@ -26,3 +26,4 @@ MonoBehaviour:
     whip as it attempted to slip past the top
   ghoulBreachRep: A growing shadow engulfs the settlement as a ghoul soars over the
     remains of the wall. The Leviathan has breached.
+  attackSound: attack_leviathan
