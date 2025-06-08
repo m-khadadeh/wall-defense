@@ -27,7 +27,7 @@ namespace WallDefense
     {
       foreach (var arrow in _startArrows)
       {
-        arrow.SetActive(show);
+        arrow.SetActive(false);
       }
     }
 
@@ -35,7 +35,7 @@ namespace WallDefense
     {
       foreach (var arrow in _morseArrows)
       {
-        arrow.SetActive(show);
+        arrow.SetActive(false);
       }
       MorseArrowsUp = show;
     }
