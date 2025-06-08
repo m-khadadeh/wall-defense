@@ -136,9 +136,16 @@ namespace WallDefense
         {
             currentDefenseType = defenseType;
         }
+
+        public void ApplyDamage(DamageParameters damageParameters, out (bool, DamageParameters.Type) defended)
+        {
+            defended = (currentDefenseType == damageParameters.type, currentDefenseType);
+            ApplyDamage(damageParameters);
+        }
+
         public void ApplyDamage(DamageParameters damageParameters)
         {
-            health -= (int)math.round(damageParameters.magnitude * (currentDefenseType == damageParameters.type ? damageParameters.reducedAmount : 1));
+            health -= (int)math.round((float)damageParameters.magnitude * (currentDefenseType == damageParameters.type ? damageParameters.reducedAmount : 1.0f));
             currentDefenseType = DamageParameters.Type.none;
         }
         public readonly bool IsDestroyed()

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Levi_Primary
   m_EditorClassIdentifier: 
   type: 3
-  magnitude: 100
+  magnitude: 40
   reducedAmount: 0.1

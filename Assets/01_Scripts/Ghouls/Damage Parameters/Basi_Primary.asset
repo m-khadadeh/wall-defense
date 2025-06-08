@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Basi_Primary
   m_EditorClassIdentifier: 
   type: 2
-  magnitude: 150
+  magnitude: 60
   reducedAmount: 0

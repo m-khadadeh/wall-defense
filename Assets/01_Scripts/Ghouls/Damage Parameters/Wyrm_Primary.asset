@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wyrm_Primary
   m_EditorClassIdentifier: 
   type: 3
-  magnitude: 150
+  magnitude: 60
   reducedAmount: 0.3

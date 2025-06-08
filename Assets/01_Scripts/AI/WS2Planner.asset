@@ -32,8 +32,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d762b2e4983b1b89f813098d688ed974, type: 2}
   - {fileID: 11400000, guid: 88d9a3fae636cd0f0b2b0ca0ffd1c792, type: 2}
   _goals:
-  - {fileID: 11400000, guid: 7ea075cce7199051f99c94c2ff71a5f0, type: 2}
   - {fileID: 11400000, guid: 0bc8e466005044810be4433180d66842, type: 2}
+  - {fileID: 11400000, guid: 7ea075cce7199051f99c94c2ff71a5f0, type: 2}
   - {fileID: 11400000, guid: 505d284e47ffb155b8dbae92707f89d7, type: 2}
   - {fileID: 11400000, guid: 7d86f7b4d1c6e1767b0d0ec2762c9f05, type: 2}
   - {fileID: 11400000, guid: e9529ab3076ee07f5b68c70d62b2ab91, type: 2}
@@ -92,7 +92,7 @@ MonoBehaviour:
     <WaitAction>k__BackingField: {fileID: 11400000, guid: 92d602021fef03f57a7c375812417c7e, type: 2}
     <CollectAction>k__BackingField: {fileID: 11400000, guid: 514ca790057500f3fad9efdbe55463df, type: 2}
     <TaskLock>k__BackingField: {fileID: 11400000, guid: 5837b918cb0ed5259b3c1bf0d3fee565, type: 2}
-    <Hours>k__BackingField: 5
+    <Hours>k__BackingField: 4
     <ProtectionTask>k__BackingField: 0
   - <StartAction>k__BackingField: {fileID: 11400000, guid: 9184285c65de60406b4e0d6cecc0bad0, type: 2}
     <WaitAction>k__BackingField: {fileID: 11400000, guid: 41f6d298915822295b2839770c2e821d, type: 2}

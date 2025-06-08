@@ -21,3 +21,8 @@ MonoBehaviour:
   targetWall: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   hourRange: {x: 22, y: 24}
   morseTextRepresentation: LVN
+  firstAttackRep: A ghoul was spotted attempting to jump over the top of the wall
+  secondAttackRep: The middle of the wall has been slammed into by the ghoul's tail
+    whip as it attempted to slip past the top
+  ghoulBreachRep: A growing shadow engulfs the settlement as a ghoul soars over the
+    remains of the wall. The Leviathan has breached.

@@ -21,3 +21,9 @@ MonoBehaviour:
   targetWall: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   hourRange: {x: 0, y: 2}
   morseTextRepresentation: WRM
+  firstAttackRep: Tracks of millions of feet emerged from a burrow. The bottom of
+    the wall shows evidence of those feet hooking themselves in to provide support
+    for the creature to scale the wall
+  secondAttackRep: 
+  ghoulBreachRep: A stampede is heard and felt from beyond the crumbled wall. It
+    grows louder by the second. The Wyrm has breached.

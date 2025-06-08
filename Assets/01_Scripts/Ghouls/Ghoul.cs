@@ -15,21 +15,24 @@ namespace WallDefense
         public Wall targetWall;
         public Vector2Int hourRange;
         public string morseTextRepresentation;
+        public string firstAttackRep;
+        public string secondAttackRep;
+        public string ghoulBreachRep;
         /// <summary>
         /// Applies main attack effects
         /// </summary>
         /// <returns>True, if wall was broken prior to attack</returns>
-        public bool MainAttack()
+        public bool MainAttack(out (bool, DamageParameters.Type) defended)
         {
-            return Attack(damageTargetMain, parametersMain);
+            return Attack(damageTargetMain, parametersMain, out defended);
         }
         /// <summary>
         /// Applies secondary attack effects
         /// </summary>
         /// <returns>True, if wall was broken prior to attack</returns>
-        public bool SecondaryAttack()
+        public bool SecondaryAttack(out (bool, DamageParameters.Type) defended)
         {
-            return Attack(damageTargetSecondary, parametersSecondary);
+            return Attack(damageTargetSecondary, parametersSecondary, out defended);
         }
         /// <summary>
         /// Applies attack damage to wall segment specified
@@ -38,32 +41,36 @@ namespace WallDefense
         /// <param name="damageType">Blugeoning, Corrosion, or Finesse</param>
         /// <param name="damageMagnitude">Unmitigated damage value</param>
         /// <returns>True, if wall was broken prior to attack</returns>
-        public bool Attack(WallSegmentName wallSegmentName, DamageParameters damageParameters)
+        public bool Attack(WallSegmentName wallSegmentName, DamageParameters damageParameters, out (bool, DamageParameters.Type) defended)
         {
             switch (wallSegmentName)
             {
                 case WallSegmentName.bottom:
                     if (targetWall.bottom.IsDestroyed())
                     {
+                        defended = (false, DamageParameters.Type.none);
                         return true;
                     }
-                    targetWall.bottom.ApplyDamage(damageParameters);
+                    targetWall.bottom.ApplyDamage(damageParameters, out defended);
                     break;
                 case WallSegmentName.middle:
                     if (targetWall.middle.IsDestroyed())
                     {
+                        defended = (false, DamageParameters.Type.none);
                         return true;
                     }
-                    targetWall.middle.ApplyDamage(damageParameters);
+                    targetWall.middle.ApplyDamage(damageParameters, out defended);
                     break;
                 case WallSegmentName.top:
                     if (targetWall.top.IsDestroyed())
                     {
+                        defended = (false, DamageParameters.Type.none);
                         return true;
                     }
-                    targetWall.top.ApplyDamage(damageParameters);
+                    targetWall.top.ApplyDamage(damageParameters, out defended);
                     break;
                 default:
+                    defended = (false, DamageParameters.Type.none);
                     break;
             }
             targetWall.CheckSegmentFailure();

@@ -21,3 +21,8 @@ MonoBehaviour:
   targetWall: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   hourRange: {x: 1, y: 3}
   morseTextRepresentation: TTN
+  firstAttackRep: The wall shuddered as its base was slammed into with a powerful
+    battering attack
+  secondAttackRep: The middle of the wall has been splashed with corrosive oil
+  ghoulBreachRep: Amidst the crumbled remains of the wall, a giant silhoutte drags
+    itself towards the inhabitants of the settlement. The Titan has breached.

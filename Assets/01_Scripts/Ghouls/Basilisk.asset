@@ -21,3 +21,8 @@ MonoBehaviour:
   targetWall: {fileID: 11400000, guid: a1ba4b8a22b1d1d4c84593df4b6e556a, type: 2}
   hourRange: {x: 21, y: 23}
   morseTextRepresentation: BSK
+  firstAttackRep: A deluge of corrosive acid has rained down upon the top of the
+    wall
+  secondAttackRep: 
+  ghoulBreachRep: Acid rain pours down onto the settlement from the skies. The Basilisk
+    has breached.

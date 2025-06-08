@@ -43,6 +43,8 @@ namespace WallDefense
         public Button[] buttonsToLockBeforeFirstDialogue;
         private bool buttonsUnlockedYet;
 
+        public TutorialKun tutorialKun;
+
         public Task[] tasks;
 
 
@@ -58,6 +60,7 @@ namespace WallDefense
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            tutorialKun.Initialize();
             OpenStartFirstCall();
             foreach (var buttonToLock in buttonsToLockBeforeFirstDialogue)
             {
@@ -98,6 +101,7 @@ namespace WallDefense
                 colony.Initialize();
             }
             playerColony.Initialize();
+            ghoulSelector.Initialize();
             ghoulSelector.SelectGhoul();
             watch.OnAdvanceHour();
             UpdateWatch();
@@ -116,6 +120,7 @@ namespace WallDefense
                     button.interactable = true;
                 }
             });
+            tutorialKun.ShowStartArrows(true);
         }
 
         public void OnNewDay()
@@ -134,6 +139,7 @@ namespace WallDefense
             }
             playerColony.OnBeforeHour(hour);
             taskManager.OnIncrementHour();
+            tutorialKun.ShowStartArrows(false);
         }
         public void OnAfterHour(int hour)
         {
@@ -173,6 +179,14 @@ namespace WallDefense
         // Update is called once per frame
         void Update()
         {
+            if (dialogueManager.NodeQueued && !tutorialKun.MorseArrowsUp)
+            {
+                tutorialKun.ShowRadioArrows(true);
+            }
+            else if (!dialogueManager.NodeQueued && tutorialKun.MorseArrowsUp)
+            {
+                tutorialKun.ShowRadioArrows(false);
+            }
             watch.CanClickButtons(!dialogueManager.NodeQueued && DialogBox.Instance == null);
             if (!buttonsUnlockedYet && dialogueManager.NodeQueued)
             {

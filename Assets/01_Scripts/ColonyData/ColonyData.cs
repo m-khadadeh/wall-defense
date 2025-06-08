@@ -113,7 +113,7 @@ namespace WallDefense
       }
     }
 
-    public void Die()
+    public void Die(string deathMessage)
     {
       if (AIController == null)
       {
@@ -121,9 +121,9 @@ namespace WallDefense
         DialogBox.QueueDialogueBox(
           new DialogueBoxParameters(
             GameObject.Find("Canvas").transform,
-            "Your settlement has fallen!",
+            $"<align=\"center\">-------------------------------------\n<size=40>DEFEAT</size>\n-------------------------------------\n<align=\"left\">{deathMessage}",
             new string[] {
-              "Restart",
+              "Main Menu",
               "Quit"
             },
             new DialogBox.ButtonEventHandler[]

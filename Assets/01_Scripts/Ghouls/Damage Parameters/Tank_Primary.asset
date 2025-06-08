@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tank_Primary
   m_EditorClassIdentifier: 
   type: 1
-  magnitude: 100
+  magnitude: 50
   reducedAmount: 0.25
